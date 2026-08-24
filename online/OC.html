@@ -1,0 +1,814 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OCs' Page</title>
+    <link href="OC.css" rel="stylesheet" type="text/css" media="all" />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/siteicon.webp"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <div class="crt"></div>
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+        <section class="small">
+          <center>
+            <marquee direction="down" scrollamount="5">
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_1.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_2.jpg"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_3.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_4.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_5.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_6.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_7.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_8.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_9.png"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_10.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_11.jpg"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_12.gif"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_13.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_14.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_15.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_16.jpg"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_17.png"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_18.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_19.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_20.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_21.png"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_22.jpg"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_23.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_24.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_25.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_26.png"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_27.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_28.png"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_29.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_30.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_31.webp"
+                width="150px;"
+                height="70px;"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_32.png"
+                width="150px;"
+                height="70px;"
+              />
+            </marquee>
+          </center>
+        </section>
+      </div>
+
+      <section class="half">
+        <h1>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/favicon_1.webp" /> greetings to the OC
+          page!! <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/favicon_1.webp" />
+        </h1>
+        <h2>come & check out the various profiles/pages for my OCs!</h2>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <h2>Dedicated To The Kidz I Fought</h2>
+        <div class="row">
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/erin"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/erin's_pfp.png"
+                title="Erin Haverathyn"
+                width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/ollie"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ollie's_pfp.png"
+                title="Ollie Coppola"
+                width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/willow"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/willow's_pfp.png"
+                title="Willow Ignacio"
+                width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/brooke"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/newNEWbrookepfp.png"
+                title="Brooke Ignacio"
+                width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/thomas"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/IMG_1077.png"
+                title="Thomas Eliphas"
+                width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/iris"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/iris's_pfp.png"
+                title="Iris Haverathyn"
+                width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/rae"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/rae's_pfp.png"
+                title="Rae Haverathyn"
+                width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/victoria"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/IMG_1079.png"
+                title="Victoria Coppola"
+                width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/thor"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/thor's_pfp.png"
+                title="Thor Coppola"
+                width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/skye"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/B657A306-932F-4805-BF2A-61FBDC6677D4.png"
+                title="Skye Coppola"
+                width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/cecilia"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/cecilia's_pfp.png"
+                title="Cecilia Russo"
+                width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/serenity"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/newserenitypfp.png"
+                title="Serenity Russo"
+                width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/gianna"
+              ><img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/giannapfp.png" 
+                title="Gianna Coppola"
+                width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href="https://nogginzmart.neocities.org/veronica"
+              ><img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/veronicaaa.png" 
+                width="100%;"
+                title="Véronica Ignacio"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <br />
+        <h2>Sincerely, Mommy</h2>
+        <div class="row">
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <br />
+        <h2>Bellevue Once Removed</h2>
+        <div class="row">
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <br />
+        <h2>Untitled Story w/friend!</h2>
+        <div class="row">
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href=""
+              ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/c07bb4cd49e8075c2a1e4a35399383a2.jpg" width="100%;"
+            /></a>
+          </div>
+        </div>
+        <h2>
+          <a href="https://nogginzmart.neocities.org/OC">head back up!</a>
+        </h2>
+      </section>
+
+      <section class="small">
+        <center>
+          <marquee direction="down" scrollamount="5">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_33.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_34.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_35.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_36.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_37.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_38.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_39.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_40.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_41.jpg"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_42.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_43.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_44.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_45.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_46.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_47.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_48.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_49.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_50.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_51.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_52.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_53.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_54.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_55.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_56.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_57.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_58.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_59.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_60.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_61.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_62.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_63.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_64.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_65.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_66.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_67.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_68.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_69.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_70.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/OCs/ws_71.png"
+              width="150px;"
+              height="70px;"
+            />
+          </marquee>
+        </center>
+      </section>
+    </div>
+
+    <footer>
+      <center>
+        <span
+          ><a href="https://nogginzmart.neocities.org/">nogginzmart</a> est.
+          08/13/2025!</span
+        >
+      </center>
+      <center>
+        <span
+          ><a
+            href="https://nogginzmart.neocities.org/"
+              >nogginzmart</a
+            >
+              est. 8/13/2025!</span
+            ><br />
+        <span
+          >cyanobacteria.css by
+          <a href="https://ribo.zone/free/layouts/">ribo.zone</a></span
+        >
+      </center>
+      <br>
+      <center>
+        <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+      </center>
+    </footer>
+    <script src="OC.js"></script>
+  </body>
+</html>

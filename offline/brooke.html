@@ -1,0 +1,955 @@
+<!doctype html>
+<html>
+  <head>
+    <title>brooke's profile</title>
+    <link href="/CSS/brooke.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="nogginzmart - OC Brooke">
+    <meta property="og:description" content="learn more about my OC, Brooke!">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/siteicon.webp"
+      type="image/x-icon"
+    />
+    </audio>
+    <div class="crt"></div>
+  </head>
+  <body>
+       <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+          
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/nav_pic.jpg" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/nav_blinkie_1.webp" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/nav_blinkie_2.webp" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/nav_blinkie_3.webp" width="100%;" />
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/siteicon.webp"
+            width="30px;"
+            height="30px;"
+          />
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_1.webp" /> brooke's page
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_1.webp" />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/siteicon.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+          learn more about my character, brooke!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h2>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Brooke is one of the main characters in my story,
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >. As the Fall 2008 school comes around once more, Brooke is prepared
+          for another, standard school year. Merely happy to have access to the
+          school library again & getting outside the house.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Though when she enters her class, there's a murmur of a new kid
+          joining their class.
+          <a href="https://nogginzmart.neocities.org/ollie">Ollie Coppola</a>
+          waltzed into their class & he's immediately the center of attention.
+          Although Brooke thought he was sweet, she kept her distance. Prefering
+          to stay out of the spotlight.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Though as the first week goes by, Ollie--dragging
+          <a href="https://nogginzmart.neocities.org/erin">Erin</a>
+          along--introduces himself to Brooke & tries to get to know her. She's
+          more than happy to talk to him & Erin, & tells
+          <a href="https://nogginzmart.neocities.org/willow">Willow</a> about it
+          later--never really having the best experience making friends. Though
+          Willow is initially apprehensive, & although Brooke tries to ease her
+          worries. Willow has never been the type of person to listen.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Much to Brooke's horror, Willow almost goes through with beating the
+          shit out of Ollie--so Erin & Brooke intervene before Ollie got grinded
+          into mush. & after Ollie talks to Willow for longer than a second,
+          Willow is totally won over by him & excited someone wants to be
+          friends with Brooke. Brooke is...not surprised, but incredibly
+          apologetic.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          & as Willow pushes herself in their little group, Brooke is thrown
+          into her first friends group where she wasn't just...inserted in. Not
+          to mention rekindling the familial & friendly relationship with Erin,
+          Brooke feels...a little off about such a drastic change to her
+          everyday normal, but maybe this will be a good change.
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+        <h2><img src="" /> check out more info below!! <img src="" /></h2>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+        <br />
+        <div class="marqueecontainer">
+          <div class="marquee">
+            <div class="marquee-content">
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_1.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_2.jpg"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_3.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_43.png"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_5.jpg"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_6.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_7.png"
+              />
+            </div>
+            <div class="marquee-content">
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_1.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_2.jpg"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_3.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_43.png"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_5.jpg"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_6.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/ws_7.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="marqueecontainer2">
+          <div class="marquee">
+            <span class="marquee-text">
+              BACKGROUND PLAYLIST ✮⋆˙ Breakfast at Tiffany's - Deep Blue Something
+              ✮⋆˙ Slide - The Goo Goo Dolls ✮⋆˙ My Beloved Monster - Eels ✮⋆˙
+              Ironic- Alanis Morssette ✮⋆˙ The Dog Days Are Over - Florence + The
+              Machine ✮⋆˙
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="small">
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_side_1.webp" width="300px;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_side_2.webp" width="300px;" />
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/BROOKE%20SPINNY.gif"
+          />
+          <span class="tooltip-text" style="bottom: 100%">
+            oh! uh...<br>hi! nice to meet you!
+          </span>
+          </div>
+        </center>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_side_3.webp" width=300px;>
+		    <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_nav_4.webp" width=300px;>
+      </section>
+
+      <section class="full">
+        <h2>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_moreinfo_1.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_moreinfo_2.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_moreinfo_3.webp" />
+          <u>more information</u>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_moreinfo_3.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_moreinfo_2.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_moreinfo_1.webp" />
+        </h2>
+
+        <div class="column">
+          <div class="box3" style="overflow-y: scroll">
+            <aside id="leftSidebar" style="margin-right: 0px">
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>basic info</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+              </h2>
+              <ul>
+                <li><u>full name</u> - Brooke Elena Ignacio</li>
+                <li>
+                  <u>ethnicity & race</u> -
+                  <img
+                    src="https://i.imgur.com/5xsrc8Y.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/African_Am._.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>pronouns</u> -
+                  <img
+                    src="https://i.imgur.com/l7Ge01H.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>gender</u> -
+                  <img
+                    src="https://i.imgur.com/FMoJ9vk.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>sexual orientation</u> -
+                  <img
+                    src="https://i.imgur.com/mtHAEL4.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                  <img
+                    src="https://i.imgur.com/H0t7Ypl.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li><u>birthplace</u> - Gunnison, Colorado</li>
+                <li><u>age</u> - 13</li>
+                <li><u>birthday</u> - January 6th, 1995</li>
+                <li><u>height</u> - 5'6''</li>
+                <li>
+                  <u>other languages</u> -
+                  <img
+                    src="https://i.imgur.com/5OBxblq.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+              </ul>
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_5.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>likes</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_5.webp"
+                  width="30px;"
+                  height="30px;"
+                />
+              </h2>
+              <ul>
+                <li>bugs!!</li>
+                <li>tea & coffee (not black coffee, though)</li>
+                <li>fall</li>
+                <li>nature</li>
+                <li>trinkets</li>
+                <li>rain</li>
+                <li>being with family & friends</li>
+                <li>goth/alternative culture (but scared to associate)</li>
+                <li>being inside during winter (freezes up out there)</li>
+                <li>holidays</li>
+                <li>english & science</li>
+              </ul>
+            </div>
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>personality</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                    </h2>
+                    <h2><u>stats</u></h2>
+
+                    <ul>
+                      <li>
+                        <u>MBTI</u> -
+                        <img
+                          src="https://i.imgur.com/l3R7Ulc.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li>
+                        <u>Zodiac</u> -
+                        <img
+                          src="https://i.imgur.com/sNuSVZA.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/YlKQFV6.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/4t6FWCD.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li>
+                        <u>Enneagram</u> -
+                        <img
+                          src="https://i.imgur.com/BYpRNso.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                    </ul>
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>mental/physical</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      /><u>ailments</u>
+                    </h2>
+                    <ul>
+                      <li>
+                        <u>Disabilities</u> -
+                        <img
+                          src="https://i.imgur.com/wLurwzJ.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li>
+                        <u>Psychological Disorders</u> -
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/0tVqxBL.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/wLurwzJ.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li><u>Addictions</u> - N/A</li>
+                    </ul>
+                </div>
+                </div>
+                    <div class="column">
+                      <div class="box3" style="overflow-y: scroll">
+                        <aside id="leftSidebar" style="margin-right: 0px">
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>interests</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <h2><u>& hobbies</u></h2>
+                          <ul>
+                            <li>
+                              <u>interests</u> - entomology (study of bugs),
+                              camping, collecting, anime, cartoons, books,
+                              comics, manga, music, fashion, video games
+                            </li>
+                            <li>
+                              <u>hobbies</u> - bug collecting/studying,
+                              photographing bugs, collecting a variety of
+                              things, reading, video games, hanging out with
+                              friends & family, cooking/baking
+                            </li>
+                            <li>
+                              <u>extracurriculars</u> - Concert Band, Book Club
+                            </li>
+                            <li>
+                              <u>favorite artists (music)</u> - Alanis
+                              Morissette, Amy Winehouse, Avril Lavigne, The
+                              Beatles, Coldplay, Fall Out Boy, P!ATD, Paramore,
+                              Fleetwood Mac, The Goo Goo Dolls, The Smashing
+                              Pumpkins
+                            </li>
+                            <li>
+                              <u>clothing style</u> - BOHO, maxi skirts ALL THE
+                              TIME, alternative, comfortable
+                            </li>
+                          </ul>
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_9.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>education</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_9.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <ul>
+                            <li>
+                              <u>schools</u> - Crested Butte Community School
+                              (K-current)
+                            </li>
+                          </ul>
+                          </div>
+                          <div class="column">
+                            <div class="box3" style="overflow-y: scroll">
+                              <aside id="leftSidebar" style="margin-right: 0px">
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>relationships</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Véronica (mom)</li>
+                                  <li>Iah (pseudo mom)</li>
+                                  <li>Sebastian (dad)(absent)</li>
+                                  <li>Willow (pseudo sister)</li>
+                                  <li>Thomas (pseudo uncle)</li>
+                                  <li>Erin, Rae, & Iris (pseudo cousins)</li>
+                                  <li>Ollie, Erin, Willow (friends)</li>
+                                </ul>
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_11.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>dislikes</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/favicon_11.webp"
+                                    width="30px"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>winter (physically freezes up)</li>
+                                  <li>spring cleaning (mom goes overboard)</li>
+                                  <li>clothes shopping</li>
+                                  <li>humid weather</li>
+                                  <li>public speaking</li>
+                                  <li>standardized tests</li>
+                                  <li>grocery shopping</li>
+                                  <li>crowded spaces</li>
+                                  <li>math</li>
+                                  <li>bullies</li>
+                                  <li>erin & willow smoking</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                                <section class="full">
+                                  <div class="box2" style="overflow-y: scroll">
+                                    <aside
+                                      id="leftSidebar"
+                                      style="margin-right: 0px"
+                                    >
+                                      <h2>
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_whataretheylike.webp"
+                                        /><u> what are they like? </u
+                                        ><img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/blinkie_whataretheylike.webp"
+                                        />
+                                      </h2>
+
+                                      <ul>
+                                        <li>
+                                          Brooke is quiet & reserved but kind.
+                                          Even though she doesn't put herself
+                                          out there as the most sociable person,
+                                          she tries to be kind to everyone she
+                                          meets. Unless they give her a reason
+                                          to act otherwise, & even then she just
+                                          ignores them or gives them the cold
+                                          shoulder.
+                                        </li>
+
+                                        <li>
+                                          She's not odd, persay, like Willow--oh
+                                          whom has more niche & loud interests.
+                                          She considers herself quite normal!
+                                          ...Minus her obsession with bugs. She
+                                          just finds them cute!! People give
+                                          them such a bad rep! not to mention
+                                          they're INCREDIBLY fascinating!! Her
+                                          mother isn't the biggest fan of her
+                                          obsession either, though encourages
+                                          her to pursue it anyways. ...even if
+                                          it makes her skin crawl.
+                                        </li>
+
+                                        <li>
+                                          Though other than bugs, she's
+                                          considers herself pretty normal!!
+                                          Willow tries to roap her into her
+                                          shenanigans, & Brooke is definitely
+                                          interested in the things she does, but
+                                          usually doesn't pursue them on her own
+                                          time.
+                                        </li>
+
+                                        <li>
+                                          She's kind of a romantic, usually
+                                          sitting with her mom when she watches
+                                          cheesy telenovellas. She hopes to find
+                                          her person one day, but her self
+                                          esteem usually gets in her way. Not to
+                                          mention she doesn't feel
+                                          conventionally, or any type of,
+                                          attractive.
+                                        </li>
+
+                                        <li>
+                                          Brooke has a complicated relationship
+                                          with her mother, <a href="https://nogginzmart.neocities.org/veronica">Véronica</a>. She loves
+                                          her immensely, but they definiely butt
+                                          heads sometimes. Usually because
+                                          Veronica is reactive & stubborn while
+                                          Brooke tends to be passive. Plus when
+                                          Willow does something that sets
+                                          Veronica off & ends up taking it out a
+                                          bit on Brooke. Plus their family
+                                          is...complicated with her Dad being
+                                          off at war. Plus with how finances
+                                          have been...their relationship has
+                                          been quite strained as a result.
+                                        </li>
+
+                                        <li>
+                                          Since they've been living with them
+                                          for so long, Brooke considers Iah
+                                          another mother. She relies on her a
+                                          lot for more emotional needs, like
+                                          comfort or someone to vent to. Iah
+                                          usually being more than happy to lend
+                                          an ear, even if she's confused by a
+                                          lot of cultural things. Though Brooke
+                                          appreciates how much she tries.
+                                        </li>
+
+                                        <li>
+                                          Brooke struggles a lot with her
+                                          weight. Not that she eats unhealthily,
+                                          she actually doesn't eat enough half
+                                          the time, but compared to her
+                                          classmates & what popular culture
+                                          deems as "healthy"...she feels like
+                                          the odd one out. Struggling a lot in
+                                          finding fashionable & appropriate
+                                          clothes for her. Thankfully, Willow,
+                                          Veronica,& <a href="">Iah</a> band together to help
+                                          find her cuter clothes that accomodate
+                                          her. Brooke tries her best to style
+                                          her clothes in a way where she still
+                                          feels cute, but not feeling like some
+                                          "freak" for what she looks like.
+                                        </li>
+
+                                        <li>
+                                          Due to a lot of the aforementioned
+                                          factors, & being considered "poor"
+                                          compared to her classmates, Brooke
+                                          doesn't have much luck finding
+                                          friends. A lot of them considering her
+                                          a "wallflower". So Willow usually
+                                          drags her along with her to hang out
+                                          with her & her emo friends. Brooke
+                                          feels like the odd one out, & knows
+                                          she's not necessarily welcome nor
+                                          included with the others in the group,
+                                          but heaven be damned if they don't do
+                                          what Willow says. Brooke appreciates
+                                          the thought, nonetheless.
+                                        </li>
+
+                                        <li>
+                                          Brooke is a good student, & thoroughly
+                                          enjoys the learning aspect of school!
+                                          Taking a part in the book club & plays
+                                          clarinet in concert band. She tries to
+                                          maximize her time there as possible.
+                                          She's in advanced placement, along
+                                          with Erin. Though since Willow is in
+                                          the normal classes she tends to be
+                                          lonely most of the school day.
+                                          Veronica & Iah can't really help with
+                                          their schoolwork, so Willow usually
+                                          relies on Brooke & Brooke tries her
+                                          best to figure it out herself.
+                                        </li>
+
+                                        <li>
+                                          She wouldn't hate winter is she didn't
+                                          freeze up! Due to her snakes, her body
+                                          gets rigid & unable to move after a
+                                          certain temperature (even if her
+                                          snakes aren't visible). So she usually
+                                          has to bundle up HEAVILY or stay
+                                          inside. It makes going to class during
+                                          the winter & late fall quite
+                                          difficult.
+                                        </li>
+
+                                        <li>
+                                          Furthermore about her snakes, most
+                                          don't know about them. it's just
+                                          immediate family, because Véronica has
+                                          snakes as well, & Iah isn't bothered
+                                          by them. Willow finds them cool
+                                          because she thinks Brooke is a
+                                          mythical creature or something. Brooke
+                                          loves them, having names for each of
+                                          her snakes. Thomas & Erin are aware of
+                                          the snakes as will, neither of them
+                                          particularly bothered by them.
+                                        </li>
+                                      </ul>
+                                    </section>
+
+                                      <section class="full">
+                                        <h2>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_blinkie_1.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_blinkie_2.webp" width=180px;
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_blinkie_3.webp"
+                                          />
+                                          <u>aesthetic</u>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_blinkie_3.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_blinkie_2.webp" width=180px;
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_blinkie_1.webp"
+                                          />
+                                        </h2>
+                                        <div class="marqueecontainer3">
+                                          <div class="marquee">
+                                            <div class="marquee-content2">
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_1.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_2.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_3.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_4.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_5.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_6.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_7.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_8.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_9.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_10.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_11.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_12.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_13.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_14.jpg"
+                                              />
+                                            </div>
+                                            <div class="marquee-content2">
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_1.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_2.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_3.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_4.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_5.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_6.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_7.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_8.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_9.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_10.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_11.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_12.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_13.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/brooke/aesthetic_14.jpg"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </section>
+                                    </div>
+
+                                      <div style="display: flex; justify-content: center;">
+                                      <footer>
+                                        <span
+                                          ><a
+                                            href="https://nogginzmart.neocities.org/"
+                                            >nogginzmart</a
+                                          >
+                                          est. 8/13/2025!</span
+                                        ><br />
+                                        <span
+                                          >cyanobacteria.css by
+                                          <a
+                                            href="https://ribo.zone/free/layouts/"
+                                            >ribo.zone</a
+                                          ></span
+                                        >
+                                        <br>
+                                        <center>
+                                          <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                        </center>
+                                      </footer>
+                                      </div>
+                                      <script src="/JS/brooke.js"></script>
+  </body>
+</html>

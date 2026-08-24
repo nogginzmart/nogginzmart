@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dedicated To The Kidz I Fought</title>
+	<link href="DTTKIF.css" rel="stylesheet" type="text/css" media="all">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta property="og:type" content="website">
+  <meta property="og:title" content="nogginzmart - dedicated to the kidz i fought">
+  <meta property="og:description" content="this is a normal teen movie...right? learn more about my story, dedicated to the kidz i fought!">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/siteicon.webp" type="image/x-icon">
+</head>
+<body>
+	<div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+	<div class="container">
+     <div class="crt"></div>
+		<header>
+			<center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+      </center>
+		</header>
+		
+			<div class="small">
+			<nav>
+				<div>A I S L E S</div>
+				<a href="https://nogginzmart.neocities.org/home">HOME</a>
+				<a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+				<a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+				<a href="https://nogginzmart.neocities.org/art">ART</a>
+				<a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+				<a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+				<a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+				<a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+        <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+				<a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+			</nav>
+			<!-- optional spot for styled button outside the navigation box -->
+				<nav>
+				<div>S H E L V E S</div>
+				<a href="https://nogginzmart.neocities.org/DTTKIF">Dedicated to The Kidz I Fought</a>
+				<a href="https://nogginzmart.neocities.org/not_found">Sincerely, Mommy</a>
+				<a href="https://nogginzmart.neocities.org/not_found">Bellevue Once Removed</a>
+				<a href="https://nogginzmart.neocities.org/not_found">Untitled Story w/ Friend</a>
+				<a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+			</nav>
+			<section class="small">
+       <center><marquee direction="down" scrollamount="5">
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_1.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_2.png" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_1.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_2.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_5.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_3.png" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_7.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_8.png" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_9.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_10.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_11.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_12.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_4.png" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_14.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_15.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_5.png" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_17.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_6.jpg" width=150px; height=70px;>
+			</marquee></center>	    
+		  </section>
+		</div>
+		
+		<section class="half">
+			<h1><img src=""> Dedicated To The Kidz I Fought <img src=""></h1>
+			<h2>this is a normal teen movie...right?</h2>
+        <center><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_Blinkie_1.webp"><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/blinkie_1.webp"><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/blinkie_2.webp"></center>
+      <marquee direction="left" scrollamount="5">
+      <p>BACKGROUND PLAYLIST ✮⋆˙ Pepper - Bullhole Surfers ✮⋆˙ Getting Naked & Playing With Guns - AJJ ✮⋆˙ When It's Over - Sugar Ray ✮⋆˙ When You Were Young - The Killers ✮⋆˙ Brazil - Declan McKenna ✮⋆˙
+      </p>
+      </marquee>
+      <br>
+      <p>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> It's August 2008 & the beginning of the school year has rolled back around once again.<a href="https://nogginzmart.neocities.org/erin">Erin Haverathyn</a> is staring their 7th grade year at Crested Butte Community School, & they're wanting to reinvent what it means to be...them. 
+      </p>
+      <p>
+       <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> Though there's a new family in town, The Coppola's. Coming all the way from New York. The youngest, <a href="https://nogginzmart.neocities.org/ollie">Ollie</a>, being in Erin's class. Who thoroughly throws off Erin's plans to stick to themselves. Ollie being an absolute social butterfly, & is thoroughly intrigued by Erin--of whom prefers to stay without friends. 
+      </p>
+      <p>
+       <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> Even if it doesn't go as planned, this will definitely be a very different school year...
+      </p>
+      <center><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/blinkie_3.webp"><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_Blinkie_5.webp" width=150px; height=20px;><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/blinkie_4.webp"></center>
+      <p>
+       <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> "Dedicated To The Kidz I Fought" is a slice-of-life, modern fantasy, & coming-of-age story taking place in 2008 Crested Butte, Colorado. 
+       </p>
+       <p>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> Although the story involves the young adult genre elements, <u><b>this story is not intended for minors</b></u>. There is not only the life developments of the main characters, but also for the adults in their lives.
+      </p>
+      <p>
+       <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> D.T.T.K.I.F has a large cast of diverse characters & their journeys in this shit show we call life.
+      </p>
+      <p>
+       <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> As a result, this story contains potentially triggering content such as
+        <ul>
+          <li>self harm</li>
+          <li><a href="https://nogginzmart.neocities.org/secretsite2" title="???">suicidal ideation</a></li>
+          <li>gender dysphoria & distress</li>
+          <li>body dysmorphia, eating disorders, & anorexia</li>
+          <li>hospitalizations for a variety of reasons</li>
+          <li>trauma/traumatic flashbacks</li>
+          <li>familial dysfunction</li>
+          <li>suicide attempts</li>
+          <li>parental death</li>
+          <li>various bodily harm</li>
+          <li>mentions of sexual violence</li>
+          <li>mentions of abuse</li> 
+          <li>mentions/inclusion of topical, politicial, & historial events</li>
+        </ul>
+      </p>
+      <br>
+      <u><h2>what are your intentions with D.T.T.K.I.F?</h2></u>
+      <p><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> I plan to make it into a webcomic, which will hopefully be hosted on here!!</p>
+      <br>
+      <u><h2>why did you write D.T.T.K.I.F?</h2></u>
+      <p><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> I wrote it to work through a lot of my own personal demons. Not to mention, bring light to experiences I saw those I cared around or once knew went through, hence the name. Not to mention I just put a lot of heart & love into it that I wish to share with others!!</p>
+      <br>
+      <u><h2>what are your inspirations for D.T.T.K.I.F?</h2></u>
+      <p><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> Oh lord, where do I start. Well, you might find this funny, but most of the characters in this story used to be Undertale Multiverse interpretations. So they just kinda evolved from there. Not that that really has effected how the story is told, but there's no denying the amount Undertale, & subsequently Deltarune, have inspired my character writing & storytelling.
+      </p>
+      <p><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> Furthermore, animes that have greatly inspired me are Fullmetal Alchemist, Sailor Moon, Mob Psycho 100, Trigun, Cowboy Bebop, Neon Genesis Evangelion--all having a variety of influence over the stories I write. When it comes to manga, Goodnight Pun Pun is a big influence.
+      </p>
+      <p><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> There's no denying the amount music influences the storytelling & characters in D.T.T.K.I.F. Every song I include on different pages related to my story are not just some background noise. D.T.T.K.I.F. is melancholy, it's long & messy, though shows the importance of human connections, & the up's & down's that come with growing up & drifting through life.
+      </p>
+      <p><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_1.webp"> I have always struggled with answering this question, because there's so many types of influences & inspirations I draw from when it comes to writing & creating for D.T.T.K.I.F. It's a lot of things, & the best place I can point you to get the best idea is through music. Though there is no denying what influence my favorite forms of media have had over this story.
+      </p>
+      <br>
+      <h2><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_2.webp"> <u>thanks for coming by!!</u> <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_2.webp"></h2>
+      <center>check out the characters in this story on the OC page! which is on the selves directory to your left!</center>
+      <br>
+      <center><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_3.webp" width=30px; height=30px;> <a href="">wanna head back up?</a> <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/favicon_3.webp" width=30px; height=30px;></center>
+		</section>
+		<section class="small">
+	    <center><marquee direction="down" scrollamount="5">
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_7.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_8.png" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_9.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_10.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_11.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_12.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_13.png" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_14.jpg" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_15.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_16.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_17.png" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_18.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_19.jpg" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_20.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_33.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_34.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_35.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_21.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_37.png" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_38.jpg" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_22.gif" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/ws_23.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_41.webp" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_42.png" width=150px; height=70px;>
+			  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/DTTKIF/DTTKIF_WS_43.webp" width=150px; height=70px;>
+			</marquee></center>
+		</section>
+</div>
+
+  <div style="display: flex; justify-content: center;">
+	<footer>
+	  <span><a href="https://nogginzmart.neocities.org/">nogginzmart</a> est. 8/13/2025!</span>
+	  <br>
+		<span>cyanobacteria.css by <a href="https://ribo.zone/free/layouts/">ribo.zone</a></span>
+		<br>
+		<center>
+		  <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+		</center>
+	</footer>
+  </div>
+ <script src="DTTKIF.js"></script>
+</body>
+</html>

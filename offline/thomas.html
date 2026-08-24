@@ -1,0 +1,869 @@
+<!doctype html>
+<html>
+  <head>
+    <title>thomas's profile</title>
+    <link href="/CSS/thomas.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+     <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/not_found">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/71067bd72dac97876a32d3aa8ca10450.jpg" width="100%" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_nav_1.webp" width=100%; />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkienav_2.webp" width=100% />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_nav_3.webp" width=100% />
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_1.webp"
+            width="30px;"
+          /> <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_heading.webp" /> thomas's page
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_heading.webp" /> <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_1.webp"
+            width="30px;"
+          />
+        </h1>
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_2.webp"
+            width="30px;"
+          />
+          learn more about my character, thomas!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_2.webp"
+            width="30px;"
+          />
+        </h2>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Thomas is one of the main characters in my story,
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >. Thomas is preparing for the Fall 2008 school year to begin--working
+          as a Junior regular & honors English teacher at the local school,
+          Crested Butte Community School. He quite enjoys his job, so he's glad
+          to get back into the swing of things.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Though he can't help but worry about
+          <a href="https://nogginzmart.neocities.org/erin">Erin</a>, his 2nd
+          cousin that's in his care. They're incredibly withdrawn, & with their
+          7th grade year starting up, he hopes they can make this a good, new
+          start to another school year.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          He's thankful that, during this economically trying time, he's secure
+          & entirely owns the home he lives in. Food being pretty easy to ration
+          considering he's only feeding himself & Erin. Though his pseudo
+          sister, <a href="https://nogginzmart.neocities.org/veronica">Véronica</a>, struggles incredibly with working as
+          an independent mechanic with 3 mouthes to feed, not including herself.
+          He does his best to pitch in to help her where he can, which he faces
+          a lot of push back on her account, but the last thing he wants is for
+          her to struggle even more than she already is.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Due to work, taking care of Erin, & personal projects--Thomas tends to
+          neglect his social life. Sure, he goes out with Véronica on Saturdays
+          to drink at local bars, but other than that he...really doesn't know
+          anybody else in their small mountain town that he hasn't taught,
+          taught their kids, or works with at the school.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Véronica wants him to live a little, which she's been desperately
+          trying to get him to do for...almost the entire time they've known
+          each other. He just worries he's just not as...interesting as Veronica
+          makes him out to be.
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+        <h2><img src="" /> check out more info below!! <img src="" /></h2>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <br />
+        <marquee direction="left" scrollamount="5">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/ws_1.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/ws_2.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/ws_3.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/ws_4.jpg"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/ws_5.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/ws_6.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/ws_7.gif"
+            width="150px;"
+            height="70px;"
+          />
+        </marquee>
+        <marquee direction="left" scrollamount="5">
+          <p>
+            BACKGROUND PLAYLIST ✮⋆˙ Jackie & Wilson - Hozier ✮⋆˙ Elderly Woman
+            Behind The Counter in A Small Town - Pearl Jam ✮⋆˙ Movin' Out
+            (Anthony's Song) - Billy Joel ✮⋆˙ Sgt. Pepper's Lonely Hearts Club
+            Band (Reprise) - The Beatles ✮⋆˙ Why Go - Pearl Jam ✮⋆˙
+          </p>
+        </marquee>
+      </section>
+
+      <section class="small">
+        <br />
+        <br />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_1.webp" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_2.webp" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_nav.webp" width="100%" />
+        <center>
+          <div class="tooltip">
+            <img 
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/thomas%20spinny.gif"
+            />
+            <span class="tooltip-text" style="bottom: 100%;">
+            Oh, well, hello there!
+            </span>
+          </div>
+        </center>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_nav_2.webp" width="100%" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_3.webp" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_4.gif" width="100%;" />
+      </section>
+
+      <section class="full">
+        <h2>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_5.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_6.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_7.webp" />
+          <u>more information</u>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_7.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_6.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_5.webp" />
+        </h2>
+
+        <div class="column">
+          <div class="box3" style="overflow-y: scroll">
+            <aside id="leftSidebar" style="margin-right: 0px">
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>basic info</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+              </h2>
+              <ul>
+                <li><u>full name</u> - Elijah (Thomas) Mikhail Eliphas</li>
+                <li>
+                  <u>ethnicity & race</u> -
+                  <img
+                    src="https://i.imgur.com/koJv3g8.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>pronouns</u> -
+                  <img
+                    src="https://i.imgur.com/cHa0MYt.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>gender</u> -
+                  <img
+                    src="https://i.imgur.com/JGB1EvW.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>sexual orientation</u> -
+                  <img
+                    src="https://i.imgur.com/mtHAEL4.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li><u>birthplace</u> - Gunnison, Colorado</li>
+                <li><u>age</u> - 50</li>
+                <li><u>birthday</u> - January 6th, 1958</li>
+                <li><u>height</u> - 6'4''</li>
+                <li>
+                  <u>other languages</u> -
+                  <img
+                    src="https://i.imgur.com/SRsfBYm.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                  <img
+                    src="https://i.imgur.com/5OBxblq.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li><u>occupation</u> - Highschool English Teacher</li>
+              </ul>
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_5.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>likes</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_5.webp"
+                  width="30px;"
+                  height="30px;"
+                />
+              </h2>
+              <ul>
+                <li>coffee (all kinds)</li>
+                <li>winter & fall</li>
+                <li>CDs, Vinyls, Casettes--you name it!</li>
+                <li>BOOKS</li>
+                <li>technology (it's fascinating)</li>
+                <li>his job!</li>
+                <li>the city</li>
+                <li>holidays</li>
+                <li>animals</li>
+                <li>TV time after a long day</li>
+                <li>nature</li>
+              </ul>
+            </div>
+            </div>
+
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>personality</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                    </h2>
+                    <h2><u>stats</u></h2>
+
+                    <ul>
+                      <li>
+                        <u>MBTI</u> -
+                        <img
+                          src="https://i.imgur.com/Vs2WmBF.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li>
+                        <u>Zodiac</u> -
+                        <img
+                          src="https://i.imgur.com/sNuSVZA.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/FG42rVN.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/nxnvMxS.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                    </ul>
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>mental/physical</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      /><u>ailments</u>
+                    </h2>
+                    <ul>
+                      <li>
+                        <u>Disabilities</u> -
+                        <img
+                          src="https://i.imgur.com/hSzgn50.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/E8sMHUt.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/wLurwzJ.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/t7CcZoC.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li>
+                        <u>Psychological Disorders</u> -
+                        <img
+                          src="https://i.imgur.com/hSzgn50.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/E8sMHUt.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/wLurwzJ.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/t7CcZoC.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li><u>Addictions</u> - nicotine</li>
+                    </ul>
+                </div>
+
+                    <div class="column">
+                      <div class="box3" style="overflow-y: scroll">
+                        <aside id="leftSidebar" style="margin-right: 0px">
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>interests</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <h2><u>& hobbies</u></h2>
+                          <ul>
+                            <li>
+                              <u>interests</u> - music, literature, technology,
+                              learning, collecting, culture
+                            </li>
+                            <li>
+                              <u>hobbies</u> - playing his guitar/singing,
+                              reading, surfing the web, cooking/baking, relaxing
+                            </li>
+                            <li>
+                              <u>favorite artists (music)</u> - Billy Joel,
+                              Queen, Pearl Jam, Nirvana, Elton John, ABBA, The
+                              Beatles, Boston, Fleetwood Mac, Ozzy Osbourne,
+                              Scorpions, System of A Down, Van Halen, Rush
+                            </li>
+                            <li>
+                              <u>clothing style</u> - Dark/Light Academia,
+                              Sweaters, button-ups, slacks, lots of coats &
+                              cardigans
+                            </li>
+                          </ul>
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_9.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>education</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_9.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <ul>
+                            <li>
+                              <u>schools</u> - Crested Butte Public School
+                              (K-5)<br />
+                              Gunnison High School (6-12)<br />
+                              Colorado College
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+
+                          <div class="column">
+                            <div class="box3" style="overflow-y: scroll">
+                              <aside id="leftSidebar" style="margin-right: 0px">
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>relationships</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>
+                                    Marina (Марина) Lubov Eliphas
+                                    (mom)(deceased)
+                                  </li>
+                                  <li>Griffin (dad)(absent/left)</li>
+                                  <li>Véronica (pseudo sister)</li>
+                                  <li>Roxanne (cousin)(deceased)</li>
+                                  <li>Brooke (pseudo niece)</li>
+                                  <li>
+                                    Rae,Iris,Erin (2nd cousins, in his custody)
+                                  </li>
+                                </ul>
+
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_11.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>dislikes</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/favicon_11.webp"
+                                    width="30px"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>humidity</li>
+                                  <li>traffic</li>
+                                  <li>dealing with money</li>
+                                  <li>crowded places</li>
+                                  <li>clutter/odd smells/messes</li>
+                                  <li>daylight savings time</li>
+                                  <li>muddy roads</li>
+                                  <li>parent teacher conferences</li>
+                                  <li>end of semester grading</li>
+                                  <li>computer issues</li>
+                                  <li>being the center of attention</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </section>
+
+                                <section class="full">
+                                  <div class="box2" style="overflow-y: scroll">
+                                    <aside
+                                      id="leftSidebar"
+                                      style="margin-right: 0px"
+                                    >
+                                      <h2>
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_8.gif"
+                                        />
+                                        what are they like?
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_8.gif"
+                                        />
+                                      </h2>
+
+                                      <ul>
+                                        <li>
+                                          Thomas is a quiet guy--cherishes his
+                                          alone time, gravitates towards hobbies
+                                          where he can do them alone, & does
+                                          have much of a social life.
+                                        </li>
+
+                                        <li>
+                                          It doesn't mean he isn't friendly or
+                                          kind, quite the contrary, though if
+                                          you see him talking to someone it's
+                                          usually his pseudo sister, Véronica, a
+                                          parents of one of his students, one of
+                                          or a former student of his, or a
+                                          coworker. Of which eliminates quite a
+                                          bit of people in their small, mountain
+                                          town.
+                                        </li>
+
+                                        <li>
+                                          It also doesn't help he lives 30
+                                          minutes from town--all the way up the
+                                          mountain. It's a beautiful place,
+                                          having inherited it from his mother.
+                                          He takes great pride in keeping it up
+                                          & functioning. Though it definitely
+                                          isolates him from the going on's in
+                                          town.
+                                        </li>
+
+                                        <li>
+                                          Although he never planned on being a
+                                          parent, he does his best when it comes
+                                          to taking care of his 2nd cousin,
+                                          Erin. Even after previous events that
+                                          threw their lives into a whirlwind, he
+                                          still does his best to prioritize
+                                          their needs. Even if their
+                                          parental/child relationship isn't the
+                                          most conventional.
+                                        </li>
+
+                                        <li>
+                                          Yes, he is THAT old. Though the only
+                                          thing about him that's really changed
+                                          is his hair--having gone grey over the
+                                          years. It's a running joke with the
+                                          staff he works the closest with at the
+                                          high school that he'll live forever.
+                                          He isn't the biggest fan of the jokes
+                                          because he prefers to stay out of the
+                                          limelight, not to mention making him
+                                          existential about his age.
+                                        </li>
+
+                                        <li>
+                                          Those that have known him long enough
+                                          know his absolute passion for music.
+                                          He doesn't really talk about it alot
+                                          unless you prompt him. Usually
+                                          incredibly bashful about his musical
+                                          abilities. He swaps between acoustic &
+                                          electric guitar & enjoys singing.
+                                          Sounding like if Hozier & Eddie Vedder
+                                          had a baby.
+                                        </li>
+
+                                        <li>
+                                          Though other than doing some shows
+                                          with some old college friends when he
+                                          goes to Denver once a year, he doesn't
+                                          do much other with it other than
+                                          personal enjoyment & practice. He's
+                                          pretty open to new music, usually
+                                          getting a word about it from his
+                                          students or Erin. He's quite far from
+                                          a pretrencious person when it comes to
+                                          music--he'll listen to pretty much
+                                          anything that jives with him.
+                                        </li>
+
+                                        <li>
+                                          Don't ask him about his love life,
+                                          because it's nonexistant. He's had
+                                          flings & interests earlier in his
+                                          life, but they've all fizzled out or
+                                          they've gone on separate paths. He
+                                          doesn't mind being single, having
+                                          gotten quite used to living that way.
+                                          Though Véronica tries to encourage him
+                                          to do SOMETHING. Though she never has
+                                          much luck. He thinks he's at the age
+                                          now where there's not much use in
+                                          dating. Who would want to date a
+                                          fossil like him?
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    </section>
+
+                                      <section class="full">
+                                        <h2>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_9.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_10.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_11.webp"
+                                          />
+                                          <u>aesthetic</u>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_11.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_10.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/blinkie_9.webp"
+                                          />
+                                        </h2>
+                                        <marquee
+                                          direction="left"
+                                          scrollamount="5"
+                                        >
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_1.jpg"
+                                            width=200px;
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_2.jpg"
+                                            width="250px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_3.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_4.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_5.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_67.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_7.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_8.jpg"
+                                            width="300px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_9.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_10.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_11.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_12.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_13.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thomas/aesthetic_14.jpg"
+                                            width="200px;"
+                                          />
+                                        </marquee>
+                                        </section>
+                                    </div>
+
+                                      <div style="display: flex; justify-content: center;">
+                                        <footer>
+                                          <span
+                                            ><a
+                                              href="https://nogginzmart.neocities.org/"
+                                              >nogginzmart</a
+                                            >
+                                            est. 8/13/2025!</span
+                                          ><br />
+                                          <span
+                                            >cyanobacteria.css by
+                                            <a
+                                              href="https://ribo.zone/free/layouts/"
+                                              >ribo.zone</a
+                                            ></span
+                                          >
+                                          <br>
+                                          <center>
+                                            <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                          </center>
+                                        </footer>
+                                        </div>
+                                        <script src="/JS/thomas.js"></script>
+  </body>
+</html>

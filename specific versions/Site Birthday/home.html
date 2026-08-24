@@ -1,0 +1,4298 @@
+<!doctype html>
+<html>
+  <head>
+    <title>nogginzmart</title>
+    <link href="/specific versions/Site Birthday/home.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="nogginzmart - homepage">
+    <meta property="og:description" content="A 2000's inspired one-stop-shop for OC art, comics, stories, & other silly gay autistic things the webmaster is into these days.">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://zoranadragon.neocities.org/more/oc-webring/onionring.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/siteicon.webp"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdring.neocities.org/cdring/onionring.css"
+    />
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
+    <div class="crt"></div>
+    <script type="text/javascript">
+// <![CDATA[
+var bits=80; // how many bits
+var speed=33; // how fast - smaller is faster
+var bangs=5; // how many can be launched simultaneously (note that using too many can slow the script down)
+var colours=new Array("#03f", "#f03", "#0e0", "#93f", "#0cf", "#f93", "#f0c"); 
+//                     blue    red     green   purple  cyan    orange  pink
+
+/****************************
+*      Fireworks Effect     *
+*(c)2004-14 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var bangheight=new Array();
+var intensity=new Array();
+var colour=new Array();
+var Xpos=new Array();
+var Ypos=new Array();
+var dX=new Array();
+var dY=new Array();
+var stars=new Array();
+var decay=new Array();
+var swide=800;
+var shigh=600;
+var boddie;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(light_blue_touchpaper);
+
+function light_blue_touchpaper() { if (document.getElementById) {
+  var i;
+  boddie=document.createElement("div");
+  boddie.style.position="fixed";
+  boddie.style.top="0px";
+  boddie.style.left="0px";
+  boddie.style.overflow="visible";
+  boddie.style.width="1px";
+  boddie.style.height="1px";
+  boddie.style.backgroundColor="transparent";
+  document.body.appendChild(boddie);
+  set_width();
+  for (i=0; i<bangs; i++) {
+    write_fire(i);
+    launch(i);
+    setInterval('stepthrough('+i+')', speed);
+  }
+}}
+
+function write_fire(N) {
+  var i, rlef, rdow;
+  stars[N+'r']=createDiv('|', 12);
+  boddie.appendChild(stars[N+'r']);
+  for (i=bits*N; i<bits+bits*N; i++) {
+    stars[i]=createDiv('*', 13);
+    boddie.appendChild(stars[i]);
+  }
+}
+
+function createDiv(char, size) {
+  var div=document.createElement("div");
+  div.style.font=size+"px monospace";
+  div.style.position="absolute";
+  div.style.backgroundColor="transparent";
+  div.appendChild(document.createTextNode(char));
+  return (div);
+}
+
+function launch(N) {
+  colour[N]=Math.floor(Math.random()*colours.length);
+  Xpos[N+"r"]=swide*0.5;
+  Ypos[N+"r"]=shigh-5;
+  bangheight[N]=Math.round((0.5+Math.random())*shigh*0.4);
+  dX[N+"r"]=(Math.random()-0.5)*swide/bangheight[N];
+  if (dX[N+"r"]>1.25) stars[N+"r"].firstChild.nodeValue="/";
+  else if (dX[N+"r"]<-1.25) stars[N+"r"].firstChild.nodeValue="\\";
+  else stars[N+"r"].firstChild.nodeValue="|";
+  stars[N+"r"].style.color=colours[colour[N]];
+}
+
+function bang(N) {
+  var i, Z, A=0;
+  for (i=bits*N; i<bits+bits*N; i++) { 
+    Z=stars[i].style;
+    Z.left=Xpos[i]+"px";
+    Z.top=Ypos[i]+"px";
+    if (decay[i]) decay[i]--;
+    else A++;
+    if (decay[i]==15) Z.fontSize="7px";
+    else if (decay[i]==7) Z.fontSize="2px";
+    else if (decay[i]==1) Z.visibility="hidden";
+	if (decay[i]>1 && Math.random()<.1) {
+	   Z.visibility="hidden";
+	   setTimeout('stars['+i+'].style.visibility="visible"', speed-1);
+	}
+    Xpos[i]+=dX[i];
+    Ypos[i]+=(dY[i]+=1.25/intensity[N]);
+
+  }
+  if (A!=bits) setTimeout("bang("+N+")", speed);
+}
+
+function stepthrough(N) { 
+  var i, M, Z;
+  var oldx=Xpos[N+"r"];
+  var oldy=Ypos[N+"r"];
+  Xpos[N+"r"]+=dX[N+"r"];
+  Ypos[N+"r"]-=4;
+  if (Ypos[N+"r"]<bangheight[N]) {
+    M=Math.floor(Math.random()*3*colours.length);
+    intensity[N]=5+Math.random()*4;
+    for (i=N*bits; i<bits+bits*N; i++) {
+      Xpos[i]=Xpos[N+"r"];
+      Ypos[i]=Ypos[N+"r"];
+      dY[i]=(Math.random()-0.5)*intensity[N];
+      dX[i]=(Math.random()-0.5)*(intensity[N]-Math.abs(dY[i]))*1.25;
+      decay[i]=16+Math.floor(Math.random()*16);
+      Z=stars[i];
+      if (M<colours.length) Z.style.color=colours[i%2?colour[N]:M];
+      else if (M<2*colours.length) Z.style.color=colours[colour[N]];
+      else Z.style.color=colours[i%colours.length];
+      Z.style.fontSize="13px";
+      Z.style.visibility="visible";
+    }
+    bang(N);
+    launch(N);
+  }
+  stars[N+"r"].style.left=oldx+"px";
+  stars[N+"r"].style.top=oldy+"px";
+} 
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+// ]]>
+</script>
+    <script type="text/javascript">
+// <![CDATA[
+var bits=80; // how many bits
+var speed=33; // how fast - smaller is faster
+var bangs=5; // how many can be launched simultaneously (note that using too many can slow the script down)
+var colours=new Array("#03f", "#f03", "#0e0", "#93f", "#0cf", "#f93", "#f0c"); 
+//                     blue    red     green   purple  cyan    orange  pink
+
+/****************************
+*      Fireworks Effect     *
+*(c)2004-14 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var bangheight=new Array();
+var intensity=new Array();
+var colour=new Array();
+var Xpos=new Array();
+var Ypos=new Array();
+var dX=new Array();
+var dY=new Array();
+var stars=new Array();
+var decay=new Array();
+var swide=800;
+var shigh=600;
+var boddie;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(light_blue_touchpaper);
+
+function light_blue_touchpaper() { if (document.getElementById) {
+  var i;
+  boddie=document.createElement("div");
+  boddie.style.position="fixed";
+  boddie.style.top="0px";
+  boddie.style.left="0px";
+  boddie.style.overflow="visible";
+  boddie.style.width="1px";
+  boddie.style.height="1px";
+  boddie.style.backgroundColor="transparent";
+  document.body.appendChild(boddie);
+  set_width();
+  for (i=0; i<bangs; i++) {
+    write_fire(i);
+    launch(i);
+    setInterval('stepthrough('+i+')', speed);
+  }
+}}
+
+function write_fire(N) {
+  var i, rlef, rdow;
+  stars[N+'r']=createDiv('|', 12);
+  boddie.appendChild(stars[N+'r']);
+  for (i=bits*N; i<bits+bits*N; i++) {
+    stars[i]=createDiv('*', 13);
+    boddie.appendChild(stars[i]);
+  }
+}
+
+function createDiv(char, size) {
+  var div=document.createElement("div");
+  div.style.font=size+"px monospace";
+  div.style.position="absolute";
+  div.style.backgroundColor="transparent";
+  div.appendChild(document.createTextNode(char));
+  return (div);
+}
+
+function launch(N) {
+  colour[N]=Math.floor(Math.random()*colours.length);
+  Xpos[N+"r"]=swide*0.5;
+  Ypos[N+"r"]=shigh-5;
+  bangheight[N]=Math.round((0.5+Math.random())*shigh*0.4);
+  dX[N+"r"]=(Math.random()-0.5)*swide/bangheight[N];
+  if (dX[N+"r"]>1.25) stars[N+"r"].firstChild.nodeValue="/";
+  else if (dX[N+"r"]<-1.25) stars[N+"r"].firstChild.nodeValue="\\";
+  else stars[N+"r"].firstChild.nodeValue="|";
+  stars[N+"r"].style.color=colours[colour[N]];
+}
+
+function bang(N) {
+  var i, Z, A=0;
+  for (i=bits*N; i<bits+bits*N; i++) { 
+    Z=stars[i].style;
+    Z.left=Xpos[i]+"px";
+    Z.top=Ypos[i]+"px";
+    if (decay[i]) decay[i]--;
+    else A++;
+    if (decay[i]==15) Z.fontSize="7px";
+    else if (decay[i]==7) Z.fontSize="2px";
+    else if (decay[i]==1) Z.visibility="hidden";
+	if (decay[i]>1 && Math.random()<.1) {
+	   Z.visibility="hidden";
+	   setTimeout('stars['+i+'].style.visibility="visible"', speed-1);
+	}
+    Xpos[i]+=dX[i];
+    Ypos[i]+=(dY[i]+=1.25/intensity[N]);
+
+  }
+  if (A!=bits) setTimeout("bang("+N+")", speed);
+}
+
+function stepthrough(N) { 
+  var i, M, Z;
+  var oldx=Xpos[N+"r"];
+  var oldy=Ypos[N+"r"];
+  Xpos[N+"r"]+=dX[N+"r"];
+  Ypos[N+"r"]-=4;
+  if (Ypos[N+"r"]<bangheight[N]) {
+    M=Math.floor(Math.random()*3*colours.length);
+    intensity[N]=5+Math.random()*4;
+    for (i=N*bits; i<bits+bits*N; i++) {
+      Xpos[i]=Xpos[N+"r"];
+      Ypos[i]=Ypos[N+"r"];
+      dY[i]=(Math.random()-0.5)*intensity[N];
+      dX[i]=(Math.random()-0.5)*(intensity[N]-Math.abs(dY[i]))*1.25;
+      decay[i]=16+Math.floor(Math.random()*16);
+      Z=stars[i];
+      if (M<colours.length) Z.style.color=colours[i%2?colour[N]:M];
+      else if (M<2*colours.length) Z.style.color=colours[colour[N]];
+      else Z.style.color=colours[i%colours.length];
+      Z.style.fontSize="13px";
+      Z.style.visibility="visible";
+    }
+    bang(N);
+    launch(N);
+  }
+  stars[N+"r"].style.left=oldx+"px";
+  stars[N+"r"].style.top=oldy+"px";
+} 
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+// ]]>
+</script>
+  </head>
+  <body>
+    <div id="popup" class="popup-overlay">
+      <div class="popup">
+        <h2>
+          a whole year of nogginzmart!
+        </h2>
+        <br>
+        <center>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/sitebirthdaypic.jpg"
+            width="200px"
+          />
+        </center>
+        <br>
+        <p>
+          it's crazy to think a whole year has gone by!
+        </p>
+        <p>
+          Thank you all for coming around & making this past year so memorable! I've met great friends, made lots of progress, & learnt a lot about how to do all of this. I couldn't be more happy I finally got my ass to sit down & make this site. 
+        </p>
+        <p>
+          It's hard to believe that only a year ago I got bored during the summer, stuck at my parent's house, jobless, & made this site. 
+        </p>
+        <p>
+          Special thanks to everyone in the Web Weavers Discord for being so helpful, friendly, & all & all awesome. You guys have no idea how much I appreciate you all. 
+        </p>
+        <p>
+          I can't wait to see what I'll get up to over this upcoming year, the people I may meet, the sites I'll see, & perhaps get my shit together & finish OC spinnys! But honestly, that's putting too much faith in myself /j
+        </p>
+        <p>
+          anyways, thank you all again<br>I hope y'all will stick around for whatever the future brings!
+        </p>
+        <br>
+        <button id="closeBtn">here's to another year!</button>
+      </div>
+    </div>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <div class="tooltip">
+          <a href="https://nogginzmart.neocities.org/about"
+            ><img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/oyymtx.png"
+          /></a>
+          <span class="tooltip-text" style="bottom: 100%">
+            huh? oh, hi. <br>wanna learn about me?
+          </span>
+        </div>
+        <center>
+        <div class="sitebutton">
+          <input type="text" 
+            style="
+            visibility: hidden;" 
+            value="&lt;a href=&quot;https://nogginzmart.neocities.org/&quot;&gt;&lt;img src=&quot;https://nogginzmart.neocities.org/catbox%20aint%20working/mysitebutton.gif&quot;&gt;&lt;/a&gt;" id="myInput">
+          <img onclick="copyandpaste()" 
+            style="
+            cursor: pointer; 
+            width:176px; 
+            height:62px;" 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/mysitebutton.gif"
+          >
+        </div>
+        </center>
+        <center><p>here's my button!</p></center>
+        <center><p>click to copy & link me back!</p></center>
+        <br />
+        <center><h1>current mood!</h1></center>
+        <center>
+          <p><u>07/15/26</u></p>
+        </center>
+        <center>
+          <div class="tooltip" style="max-width: 1000px;">
+            <div class="sitebutton2" >
+            <a href="https://www.imood.com/users/leenogginzmart"
+              ><img
+                src="https://moods.imood.com/display/uname-leenogginzmart/fg-000000/bg-D2B48C/imood.gif"
+                alt="The current mood of leenogginzmart at www.imood.com"
+                border="0"
+                width="120px;"
+            /></a>
+            </div>
+            <span class="tooltip-text" style="width: 600px; text-wrap: wrap;">
+              My period finally caught up to me--it's been about 2 month since my last one so this has been a sore & long process. Been craving so many foods it's driving me crazy!! I've kinda slowed down on Artfight updates due to this, but hopefully I'll be back at it so I can finish the season strong! I've been looking at getting a PC sometime in the future, so I've been excited thinking of the stuff to get for it! also my Ralsei plushed arrived!! So everything's not too bad! 
+            </span>
+          </div>
+        </center>
+        <center>
+          <p>
+            hover mouse over the badge to see more about what I did/felt today!
+          </p>
+        </center>
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+          hey, welcome in!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_2.webp"
+            width="20px;"
+            height="20px;"
+          />
+          welcome to nogginzmart!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_2.webp"
+            width="20px;"
+            height="20px;"
+          />
+        </h2>
+
+        <p>
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+          <center>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_3.webp"
+              width="30px;"
+              height="30px;"
+            />
+            nogginzmart is a celebration of the old internet!
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_3.webp"
+              width="30px;"
+              height="30px;"
+            />
+            <br />
+            <br />
+            being a place where I can post things I like, art I create, &
+            general fun stuff!
+
+            <br /><img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_4.webp"
+              width="30px;"
+              height="30px;"
+            />
+            such as,
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_4.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </center>
+        </p>
+
+        <h1></h1>
+
+        <center>
+          <h2>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_5.webp" width="30px;" />
+            <u>art</u>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_5.webp" width="30px;" />
+          </h2>
+        </center>
+        <center><h3>oc's & fanart</h3></center>
+        <center>
+          <h2>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_6.webp" width="30px;" />
+            <u>blog entries</u>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_6.webp" width="30px;" />
+          </h2>
+        </center>
+        <center><h3>keep up with me!</h3></center>
+        <center>
+          <h2>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_7.webp" width="30px;" />
+            <u>story information/oc profiles</u>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_7.webp" width="30px;" />
+          </h2>
+        </center>
+        <center>
+          <h2>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_8.webp" width="30px;" />
+            <u>comics pertaining to my stories</u>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_8.webp" width="30px;" />
+          </h2>
+        </center>
+        <center>
+          <h2>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_9.webp" width="30px;" />
+            <u>& lots of other cool stuff!!</u>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_9.webp" width="30px;" />
+          </h2>
+        </center>
+
+        <h1></h1>
+
+        <center>
+          <p>
+            now I am no coding genius, nor a person with infinite time, so stuff
+            will be added here at my own pace!
+          </p>
+        </center>
+        <br />
+        <center>
+          <p>
+            Though look forward to & check out all the activities & content here
+            on my sight!
+          </p>
+        </center>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <h4>
+          <center>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_10.webp"
+              width="35px;"
+              height="30px;"
+            />
+            thanks for stopping by!
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_10.webp"
+              width="35px;"
+              height="30px;"
+            />
+          </center>
+        </h4>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <center>
+          <p>please come by & follow my site!</p>
+          <h2>
+            <a href="https://neocities.org/site/nogginzmart">click here!</a>
+          </h2>
+        </center>
+        <br />
+        <center>click this button to give me a clap!</center>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/sparkle_fav.webp" width="30px;" />
+          <a href="https://clap.fc2.com/pages/leenogginzmart"
+            ><img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/clicktoclap.png"
+              title="you know you want to!"
+              width="130px;"
+          /></a>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/sparkle_fav.webp" width="30px;" />
+        </center>
+
+        <h1></h1>
+
+        <br />
+        <div class="marquee">
+          <div class="marquee-content" repeatCount="indefinite">
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/WS_marquee_1.png"/>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_2.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_3.webp" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_4.png"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_5.webp" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_6.webp" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_7.png"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_8.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_9.png" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_10.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_11.webp" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_12.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_13.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_14.webp" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_15.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_16.png"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_17.png"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_18.png"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_19.webp"  />
+          </div>
+          <div class="marquee-content" repeatCount="indefinite">
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/WS_marquee_1.png"/>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_2.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_3.webp" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_4.png"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_5.webp" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_6.webp" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_7.png"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_8.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_9.png" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_10.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_11.webp" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_12.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_13.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_14.webp" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_15.webp"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_16.png"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_17.png"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_18.png"  />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ws_marquee_19.webp"  />
+          </div>
+        </div>
+        <br>
+        <center>
+          <div class="tooltip">
+            <div class="sitebutton2">
+              <a 
+                href="https://discord.gg/GY5tuAnAgG" 
+                target="_blank" 
+                title="super cool discord invite button wooo!"
+              >
+                <img 
+                  src="https://ghostk.id/i/ww-88x31-left-black.png"
+                >
+              </a>
+            </div>
+          </div>
+          <br>
+          18+ Discord server for fellow Webmasters run by <a href="https://ghostk.id/">ghostk.id</a>!
+          <br />
+          <u>please join if eligible!</u>
+      </section>
+
+      <section class="small">
+        <div class="box5">
+          <br />
+          <center>
+            <a href="https://nogginzmart.neocities.org/rss.xml">
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/rss.png" width=150px;>
+            </a>
+            <br>
+            check out my RSS to stay updated!
+          </center>
+            <center>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+            </center>
+          <center>
+            <h2>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/sparkle_fav.webp"
+              width="30px"
+            />
+            BUTTONLINK!
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/sparkle_fav.webp"
+              width="30px"
+            />
+            </h2>
+            <div class="tooltip">
+              <iframe 
+                width="176px" height="62px"style="border:none" src="https://melonsoda.nekoweb.org/button.html" name="buttonlink">
+              </iframe>
+              <span class="tooltip-text">
+                check out other sick<br>sites on the indie web!
+              </span>
+            </div>
+          </center>
+          <center>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+            </center>
+          <br>
+          <center>
+            <div class="sidebuttons">
+              <div class="tooltip" style="bottom: 100%">
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/bestviewedcomp.gif"
+                />
+                <span class="tooltip-text">
+                  too lazy to make it<br> mobile friendly
+                </span>
+              </div>
+              <div class="tooltip" style="bottom: 100%">
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/thiswebsiteisgay.webp"
+                />
+                <span class="tooltip-text">
+                  certified homosexual<br>over here
+                </span>
+              </div>
+              <div class="tooltip">
+                <a href="https://arab.org/click-to-help/palestine/"
+                  ><img
+                      src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/8wt1v9.gif"
+                /></a>
+                  <span class="tooltip-text">
+                    help those in the<br>Gaza strip & advocate<br>for a free Palestine!
+                  </span>
+              </div>
+              <div class="tooltip">
+                <a href="https://nogginzmart.neocities.org/secretsite1"
+                  ><img
+                      src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/jqtje3.jpg"
+                /></a>
+                  <span class="tooltip-text">
+                    ???
+                  </span>
+              </div>
+              <div class="tooltip">
+                <a
+                  href="https://www.thetrevorproject.org/resources/category/gender-identity/"
+                >
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fm1ec4.png"
+                /></a>
+                <span class="tooltip-text">
+                  check out resources for<br>those that are trans<br>& ways to advocate for<br>our trans brothers,<br> sisters, & siblings!
+                </span>
+              </div>
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/o5x9hd.gif"
+              />
+
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/wqvs5x.gif"
+              />
+
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/6ckp7d.jpg"
+              />
+              <div class="tooltip">
+                <a href="https://www.eff.org/issues/privacy"
+                  ><img
+                      src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/gsbuc0.gif"
+                      title="people are fighting for our internet privacy! see how YOU can help & get involved!"
+                  /></a>
+                  <span class="tooltip-text">
+                    people are fighting for<br>out internet privacy!<br>see how YOU can<br>help & get involved!
+                  </span>
+              </div>
+              <div class="tooltip">
+                <a href="https://archive.org/"
+                  ><img
+                      src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/tumblr_4b3ecc7e1b988bcf18a8fba26880951e_54c9ba54_100.jpg"
+                  /></a>
+                  <span class="tooltip-text">
+                    heard of lost media?<br>lets help prevent losing<br>stuff on the internet &<br>& archive it through<br>the internet archive!
+                  </span>
+              </div>
+            </div>
+            <center>
+              <h1><u>Webrings!!</u></h1>
+            </center>
+
+            <div id="sapphicring1">
+              <a href="https://sunnishinez.neocities.org/webring/sapphicring"
+                ><img
+                  src="https://sunnishinez.neocities.org/webring/sapphic/swindex.png" /></a
+              ><br />
+              <a
+                href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous"
+                ><img
+                  src="https://sunnishinez.neocities.org/webring/sapphic/swleft.png"
+              /></a>
+              <a
+                href="https://sunnishinez.neocities.org/webring/sapphicring?action=random"
+                >random</a
+              >
+              <a
+                href="https://sunnishinez.neocities.org/webring/sapphicring?action=next"
+                ><img
+                  src="https://sunnishinez.neocities.org/webring/sapphic/swright.png"
+              /></a>
+            </div>
+
+            <center>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+            </center>
+
+            <!-- CDRING START -->
+            <div id="cdr">
+              <script
+                type="text/javascript"
+                src="https://cdring.neocities.org/cdring/onionring-variables.js"
+                ;
+              ></script>
+              <script
+                type="text/javascript"
+                src="https://cdring.neocities.org/cdring/onionring-widget.js"
+              ></script>
+            </div>
+          </center>
+          <!-- CDRING END -->
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <br />
+          <center>
+            <map name="onlinewidget">
+              <area
+                href="https://webring.ghostk.id/online/"
+                target="_blank"
+                shape="rect"
+                coords="20,14,167,24"
+                alt="The online webring"
+                title="The online webring"
+              />
+              <area
+                href="https://webring.ghostk.id/online/lee/previous"
+                target="_top"
+                shape="rect"
+                coords="7,27,60,36"
+                alt="Previous"
+                title="Previous"
+              />
+              <area
+                href="https://webring.ghostk.id/online/random"
+                target="_top"
+                shape="rect"
+                coords="74,27,126,36"
+                alt="Random"
+                title="Random"
+              />
+              <area
+                href="https://webring.ghostk.id/online/lee/next"
+                target="_top"
+                shape="rect"
+                coords="139,27,192,36"
+                alt="Next"
+                title="Next"
+              />
+            </map>
+            <img
+              usemap="#onlinewidget"
+              src="https://ghostk.id/i/onlinerainbow.gif"
+              width="200"
+              height="40"
+              style="
+                width: 200px;
+                height: 40px;
+                max-width: none;
+                image-rendering: pixelated;
+              "
+              alt="A Windows style dialog box titled 'come check out other active sites here at the online webring!' with three clickable buttons labeled Previous, Random, and Next"
+              title="come check out other active sites here at the online webring!"
+            />
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <br />
+          <div id="gfdkris">
+            <script
+              type="text/javascript"
+              src="https://fabstarotcorner.neocities.org/webring/onionring-variables.js"
+            ></script>
+            <script
+              type="text/javascript"
+              src="https://fabstarotcorner.neocities.org/webring/onionring-widget.js"
+            ></script>
+          </div>
+          <br />
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <br />
+          <center>
+            <div id="ckwr">
+              <div class="webring-wrapper">
+                <div class="webring-title">
+                  <a href='https://evehibi.nekoweb.org/ckwr/' target="_top">
+                    <img src="https://evehibi.nekoweb.org/ckwr/logo.png">
+                  </a>
+                </div>
+                <div class="webring-flex">
+                  <div class="webring-prev">
+                    <a href="https://evehibi.nekoweb.org/ckwr/?action=previous" target="_top">
+                      <img class="arrow-image" src="https://evehibi.nekoweb.org/ckwr/w/a.png">
+                     </a>
+                  </div>
+                  <img class="webring-image" 
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/34b887e159961882d88023fdde047f96.webp" 
+                    title="This is nogginzmart's favorite cookie! When asked why they liked this cookie, they said: 'THEY'RE SO CUTE THEY'RE A CUTIE PATOOTIE I STRIVE TO BE THIS LITTLE CUTIE!!'"> <!-- replace the src to a link of an image of your favorite cookie, and the title to whatever you want idc really -->
+                      <div class="webring-next">
+                        <a href="https://evehibi.nekoweb.org/ckwr/?action=next" target="_top">
+                          <img class="arrow-image" 
+                            src="https://evehibi.nekoweb.org/ckwr/w/a.png">
+                        </a>
+                      </div>
+                </div>
+              </div>
+              <link rel="stylesheet" href="https://evehibi.nekoweb.org/ckwr/dynamic.css" />
+            </div>
+          </center>
+          <br />
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+          
+          <center>
+            <a href="https://compulsivecomputer.net/CollectiveUnconscious">
+              <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/0ee38e1b65b957e7c7e2e524b598c7a5.jpg"
+                width=150px;
+              />
+            </a>
+            <div id="PNwebring">
+              <script type="text/javascript" src="https://compulsivecomputer.net/pnwebring/onionring-variables.js"></script>
+              <script type="text/javascript" src="https://compulsivecomputer.net/pnwebring/pnwebringtext-widget.js"></script>
+            </div>
+          </center>
+          
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+          
+          <center>
+            <div id=OCverse><script type=text/javascript src=https://zoranadragon.neocities.org/more/oc-webring/onionring-variables.js></script><script type=text/javascript src=https://zoranadragon.neocities.org/more/oc-webring/onionring-widget-tan.js></script></div>
+          </center>
+          
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+          <br>
+          <center>
+            <a style="color:#ffffff" href="https://qtbeans.neocities.org/artistsonline?action=previous"> << </a>
+            <a href="https://qtbeans.neocities.org/artistsonline"><img style="vertical-align:middle" src="https://files.catbox.moe/n8gl9h.png" width="130px"></a>
+            <a style="color:#ffffff;" href="https://qtbeans.neocities.org/artistsonline?action=next"> >> </a>
+            <br>
+            <a style="color:#ffffff" href="https://qtbeans.neocities.org/artistsonline?action=random">random</a>
+          </center>
+          
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+          <br>
+          <center>
+            <div>
+              <a 
+                href="https://e0nbreak.neocities.org/shrines/rgu/rguwebring"
+              >
+                <b>Virtual Star Embryology</b>
+              </a>
+              <br />
+              <img 
+                src = "https://cdn.imgchest.com/files/73e50ee2689b.png" 
+                style = "width: 100px;"
+              >
+              <br>
+              <a href="https://e0nbreak.neocities.org/shrines/rgu/rguwebring?action=previous">←</a>
+              <a href="https://e0nbreak.neocities.org/shrines/rgu/rguwebring?action=random">Random?</a>
+              <a href="https://e0nbreak.neocities.org/shrines/rgu/rguwebring?action=next">→</a>
+            </div>
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <center>
+            <br>
+            <a href="https://y2kstardust.neocities.org/webring/">
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/webring.png"
+                target="_blank"
+              >
+            </a> 
+            <br>
+            [<a href="https://y2kstardust.neocities.org/webring/prev.html?id=0">&lt;PREV
+            </a> 
+            <a href="https://y2kstardust.neocities.org/webring/rand.html?id=0">RAND
+            </a> 
+            <a href="https://y2kstardust.neocities.org/webring/list.html?id=0">LIST
+            </a> 
+            <a href="https://y2kstardust.neocities.org/webring/next.html?id=0">NEXT&gt;
+            </a>]
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <u><h1>Cliques</h1></u>
+          
+          <center>
+            <a href="https://joroki.neocities.org/cliques">my usual</a>
+            <p>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/m2gkc4.png" width="30px;" />
+            </p>
+            <p>iced cinnamon latte w/ apple brown sugar syrup</p>
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <center>
+            <a href="https://oodlecat.neocities.org/"
+              ><p>The Touch Generation</p></a
+            >
+            <a href="https://oodlecat.neocities.org/"
+              ><img
+                src="https://files.catbox.moe/i6bvl6.png"
+                title="the touch generation :: DS Lite"
+                width="40px;"
+            /></a>
+          </center>
+          
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <br>
+          <center>
+            <a href="https://lockheart.love/collections/cliques">
+              <img 
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/cringeisdead.gif"
+              width=190px;
+            ></a><br>
+              Sonic The Hedgehog<br>
+              Undertale/Deltarune<br>
+              Anime<br>
+              MLP F.I.M<br>
+              Invader Zim<br>
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+          
+          <center>
+            <br>
+            <div class="sidebuttons">
+              <div class="tooltip">
+                <a href="https://humanfinny.neocities.org/fanlistings/fanlisting_2000s">
+                  <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/100x50_00.png"
+                  />
+                </a>
+                <span class="tooltip-text">
+                  Music of The 2000s<br> fanlisting
+                </span>
+              </div>
+            </div>
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+          <br>
+          <center>
+            <a href="https://pkmn.aquarel.nu/">
+              <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/blinkiesCafe-HQ.gif"
+                width="190px"
+              />
+              <img 
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/shayminnn.png"
+                  width="60px;"
+                >
+            </a>
+            <h3>
+              Shaymin<br>Land Form
+            </h3>
+          </center>
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <center>
+            <a
+              href="https://www.pokemon-adoption.de"
+            >
+              <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/ezgif-722ee81d6e15cfd7.gif" 
+                style="width: 80px;" alt="Blossom"
+              />
+            </a>
+          </center>
+          <center>
+            <b>Name:</b> Blossom<br />
+            Adopt one yourself! @<a href="https://www.pokemon-adoption.de">Pok&eacute;mon Orphanage</a>
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <center>
+            <a 
+              href="https://bungle.online/clique"
+            >
+              <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/outline_2.png" 
+                alt="Angel resting upon a computer"
+                width="120px"
+              >
+            </a>
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <center>
+            <a 
+              href="https://sweet-pea.neocities.org/pages/cliques/text"
+            >
+              <h1>
+                witchy
+              </h1>
+            </a>
+            <img 
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/witch.webp"
+              width="50px"
+            > 
+            <h3>i practice witchcraft!</h3>
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+          </center>
+          
+          <center>
+            <br>
+            <div class="sidebuttons">
+              <a href="https://fan.moonkiss.org/utdr/">
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/utdr100x50.png"
+                />
+              </a>
+            </div>
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" 
+            />
+          </center>
+          <br>
+          <center>
+            <div class="othersidebuttons">
+              <a 
+                href="https://crushpunchh.neocities.org/othersites/deltaplushie/"
+                target="_blank"
+              >
+              <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/IMG_1206.png"
+              />
+              </a>
+            </div>
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" 
+            />
+          </center>
+
+          <center>
+            <br>
+            <div class="sidebuttons">
+            <a href="https://sweetcharm.net/.CuteDesktop/Website/RPGClub/index.html">
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/LinkMe1.gif"
+              >
+            </a>
+            </div>
+            <br>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/Untitled_3.png"
+              width="180px"
+            />
+          </center>
+
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" 
+            />
+          </center>
+        </section>
+
+          <section class="full">
+            <div class="row">
+              <div class="column">
+                <iframe
+                  width="314"
+                  height="321"
+                  scrolling="no"
+                  src="https://gifypet.neocities.org/pet/pet.html?name=Thor&dob=1755399932&gender=m&element=Fire&pet=https%3A%2F%2Ffiles.catbox.moe%2F7n8nmj.gif&map=https%3A%2F%2Ffiles.catbox.moe%2Fv5s4t3.png&background=https%3A%2F%2Ffiles.catbox.moe%2Fvwfu0f.jpg&tablecolor=black&textcolor=black"
+                  frameborder="2"
+                ></iframe>
+              </div>
+
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <center>
+                        <img
+                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_11.webp"
+                          width:30px;
+                          height:30px;
+                        />
+                        BLOG UPDATES!
+                        <img
+                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_11.webp"
+                          width:30px;
+                          height:30px;
+                        />
+                      </center>
+                    </h2>
+                    <center>
+                      <p>
+                        last update:
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >06/28/2026</a
+                        >
+                        <span id="lastupdate"></span>
+                      </p>
+                    </center>
+                    <ul style="padding-left: 20px">
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >06/28/2026</a
+                        >
+                        - Deltarune Chapter 5 Review & Thoughts!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >06/01/2026</a
+                        >
+                        - Pride Month is here! Commentary & Personal Anecdotes!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >05/07/2026</a
+                        >
+                        - the 2025/2026 school year is over! summer plans & reflections!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >04/07/2026</a
+                        >
+                        - just some updates on the page & Lee's super interesting life
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >02/06/2026</a
+                        >
+                        - A little blurb with some updates!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >01/07/2026</a
+                        >
+                        - The first blog post of the new year! Some Updates!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >12/12/2025</a
+                        >
+                        - Personal & Site Updates!!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >11/29/2025</a
+                        >
+                        - Happy Thanksgiving post with some other fun stuff!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >11/23/2025</a
+                        >
+                        - some updates before Thanksgiving!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >11/10/2025</a
+                        >
+                        - little updates & some personal stuff!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >11/8/2025</a
+                        >
+                        - random little updates!!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >11/2/2025</a
+                        >
+                        - personal & site updates + late Halloween wishes!!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >10/24/2025</a
+                        >
+                        - little personal updates!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >10/20/2025</a
+                        >
+                        - a bunch of different updates!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >10/15/2025</a
+                        >
+                        - site & personal updates!!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >10/2/2025</a
+                        >
+                        - site updates & personal, everyday nonsense!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >9/29/2025</a
+                        >
+                        - site updates & evident lee needs a nap
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >9/22/2025</a
+                        >
+                        - site & life updates!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >9/18/2025</a
+                        >
+                        - in memoriam of my sweet childhood dog, Lady
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >9/15/2025</a
+                        >
+                        - current events & site updates
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >9/8/2025</a
+                        >
+                        - site updates galore!!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >9/5/2025</a
+                        >
+                        - site updates!!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >9/3/2025</a
+                        >
+                        - site updates, planning, & some personal stuff!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >8/26/2025</a
+                        >
+                        - the college grind begins!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >8/22/2025</a
+                        >
+                        - life updates!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >8/19/2025</a
+                        >
+                        - site updates & personal hyjinks!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog"
+                          >8/18/2025</a
+                        >
+                        - personal & site updates!
+                      </li>
+                      <li>
+                        <a href="https://nogginzmart.neocities.org/blog#intro"
+                          >8/17/2025</a
+                        >
+                        - introduction to my blog!
+                      </li>
+                    </ul>
+                  </div>
+                  </div>
+
+                    <div class="column">
+                      <div class="ipod">
+                        <div class="screen">
+                          <b> song of the month! </b>
+                          <audio controls>
+                            <source
+                              src="https://nogginzmart.neocities.org/music/songofthemonthAugust2026.ogg"
+                              type="audio/mpeg"
+                            />
+                          </audio>
+                          <div class="caption">
+                              Collar Full<br />Panic! at The Disco
+                          </div>
+                        </div>
+                        <div class="button">
+                          <div class="b b-top">▶</div>
+                          <div class="b b-left">⏮︎</div>
+                          <div class="b b-right">⏭︎</div>
+                          <div class="b b-bottom">❚❚</div>
+                          <div class="button"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                    <section class="full">
+                      <center>
+                        <h3>
+                          "Breaking Bad Kart" by
+                          <a href="https://www.youtube.com/@Saltydkdan"
+                            >Saltydkdan</a
+                          >
+                        </h3>
+                      </center>
+                      <div class="row">
+                        <div class="column">
+                          <form id="pollForm"
+                             method="post"
+                             action="https://docs.google.com/forms/d/e/1FAIpQLSebET4RAzbH9Axr92kpowuKERceX0fzLKvHWjSWBkxmP7YWFQ/viewform?usp=dialog">
+                            <center>
+                              <p>
+                                <b>
+                                  What is keeping you from leaving Spotify/Apple Music/Youtube Music?
+                                </b>
+                              </p>
+                            </center>
+                            <center>
+                              <img 
+                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/f8rbbu.jpg"
+                                width="100%"
+                              />
+                            </center>
+                              <li>
+                                <input 
+                                    type="radio" 
+                                    name="entry.761438196" 
+                                    value="Piracy Scary">
+                                <label>
+                                  Piracy Scary
+                                </label>
+                              </li>
+                              <li>
+                                <input 
+                                  type="radio" 
+                                  name="entry.761438196" 
+                                  value="Convenience">
+                                <label>
+                                  Convenience
+                                </label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  name="entry.761438196"
+                                  value="Can't afford MP3 Player, iPod, etc">
+                                <label>
+                                  Can't afford MP3 Player, iPod, etc
+                                </label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  name="entry.761438196"
+                                  value="Haven't explored other options">
+                                <label>
+                                  Haven't explored other options
+                                </label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  name="entry.761438196"
+                                  value="What's wrong with those platforms?">
+                                <label>
+                                  What's wrong with those platforms? 
+                                </label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  name="entry.761438196"
+                                  value="Other (answer in chatbox!)">
+                                <label>
+                                  Other (answer in chatbox!)
+                                </label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  name="entry.761438196"
+                                  value="I have left these platforms for a better, ethical option! (share in chatbox!)">
+                                <label>
+                                  I have left these platforms for a better, ethical option! (share in chatbox!)
+                                </label>
+                              </li>
+                            <center>
+                              <img 
+                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/f8rbbu.jpg"
+                                width="100%"
+                              />
+                            </center>
+                            <center>
+                              <button id="voteBtn" type="submit">Vote</button>
+                            </center>
+                            <center>
+                              <button id="resultsBtn" type="button" disabled>View Results</button>
+                            </center>
+                          </form>
+                          <section id="results">
+
+                          </section>
+                        </div>
+                        <div class="column">
+                          <div class="tv">
+                            <style>
+                              .tv {
+                                width: 400px;
+                                position: relative;
+                                margin-left: 0px;
+                                margin-top: 10px;
+                              }
+                            </style>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/IMG_0959.png"
+                              style="image-rendering: pixelated"
+                            />
+                            <video controls="true"
+                              name="tvscreen"
+                              src="https://nogginzmart.neocities.org/Breaking%20Bad%20Kart.mp4"
+                              type="video/mp4"
+                              style="
+                                width: 330px;
+                                height: 240px;
+                                background-color: black;
+                                position: absolute;
+                                margin-top: 35px;
+                                margin-left: -363px;
+                                z-index: 0;
+                                overflow-y: hidden;
+                                overflow-x: hidden;
+                              "
+                            ></video>
+                          </div>
+                        </div>
+                        <div class="column">
+                         <div class="cal">
+                            <style>
+                              .cal {
+                                width: 350px;
+                                height: 0px;
+                                background: #354647;
+                                background-color: #354647;
+                                border: 3px #494238;
+                                border-radius: 3px;
+                                position: relative;
+                              }
+                            </style>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/d9c698a4ed4a4f22eb1dabbeae6edf15.jpg"
+                              style="
+                                width: 380px;
+                                border: 3px #1c0a0a;
+                                outline: 3px #1c0a0a;
+                                image-rendering: pixelated;
+                              "
+                            />
+                            <div
+                              class="month"
+                              style="
+                                background: #742705;
+                                border-bottom: 3px solid #3e210f;
+                                border-top: 3px solid #3e210f;
+                                font-size: 35px;
+                                padding: 2px;
+                                padding-left: 60px;
+                                color: rgb(255, 255, 255);
+                              "
+                            >
+                              August 2026
+                            </div>
+
+                            <div
+                              class="week"
+                              style="
+                                background: #6f624f;
+                                border-bottom: 3px solid #494238;
+                                font-size: 35px;
+                                color: #2e2922;
+                                overflow: hidden;
+                              "
+                            >
+                              <div
+                                class="sunday"
+                                style="
+                                  background: #6f624f;
+                                  float: left;
+                                  padding-left: 8px;
+                                  padding-right: 18px;
+                                "
+                              >
+                                S
+                              </div>
+                              <div
+                                class="monday"
+                                style="
+                                  background: #6f624f;
+                                  float: left;
+                                  padding-left: 8px;
+                                  padding-right: 18px;
+                                "
+                              >
+                                M
+                              </div>
+                              <div
+                                class="tuesday"
+                                style="
+                                  background: #6f624f;
+                                  float: left;
+                                  padding-left: 8px;
+                                  padding-right: 18px;
+                                "
+                              >
+                                T
+                              </div>
+                              <div
+                                class="wednesday"
+                                style="
+                                  background: #6f624f;
+                                  float: left;
+                                  padding-left: 8px;
+                                  padding-right: 18px;
+                                "
+                              >
+                                W
+                              </div>
+                              <div
+                                class="thursday"
+                                style="
+                                  background: #6f624f;
+                                  float: left;
+                                  padding-left: 8px;
+                                  padding-right: 18px;
+                                "
+                              >
+                                T
+                              </div>
+                              <div
+                                class="friday"
+                                style="
+                                  background: #6f624f;
+                                  float: left;
+                                  padding-left: 10px;
+                                  padding-right: 20px;
+                                "
+                              >
+                                F
+                              </div>
+                              <div
+                                class="saturday"
+                                style="
+                                  background: #6f624f;
+                                  float: left;
+                                  padding-left: 10px;
+                                  padding-right: 20px;
+                                "
+                              >
+                                S
+                              </div>
+                            </div>
+
+                            <div
+                              class="dates"
+                              style="
+                                background: #e5e5e5;
+                                border-bottom: 3px solid #8c8882;
+                                font-size: 30px;
+                                color: #8c8274;
+                                overflow: hidden;
+                              "
+                            >
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 14px;
+                                  padding-right: 22px;
+                                "
+                              >
+                                &nbsp;
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 15px;
+                                  padding-right: 18px;
+                                "
+                              >
+                                &nbsp;
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 15px;
+                                  padding-right: 37px;
+                                "
+                              >
+                                &nbsp;
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 18px;
+                                  padding-right: 18px;
+                                "
+                              >
+                                &nbsp;
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 15px;
+                                  padding-right: 15px;
+                                "
+                              >
+                                &nbsp;
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 50px;
+                                  padding-right: 15px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                &nbsp;
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 14px;
+                                  padding-right: 17px;
+                                "
+                              >
+                                1
+                              </div>
+                            </div>
+
+                            <div
+                              class="dates"
+                              style="
+                                background: #e5e5e5;
+                                border-bottom: 3px solid #8c8882;
+                                font-size: 30px;
+                                color: #bbc18b;
+                                overflow: hidden;
+                              "
+                            >
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 9px;
+                                  padding-right: 15.5px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                2
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 13px;
+                                  padding-right: 15px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                3
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 13px;
+                                  padding-right: 16px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                4
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 15px;
+                                  padding-right: 15px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                5
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 15px;
+                                  padding-right: 15px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                6
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 14px;
+                                  padding-right: 15.5px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                7
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 12px;
+                                  padding-right: 12px;
+                                "
+                              >
+                                8
+                              </div>
+                            </div>
+
+                            <div
+                              class="dates"
+                              style="
+                                background: #e5e5e5;
+                                border-bottom: 3px solid #8c8882;
+                                font-size: 30px;
+                                color: #bbc18b;
+                                overflow: hidden;
+                              "
+                            >
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 10px;
+                                  padding-right: 14px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                9
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 6.5px;
+                                  padding-right: 10px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                10
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 10px;
+                                  padding-right: 13px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                11
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 8px;
+                                  padding-right: 9px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                12
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 8px;
+                                  padding-right: 10px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                13
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 7px;
+                                  padding-right: 10px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                14
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 6px;
+                                  padding-right: 10px;
+                                "
+                              >
+                                15
+                              </div>
+                            </div>
+
+                            <div
+                              class="dates"
+                              style="
+                                background: #e5e5e5;
+                                border-bottom: 3px solid #8c8882;
+                                font-size: 30px;
+                                color: #bbc18b;
+                                overflow: hidden;
+                              "
+                            >
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 4px;
+                                  padding-right: 8px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                16
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 8px;
+                                  padding-right: 8px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                17
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 8px;
+                                  padding-right: 9.5px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                18
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 7.5px;
+                                  padding-right: 10px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                19
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 5px;
+                                  padding-right: 7px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                20
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 9px;
+                                  padding-right: 9px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                                21
+                              </div>
+                              <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 5px;
+                                  padding-right: 2px;
+                                "
+                              >
+                                22
+                              </div>
+                            </div>
+                           <div
+                              class="dates"
+                              style="
+                                background: #e5e5e5;
+                                border-bottom: 3px solid #8c8882;
+                                font-size: 30px;
+                                color: #bbc18b;
+                                overflow: hidden;
+                              "
+                            >
+                            <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 2px;
+                                  padding-right: 5px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                              23
+                            </div>
+                            <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 4px;
+                                  padding-right: 6px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                              24
+                            </div>
+                            <div 
+                              class="number" 
+                              style="
+                                background: #e5e5e5; 
+                                color:#93826A; 
+                                float: left;
+                                padding-left: 6px; 
+                                padding-right: 6px; 
+                                border-right: 3px solid #8c8882;
+                              "
+                            >
+                              25
+                            </div>
+                            <div 
+                              class="number" 
+                              style="
+                                background: #e5e5e5; 
+                                color:#93826A; 
+                                float: left; 
+                                padding-left: 6px; 
+                                padding-right: 6px;
+                                border-right: 3px solid #8c8882;
+                              "
+                            >
+                              26
+                            </div>
+                            <div 
+                              class="number" 
+                              style="
+                                background: #e5e5e5; 
+                                color:#93826A; 
+                                float: left; 
+                                padding-left: 5px;
+                                padding-right: 7px;
+                                border-right: 3px solid #8c8882;
+                              "
+                            >
+                              27
+                            </div>
+                            <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 6px;
+                                  padding-right: 6.5px;
+                                  border-right: 3px solid #8c8882;
+                                "
+                              >
+                              28
+                            </div>
+                            <div 
+                              class="number" 
+                              style="
+                                background: #e5e5e5;
+                                color:#93826A; 
+                                float: left; 
+                                padding-left: 4px; 
+                                padding-right: 3px;
+                              "
+                            >
+                              29
+                            </div>
+                            </div>
+                            <div
+                              class="dates"
+                              style="
+                                background: #e5e5e5;
+                                border-bottom: 3px solid #8c8882;
+                                font-size: 30px;
+                                color: #bbc18b;
+                                overflow: hidden;
+                              "
+                            >
+                            <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 2px;
+                                  padding-right: 5px;
+                                  border-right: 3px solid #8c8882;
+                                  border-bottom: 3px solid #8c8882;
+                                "
+                              >
+                              30
+                            </div>
+                            <div
+                                class="number"
+                                style="
+                                  background: #e5e5e5;
+                                  color: #93826a;
+                                  float: left;
+                                  padding-left: 7.5px;
+                                  padding-right: 9px;
+                                  border-right: 3px solid #8c8882;
+                                  border-bottom: 3px solid #8c8882;
+                                "
+                              >
+                              31
+                            </div>
+                          <script>
+                            //today's date
+                            const today = new Date();
+                            const todayDate = today.getDate();
+
+                            //all the calendar numbe
+                            const numbers =
+                              document.querySelectorAll(".cal .number");
+
+                            numbers.forEach((el) => {
+                              if (parseInt(el.textContent) === todayDate) {
+                                el.style.backgroundColor = "#5a1e05";
+                                el.style.color = "#fff";
+                              }
+                            });
+                          </script>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="full">
+                      <div class="row">
+                        <div class="column">
+                          <div class="box2" style="overflow-y: scroll">
+                            <h2>
+                              <img
+                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_12.webp"
+                                width:30px;
+                                height:30px;
+                              />
+                              TO-DO LIST
+                              <img
+                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_12.webp"
+                                width:30px;
+                                height:30px;
+                              />
+                            </h2>
+                            <ul>
+                              <li>Stardew related page</li>
+                              <li>make an achievement system</li>
+                              <li>finish Cecilia's spinny</li>
+                              <li>finish Serenity's spinny</li>
+                              <li>finish Gianna's spinny</li>
+                              <li>finish Véronica's spinny</li>
+                              <li>finish all D.T.T.K.I.F characters</li>
+                              <s><li>make Mountain Dew Spark shrine page</li></s>
+                              <s><li>finish Skye's spinny</li></s>
+                              <s><li>finish Thor's spinny</li></s>
+                              <s><li>redo Willow's spinny</li></s>
+                              <s><li>redo about me page</li></s>
+                              <s><li>set up media players & get rid of autoplaying music for agency</li></s>
+                              <s><li>fix all broken marquees</li></s>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="column">
+                          <iframe
+                            src="https://iframe.chat/embed?chat=nogginzmartscoolchat"
+                            id="chattable"
+                            width="370px;"
+                            height="500px;"
+                          ></iframe>
+                        </div>
+                        <div class="column">
+                          <div class="box4" style="overflow-y: scroll">
+                            <h2>
+                              <img
+                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_13.webp"
+                                width="50px;"
+                              />
+                              CHANGE LOG
+                              <img
+                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/fav_13.webp"
+                                width="50px;"
+                              />
+                            </h2>
+                            <ul>
+                              <li><u>08/10/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Proofreading revisions made to Erin & Brooke's OC pages
+                                </li>
+                                <li>
+                                  minor adjustments made to about me page
+                                </li>
+                              </ul>
+                              <li><u>08/09/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  minor adjustments to homepage
+                                </li>
+                                <li>
+                                  new sitebutton added & one revised
+                                </li>
+                              </ul>
+                              <li><u>08/06/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  spinny added to Cecilia's page!
+                                </li>
+                                <li>
+                                  new art & last artfight attacks added to art page!
+                                </li>
+                                <li>
+                                  added tooltip to Thor, Skye, & Cecilia's spinnys!
+                                </li>
+                            </ul>
+                            <ul>
+                              <li><u>08/02/2026</u> -</li>
+                              <ul>
+                                new CD's I got have been added to Collections page!
+                              </ul>
+                              <li><u>08/01/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Véronica's OC page is done!!
+                                </li>
+                                <li>
+                                  fixed several OC pages fixing Véronica's name!
+                                </li>
+                                <li>
+                                  calendar updated!
+                                </li>
+                                <li>
+                                  new song of the month added!
+                                </li>
+                                <li>
+                                  new video added to homepage TV!
+                                </li>
+                              </ul>
+                              <li><u>07/28/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  fixed widgets for Goofy Goobers Webring!
+                                </li>
+                                <li>
+                                  fixed homepage links on Goofy Goobers Webring, Community, & Resources page
+                                </li>
+                                <li>
+                                  added resource to the resources page!
+                                </li>
+                              </ul>
+                              <li><u>07/27/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Fixes made to Goofy Goobers Webring!
+                                </li>
+                              </ul>
+                              <li><u>07/26/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  WEBRING MADE! GOOFY GOOBERS WEBRING ONLINE!
+                                </li>
+                                <li>
+                                  Community added to the main directory!!
+                                </li>
+                                <li>
+                                  entries added to resources page!
+                                </li>
+                                <li>
+                                  site map added to to reflect new pages!
+                                </li>
+                              </ul>
+                              <li><u>07/25/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new site buttons added!
+                                </li>
+                              </ul>
+                              <li><u>07/23/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new site button added!
+                                </li>
+                              </ul>
+                              <li><u>07/19/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  <a href="https://nogginzmart.neocities.org/mountaindew">Mountain Dew Spark shrine</a> is finally up!!
+                                </li>
+                              </ul>
+                              <li><u>07/18/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  minor style adjustments made to homepage quiz (thanks weeble)
+                                </li>
+                              </ul>
+                              <li><u>07/17/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Undertale + Deltarune fanlisting added!
+                                </li>
+                                <li>
+                                  new sitebuttons added to homepage collection!
+                                </li>
+                                <li>
+                                  Virtual Star Embryology webring added!
+                                </li>
+                                <li>
+                                  Hyperfixated webring added!
+                                </li>
+                                <li>
+                                  deltaplushie webring added!
+                                </li>
+                                <li>
+                                  RPG Club clique added!
+                                </li>
+                              </ul>
+                              <li><u>07/15/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new buttons added to homepage collection & edited!
+                                </li>
+                                <li>
+                                  Separated Webrings & Cliques on homepage! 
+                                </li>
+                                <li>
+                                  added Computer Angel clique!
+                                </li>
+                                <li>
+                                  added Witchy clique!
+                                </li>
+                                <li>
+                                  prepared August calendar!
+                                </li>
+                              </ul>
+                              <li><u>07/12/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new quiz format & quiz up & running on homepage!
+                                </li>
+                              </ul>
+                              <li><u>07/08/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Adopted Pokemon added to homepage!
+                                </li>
+                                <li>
+                                  additions made to the About Me Page!
+                                </li>
+                                <li>
+                                  adjusted Collective Subconscious webring (Psychonauts) widget on homepage a bit
+                                </li>
+                              </ul>
+                              <li><u>07/05/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new button added to homepage's collection!
+                                </li>
+                                <li>
+                                  a bunch of art added to gallery!!
+                                </li>
+                              </ul>
+                              <li><u>06/30/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new button added to homepage's collection!
+                                </li>
+                                <li>
+                                  Spinny added to Skye's page!
+                                </li>
+                              </ul>
+                              <li><u>06/28/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Spinny added to Thor's page!
+                                </li>
+                              </ul>
+                              <li><u>06/27/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  a bunch of new buttons added to homepage!
+                                </li>
+                              </ul>
+                              <li><u>06/26/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new thing added to To Do list on homepage
+                                </li>
+                                <li>
+                                  some minor aesthetic editing to homepage
+                                </li>
+                              </ul>
+                              <li><u>06/22/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new video added to the homepage CRT!
+                                </li>
+                              </ul>
+                              <li><u>06/15/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  July calendar prepared for next month!
+                                </li>
+                              </ul>
+                              <li><u>06/13/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  added Artists Online Webring!
+                                </li>
+                              </ul>
+                              <li><u>06/12/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new button added to the homepage site button collection!
+                                </li>
+                              </ul>
+                              <li><u>06/01/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Song of the Month updated!
+                                </li>
+                                <li>
+                                  June Calendar up! Happy Pride Month!
+                                </li>
+                              </ul>
+                              <li><u>05/29/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  added "I Choose You!" clique to homepage webrings!
+                                </li>
+                              </ul>
+                              <li><u>05/27/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Skye, Thomas, & Victoria's pfp's updated on the OC page!
+                                </li>
+                              </ul>
+                              <li><u>05/26/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new art added to the gallery!
+                                </li>
+                              </ul>
+                              <li><u>05/25/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new video added to homepage TV!
+                                </li>
+                              </ul>
+                              <li><u>05/23/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new site button added to homepage!
+                                </li>
+                              </ul>
+                              <li><u>05/18/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  several new art pieces added to the art gallery!
+                                </li>
+                              </ul>
+                              <li><u>05/14/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  June calendar prepared!
+                                </li>
+                                <li>
+                                  some cosmetic changes made to art page!
+                                </li>
+                              </ul>
+                              <li><u>05/12/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  added Music of The 2000s fanlisting to webrings/cliques on homepage
+                                </li>
+                              </ul>
+                              <li><u>05/07/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Willow's spinny is finally done & up!
+                                </li>
+                                <li>
+                                  new art piece posted to the gallery!
+                                </li>
+                              </ul>
+                              <li><u>05/05/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  cosmetic changes to Random directory!
+                                </li>
+                              </ul>
+                              <li><u>05/01/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  May calendar up!
+                                </li>
+                                <li>
+                                  new song of the month added!
+                                </li>
+                              </ul>
+                              <li><u>04/29/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  cosmetic changes made to the rest of the pages
+                                </li>
+                              </ul>
+                              <li><u>04/26/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  site buttons featured fixed on homepage! + some more sites added!
+                                </li>
+                                <li>
+                                  buttonlink added to homepage!
+                                </li>
+                                <li>
+                                  another song added to blog page
+                                </li>
+                              </ul>
+                              <li><u>04/25/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  cosmetic changes to Cecilia's page
+                                </li>
+                                <li>
+                                  cosmetic changes to Brooke's page
+                                </li>
+                                <li>
+                                  cosmetic changes to blog 
+                                </li>
+                                <li>
+                                  cosmetic changes to about me page
+                                </li>
+                                <li>
+                                  cosmetic changes to 3DS page
+                                </li>
+                                <li>
+                                  even more cosmetic changes to homepage
+                                </li>
+                              </ul>
+                              <li><u>04/24/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  some more cosmetic changes to homepage
+                                </li>
+                                <li>
+                                  new video added to the homepage TV!
+                                </li>
+                              </ul>
+                              <li><u>04/22/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  some cosmetic changes to homepage!
+                                </li>
+                              </ul>
+                              <li><u>04/21/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  May calendar ready for next month!
+                                </li>
+                              </ul>
+                              <li><u>04/19/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  About Me page is redone & up!
+                                </li>
+                              </ul>
+                              <li><u>04/17/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  added autoplaying to audio players when opening page
+                                </li>
+                              </ul>
+                              <li><u>04/12/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  audio player added to Willow's page!
+                                </li>
+                                <li>
+                                  audio player added to Victoria's page!
+                                </li>
+                                <li>
+                                  audio player added to Thor's page!
+                                </li>
+                                <li>
+                                  audio player added to Thomas's page!
+                                </li>
+                                <li>
+                                  audio player added to stories page!
+                                </li>
+                                <li>
+                                  audio player added to Skye's page!
+                                </li>
+                                <li>
+                                  audio player added to site map!
+                                </li>
+                                <li>
+                                  audio player added to Serenity's page!
+                                </li>
+                              </ul>
+                              <li><u>04/11/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  volume slider removed from all audio players thus far because it's fucking stupid & makes the music too quiet, even on 100% >:/
+                                </li>
+                                <li>
+                                  audio player added to the resources page!
+                                </li>
+                                <li>
+                                  different songs added & deleted from Rae's page
+                                </li>
+                                <li>
+                                  audio player added to Rae's page!
+                                </li>
+                                <li>
+                                  audio player added to the OC page!
+                                </li>
+                                <li>
+                                  audio player added to Iris's page!
+                                </li>
+                                <li>
+                                  audio player added to the iPod page!
+                                </li>
+                                <li>
+                                  audio player added to Gianna's page!
+                                </li>
+                              </ul>
+                              <li><u>04/09/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  art landing page removed--site map & links adjusted accordingly! art navigation will send you directly to the art gallery!
+                                </li>
+                              </ul>
+                              <li><u>04/08/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  audio player added to Collections page!
+                                </li>
+                                <li>
+                                  audio player added to DTTKIF page!
+                                </li>
+                                <li>
+                                  audio player added to Erin's page!
+                                </li>
+                                <li>
+                                  click to copy site button code added!
+                                </li>
+                              </ul>
+                              <li><u>04/01/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  April Fools Prank added!!
+                                </li>
+                                <li>
+                                  Homepage Calendar updated for April!
+                                </li>
+                                <li>
+                                  audio player added to Cecilia's page!
+                                </li>
+                                <li>
+                                  Song of The Month updated!
+                                </li>
+                              </ul>
+                              <li><u>03/31/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  audio player added to the 3DS page!
+                                </li>
+                                <li>
+                                  audio player added to the art page!
+                                </li>
+                                <li>
+                                  audio player added to the blog page!
+                                </li>
+                                <li>
+                                  audio player added to Brooke's page!
+                                </li>
+                              </ul>
+                              <li><u>03/30/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  audio player added to the about page!
+                                </li>
+                                <li>
+                                  audio player added to homepage!
+                                </li>
+                              </ul>
+                              <li><u>03/29/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  marquees fixed on Brooke's page!
+                                </li>
+                                <li>
+                                  marquees fixed on Cecilia's page!
+                                </li>
+                                <li>
+                                  collection's page marquee fixed!
+                                </li>
+                              </ul>
+                              <li><u>03/26/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  3DS page marquee fixed
+                                </li>
+                                <li>
+                                  art page marquee fixed
+                                </li>
+                              </ul>
+                              <li><u>03/22/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  changed homepage TV so the video wouldn't autoplay
+                                </li>
+                                <li>
+                                  fixed homepage marquee since it's not working
+                                </li>
+                              </ul>
+                              <li><u>03/20/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  New video added to the homepage television!!
+                                </li>
+                              </ul>
+                              <li><u>03/18/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  homepage calendar prepared for the next month!
+                                </li>
+                              </ul>
+                              <li><u>03/15/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  site buttons added to homepage!
+                                </li>
+                                <li>
+                                  cringe is dead clique added to homepage!
+                                </li>
+                                <li>
+                                  new art piece added to gallery
+                                </li>
+                              </ul>
+                              <li><u>03/09/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  landing page created!
+                                </li>
+                                <li>
+                                  new song added to NEWLY NAMED Song of The Month!
+                                </li>
+                              </ul>
+                              <li><u>03/04/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  New OC page!! Welcome, <a href="https://nogginzmart.neocities.org/gianna">Gianna</a>!
+                                </li>
+                                <li>
+                                  New "Song of The Day"!
+                                </li>
+                              </ul>
+                              <li><u>03/02/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Collective Unconscious (Psychonauts) Webring added!
+                                </li>
+                                <li>
+                                  Cookie Run Webring adjusted! (they had an updated code template)
+                                </li>
+                                <li>
+                                  Various adjustments made to other pages
+                                </li>
+                              </ul>
+                              <li><u>02/28/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Art page fixed!
+                                </li>
+                                <li>
+                                  Art Gallery page fixed!
+                                </li>
+                                <li>
+                                  Blog page fixed!
+                                </li>
+                                <li>
+                                  Collections page fixed!
+                                </li>
+                                <li>
+                                  Cecilia's OC page fixed!
+                                </li>
+                                <li>
+                                  iPod page fixed!
+                                </li>
+                                <li>
+                                  Random Directory Page fixed!
+                                </li>
+                                <li>
+                                  Serenity's OC page fixed!
+                                </li>
+                                <li>
+                                  Skye's OC page fixed!
+                                </li>
+                                <li>
+                                  Tiny changes made to Thor's OC page!
+                                </li>
+                              </ul>
+                              <li><u>02/27/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  3DS page fixed!
+                                </li>
+                                <li>
+                                  OC page fixed!
+                                </li>
+                                <li>
+                                  Iris's OC page fixed!
+                                </li>
+                              </ul>
+                              <li><u>02/26/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Willow's OC page fixed!
+                                </li>
+                              </ul>
+                              <li><u>02/25/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  About page fixed!
+                                </li>
+                              </ul>
+                              <li><u>02/24/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Guestbook added to the bottom of homepage!
+                                </li>
+                              </ul>
+                              <li><u>02/23/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Victora's OC page fixed!
+                                </li>
+                                <li>
+                                  Thomas's OC page fixed!
+                                </li>
+                                <li>
+                                  Thor's OC page fixed!
+                                </li>
+                              </ul>
+                              <li><u>02/21/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  site button assets updated
+                                </li>
+                                <li>
+                                  March calendar prepared for the upcoming month
+                                </li>
+                                <li>
+                                  Site Map page fixed!
+                                </li>
+                                <li>
+                                  Stories Page fixed!
+                                </li>
+                              </ul>
+                              <li><u>02/20/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  broken site buttons removed from the bottom of homepage
+                                </li>
+                              </ul>
+                              <li><u>02/19/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Rae's OC page fixed!
+                                </li>
+                                <li>
+                                  Ollie's OC page fixed!
+                                </li>
+                              </ul>
+                              <li><u>02/18/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Erin's OC page fixed!
+                                </li>
+                                <li>
+                                  Not Found Page adjusted & fixed!
+                                </li>
+                              </ul>
+                              <li><u>02/17/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  DTTKIF page fixed!
+                                </li>
+                                <li>
+                                  Brooke's OC page fixed!
+                                </li>
+                              </ul>
+                              <li><u>02/15/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  New "Song of The Day"!
+                                </li>
+                              </ul>
+                              <li><u>02/14/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  RSS Feed finished & linked in the right side bar on homepage!
+                                </li>
+                              </ul>
+                              <li><u>02/13/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new OC site up! welcome
+                                  <a
+                                    href="https://nogginzmart.neocities.org/serenity"
+                                    >Serenity!</a
+                                  >
+                                </li>
+                                <li>adjustments made to latest OC sites</li>
+                                <li>new OC pfp added to OC page</li>
+                              </ul>
+                              <li><u>02/08/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new OC site up! welcome
+                                  <a
+                                    href="https://nogginzmart.neocities.org/cecilia"
+                                    >Cecilia!</a
+                                  >
+                                </li>
+                                <li>adjustments made to Skye's OC page!</li>
+                                <li>new sites added to site map!</li>
+                                <li>adjustments made to site map page</li>
+                              </ul>
+                              <li><u>02/07/2026</u> -</li>
+                              <ul>
+                                <li>edits & additions made to OC pages</li>
+                                <li>
+                                  javascript fixed on Iris's page (music working
+                                  now yaaay)
+                                </li>
+                                <li>
+                                  new OC site up! Welcome
+                                  <a
+                                    href="https://nogginzmart.neocities.org/skye"
+                                    >Skye!</a
+                                  >
+                                </li>
+                                <li>OC profile pics updated</li>
+                              </ul>
+                              <li><u>02/01/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  Homepage calendar updated for February!!
+                                </li>
+                                <li>CRT effect added to most sites!!</li>
+                                <li>
+                                  guide used for CRT effect added to resources
+                                  page!
+                                </li>
+                              </ul>
+                              <li><u>01/31/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  various adjustments made to different pages!
+                                </li>
+                                <li>
+                                  new site button added to the bottom of the
+                                  homepage!
+                                </li>
+                              </ul>
+                              <li><u>01/30/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  featured sites section on homepage edited to
+                                  remove refunct or discontinued sites!
+                                </li>
+                                <li>
+                                  collections site updated! got some cool stuff!
+                                </li>
+                              </ul>
+                              <li><u>01/29/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new video added to the TV on the homepage!
+                                </li>
+                                <li>
+                                  new site buttons added to the homepage!
+                                  (please check them out!!)
+                                </li>
+                                <li>
+                                  February calendar prepared! (will replace the
+                                  January one when the month is over!)
+                                </li>
+                              </ul>
+                              <li><u>01/28/2026</u> -</li>
+                              <ul>
+                                <li>"Song of The Day" updated!!</li>
+                              </ul>
+                              <li><u>01/22/2026</u> -</li>
+                              <ul>
+                                <li>adjustments made to homepage</li>
+                              </ul>
+                              <li><u>01/21/2026</u> -</li>
+                              <ul>
+                                <li>new emojis added to chattable!</li>
+                                <li>
+                                  along with notice of chattable being down for
+                                  a certain period of time
+                                </li>
+                              </ul>
+                              <li><u>01/12/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  fixed The Online Webring button & code per
+                                  request of the owner (i'm the stoopid)
+                                </li>
+                              </ul>
+                              <li><u>01/02/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  new random site page finished! Welcome
+                                  <a
+                                    href="https://nogginzmart.neocities.org/3DS"
+                                    >3DS Homebrew</a
+                                  >!
+                                </li>
+                              </ul>
+                              <li><u>12/31/2025</u> -</li>
+                              <ul>
+                                <li>
+                                  updating collections site because I got more
+                                  cool stuff!!
+                                </li>
+                                <li>
+                                  calendar on homepage updated for the new month
+                                </li>
+                              </ul>
+                              <li><u>12/30/2025</u> -</li>
+                              <ul>
+                                <li>
+                                  updating collections site because I got cool
+                                  stuff!!
+                                </li>
+                                <li>
+                                  new video added to the TV on the homepage!
+                                  "The Streaming Wars are Over. Piracy Won" by
+                                  Money Legends"
+                                </li>
+                              </ul>
+                              <li><u>12/17/2025</u> -</li>
+                              <ul>
+                                <li>
+                                  updating About Me & Blog pages because I'm one
+                                  year older!!! (happy birthday to me!!)
+                                </li>
+                              </ul>
+                              <li><u>12/8/2025</u> -</li>
+                              <ul>
+                                <li>Updates made to the iPod page</li>
+                                <li>Updates made to the Collections page</li>
+                              </ul>
+                              <li><u>12/6/2025</u> -</li>
+                              <ul>
+                                <li>
+                                  background music added to the resources page
+                                  (I swear to God I thought I put it in)
+                                </li>
+                                <li>
+                                  custom cursor added to the resources page
+                                </li>
+                                <li>
+                                  text added & some reformatting for the
+                                  resources page
+                                </li>
+                              </ul>
+                              <li><u>12/3/25</u> -</li>
+                              <ul>
+                                <li>Calendar added to the homepage!</li>
+                                <li>
+                                  little quiz patched after not working properly
+                                </li>
+                              </ul>
+                              <li><u>12/2/25</u> -</li>
+                              <ul>
+                                <li>
+                                  TV player added to homepage! (videos will be
+                                  updated every once & a while)
+                                </li>
+                                <li>
+                                  little quiz thing added to homepage! (same
+                                  thing, might be a little less often)
+                                </li>
+                              </ul>
+                              <li><u>11/29/25</u> -</li>
+                              <ul>
+                                <li>adjustments to the blog site</li>
+                                <li>
+                                  forgot to so updated the new site button on
+                                  blog site
+                                </li>
+                                <li>
+                                  dividers added between different webrings
+                                </li>
+                              </ul>
+                              <li><u>11/25/25</u> -</li>
+                              <ul>
+                                <li>Touch Generation clique added</li>
+                                <li>adjustments to home page width</li>
+                              </ul>
+                              <li><u>11/15/25</u> -</li>
+                              <ul>
+                                <li>Cookie Run Webring Code added!!</li>
+                                <li>current mood status added!!</li>
+                              </ul>
+                              <li><u>11/14/25</u> -</li>
+                              <ul>
+                                <li>
+                                  "KRIS WHERE THE FUCK ARE WE?" Webring code
+                                  added
+                                </li>
+                                <li>
+                                  Side bar adjusted to work with adding more
+                                  webrings & buttons
+                                </li>
+                                <li>chattable text box added</li>
+                              </ul>
+                              <li><u>11/10/25</u> - change log established</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="full">
+                      <div class="box6">
+                        <div class="box6header">
+                          <center>
+                            <h2>
+                              <img 
+                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/blinkie_1.webp" 
+                              />
+                              <u>check these other sites out!! </u
+                              >
+                              <img 
+                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/blinkie_1.webp" 
+                              />
+                            </h2>
+                          </center>
+                        </div>
+                        <div class="sitebutton3">
+                          <div class="row">
+                            <div class="column">
+                              <center>
+                                <a
+                                  href="https://olliveen.neocities.org/"
+                                  target="_blank"
+                                >
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/olliveen.gif"
+                                  />
+                                </a>
+                              </center>
+                            </div>
+                            <div class="column">
+                              <center>
+                                <a 
+                                  href="https://bruisedgh0st.neocities.org/"
+                                  target="_blank"
+                                >
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/1o753n.gif"
+                                  />
+                                </a>
+                              </center>
+                            </div>
+                            <div class="column">
+                              <center>
+                                <a 
+                                  href="https://toothachesplinter.neocities.org/"
+                                  target="_blank"
+                                >
+                                  <img
+                                    src="https://toothachesplinter.neocities.org/button.gif"
+                                  />
+                                </a>
+                              </center>
+                            </div>
+                            <div class="column">
+                              <center>
+                                <a
+                                  target="_blank"
+                                  href="https://toribytez.neocities.org/"
+                                >
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/trbz-btn.png"
+                                  />
+                                </a>
+                              </center>
+                            </div>
+                            <div class="column">
+                              <center>
+                                <a 
+                                  href="https://goldhillmall.neocities.org/"
+                                  target="_blank"
+                                >
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/goldhillmallbanner.gif"
+                                  />
+                                </a>
+                              </center>
+                            </div>
+                            <div class="column">
+                              <center>
+                                <a 
+                                  target="_blank" 
+                                  href="https://xsolimini.fr"
+                                >
+                                  <img
+                                    src="https://xsolimini.fr/images/xsoliminishq88x31.gif"
+                                  />
+                                </a>
+                              </center>
+                            </div>
+                            <div class="column">
+                              <center>
+                                <a 
+                                  href="https://aoki553.nekoweb.org/"
+                                  target="_blank" 
+                                >
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/aoki.gif"
+                                  />
+                                </a>
+                              </center>
+                            </div>
+                            <div class="column">
+                              <center>
+                                <a 
+                                  href="https://sunnishinez.neocities.org/"
+                                  target="_blank" 
+                                >
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/sunnishinez.png"
+                                  />
+                                </a>
+                              </center>
+                            </div>
+                            <div class="column">
+                              <center>
+                                <a 
+                                  href="https://nomi.gay/"
+                                  target="_blank" 
+                                >
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/site%20buttonsnomi.gif"
+                                  />
+                                </a>
+                              </center>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="column">
+                              <a 
+                                href="https://luziekennel.nekoweb.org/"
+                                target="_blank" 
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/luziekennel.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://mintywyvern.neocities.org/"
+                                target="_blank" 
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/2sao4q.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://www.virtuagirl.net/"
+                                target="_blank" 
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/virtuagirlbutton.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://burgernet.online/"
+                                target="_blank" 
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/burger.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://daisybells.neocities.org/"
+                                target="_blank" 
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/daisybellsCentral.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://usprisoner.neocities.org/"
+                                target="_blank" 
+                              >
+                                <img
+                                  src="https://file.garden/ZrvuPPC1HzBK0srs/momoa_button.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://ttaxyy.neocities.org/"
+                                target="_blank" 
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/1ml95p.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://roboticoperatingbuddy.neocities.org/"
+                                target="_blank" 
+                              >
+                                <img
+                                  src="https://roboticoperatingbuddy.neocities.org/images/mybutton.png"
+                                  alt="robotic operating buddys site button"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://velvetblue.neocities.org"
+                                target="_blank" 
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/vltthb.png"
+                                  alt="Velvet Blue"
+                                />
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="column">
+                              <a 
+                                href="https://lostlove.neocities.org/"
+                                target="_blank" 
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/92bvi3.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://lydels.neocities.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <img
+                                  src="https://lydels.neocities.org/imagenes/index/lydelsbutton.gif"
+                                  alt="button"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://inkyblinkyarts.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/sitebuttonnew.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://candybling.nekoweb.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://candybling.nekoweb.org/homepage/assets/candybling-button.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://stringsattached.neocities.org/"
+                                target="_blank"
+                                title="Strings Attached"
+                              >
+                                <img
+                                  src="https://stringsattached.neocities.org/sitebutton1.gif"
+                                  alt="A site button with text reading: Strings Attached. The text flashes periodically. A sprite of Spamton appears on the right of the text and changes as he notices the green strings that appear behind him."
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://nekromant.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/huaidy.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://hellstarares.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://hellstarares.neocities.org/buttons/hellstarares.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://sea-of-colors.neocities.org//index.html"
+                                target="_blank"
+                              >
+                                <img
+                                src="https://file.garden/Zhv5YDnnzDVjn52y/button.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://ridvenge.com" 
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://ridvenge.com/button.gif"
+                                />
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="column">
+                              <a
+                                href="https://sakuraducky.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/b_sakuraducky.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://justjennie.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://justjennie.neocities.org/images/jenniedoggies.gif"
+                                  style="
+                                  image-rendering: pixelated;
+                                  image-rendering: crisp-edges;
+                                  "
+                                  alt="just jennie"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://westopolis.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://westopolis.neocities.org/westopolis_stamp.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://coffeeplant.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/d318pz.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://luvstarkei.com/"
+                                target="_blank"
+                              > 
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/luvstarkei.webp"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://foolsparadise.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/7lpp0y.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://vivirinart.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://vivirinart.neocities.org/webbutton88x31.png"
+                                  alt="My button"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://marshdotcom.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/jg76um.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://nukochannel.neocities.org"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nukochannel.neocities.org/NukoChannelButton.gif"
+                                />
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="column">
+                              <a 
+                                href="https://warp.zone"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://warp.zone/Graphix/88x31/warpzone_button.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://ghostk.id/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://ghostk.id/i/88x31.gif"
+                                  alt="https://ghostk.id button"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://qtbeans.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/2u4cq3.png"
+                                >
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://howsoonisnow.org/" 
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/butt3.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://vulpecula.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/5dv8cd.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://temstuff.neocities.org/MainPage"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/duuoja.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://ne0nbandit.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://ne0nbandit.github.io/assets/img/btn/mine/nbbanner.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://cyanidefish.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/no3888.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://yutuzi.club"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://yutuzi.club/images/button88x31.gif"
+                                  alt="https://yutuzi.club button"
+                                />
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="column">
+                              <a 
+                                href="https://viatrix.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/tabihitonoheya.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://www.valentinely.cc/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/mjpcam.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://husbandoism.life/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/cBsLRim.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://jarema.me/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://jarema.me/badge.png"
+                                  alt="Jarema's digital garden"
+                                  style="image-rendering: pixelated"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://kimberlygb.neocities.org"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/dp1r7n.png"
+                                  alt="Kim's Blog"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://emiaki.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/6xsnbm.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://bungle.online/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/dbw8b2Z.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://zomboid.pro/connections.html"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/zbp1.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://korenara.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://korenara.neocities.org/images/ramenbutton2.gif"
+                                />
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="column">
+                              <a 
+                                href="https://loominggrey.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://file.garden/aX2GyiOMiUpCAxsu/download%20(1).png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://silencingmachine.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://silencingmachine.org/images/silencing_machine.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://socsie.space/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://socsie.space/button/socsie.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://cyberwright.nekoweb.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/cyberwright-btn.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://rss-list.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/rss-list.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://frammyjammy.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/frammyjammy-button88x31.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://salinepunch.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/buttonme.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://foggybear42.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/foggybear42.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://vinnyvistazo.com/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/vinnyvistazo_button.gif"
+                                />
+                              </a>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="column">
+                              <a 
+                                href="https://silicaspace.neocities.org/" 
+                                target="_blank"
+                              >
+                                <img 
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/silica.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://kozutism.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/abjmny.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://louyy.nekoweb.org/html-files/home.html"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTYwemYyNHV5anhwanE1MXFvcWlwdHZ5bnZkN3p5b3BnNWR1aWRwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j5CPyEUmJSncLmZIHT/giphy.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://ladyisabel0052.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                src="https://ladyisabel0052.neocities.org/assets/ladyisabel-button.png"
+                                />
+                             </a>
+                            </div>
+                            <div class="column">
+                              <a 
+                                href="https://isntreal.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/isntreal.jpg"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://neopetgameboy.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/neopetgameboy1.png"
+                                >
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://spinebreaker.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/88x31_banner.gif"
+                                >
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://shittymeat999.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/zthemeat.png"
+                                >
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://petrapixel.neocities.org/indiewebdb/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/indiewebdb.png"
+                                >
+                              </a>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="column">
+                              <a
+                                href="https://izzzyzzz.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/Izzzyzzz-Button.gif"
+                                >
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://0u75k1r7-p4rad1c3.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/Button.png"
+                                >
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://itinerae.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/tumblr_19285b0e8bbb935ed13a07e755457f86_325f6de2_100.jpg"
+                                >
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://hisahito.neocities.org/"
+                                target="_blank"
+                              >
+                                <img 
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/sitebuttonthing.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://niko.horse/"
+                                target="_blank"
+                              >
+                                <img 
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/banner88x31.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://dreamyren.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/notaphasecomic.gif"
+                                /> 
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://minx98.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/minx_button.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://leopardotted.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/mybutton.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://antiamorous.neocities.org/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/site%20buttons/antiamobutton.gif"
+                                />
+                              </a>
+                            </div>
+                          </div>
+                          <div class="row">
+
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  <section class="full">
+                     <iframe 
+                        src="http://users3.smartgb.com/g/g.php?a=s&i=g36-40628-69" 
+                        width="100%" 
+                        height="500px">
+                     </iframe>
+                  </section>
+              </div>
+                    <footer>
+                      <span>
+                        <a href="https://nogginzmart.neocities.org/"
+                          >nogginzmart</a>
+                        est. 08/13/2025!</span>
+                      <br>
+                      <span>
+                        cyanobacteria.css by
+                        <a href="https://ribo.zone/free/layouts/">ribo.zone</a>
+                        <br><img
+                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/homepage/blinkie_2.webp"
+                          width="170px;"
+                          height="30px;"
+                      ></span>
+                      <br>
+                      <center>
+                        <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                      </center>
+                    </footer>
+                  </aside>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="/specific versions/Site Birthday/home.js"></script>
+  </body>
+</html>

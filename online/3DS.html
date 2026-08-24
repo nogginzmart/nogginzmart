@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3DS Homebrew</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="nogginzmart - 3DS">
+    <meta property="og:description" content="ever wanted to learn how to mod your 3DS? check out my experience doing so!">
+    <link href="3DS.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+
+  <body>
+  <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+        </nav>
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/iPod">iPOD LIFE</a>
+          <a href="https://nogginzmart.neocities.org/collections"
+            >COLLECTIONS</a
+          >
+          <a href="https://nogginzmart.neocities.org/3DS">3DS HOMEBREW</a>
+          <a href="https://nogginzmart.neocities.org/mountaindew">MTN DEW SPARK</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/nav_blinkie_1.webp" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/nav_blinkie_2.webp" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/nav_blinkie_3.webp" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/nav_blinkie_4.webp" width="100%;" />
+      </div>
+
+      <section class="large">
+        <h1>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/blinkie_1.webp" width="180px;" />
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/favicon_1.webp" width="40px;" />
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/favicon_2.webp" width="40px;" /> 3DS
+          Homebrew
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/favicon_2.webp" width="40px;" />
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/favicon_1.webp" width="40px;" />
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/blinkie_1.webp" width="180px;" />
+        </h1>
+        <h2>learn about my experience with modding my 3DS console!</h2>
+        <center>
+          <h4>not to mention links & guides to resources that helped me!</h4>
+        </center>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <p>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/listimage.webp" width="30px;" /> So,
+          YOU want to mod YOUR 3DS/2DS console? or...not & you just wanna see
+          how I did it or check out the page (if that's the case, thank you!).
+          Well, you're in the right place!
+        </p>
+
+        <p>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/listimage.webp" width="30px;" /> As a
+          marginally tech savvy person--I found this process to be fairly easy.
+          Though I definitely had moments I was like "WHAT THE FUCK AM I
+          DOING!?!?", so do take what I offer with a grain of salt!!
+        </p>
+
+        <p>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/listimage.webp" width="30px;" />
+          Everything I will provide will be what will actually help you mod your
+          console--I will not be giving a step-by-step tutorial! I've only
+          modded 2 consoles, so I don't want to claim to be an expert or
+          anything!!
+        </p>
+
+        <p>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/listimage.webp" width="30px;" />
+          Furthermore, I am not responsible if you brick your console. Now it is
+          VERY hard with these processes in these guides to brick your console
+          unless you were purposefully trying--but if you do happen to do so,
+          uh...good luck! I hope you backed up your NAND!
+        </p>
+
+        <p>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/listimage.webp" width="30px;" />
+          Finally, I will try my best to keep things updated, but I highly
+          recommend just sticking to the main guides & refraining from relying
+          on videos. I found them useful as a visual learner, but these programs
+          are being actively updated. These videos can go out of date fast--so
+          please proceed with caution!
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <div class="marqueecontainer">
+          <div class="marquee">
+            <div class="marquee-content">
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_1.webp"/>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_2.png" />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_3.png"/>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_4.jpg"/>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_5.png"/>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_6.png" />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_7.png" />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_8.png"/>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_9.png" />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_10.webp" />
+            </div>
+            <div class="marquee-content">
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_1.webp"  />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_2.png" />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_3.png" />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_4.jpg" />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_5.png"  />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_6.png" />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_7.png"  />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_8.png" />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_9.png" />
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/ws_10.webp" />
+            </div>
+          </div>
+        </div>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+      </section>
+
+      <section class="half">
+        <div class="box3" style="overflow-y: scroll">
+          <center><h1>3DS HOMEBREW 101</h1></center>
+
+          <p>
+            <center>
+              <h3><u>what was the main guide you used?</u></h3>
+            </center>
+            <center>
+              <img src="https://files.catbox.moe/tezoom.webp" width="30px;" />
+              <a href="https://3ds.hacks.guide/key-information.html"
+                >3DS.Hacks.Guide</a
+              >!, it's the shit when it comes to modding your console! I will
+              say I struggles traversing the site, but with it & supplementary
+              content I will provide, I modded my console just fine!
+            </center>
+            <center>
+              <img src="https://files.catbox.moe/tezoom.webp" width="30px;" /> I
+              also used
+              <a href="https://youtu.be/C1X5kdCKy7c?si=yvrXaNSYxZJvpI5g"
+                >this video</a
+              >! (please remember these videos can go out of date due to
+              updates--use with with caution)
+            </center>
+
+            <center>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+            </center>
+
+            <center>
+              <h3><u>what are the main programs you use?</u></h3>
+            </center>
+            <center>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/tezoom.webp" width="30px;" />
+              The guide will tell you the main applications you'll need to have
+              a well-rounded modded 3DS/2DS experience--but I use<br />
+            </center>
+            <center>
+              <h3><u>TwilightMenu++</u></h3>
+              a DSi, DS, & GBA emulator<br />
+              <h3><u>Amenone</u></h3>
+              a theme, splash, & badge manager<br />
+              <h3><u>Univerval Updater</u></h3>
+              where you can download different applications or ROM hacks to
+              enhance your homebrew experience!<br />
+              <h3><u>uh...the-8th-letter-of-the-alphabet shop</u></h3>
+              I will not elaborate--use Google.<br />
+            </center>
+
+            <center>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+            </center>
+
+            <center>for more personal/fun applications, I have</center>
+
+            <center>
+              <h3><u>Nimbus/Pretendo</u></h3>
+              a fake server for online gameplay--look up the Pretendo website to
+              see what games you like they support!<br />
+
+              <h3><u>NetPass</u></h3>
+              find people for Streetpass over the internet!<br />
+
+              <h3><u>SNES9X</u></h3>
+              SNES emulator for the 3DS<br />
+
+              <h3><u>CTGP-7</u></h3>
+              modded Mario Kart 7 (you have to own the original game) with new
+              tracks, characters, & great online gameplay!<br />
+
+              <center>
+                <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+              </center>
+
+              <center>
+                <h3><u>why did you mod your console?</u></h3>
+              </center>
+
+              <center>
+                <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/tezoom.webp" width="30px;" />
+                After doing extensive research on 3DS modding, why wouldn't I?
+                It adds SO much life to your 3DS & honestly drives me to play
+                with it more. I can bond with other modded 3DS/2DS owners over
+                Streetpass & Miiverse, I can play with people on Mario Kart 7
+                online in CTGP-7, & I get to finally play games I've never had
+                the chance to touch!<br />
+
+                <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/tezoom.webp" width="30px;" />
+                I know it won't be for everyone, but my 3DS is so...genuinely me
+                since I've modded it. I make my own themes, I have all these
+                badges to decorate my home screen & folders, & I'm also not on
+                my phone as much because of all I can do on my 3DS!<br />
+
+                <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/tezoom.webp" width="30px;" />
+                If you have the money, knowledge, & time--mod a 3DS/2DS. Plus if
+                you already own another console in the family, breathe life back
+                into it!! I modded my little brother's 2DS & he was ecstatic! I
+                got him all the fanmade 3DS ports for FNAF 1-4 & got him some
+                original DS games he's always wanted to play with
+                TwilightMenu++!<br />
+
+                <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/tezoom.webp" width="30px;" />
+                Though if you're going to do it, do it soon, or search a while
+                to find the best deals on a 3DS/2DS! They're getting really
+                expensive due to rising nostalgia & modding capabilities, so get
+                out there!<br />
+              </center>
+
+              <center>
+                <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+              </center>
+
+              <center>
+                <h3><u>anything else you wanna tell us?</u></h3>
+              </center>
+
+              <center>
+                <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/tezoom.webp" width="30px;" />
+                now you have to have Pretendo/Nimbus to accept me as a friend (a
+                downside to the service), but my friend code is 2122 2052 2535!
+                Please feel free to add me!<br />
+
+                <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/tezoom.webp" width="30px;" />
+                Also, they're not accepted yet on Anemone's site, Theme Plaza
+                (also, personal note, their Discord is super not useful &
+                they're highkey assholes if you ask for help), so if you want to
+                add these themes I made, you'll have to do it manually!<br />
+
+                <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/tezoom.webp" width="30px;" />
+                You have to have anemone downloaded & a modded 3DS for this to
+                work, but take your SD card from your console & put it in your
+                reader for your computer/laptop. Take the downloaded file & make
+                sure it's just a normal folder, not zipped. find the themes
+                folder on your SD card & put it in there! It should work
+                properly on your DS from Anemone! All you'll need is to download
+                it through the application!<br />
+              </center>
+
+              <center>
+                <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+              </center>
+
+              <center>
+                <h3><u>Themes I Made</u></h3>
+              </center>
+
+              <center>
+                <a
+                  href="https://drive.google.com/drive/folders/1VXGLvt7xAhTP_j_AIWvoUGfJq5z1Prmc?usp=drive_link"
+                  download="2000s Diner Theme"
+                  >2000's Diner Theme</a
+                >
+              </center>
+              <br />
+
+              <center>
+                <a
+                  href="https://drive.google.com/drive/folders/1cGlRKzkoTsQuJqW3taQuPKojSw9pGcN8?usp=drive_link"
+                  download="Midwest Emo Theme"
+                  >Midwest Emo Theme</a
+                >
+              </center>
+              </center>
+            </div>
+            </section>
+
+              <section class="half">
+                <h1>My Stuff!</h1>
+
+                <center>
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/3DS/PXL_20260102_1855450772.jpg"
+                    width="500px;"
+                  />
+                </center>
+
+                <center><p>items included in this picture!</p></center>
+                <center>
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+                    width="100%;"
+                  />
+                </center>
+                <center>
+                  <p>
+                    3DS LL (Japanese 3DS XL)<br />
+                    <a
+                      href="https://www.amazon.com/dp/B07NW8RPYN?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1"
+                      >Anker SD Card Reader to USB-C</a
+                    ><br />
+                    <a
+                      href="https://www.amazon.com/dp/B09X7C2GBC?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1"
+                      >SanDisk 512GB Extreme Micro SD Card</a
+                    ><br />
+                    <a
+                      href="https://www.amazon.com/dp/B0FWYH5LXR?ref=ppx_yo2ov_dt_b_fed_asin_title"
+                      >Plastic Cover for Console</a
+                    >
+                  </p>
+
+                  <p></p>
+                </center>
+            </div>
+              </section>
+              <div style="display: flex; justify-content: center;">
+              <footer>
+                <span
+                  ><a href="https://nogginzmart.neocities.org/">nogginzmart</a>
+                  est. 08/13/25!</span
+                ><br />
+                <span
+                  >cyanobacteria.css by
+                  <a href="https://ribo.zone/free/layouts/">ribo.zone</a></span
+                >
+                <br>
+                <center>
+                  <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                </center>
+              </footer>
+              </div>
+            </center>
+          </p>
+        </div>
+      </section>
+    </div>
+    <script src="3DS.js"></script>
+  </body>
+</html>

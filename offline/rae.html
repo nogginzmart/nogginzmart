@@ -1,0 +1,828 @@
+<!doctype html>
+<html>
+  <head>
+    <title>rae's profile</title>
+    <link href="/CSS/rae.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+     <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/not_found">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_nav_pic.jpg" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_1.webp" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_2.webp" width="100%;" />
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_heading.webp" /> rae's page
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_heading.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_23.webp"
+            width="30px;"
+            height="30px;"
+          />
+          learn more about my character, rae!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_23.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h2>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_2.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Rae is one of the side characters im my story,
+          <a href="">Dedicated to The Kidz I Fought</a>. She is one of Erin's
+          older sisters. Being a fraternal twin with
+          <a href="https://nogginzmart.neocities.org/iris">Iris</a>. It might be
+          in your best interest to leave her be...
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_2.webp"
+            width="40px;"
+            height="40px;"
+          />
+          It's evident Rae has something going on. She prefers to be left alone,
+          either ignoring those that strike up conversation or snapping back at
+          them if they're persistent. She may keep to herself, but she's not
+          afraid to let you know your company is not wanted.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_2.webp"
+            width="40px;"
+            height="40px;"
+          />
+          School...doesn't seem like her strong suit. Skipping class entirely,
+          sleeping through class, or she's just off in her own mind--either way,
+          not paying attention. She also gets REALLY angry if you ask her to
+          read aloud in front of people. Being really ashamed about her
+          dyslexia. Though it seems math is the only one she will least TRY to
+          listen & understand.
+          <a href="https://nogginzmart.neocities.org/thomas">Thomas</a> making
+          sure she gets time with the only teacher that seems to know how to
+          deal with her.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_2.webp"
+            width="40px;"
+            height="40px;"
+          />
+          It seems the only real knack she has, & will try in persistently in,
+          is track. Thomas is thankful for it because it keeps her from being
+          kicked out--easily leading their team to state championships. Her
+          track coach is also strict with her, wanting her to stop doing shit
+          just because--which Rae usually butts up against. Though, if she had
+          the choice, she'd listen to music & run all day...
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+        <h2><img src="" /> check out more info below!! <img src="" /></h2>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <br />
+        <marquee direction="left" scrollamount="5">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_WS_marquee_1.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/ws_2.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/ws_3.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_marquee_4.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_WS_marquee_5.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_WS_marquee_6.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_WS_marquee_7.png"
+            width="150px;"
+            height="70px;"
+          />
+        </marquee>
+        <marquee direction="left" scrollamount="5">
+          <p>
+            BACKGROUND PLAYLIST ✮⋆˙ Welcome to Paradise - Green Day ✮⋆˙ Lucky Guy -
+            The Muffs ✮⋆˙ Sifting - Nirvana ✮⋆˙ Feeling Sorry - Paramore
+             ✮⋆˙ Brianstorm - Arctic Monkeys ✮⋆˙
+          </p>
+        </marquee>
+      </section>
+
+      <section class="small">
+        <br>
+        <br>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_3.webp" width=100%;>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_4.webp" width="300px;" />
+        <center>
+          <div class="tooltip">
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae%20spinny!!!.gif" />
+            <span class="tooltip-text" style="bottom: 100%;">
+              ...why are you here?
+            </span>
+          </div>
+        </center>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_4.webp" width="300px;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_3.webp" width=100%;>
+      </section>
+
+      <section class="full">
+        <h2>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_5.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_blinkie_3.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_blinkie_4.webp" />
+          <u>more information</u>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_blinkie_4.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_blinkie_3.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_5.webp" />
+        </h2>
+
+        <div class="column">
+          <div class="box3" style="overflow-y: scroll">
+            <aside id="leftSidebar" style="margin-right: 0px">
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>basic info</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+              </h2>
+              <ul>
+                <li>
+                  <u>pronouns</u> -
+                  <img
+                    src="https://i.imgur.com/or7Yz8j.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>gender</u> -
+                  <img
+                    src="https://i.imgur.com/FMoJ9vk.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>sexual orientation</u> -
+                  <img
+                    src="https://i.imgur.com/5iXiC8z.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li><u>birthplace</u> - Gulf Shores, Alabama</li>
+
+                <li><u>age</u> - 17</li>
+
+                <li><u>birthday</u> - June 1st, 1991</li>
+
+                <li><u>height</u> - 6'2''</li>
+              </ul>
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_favicon_1.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>likes</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_favicon_1.webp"
+                  width="30px;"
+                  height="30px;"
+                />
+              </h2>
+              <ul>
+                <li>being alone</li>
+                <li>running</li>
+                <li>cold weather (fall & winter seasons)</li>
+                <li>coffee</li>
+                <li>math (the only subject she'll try in)</li>
+                <li>sleeping in</li>
+                <li>cooking/baking (don't ask her or she won't do it)</li>
+                <li>first-person shooters (mostly call of duty)</li>
+                <li>driving</li>
+                <li>nighttime</li>
+                <li>holidays (though she'll never admit it)</li>
+              </ul>
+            </div>
+            </div>
+
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_5.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>personality</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_5.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                    </h2>
+                    <h2><u>stats</u></h2>
+
+                    <ul>
+                      <li>
+                        <u>MBTI</u> -
+                        <img
+                          src="https://i.imgur.com/bYSdYyu.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+
+                      <li>
+                        <u>Zodiac</u> -
+                        <img
+                          src="https://i.imgur.com/zl1ZGZ2.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/AOsZxjG.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/tUt6mnx.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                    </ul>
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/9dnfcj.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>mental/physical</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/9dnfcj.webp"
+                        width="30px;"
+                        height="30px;"
+                      /><u>ailments</u>
+                    </h2>
+                    <ul>
+                      <li>
+                        <u>Disabilities</u> -
+                        <img
+                          src="https://i.imgur.com/o7CqYdD.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/gUe2de3.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/7FieAqK.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/t7CcZoC.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+
+                      <li>
+                        <u>Psychological Disorders</u> -
+                        <img
+                          src="https://i.imgur.com/o7CqYdD.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/gUe2de3.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/7FieAqK.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/t7CcZoC.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/faKBo3F.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+
+                      <li><u>Addictions</u> - nicotine</li>
+                    </ul>
+                </div>
+
+                    <div class="column">
+                      <div class="box3" style="overflow-y: scroll">
+                        <aside id="leftSidebar" style="margin-right: 0px">
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_favicon_2.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>interests</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_favicon_2.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <h2><u>& hobbies</u></h2>
+                          <ul>
+                            <li><u>interests</u> - music, running</li>
+
+                            <li>
+                              <u>hobbies</u> - playing her guitar/singing,
+                              running
+                            </li>
+
+                            <li>
+                              <u>extracurriculars</u> - varsity track & field,
+                              cross country, concert band (PIT, Percussion,
+                              MISC.)
+                            </li>
+
+                            <li>
+                              <u>favorite artists (music)</u> - Fall Out Boy,
+                              Green Day, Breaking Benjamin, Arctic Monkeys, Cage
+                              The Elephant, CAKE, Nirvana, The Offspring,
+                              Paramore, Pearl Jam, System of A Down, Radiohead,
+                              Metallica, Pantera, Disturbed, SOME Blink-182,
+                              Sublime
+                            </li>
+
+                            <li>
+                              <u>clothing style</u> - comfortable, sporty,
+                              grunge
+                            </li>
+                          </ul>
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_6.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>education</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/favicon_6.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <ul>
+                            <li>
+                              <u>schools</u> - Lubbock-Cooper West Elementary
+                              School (pre K-5)<br />
+                              Crested Butte Community School (6-present)
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+
+                          <div class="column">
+                            <div class="box3" style="overflow-y: scroll">
+                              <aside id="leftSidebar" style="margin-right: 0px">
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_favicon_3.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>relationships</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_favicon_3.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Iris (fraternal twin)</li>
+                                  <li>Iris, Erin (siblings)</li>
+                                  <li>Thomas (guardian)</li>
+                                  <li>Roxanne (mom)(deceased)</li>
+                                  <li>Skye (friend)</li>
+                                </ul>
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_favicon_4.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>dislikes</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_favicon_4.webp"
+                                    width="30px"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Victoria</li>
+                                  <li>school</li>
+                                  <li>attention on her</li>
+                                  <li>waking up early</li>
+                                  <li>humidity/excessive heat</li>
+                                  <li>chores</li>
+                                  <li>
+                                    having absolutely nothing to do & nowhere to
+                                    go
+                                  </li>
+                                  <li>rain</li>
+                                  <li>people in authority</li>
+                                  <li>
+                                    crowded spaces/too many people talking
+                                  </li>
+                                  <li>
+                                    "nosey" people (believe me she has a
+                                    specific definition)
+                                  </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </section>
+
+                                <section class="full">
+                                  <div class="box2" style="overflow-y: scroll">
+                                    <aside
+                                      id="leftSidebar"
+                                      style="margin-right: 0px"
+                                    >
+                                      <h2>
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_6.webp"
+                                        />
+                                        what are they like?
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_6.webp"
+                                        />
+                                      </h2>
+
+                                      <ul>
+                                        <li>
+                                          Rae, even to her own family, is
+                                          distant. It doesn't help she can't
+                                          really explain WHY she does what she
+                                          does. Especially when emotionally
+                                          charged. Thomas tries his best not to
+                                          set her off, though to her it comes
+                                          off as babying her. Iris seems to be
+                                          the only one to talk to her & Rae
+                                          doesn't snap back as harsh? If
+                                          anything she's very monotone &
+                                          straight forward with her. She almost
+                                          entirely avoids Erin. Though Erin
+                                          isn't one to confront people unless
+                                          they have something specific to say or
+                                          need something. So their interaction
+                                          is scarce.
+                                        </li>
+
+                                        <li>
+                                          Skye & Rae mostly bond over the fact
+                                          they stick out like sore thumbs. Skye
+                                          balances out Rae & honestly Rae seems
+                                          more relaxed & interested in having
+                                          fun when around Skye. Though Skye
+                                          doesn't put up with some of Rae's
+                                          bullshit, especially when it's self
+                                          sabotage-y or against Victoria. Skye
+                                          doesn't mind Rae has her own issues
+                                          she's trying (& failing a bit) to deal
+                                          with. Though there's...an extent
+                                          they're willing to put up with.
+                                        </li>
+
+                                        <li>
+                                          Her hate of Victoria is pretty
+                                          irrational. Knowing how fake she is &
+                                          knows the girls she associates herself
+                                          with bully Iris the most. Even if
+                                          Victoria tries to remedy those
+                                          transgressions, Rae isn't keen on
+                                          forgiving & forgetting. Causing the
+                                          both of them to get in trouble for
+                                          their variety of feuds. Much to
+                                          Thomas's & Gianna's dismay.
+                                        </li>
+
+                                        <li>
+                                          Although Rae is distant, she will
+                                          vehemently defend her siblings tooth &
+                                          nail. Anyone bullying them? THAT sure
+                                          won't last for long, or the bullies
+                                          will get more creative with their
+                                          tactics. Erin finds it embarrassing,
+                                          Iris more worried about Rae getting in
+                                          trouble. Rae can't stand injustice,
+                                          ESPECIALLY from people with absolutely
+                                          no backbone.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    </section>
+
+                                      <section class="full">
+                                        <h2>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_7.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_blinkie_idk.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_blinkie_idk2.webp"
+                                          />
+                                          <u>aesthetic</u>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_blinkie_idk2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_blinkie_idk.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/blinkie_7.webp"
+                                          />
+                                        </h2>
+                                        <marquee
+                                          direction="left"
+                                          scrollamount="5"
+                                        >
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_1.jpg"
+                                            width="200px;"
+                                            height="230px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_2.jpg"
+                                            width="230px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/aesthetic_3.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_4.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_5.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_6.jpg"
+                                            width="200px;"
+                                            height="230px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_7.jpg"
+                                            width="200px;"
+                                            height="240px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_8.jpg"
+                                            width="200px;"
+                                            height="230px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_9.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_10.jpg"
+                                            width="200px;"
+                                            height="220px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_11.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_12.jpg"
+                                            width="230px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_13.jpg"
+                                            width="200px;"
+                                            height="250px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/rae/rae_aesthetic_14.jpg"
+                                            width="230px;"
+                                            height="200px;"
+                                          />
+                                        </marquee>
+                                        </section>
+                                    </div>
+
+                                        <footer>
+                                          <span
+                                            ><a
+                                              href="https://nogginzmart.neocities.org/"
+                                              >nogginzmart</a
+                                            >
+                                            est. 8/13/2025!</span
+                                          ><br />
+                                          <span
+                                            >cyanobacteria.css by
+                                            <a
+                                              href="https://ribo.zone/free/layouts/"
+                                              >ribo.zone</a
+                                            ></span
+                                          >
+                                          <br>
+                                          <center>
+                                            <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                          </center>
+                                        </footer>
+
+                                        <script src="/JS/rae.js"></script>
+  </body>
+</html>

@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+  <head>
+    <title>stories</title>
+    <link href="stories.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/siteicon.webp"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+     <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <div class="crt"></div>
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+      </div>
+
+      <section class="half">
+        <h1>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/favicon_1.webp" /> welcome to the
+          stories page! <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/favicon_1.webp" />
+        </h1>
+        <h2>
+          this is where you can explore all the worlds I have, or had the hand,
+          in creating!
+        </h2>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/blinkie_1.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/blinkie_2.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/blinkie_3.webp" />
+        </center>
+        <center>
+          <p>
+            Although I may be the world's slowest writer, I have plenty of
+            content & concepts you can come check out!
+          </p>
+          <p>
+            Some I've been working on for years while others are just concepts!
+          </p>
+          <p>
+            can't guarrantee some will remain the concepts they are now but
+            least you can watch & see how they progress over time!
+          </p>
+          <center>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/blinkie_4.webp" /><img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/blinkie_5.webp"
+            /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/blinkie_6.webp" />
+          </center>
+          <p>
+            to thy left, is the normal directory & then the STORIES directory!!
+          </p>
+          <p>
+            there, you can select which story you want to read about! More like
+            a description rather than reading the story itself, I mean
+          </p>
+          <p>
+            do you just want to go straight to seeing my oc's? there's also the
+            OC page!! you can also access it through the different story tabs as
+            well! though I figured people would be most interested in the
+            characters within the stories!
+          </p>
+        </center>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+        <center>
+          <h3>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/favicon_2.webp" /> thanks for coming
+            by! <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/favicon_2.webp" />
+          </h3>
+        </center>
+        <center><h3>have fun exploring!</h3></center>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+      </section>
+
+      <section class="small">
+        <center>
+          <marquee direction="down" scrollamount="5">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee1_ws_1.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee1_ws_2.webp"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee1_ws_3.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee1_ws_4.jpg"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee1_ws_5.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee1_ws_6.png"
+              width="150px;"
+              height="70px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee1_ws_7.webp"
+              width="150px;"
+              height="70px;"
+            />
+          </marquee>
+        </center>
+      </section>
+
+      <section class="full">
+        <marquee direction="right" scrollamount="5">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_1.jpg"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_2.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_3.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_4.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_5.jpg"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_6.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_7.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_8.jpg"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_9.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_10.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_11.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_122.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_13.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/stories/marquee2_ws_14.webp"
+            width="150px;"
+            height="70px;"
+          />
+        </marquee>
+      </section>
+    </div>
+
+    <footer>
+      <center>
+        <span
+          ><a href="https://nogginzmart.neocities.org/">nogginzmart</a> est.
+          08/13/2025!</span
+        >
+      </center>
+      <center>
+        <span
+          >cyanobacteria.css by
+          <a href="https://ribo.zone/free/layouts/">ribo.zone</a></span
+        >
+      </center>
+      <br>
+      <center>
+            <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+      </center>
+    </footer>
+    <script src="stories.js"></script>
+  </body>
+</html>

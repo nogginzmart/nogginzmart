@@ -1,0 +1,637 @@
+<!doctype html>
+<html>
+  <head>
+    <title>earthbound webring</title>
+    <link
+      href="earthbound.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta property="og:title" content="earthbound webring">
+    <meta property="og:description" content="for fans of the SNES cult classic--Earthbound!!">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/favicon.ico"
+      type="image/x-icon"
+    />
+    <script>
+      // List of members. You need to update this by hand.
+      const members = [
+        {
+          url:"https://dipndops.neocities.org/",
+          title:"dipdop hideout",
+          description:"A lil place to share my art, projects, and yaps! c:",
+          buttonUrl:"https://dipndops.neocities.org/dipdop_button.gif",
+          favoriteCharacter:"Jeff<br>Lucas",
+        },
+        {
+          url:"https://lunarcorvus.com",
+          title:"The Violet Abyss<br><b>18+</b>",
+          description:"My Violet Internet Garden where I show off my projects & interests",
+          buttonUrl:"https://lunarcorvus.com/assets/buttons/lunarcorvusbutton.png",
+          favoriteCharacter:"Paula<br>Lucas",
+        },
+        {
+          url: "https://nogginzmart.neocities.org/",
+          title: "lee_nogginzmart<br><b>18+ C/W</b>",
+          description:
+            "nogginzmart is a celebration of <br>the old internet, specifically the early 2000s. Here I post my art, stuff about my OCs, comics, stories, & blog posts about what goes on in my life & site progress!!",
+          buttonUrl:
+            "https://nogginzmart.neocities.org/catbox%20aint%20working/mysitebutton.gif",
+          favoriteCharacter:
+            "Ness",
+        },
+      ];
+    </script>
+    <script src="webringu2.js"></script>
+  </head>
+  <body>
+    <div class="crt"></div>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="0"
+          class="seek_slider"
+          onchange="seekTo()"
+        />
+
+        <div class="total-duration">0:00</div>
+      </div>
+      <audio id="music" src=""></audio>
+    </div>
+    <div class="container">
+      <header >
+        <center>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Earthbound-Logo-PNG.png"
+            />
+            <span class="tooltip-text" style="font-size: 20px; top: 90%">
+              Earthbound Webring<br>say fuzzy pickles!<br> you're at the stinkiest webring <br>for the stinkiest game on the SNES!
+            </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+        </nav>
+        <br>
+        <!-- optional spot for styled button outside the navigation box -->
+        <iframe width="100%" height="220px" style="border-radius: 10px;" src="https://evehibi.nekoweb.org/ringlink/" name="ringlink"></iframe>
+        <center>
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/688d60e73d3995a9517eebd65bd4696b.jpg"
+                width="100%"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/990e44abf69d1bf002b0a1dc1450f6b4.jpg"
+                width="100%"
+            />
+            <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/98a0c29820dc7cf7161cda95a847e6f0.jpg"
+                width="100%"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/f2638261ac67da50d10cb511f48e6030.jpg"
+                width="100%"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/4529d2ca8fdbfb539dd6d26b33c26d58.jpg"
+                width="100%"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/1eef2caefbf3f3fc895c2c3793c238a9.jpg"
+                width="100%"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/24a0e7b49b7dab8d819382f15f6c9c79.jpg"
+                width="100%"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/dbb71d71890423f80cd51cd48ab8eff8.jpg"
+                width="100%"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/d2fad7c72b4ff65a47ad22e54e85e4ee.jpg"
+                width="100%"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/9c2c6f49ae9a874c1977e41087747e6e.jpg"
+                width="100%"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/a4d237da30710c7aaf88ab42d3481f43.jpg"
+                width="100%"
+            />
+        </center>
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/tumblr_b175f84ccaa97ccce9ca266f9658c65e_26d49927_250.gif"
+            width="200px"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Question%20Mark.gif"
+          />
+          the who & the what now?
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Question%20Mark.gif"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/tumblr_b175f84ccaa97ccce9ca266f9658c65e_26d49927_250.gif"
+            width="200px"
+          />
+        </h1>
+        <center>
+          <p><b>This game stinks!</b></p>
+          <p>
+            Despite what Nintendo Power says, this is webring for fans of <br>Shigesato Itoi's SNES cult classic,<br> <b>EARTHBOUND</b>!
+          </p>
+          <p>
+            what'd you expect? that's pretty much it!
+          </p>
+          <p>
+            why don't'cha stay a while?
+          </p>
+        </center>
+        <h1></h1>
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/tumblr_d3c7b25faf12611e8197d674b45b7973_f594dcdd_250.webp"
+            width="200px"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Captain%20Strong%20-%20Walk%20(Front).gif"
+          />
+          rules
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Captain%20Strong%20-%20Walk%20(Front).gif"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/tumblr_d3c7b25faf12611e8197d674b45b7973_f594dcdd_250.webp"
+            width="200px"
+          />
+        </h1>
+        <ol>
+          <li>
+            you don't have to have a page/site dedicated to Earthbound! There's
+            <br />honestly...no real requirements? juuuust follow the rules &
+            answer <br />all the required questions!
+          </li>
+          <li>
+            No social medias, carrds, etc--it must be YOUR website where you can
+            <br />edit the HTML/CSS/etc. <br />I will be checking!
+          </li>
+          <li>I need to be able to find where you put the widget!</li>
+          <li>
+            No sites with hateful & discriminatory content, including
+            discriminative <br />views. No racism, homophobia, transphobia,
+            zionism, etc.
+          </li>
+          <li>
+            If your website is 18+ or have content warnings, there must be
+            visible <br />warnings before accessing such content!
+          </li>
+          <li>
+            Furthermore, you must disclose ANY content warnings & if your site
+            is <br />18+. Otherwise I will turn away your application
+          </li>
+          <li>
+            Virtually empty sites & sites full of broken links will be rejected
+          </li>
+          <li>
+            I reserve the right to refuse applicants. This isn't to discourage
+            anyone<br />
+            from doing the content they want to do, but I'm still a person. I
+            get <br />uncomfortable & stuff bothers me.
+          </li>
+        </ol>
+        <h1></h1>
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/tumblr_a919deec5b208e48f8367aa005fcf640_fdabd2a4_250.webp"
+            width="200px"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Exit%20Mouse%20-%20Walk%20(Left).gif"
+          />
+          application
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Exit%20Mouse%20-%20Walk%20(Left).gif"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/tumblr_a919deec5b208e48f8367aa005fcf640_fdabd2a4_250.webp"
+            width="200px"
+          />
+        </h1>
+        <center>
+          <form id="pollForm">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/favicon.ico"
+              width="30px"
+            />
+            means that the question is required to answer!
+            <h1></h1>
+            <li>
+              <label>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/favicon.ico"
+              width="30px"
+                />
+                Website URL
+                <textarea
+                  id="websiteUrl"
+                  name="entry.1271095145">
+                </textarea>
+              </label>
+            </li>
+            <li>
+              <label>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/favicon.ico"
+              width="30px"
+                />
+                Your Name or Site's Name
+                <textarea
+                  id="siteName"
+                  name="entry.255617314">
+                </textarea>
+              </label>
+            </li>
+            <li>
+              <label>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/favicon.ico"
+              width="30px"
+                />
+                Favorite Character
+                <textarea
+                  id="favoriteCharacter"
+                  name="entry.1359109291">
+                </textarea>
+              </label>
+            </li>
+            <li>
+              <label>
+                <img
+                 src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/favicon.ico"
+              width="30px"
+                />
+                Site Description
+                <textarea
+                  id="siteDescription"
+                  name="entry.1378333182">
+                </textarea>
+              </label>
+            </li>
+            <li>
+              <label>
+                Any Content Warnings/18+
+                <textarea
+                  id="warnings"
+                  name="entry.526902955">
+                </textarea>
+              </label>
+            </li>
+            <li>
+              <label>
+                Site Button Link
+                <textarea
+                  id="buttonLink"
+                  name="entry.428297621">
+                </textarea>
+              </label>
+            </li>
+            <br />
+            <button id="voteBtn" type="submit">
+              Submit Application
+            </button>
+          </form>
+          <h2>
+            <u> Note </u>
+          </h2>
+          <center>
+            I will try to add newbies as fast as I can! <br />Though I am in
+            university & employed, so apply with this in mind!<br />Furthermore,
+            if you need to update any information, <br />email me at
+            <b>nogginzmart@protonmail.com</b>!
+          </center>
+        </center>
+        <h1></h1>
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/tumblr_df5509561bbc575514955bd61ca80450_3034a8d5_250.webp"
+            width="200px"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Present%20-%20Wrapped.gif"
+          />
+          widget
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Present%20-%20Wrapped.gif"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/tumblr_df5509561bbc575514955bd61ca80450_3034a8d5_250.webp"
+            width="200px"
+          />
+        </h1>
+        <center>
+          <h2><u>Note</u></h2>
+          do not put a widget on your site until you are <b>accepted</b> into
+          the webring!
+        </center>
+        <br />
+        <div id="widget-options">
+          <div class="widgets" id="one" title="generic">
+            <div>
+              <center>
+                <a href="https://nogginzmart.neocities.org/earthbound">
+                  <b>Earthbound<br>Webring</b>
+                </a>
+                <br />
+                <a
+                  href="https://nogginzmart.neocities.org/earthbound?action=previous"
+                >
+                  previous
+                </a>
+                <a
+                  href="https://nogginzmart.neocities.org/earthbound?action=random"
+                >
+                  random
+                </a>
+                <a
+                  href="https://nogginzmart.neocities.org/earthbound?action=next"
+                >
+                  next
+                </a>
+              </center>
+            </div>
+            <center>
+              <button
+                onclick="copyOne()"
+                value="
+                        &lt;div>
+                            &lt;center>
+                                &lt;a 
+                                    href='https://nogginzmart.neocities.org/earthbound'>
+                                    &lt;b>Earthbound&lt;b>Webring&lt;/b>
+                                &lt;/a>
+                                &lt;br />
+                                &lt;a 
+                                    href='https://nogginzmart.neocities.org/earthbound?action=previous'>
+                                    previous
+                                &lt;/a>
+                                &lt;a 
+                                    href='https://nogginzmart.neocities.org/earthbound?action=random'>
+                                    random
+                                &lt;/a>
+                                &lt;a 
+                                    href='https://nogginzmart.neocities.org/earthbound?action=next'>
+                                    next
+                                &lt;/a>
+                            &lt;/center>
+                        &lt;/div>"
+                id="inputOne"
+              >
+                copy widget!
+              </button>
+            </center>
+          </div>
+          <div class="widgets" id="two" title="style1">
+            <div>
+              <center>
+                <a href="https://nogginzmart.neocities.org/earthbound">
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/earthboundwebring.png"
+                  />
+                </a>
+                <br />
+                <a
+                  href="https://https://nogginzmart.neocities.org/earthbound?action=previous"
+                >
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/left.png"
+                    width="15px"
+                  />
+                </a>
+                <a
+                  href="https://nogginzmart.neocities.org/earthbound?action=random"
+                >
+                  random
+                </a>
+                <a
+                  href="https://nogginzmart.neocities.org/earthbound?action=next"
+                >
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/right.png"
+                    width="15px"
+                  />
+                </a>
+              </center>
+            </div>
+            <center>
+              <button
+                onclick="copyTwo()"
+                value="&lt;div>
+                        &lt;center>
+                            &lt;a
+                                href='https://nogginzmart.neocities.org/earthbound'>
+                                &lt;img
+                                    src='https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/earthboundwebring.png'
+                                />
+                            &lt;/a>
+                            &lt;br>
+                            &lt;a 
+                                href='https://nogginzmart.neocities.org/earthbound?action=previous'>
+                                    &lt;img
+                                        src='https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/left.png'
+                                        width='15px'
+                                    />
+                            &lt;/a>
+                            &lt;a 
+                                href='https://nogginzmart.neocities.org/earthbound?action=random'>
+                                random
+                            &lt;/a>
+                            &lt;a 
+                                href='https://nogginzmart.neocities.org/earthbound?action=next'>
+                                    &lt;img 
+                                        src='https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/right.png'
+                                        width='15px'
+                                    />
+                            &lt;/a>
+                        &lt;/center>
+                    &lt;/div>"
+                id="inputTwo"
+              >
+                copy widget!
+              </button>
+            </center>
+          </div>
+        </div>
+        <center>
+          <br />
+          & hopefully more to come soon!
+        </center>
+        <br />
+        <h1></h1>
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/tumblr_81d45e5f7466aff73f7fc12842537c7f_a341f1b9_250.webp"
+            width="200px"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Ness%20(Bike)%20(Left).gif"
+          />
+          members
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Ness%20(Bike)%20(Left).gif"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/tumblr_81d45e5f7466aff73f7fc12842537c7f_a341f1b9_250.webp"
+            width="200px"
+          />
+        </h1>
+        <center>
+          <u
+            ><h3>
+              This webring has <span id="webringucount"></span> members
+            </h3></u
+          >
+        </center>
+        <center>
+          <b>C/W</b> means content warnings for that site!<br>
+          <u>sorted from newest to oldest</u>
+        </center>
+        <div class="box3">
+          <div id="webringulist">
+          </div>
+          <div class="earthbound">
+            <div>
+                <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Ness%20-%20Walk%20(Left).gif"
+                />
+            </div>
+            <div>
+                <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Paula%20-%20Walk%20(Left).gif"
+                />
+            </div>
+            <div>
+                <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Jeff%20-%20Walk%20(Left).gif"
+                />
+            </div>
+            <div>
+                <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/earthbound/Poo%20-%20Walk%20(Left).gif"
+                />
+            </div>
+          </div>
+        </div>
+        <noscript>Please enable JavaScript to view the member list.</noscript>
+      </section>
+    </div>
+    <footer>
+      <br />
+      <span>
+        used with help from
+        <a href="https://petrapixel.neocities.org/coding/webringu"
+          >petrapixel's</a
+        >
+        webringu! </span
+      ><br />
+      <span
+        >cyanobacteria.css by
+        <a href="https://ribo.zone/free/layouts/">ribo.zone</a></span
+      >
+      <br>
+      Earthbound sprites thanks to <a href="https://www.videogamesprites.net/Earthbound/">videogamesprites.net</a>!
+      <br />
+      <center>
+        <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by
+        <a href="https://example.com">lee_nogginzmart</a> is licensed under
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+          >CC BY-NC-ND 4.0</a
+        ><img
+          src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+          alt=""
+          style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+        /><img
+          src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
+          alt=""
+          style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+        /><img
+          src="https://mirrors.creativecommons.org/presskit/icons/nc.svg"
+          alt=""
+          style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+        /><img
+          src="https://mirrors.creativecommons.org/presskit/icons/nd.svg"
+          alt=""
+          style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+        />
+      </center>
+      <br />
+    </footer>
+    <script src="earthbound.js"></script>
+  </body>
+</html>

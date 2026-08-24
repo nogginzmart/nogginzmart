@@ -1,0 +1,859 @@
+<!doctype html>
+<html>
+  <head>
+    <title>erin's profile</title>
+    <link href="/CSS/erin.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="nogginzmart - OC erin">
+    <meta property="og:description" content="learn more about my OC, erin!">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+       <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_navpic.jpg" width="500px;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_nav.webp" width="500px;" />
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_1.webp" /> erin's page
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_1.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+          learn more about my character, erin!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h2>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Erin is one of the main characters in my story
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >"Dedicated to The Kidz I Fought"</a
+          >. As the Fall 2008 school year comes back around, they're wanting to
+          make a drastic change to what it means to be "them". Who needs
+          friends? People to talk to? Books, music, & getting work done, & going
+          back home is just much more appealing.
+        </p>
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          But there's a new family in town--the Coppola's--coming all the
+          way from New York! The youngest,
+          <a href="https://nogginzmart.neocities.org/ollie">Ollie Coppola</a>,
+          is in Erin's class! He's keen on getting to know everyone, even the
+          loner Erin--MUCH to their dismay.
+        </p>
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          More about Erin, people are not their niche.
+          Although they've tried to make friends, in their own way. It either
+          falls flat & people are turned off by their efforts, or they're
+          interested in the wrong people--driving Erin to feel discouraged. As a
+          result, they prefer to stick to what they're good at, which is their
+          studies, reading, photography, or just listening to music.
+        </p>
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          They're not entirely alone, however, having a guardain who cares a lot
+          about them,
+          <a href="https://nogginzmart.neocities.org/thomas">Thomas</a>.
+          Although they appreciate it & know he wants them to make friends, they
+          internalize it & think it's something innate about them that's
+          inherently unlikeable.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Even though they've known <a href="https://nogginzmart.neocities.org/brooke">Brooke</a> & <a href="https://nogginzmart.neocities.org/willow">Willow</a> for a long while, it's not till Ollie is adament on getting to know Brooke that the three actually start bonding. Even if it's...as a result of Willow almost pummeling Ollie into paste. 
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+        <h2><img src="" /> check out more info below!! <img src="" /></h2>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <br />
+        <marquee direction="left" scrollamount="5">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/ws_1.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/ws_2.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/ws_3.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/ws_4.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/ws_5.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/ws_6.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/ws_7.webp"
+            width="150px;"
+            height="70px;"
+          />
+        </marquee>
+        <span
+          ><marquee direction="left" scrollamount="5">
+            <p>
+              BACKGROUND PLAYLIST ✮⋆˙ Kill All Your Friends - My Chemical
+              Romance ✮⋆˙ Distance - AJJ ✮⋆˙ Tears Over Beers - Modern Baseball
+              ✮⋆˙ Paranoid Android - Radiohead ✮⋆˙ Heartilation - AJJ ✮⋆˙
+            </p>
+          </marquee></span
+        >
+      </section>
+
+      <section class="small">
+        <br>
+        <br>
+        <br>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_blinkie_side_1.webp" width="100%;">
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_3.webp" width="300px;" />
+        <center>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/ERIN%20SPIIIN.gif"
+            />
+            <span class="tooltip-text" style="bottom: 100%;">
+              huh? what are you<br>doing here?
+            </span>
+          </div>
+        </center>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_3.webp" width="300px;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_blinkie_side_4.webp" width="100%">
+      </section>
+
+      <section class="full">
+        <h2>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_blinkie_2.webp" width="150px" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_4.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_5.webp" />
+          <u>more information</u>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_5.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_4.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_blinkie_2.webp" width="150px"/>
+        </h2>
+        <div class="column">
+          <div class="box3" style="overflow-y: scroll">
+            <aside id="leftSidebar" style="margin-right: 0px">
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>basic info</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+              </h2>
+              <ul>
+                <li><u>full name</u> - Erin Rain Haverathyn</li>
+                <li>
+                  <u>pronouns</u> -
+                  <img
+                    src="https://i.imgur.com/MUYNhfy.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>gender</u> -
+                  <img
+                    src="https://i.imgur.com/tn0RSo5.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>sexual orientation</u> -
+                  <img
+                    src="https://i.imgur.com/XtTlR0S.png"
+                    width="100px;"
+                    height="20px;"
+                  /><br />(later
+                  <img
+                    src="https://i.imgur.com/5iXiC8z.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                  <img
+                    src="https://i.imgur.com/H0t7Ypl.png"
+                    width="100px;"
+                    height="20px;"
+                  />)
+                </li>
+                <li><u>birthplace</u> - Lubbock, Texas</li>
+                <li><u>age</u> - 13</li>
+                <li><u>birthday</u> - April 25th, 1995</li>
+                <li><u>height</u> - 5'3''</li>
+              </ul>
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_5.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>likes</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_5.webp"
+                  width="30px;"
+                  height="30px;"
+                />
+              </h2>
+              <ul>
+                <li>animals</li>
+                <li>cold weather</li>
+                <li>hoodies/sweaters</li>
+                <li>coffee (even black)</li>
+                <li>shoplifting (but you didn't hear it from them)</li>
+                <li>traveling</li>
+                <li>rainy days</li>
+                <li>
+                  being snowed in (Thomas always has them prepared, makes it
+                  fun/relaxing)
+                </li>
+                <li>people watching</li>
+                <li>nature</li>
+                <li>
+                  Malboros (steals them from Thomas or gets them from older/more
+                  savvy students)
+                </li>
+              </ul>
+            </div>
+            </div>
+
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_favicon_5.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>personality</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_favicon_5.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                    </h2>
+                    <h2><u>stats</u></h2>
+                    <ul>
+                      <li>
+                        <u>MBTI</u> -
+                        <img
+                          src="https://i.imgur.com/l3R7Ulc.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li>
+                        <u>Zodiac</u> -
+                        <img
+                          src="https://i.imgur.com/jA5A7gu.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/YlKQFV6.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/4t6FWCD.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                    </ul>
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_67.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>mental/physical</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_67.webp"
+                        width="30px;"
+                        height="30px;"
+                      /><u>ailments</u>
+                    </h2>
+                    <ul>
+                      <li>
+                        <u>Disabilities</u> -
+                        <img
+                          src="https://i.imgur.com/E8sMHUt.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/wLurwzJ.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/OBrKa68.png"
+                          width="100px"
+                          height="20px;"
+                        />
+                      </li>
+                      <li>
+                        <u>Psychological Disorders</u> -
+                        <img
+                          src="https://i.imgur.com/E8sMHUt.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/wLurwzJ.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/OBrKa68.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li><u>Addictions</u> - nicotine</li>
+                    </ul>
+                </div>
+
+                    <div class="column">
+                      <div class="box3" style="overflow-y: scroll">
+                        <aside id="leftSidebar" style="margin-right: 0px">
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_7.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>interests</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_7.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <h2><u>& hobbies</u></h2>
+                          <ul>
+                            <li>
+                              <u>interests</u> - music, the internet,
+                              electronics, anime, cartoons, learning, video
+                              games
+                            </li>
+                            <li>
+                              <u>hobbies</u> - photography, music,
+                              skateboarding, reading, hiking
+                            </li>
+                            <li>
+                              <u>extracurriculars</u> - concert band, yearbook
+                              (formerly)
+                            </li>
+                            <li>
+                              <u>favorite artists (music)</u> - MCR, AJJ, Fall
+                              Out Boy, Green Day, P!ATD, Radiohead, AJJ, Andrew
+                              W.K, Pierce The Veil, The Smashing Pumpkins, Cake,
+                              System Of A Down, The Used
+                            </li>
+                            <li>
+                              <u>clothing style</u> - alternative, comfortable,
+                              layers, grunge, emo
+                            </li>
+                          </ul>
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>education</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <ul>
+                            <li>
+                              <u>schools</u> - Lubbock-Cooper West Elementary
+                              School (Lubbock,Texas) (pre-k-1st),<br />
+                              Crested Butte Community School (Crested Butte,
+                              Colorado) (2nd-current)
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+
+                          <div class="column">
+                            <div class="box3" style="overflow-y: scroll">
+                              <aside id="leftSidebar" style="margin-right: 0px">
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_9.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>relationships</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/favicon_9.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Rae, Iris (older sisters)</li>
+                                  <li>Thomas (guardian)</li>
+                                  <li>Roxanne (bio mum)(deceased)</li>
+                                  <li>Veronica (pseudo aunt)</li>
+                                  <li>Willow, Brooke, Ollie (friends)</li>
+                                </ul>
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>dislikes</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_favicon_10.webp"
+                                    width="30px"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>people</li>
+                                  <li>
+                                    bumpy roads (hard to bike & skateboard on)
+                                  </li>
+                                  <li>political incorrectness/ignorance</li>
+                                  <li>crowds</li>
+                                  <li>hot/humid weather</li>
+                                  <li>loud noises (when not music)</li>
+                                  <li>changing in plans</li>
+                                  <li>group projects</li>
+                                  <li>public restrooms</li>
+                                  <li>gossip</li>
+                                  <li>
+                                    good books with bad endings (makes them
+                                    incredibly violent)/li>
+                                  </li>
+                                </ul>
+                            </div>
+                        </div>
+                        </section>
+
+                                <section class="full">
+                                  <div class="box2" style="overflow-y: scroll">
+                                    <aside
+                                      id="leftSidebar"
+                                      style="margin-right: 0px"
+                                    >
+                                      <h2>
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_whataretheylike.webp"
+                                        />
+                                        what are they like?
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_whataretheylike.webp"
+                                        />
+                                      </h2>
+
+                                      <ul>
+                                        <li>
+                                          Erin is pretty...straight forward.
+                                          They keep to themselves, & tend to
+                                          come off hostile & aloof. Not to
+                                          mention a little pretentious, finding
+                                          more "main stream" interests shallow
+                                          (it's definitely projection).
+                                          It gives some reason as to WHY people
+                                          don't want to hang out with them.
+                                          They weren't always this way, but
+                                          felt they might as well unmask if no
+                                          one is going to like them pretending.
+                                        </li>
+
+                                        <li>
+                                          This isn't to excuse how they
+                                          treat others--they're still young &
+                                          not used to unmasking. Not to mention
+                                          not really...knowing much about
+                                          themselves yet either. They're
+                                          in those years where you start
+                                          exploring that. Explaining their
+                                          DRASTIC aesthetic & attitude change.
+                                        </li>
+
+                                        <li>
+                                          Erin can conversate normally, but
+                                          it always tends to come off as
+                                          stilted, monotone, & stiff. A
+                                          lot of that is unintentional, however. Thomas
+                                          is used to it & Erin usually shows
+                                          more emotion if they're irritated or
+                                          showing sass--of which he DEFINITELY
+                                          picks up on. Usually getting onto them
+                                          for it.
+                                        </li>
+
+                                        <li>
+                                          Thomas & Erin are close. However they don't
+                                          really...explain to others why they
+                                          call him Thomas & not dad or anything
+                                          else, really. To them it just isn't
+                                          that complicated, & it really isn't.
+                                          They spend a lot of time together,
+                                          especially when there's down time at
+                                          the house. Usually sitting together to
+                                          watch evening TV like Jeopardy & Wheel
+                                          of Fortune--taking turns answering
+                                          things & trying to figure stuff out.
+                                        </li>
+
+                                        <li>
+                                          School comes easy to Erin--enjoying
+                                          the mental stimulation. They'd
+                                          prefer to work on it all on their own
+                                          rather than paying attention to
+                                          lecture. Usually finishing early to
+                                          bury their nose back in a book, much
+                                          to some of their teacher's dismay.
+                                          Thomas usually having to come vouch
+                                          for them.
+                                        </li>
+
+                                        <li>
+                                          Erin has a couple of special
+                                          interests--those including music, the
+                                          internet, & books. Erin plows through
+                                          books pretty fast--usually taking them
+                                          a week or two to get through a pretty
+                                          dense text. It's apparent their
+                                          fascination with music--collecting
+                                          CD's, following forums online, burning
+                                          CD's of their favorite songs to
+                                          different favorite artists, & they
+                                          write some "songs" themselves! Though
+                                          they don't think they're any good.
+                                        </li>
+
+                                        <li>
+                                          Furthermore, they play alto sax in the
+                                          concert band! Thomas suggested it
+                                          since they enjoy music so much, &
+                                          learning it might make them feel
+                                          closer to it. They've done it long
+                                          enough they don't see much of a reason
+                                          to get away from it. Plus they do a
+                                          lot of interesting pieces, & they like
+                                          the energy of the antics that go on in
+                                          class. Even if they don't directly participate in the antics. 
+                                        </li>
+
+                                        <li>
+                                          It's not like Erin disliked Brooke or Willow before Ollie brought them all together. Erin got introduced to Brooke & Willow at a very tumultuous time in their life. Half the time they wouldn't even speak. The three got along when Erin would have to stay put there at their house or they'd be dropped off at their's, but not much of a relationship other than the given one ever formed. Usually out of anxiety out of Erin & Brooke & Willow just...well she's Willow. 
+                                        </li>
+                                      </ul>
+                                    </div>
+                                </section>
+
+                                      <section class="full">
+                                        <h2>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_6.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_blinkie_aesthetic_2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_blinkie_aesthetic_3.webp"
+                                          />
+                                          <u>aesthetic</u>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_blinkie_aesthetic_3.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_blinkie_aesthetic_2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/blinkie_6.webp"
+                                          />
+                                        </h2>
+                                        <marquee
+                                          direction="left"
+                                          scrollamount="5"
+                                        >
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_1.jpg"
+                                            width="200px;"
+                                            height="250px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_2.jpg"
+                                            width="200px;"
+                                            height="250px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_3.jpg"
+                                            width="200px;"
+                                            height="220px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_4.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_5.jpg"
+                                            width="200px;"
+                                            height="250px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_6.jpg"
+                                            width="200px;"
+                                            height="280px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_7.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_8.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_9.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_10.jpg"
+                                            width="200px;"
+                                            height="230px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_11.jpg"
+                                            width="200px;"
+                                            height="220px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_12.jpg"
+                                            width="300px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_13.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/erin/erin_aesthetic_14.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                        </marquee>
+                                        </section>
+                                    </div>
+
+                                      <div style="display: flex; justify-content: center;">
+                                        <footer>
+                                          <span
+                                            ><a
+                                              href="https://nogginzmart.neocities.org/"
+                                              >nogginzmart</a
+                                            >
+                                            est. 8/13/2025!</span
+                                          ><br />
+                                          <span
+                                            >cyanobacteria.css by
+                                            <a
+                                              href="https://ribo.zone/free/layouts/"
+                                              >ribo.zone</a
+                                            ></span
+                                          >
+                                          <br>
+                                          <center>
+                                            <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                          </center>
+                                        </footer>
+                                      </div>
+                                        <script src="/JS/erin.js"></script>
+                                      </section>
+  </body>
+</html>

@@ -1,0 +1,806 @@
+/* start light mode styling */
+:root {
+  --text: rgb(0, 0, 0);
+    --border: #515a7e;
+    --accent: #315396;
+    --bg: rgba(77, 159, 200, 0.57);
+    --gradientBottom: #ffffff;
+    --gradientTop: #f0f0f0;
+    a:link {
+      color: #284758;
+    }
+}
+header {
+  background: url("https://nogginzmart.neocities.org/catbox%20aint%20working/community/06171d287b14ca72333a3dcf7b21dff8.jpg");
+}
+/* end light mode styling */
+
+/* start dark mode styling */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: rgb(0, 0, 0);
+    --border: #515a7e;
+    --accent: #315396;
+    --bg: rgba(77, 159, 200, 0.57);
+    --gradientBottom: #ffffff;
+    --gradientTop: #f0f0f0;
+    a:link {
+      color: #284758;
+    }
+  }
+  header {
+    background: url("https://nogginzmart.neocities.org/catbox%20aint%20working/community/06171d287b14ca72333a3dcf7b21dff8.jpg");
+  }
+}
+/* end dark mode styling */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--text);
+
+  /* page background pattern */
+  background-color: var(--gradientTop);
+  background-image: url("https://nogginzmart.neocities.org/catbox%20aint%20working/community/background.jpg");
+  background-size: 100%;
+  background-position:
+    0 0,
+    0 0,
+    10px 18px,
+    10px 18px,
+    0 0,
+    10px 18px;
+  background-attachment: fixed; 
+}
+
+.container {
+  max-width: 800px;
+  margin: 5vw auto 12px auto;
+  border: 6px ridge var(--border);
+  outline: 3px solid var(--gradientTop);
+  outline-offset: 4px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  gap: 5px;
+
+  /* container background pattern */
+   backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    background-color: rgba(182, 230, 254, 0.57);
+    border-radius: 12px;
+    border: 1px solid rgba(8, 75, 176, 0.3);
+}
+/* these control the column widths */
+.small {
+  flex: 1 1 9%;
+}
+.large {
+  flex: 1 1 82%;
+}
+.full {
+  flex: 1 1 100%;
+}
+.half {
+  flex: 1 1 75%;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100px; /* change banner height here*/
+  border: 2px ridge var(--border);
+  border-radius: 5px;
+  position: relative;
+}
+
+nav {
+  border: 2px ridge var(--border);
+  border-radius: 5px;
+  padding: 5px;
+  width: 170px;
+  background: linear-gradient(var(--gradientTop), var(--gradientBottom));
+}
+nav div {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 5px 5px 10px 5px;
+}
+nav a {
+  display: block;
+  margin: 5px;
+  background: linear-gradient(to right, var(--bg), var(--gradientBottom));
+  border-radius: 5px;
+  padding: 2px 7px;
+  text-decoration: none;
+}
+nav a:link,
+nav a:visited {
+  color: var(--text);
+}
+nav a:hover,
+nav a:focus {
+  background: linear-gradient(
+    to right,
+    var(--bg),
+    var(--gradientBottom),
+    var(--gradientTop)
+  );
+}
+
+/* optional button styling like in the preview */
+div.small > img {
+  display: block;
+  margin: 5px auto;
+  border: 2px ridge var(--border);
+  border-radius: 5px;
+}
+
+.imageContainer {
+  width: 100px;
+  height: 300px;
+  background-image: url(https://files.catbox.moe/k6urew.jpg);
+}
+
+section {
+  border: 2px ridge var(--border);
+  border-radius: 5px;
+  background: linear-gradient(var(--gradientTop), var(--gradientBottom));
+  padding: 5px;
+  overflow: hidden;
+  list-style-image: url("https://files.catbox.moe/w34wic.webp");
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 5vw;
+  font-size: 0.8rem;
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-color: rgba(146, 181, 199, 0.57);
+  border: 1px solid rgba(3, 23, 54, 0.3);
+  width: 550px; /* Set your desired fixed or percentage width */
+  margin: 0 auto;
+  border-radius: 25px;
+  
+}
+footer a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 5px;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+  text-align: center;
+  border-bottom: 2px ridge var(--border);
+  padding-bottom: 5px;
+}
+h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  text-align: center;
+}
+h3 {
+  font-size: 1.1rem;
+}
+h4 {
+  font-size: 1rem;
+  color: var(--accent);
+  padding-left: 12px;
+}
+
+/* prevents overflow on smaller screens */
+img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+
+a:hover,
+a:focus {
+  font-style: italic;
+}
+a:visited {
+  color: var(--accent);
+}
+
+.ipod {
+  /* change these to whatever colors you want to use for it! */
+  --black: #182017;
+  --dark: #171c17;
+  --med: #1f241d;
+  --light: #39473a;
+  --white: #e2e1e0;
+
+  width: 200px;
+  height: 320px;
+  border: 5px var(--med) solid;
+  padding: 15px;
+  position: relative;
+  margin: 10px;
+  border-radius: 15px;
+  background: var(--light);
+  box-shadow: 10px 10px var(--med);
+}
+
+/* the actual music player*/
+audio {
+  border-radius: 25px;
+  width: 90%;
+  height: 15px;
+  background: var(--med);
+  color: white;
+  mix-blend-mode: hard-light;
+  opacity: 0.4;
+  margin: 10px auto;
+}
+
+/*offsets every second ipod widget by a little bit, to make them arrange in a more interesting way, and changes the colors slightly! you can get rid of this if you don't want that.*/
+.ipod:nth-of-type(even) {
+  background: var(--med);
+  box-shadow: 10px 10px var(--dark);
+  border-color: var(--dark);
+  margin-top: -5px;
+}
+.ipod:nth-of-type(even) .button .button {
+  background: var(--med);
+  border: 1px double var(--light);
+}
+
+.screen {
+  height: 50%;
+  background: #a2ac9e;
+  border-radius: 20px;
+  overflow-y: hidden;
+  outline: 2px var(--white) solid;
+  outline-offset: 3px;
+  font-family:
+    "ChicagoFLF", "Chicago", monospace; /* the font used on vintage apple products - feel free to change this if
+you want something different! */
+  font-size: 11px;
+  text-align: center;
+}
+
+/* the bold text - where your song title will go, probably */
+.screen b {
+  background: var(--med);
+  color: white;
+  width: 100%;
+  display: block;
+  padding: 3px 5px;
+  font-size: 0.9em;
+  margin-top: 5px;
+  border-top: 15px double var(--white);
+}
+
+/* the bit under the audio player */
+.screen .caption {
+  padding: 0px 10px;
+}
+
+/* the circular buttons - this bit is just for decoration, really! */
+.button {
+  border: 1px double var(--med);
+  background: var(--white);
+  height: 40%;
+  aspect-ratio: 1 / 1;
+  margin: 10% auto;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+.button .b {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: var(--black) !important;
+}
+.b.b-top {
+  top: 5%;
+  font-size: 0.9em;
+}
+.b.b-bottom {
+  bottom: 5%;
+  font-size: 0.6em;
+}
+.b.b-left {
+  left: 3%;
+  top: 40%;
+  width: 20%;
+}
+.b.b-right {
+  right: 3%;
+  top: 40%;
+  width: 20%;
+}
+
+.button .button {
+  height: 50%;
+  aspect-ratio: 1 / 1;
+  margin: 25% auto;
+  background: var(--light);
+}
+
+.row {
+  display: flex;
+}
+.box5 {
+  background-color: #3b3533;
+  border: 3px solid #000000;
+  padding: 10px;
+  width: 250px;
+  height: 315px;
+  float: none;
+}
+
+.box4 {
+  background-color: #3b3533;
+  border: 3px solid #000000;
+  padding: 10px;
+  width: 350px;
+  height: 500px;
+  float: right;
+}
+.box2 {
+  background-color: #3b3533;
+  border: 3px solid #000000;
+  padding: 10px;
+  width: 350px;
+  height: 500px;
+  float: left;
+}
+
+.box3 {
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-color: rgba(146, 181, 199, 0.57);
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  height: 120px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-block-end: 0.75rem;
+}
+
+.box3 img{
+  width: 100px;
+  cursor: pointer;
+  transition: transform 250ms;
+}
+
+.box3 img:hover{
+  transform: scale(1.2);
+}
+ 
+body {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  z-index: 2;
+  background-size:
+    100% 2px,
+    3px 100%;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.10626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.10626;
+  }
+  30% {
+    opacity: 0.18128;
+  }
+  35% {
+    opacity: 0.23604;
+  }
+}
+
+.crt::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#OCverse {
+  width: 210px;
+}
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+.marquee-content {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+.marquee-content img {
+  width: 150px;
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#musicplayer {
+  z-index: 10;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: bold;
+  height: 40px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  margin-bottom: 20px;
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    black 0%,
+    rgb(150, 140, 128) 45%,
+    rgb(45, 38, 38) 47%,
+    rgb(26, 23, 22) 60%,
+    rgb(41, 36, 31) 100%
+  );
+  border: ridge 2px gray; /* border around player */
+  outline: solid 2px black;
+  box-shadow:
+    inset 13px 0px 6px -10px rgb(66 66 66 / 20%),
+    inset -13px 0px 6px -10px rgb(66 66 66 / 56%),
+    inset 0px 13px 6px -10px #b5a39b,
+    inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+}
+
+.songtitle {
+  display: block;
+  padding: 2px; /* padding around song title */
+  font-family: "Pixelify Sans", sans-serif;
+  margin-top: 4px;
+  margin-right: 5px;
+  font-size: 15px;
+  color: black;
+  letter-spacing: 1px;
+
+  background: white; /* background of song title */
+  border: gray inset 1px;
+  border-radius: 6px;
+  box-shadow:
+    inset 13px 0px 6px -10px rgb(66 66 66 / 20%),
+    inset -13px 0px 6px -10px rgb(66 66 66 / 56%),
+    inset 0px 13px 6px -10px #ffffff,
+    inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+}
+
+.controls {
+  font-size: 12px; /* size of controls */
+  text-align: center;
+  width: 100px;
+  height: 20px;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)
+    drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black);
+}
+
+.controls td {
+  padding-top: 5px; /* padding around controls */
+}
+
+.seeking {
+  width: 75%;
+  background: transparent; /* background color of seeking bar */
+  display: flex;
+  justify-content: space-evenly;
+  padding: 7px; /* padding around seeking bar */
+}
+
+.current-time {
+  padding-right: 5px;
+  margin-right: 3px;
+  color: black;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)
+    drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black);
+}
+
+.total-duration {
+  padding-left: 5px;
+  color: black;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)
+    drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black);
+}
+.ctrlimg {
+  height: 20px;
+  width: 20px;
+}
+.ctrlimg:hover {
+  cursor: pointer;
+}
+
+input[type="range"] {
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px; /* thickness of seeking track */
+  cursor: help;
+  border-radius: 6px;
+  background: black; /* color of seeking track */
+  border: 1px white solid;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 30px; /* height of seeking square */
+  width: 20px; /* width of seeking square */
+  background-image: url("https://file.garden/Zztv0a9yEhr5pmEq/tumblr_40786d3985453eb5412348aad980ac51_3a9a1088_1280%20(1).gif"); /* image of  seeking square */
+  background-size: 25px;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+input[type="range"].volume_slider::-webkit-slider-runnable-track {
+  background: white; /* color of volume seeking track */
+  filter: drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black); /* outline of volume seeking track */
+}
+
+input[type="range"].volume_slider::-webkit-slider-thumb {
+  background-image: url(https://file.garden/Zztv0a9yEhr5pmEq/798d7d72_original.png); /* image of volume seeking square */
+  background-size: 20px;
+  height: 20px; /* height of volume seeking square */
+  width: 20px;
+  margin-top: -8px;
+}
+
+.slider_container {
+  width: 15%; /* width of volume seeker */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sitebutton img {
+  width: 176px;
+  height: 62px;
+  cursor: pointer;
+  transition: transform 250ms;
+}
+
+.sitebutton img:hover {
+  transform: scale(1.2);
+}
+
+.sitebutton2 img {
+  width: 120px;
+  height: 40px;
+  transition: transform 250ms;
+}
+
+.sitebutton2 img:hover {
+  transform: scale(1.2);
+}
+
+header img:hover {
+  transform: scale(1.2);
+}
+
+header img {
+  transition: transform 250ms;
+  width: 500px;
+  height: 100px;
+  padding-left: 80px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 125%; /* above the image */
+  left: 50%;
+  z-index: 50;
+  font-size: 15px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.sidebuttons img {
+  width: 120px;
+  height: 50px;
+  transition: transform 250ms 
+}
+
+.othersidebuttons img {
+  width: 150px;
+  height: 50px;
+  transition: transform 250ms
+}
+
+.sidebuttons img:hover {
+  transform: scale(1.2);
+}
+
+.othersidebuttons img:hover {
+  transform: scale(1.2);
+}
+
+#pollForm {
+  background-color:#3b3533;
+  border: 3px solid #000000;
+  padding: 20px;
+  width: 335px;
+  position: relative;
+}
+
+#pollForm li{
+  display: flex; 
+  list-style-image: none;
+   margin: .5rem 0;
+}
+
+#pollForm button{
+  width: 200px;
+
+}
+
+#results{
+  display: none;
+  width: 335px;
+  border: 3px solid #000000;
+}
+
+#results li{
+  list-style-image: none;
+  list-style-type: none;
+  margin: .5rem 0;
+}
+
+#results ul {
+    padding-left: 0;
+}
+
+.progress-indicator {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  box-shadow:
+    inset -2px -2px #dfdfdf,
+    inset 2px 2px grey;
+  box-sizing: border-box;
+  height: 16px;
+  background-color: #c0c0c0;
+  padding: 3px;
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.progress-indicator-bar {
+  background-color: #496341 !important;
+  display: block;
+  height: 100%;
+  width: 0;
+  transition: width 0.5s ease;
+  box-sizing: border-box;
+}
+
+progress {
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #c0c0c0;
+}
+
+progress::-webkit-progress-value {
+  background-color: #496341;
+}
+
+progress::-moz-progress-bar {
+  background-color: #496341;
+}

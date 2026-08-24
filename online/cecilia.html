@@ -1,0 +1,860 @@
+<!doctype html>
+<html>
+  <head>
+    <title>cecilia's profile</title>
+    <link href="cecilia.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="nogginzmart - OC Cecilia">
+    <meta property="og:description" content="learn more about my OC, Cecilia!">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/not_found">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/navpic.jpg" width="100%" />
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_1.webp" /> cecilia's page!
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_1.webp" />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+          learn more about my character, cecilia!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h2>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/pwuze9.jpg" width="100%;" />
+        </center>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Cecilia is one of the side characters in my story,
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >. She is a freshman at Crested Butte Community School, when the story
+          begins, & the only daughter to <a href="https://nogginzmart.neocities.org/serenity">Serenity</a>, who's the
+          owner of "Morning Fix",cafe-by-day-bar-by-night in town. She's an
+          astute but also nerdy & theatric student, enjoying the activites &
+          classwork in school but...not the social aspect.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          When <a href="https://nogginzmart.neocities.org/iris">Iris</a> comes
+          back around her junior year, the two rekindle their long neglected
+          best friend status. Due to both of their social awkwardness & aspects
+          that they outwardly express, they both experience bullying, ridicule,
+          & exclusion. As a result they take solace in one another & being each
+          other's biggest fans.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          She's always busy doing something--whether it be school work, her
+          variety of hobbies, extracurriculars, or working with her mum at her
+          business. Iris is usually dragging her away to have fun or Serenity
+          telling her to go be a kid for a while.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          She tries to be as optimistic as possible--even when she feels
+          isolated, lonely, or ugly. Why do these other, negative opinions
+          matter when those who truly care & take time to know her say
+          otherwise?
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/pwuze9.jpg" width="100%;" />
+        </center>
+        <h2><img src="" /> check out more info below!! <img src="" /></h2>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/pwuze9.jpg" width="100%;" />
+        </center>
+
+        <br />
+        <div class="marqueecontainer">
+          <div class="marquee">
+            <div class="marquee-content">
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_1.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_2.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_3.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_4.png"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_5.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_6.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_7.gif"
+              />
+            </div>
+            <div class="marquee-content">
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_1.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_2.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_3.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_4.png"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_5.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_6.webp"
+              />
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/ws_7.gif"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="marqueecontainer2">
+          <div class="marquee">
+            <span class="marquee-text">
+              BACKGROUND PLAYLIST ✮⋆˙ POLLYANNA (I BELIEVE IN YOU) - Catherine
+              Warwick ✮⋆˙ America's Suitehearts - Fall Out Boy ✮⋆˙ Don't Wake Me
+              Up - The Hush Sound ✮⋆˙ Suddenly I See - KT Tunstall ✮⋆˙ Absolutely
+              (Story of A Girl) - Nine Days ✮⋆˙
+            </span>
+            <span class="marquee-text">
+              BACKGROUND PLAYLIST ✮⋆˙ POLLYANNA (I BELIEVE IN YOU) - Catherine
+              Warwick ✮⋆˙ America's Suitehearts - Fall Out Boy ✮⋆˙ Don't Wake Me
+              Up - The Hush Sound ✮⋆˙ Suddenly I See - KT Tunstall ✮⋆˙ Absolutely
+              (Story of A Girl) - Nine Days ✮⋆˙
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="small">
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/spinnyblinkie_1.gif"
+          width="100%"
+        />
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/spinnyblinkie_2.gif"
+          width="100%"
+        />
+        <center>
+          <div class="tooltip">
+            <img 
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1242.gif" 
+            />
+            <span class="tooltip-text" style="bottom: 100%;">
+              why hello there!
+            </span>
+          </div>
+        </center>
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/spinnyblinkie_3.gif"
+          width="100%"
+        />
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/spinnyblinkie_4.gif"
+          width="100%"
+        />
+      </section>
+
+      <section class="full">
+        <h2>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_1_moreinfo.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_2_moreinfo.gif"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_3_moreinfo.webp" />
+          <u>more information</u>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_3_moreinfo.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_2_moreinfo.gif"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_1_moreinfo.webp" />
+        </h2>
+
+        <div class="column">
+          <div class="box3" style="overflow-y: scroll">
+            <aside id="leftSidebar" style="margin-right: 0px">
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>basic info</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+              </h2>
+              <ul>
+                <li>
+                  <u>pronouns</u> -
+                  <img
+                    src="https://i.imgur.com/hHi8SF1.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>gender</u> -
+                  <img
+                    src="https://i.imgur.com/0CFHa9f.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>sexual orientation</u> -
+                  <img
+                    src="https://i.imgur.com/5iXiC8z.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li><u>birthplace</u> - Denver, Colorado</li>
+
+                <li><u>age</u> - 14</li>
+
+                <li><u>birthday</u> - October 11th, 1991</li>
+
+                <li><u>height</u> - 5'11''</li>
+              </ul>
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_5.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>likes</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_5.webp"
+                  width="30px;"
+                  height="30px;"
+                />
+              </h2>
+              <ul>
+                <li>the ocean</li>
+                <li>animals (aspiring vet!!)</li>
+                <li>mermaids & fairies (they're cool!)</li>
+                <li>theater, acting, & singing</li>
+                <li>coffee (it has to be super sugary, though)</li>
+                <li>fashion</li>
+                <li>video games (BIG Pokemon fan)</li>
+                <li>trinkets</li>
+                <li>staying busy</li>
+                <li>cartoons</li>
+                <li>shopping</li>
+              </ul>
+            </div>
+            </div>
+
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>personality</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                    </h2>
+                    <h2><u>stats</u></h2>
+
+                    <ul>
+                      <li>
+                        <u>MBTI</u> -
+                        <img
+                          src="https://i.imgur.com/GIQnAA5.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+
+                      <li>
+                        <u>Zodiac</u> -
+                        <img
+                          src="https://i.imgur.com/OPFWPxg.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/w8JMf5u.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/YlKQFV6.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                    </ul>
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>mental/physical</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      /><u>ailments</u>
+                    </h2>
+                    <ul>
+                      <li>
+                        <u>Disabilities</u> -
+                        <img
+                          src="https://i.imgur.com/gUe2de3.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <img
+                        src="https://i.imgur.com/OBrKa68.png"
+                        width="100px;"
+                        height="20px;"
+                      />
+
+                      <li>
+                        <u>Psychological Disorders</u> -
+                        <img
+                          src="https://i.imgur.com/0tVqxBL.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/3Atxu83.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/OBrKa68.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+
+                      <li><u>Addictions</u> - N/A</li>
+                    </ul>
+                </div>
+                </div>
+
+                    <div class="column">
+                      <div class="box3" style="overflow-y: scroll">
+                        <aside id="leftSidebar" style="margin-right: 0px">
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>interests</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <h2><u>& hobbies</u></h2>
+                          <ul>
+                            <li>
+                              <u>interests</u> - animals, tech, video games,
+                              fashion, nature, theater
+                            </li>
+
+                            <li>
+                              <u>hobbies</u> - video gaming, acting, biking
+                            </li>
+
+                            <li>
+                              <u>extracurriculars</u> - theater, beta club, book
+                              club
+                            </li>
+
+                            <li>
+                              <u>favorite artists (music)</u> - Coldplay, Fall
+                              Out Boy, Owl City, Fleetwood Mac, Journey, Queen,
+                              Britney Spears, Bruno Mars, Ke$ha, Maroon 5
+                            </li>
+
+                            <li>
+                              <u>clothing style</u> - Twee, skirts galore, lots
+                              of pastel blues & yellow, comfortable, lots of
+                              accessorries
+                            </li>
+                          </ul>
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_9.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>education</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_9.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <ul>
+                            <li>
+                              <u>schools</u> - Crested Butte Community School
+                              (K-current)
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+
+                          <div class="column">
+                            <div class="box3" style="overflow-y: scroll">
+                              <aside id="leftSidebar" style="margin-right: 0px">
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>relationships</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Serenity (mum)</li>
+                                  <li>Iris (best friend)</li>
+                                  <li>John Robinson (bio dad)(no contact)</li>
+                                </ul>
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_11.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>dislikes</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/favicon_11.webp"
+                                    width="30px"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>BOREDOM</li>
+                                  <li>men</li>
+                                  <li>overcast skies</li>
+                                  <li>auditions & casting</li>
+                                  <li>public speaking</li>
+                                  <li>doctors</li>
+                                  <li>cigarettes</li>
+                                  <li>her mum overworking herself</li>
+                                  <li>no minutes on her phone</li>
+                                  <li>eating in front of people</li>
+                                  <li>
+                                    her mum driving (she's a little crazy)
+                                  </li>
+                                </ul>
+                            </div>
+                            </div>
+                            </section>
+
+                                <section class="half">
+                                  <div class="box2" style="overflow-y: scroll">
+                                    <aside
+                                      id="leftSidebar"
+                                      style="margin-right: 0px"
+                                    >
+                                      <h2>
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_whataretheylike.webp"
+                                        />
+                                        what are they like?
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_whataretheylike.webp"
+                                        />
+                                      </h2>
+
+                                      <ul>
+                                        <li>
+                                          Although she does theater, she
+                                          DESPISED public speaking or having to
+                                          lead in a discussion. All the eyes on
+                                          her make her stumble over her words.
+                                          Even if she were to plan what she was
+                                          going to say, it causes her to forget
+                                          it in the moment.
+                                        </li>
+                                        <li>
+                                          She lives with her mum in an apartment
+                                          upstairs to her business. It's a
+                                          quaint place, perfect for the both of
+                                          them. She likes being close to the
+                                          school & to everything going on in
+                                          town. Though it sucks when she has to
+                                          wait an eternity for Iris to make her
+                                          way down the mountain to hang out.
+                                        </li>
+                                        <li>
+                                          She's proud of all the work her mum
+                                          has put into making sure she's
+                                          comfortable & safe. Though she feels
+                                          like she has to make up for what
+                                          hardship she's have to make her mum go
+                                          through for her. Her mother insists
+                                          there's no need, but she feels like
+                                          she derailed her mum's whole life
+                                          because of who she is.
+                                        </li>
+                                        <li>
+                                          Even though her dad lives in town, she
+                                          makes an effort to avoid whereever he
+                                          could be. She feels like she could go
+                                          the rest of her life without speaking
+                                          to him again.
+                                        </li>
+                                        <li>
+                                          <a
+                                            href="https://nogginzmart.neocities.org/rae"
+                                            >Rae</a
+                                          >
+                                          & Cecilia have...a weird relationship.
+                                          The two interact often because of
+                                          Cecilia's proximity to Iris, but
+                                          Cecilia doesn't give Rae as much grace
+                                          as Iris does. She finds a lot of her
+                                          angst off putting & her reactive
+                                          tendencies immature--preferring to
+                                          keep her distance when she can.
+                                        </li>
+                                        <li>
+                                          She really struggles with wanderlust.
+                                          Though because of her mum's business
+                                          being their sole source of income, it
+                                          doesn't leave much time & space to
+                                          travel hours or potentially days out
+                                          to travel or do things. Though
+                                          Serenity least makes out time for them
+                                          to have a day or 2 to go out & shop
+                                          out of town. Thrifting is nice, but
+                                          the both of them like their trendy
+                                          little items.
+                                        </li>
+                                      </ul>
+                                    </section>
+
+                                      <section class="full">
+                                        <h2>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_aesthetic_1.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_aesthetic_2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_aesthetic_3.webp"
+                                          />
+                                          <u>aesthetic</u>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_aesthetic_3.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_aesthetic_2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/blinkie_aesthetic_1.webp"
+                                          />
+                                        </h2>
+                                        <div class="marqueecontainer3"
+                                        >
+                                          <div class="marquee"
+                                          >
+                                            <div class="marquee-content2"
+                                            >
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_1.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_2.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_3.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_4.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_5.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_6.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_7.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_8.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_9.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_10.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_11.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_12.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_13.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_14.jpg"
+                                              />
+                                            </div>
+                                            <div class="marquee-content2"
+                                            >
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_1.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_2.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_3.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_4.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_5.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_6.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_7.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_8.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_9.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_10.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_11.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_12.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_13.jpg"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/cecilia/aesthetic_14.jpg"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </section>
+                                    </div>
+
+                                    <div style="display: flex; justify-content: center;">
+                                      <footer>
+                                        <span
+                                          ><a
+                                            href="https://nogginzmart.neocities.org/"
+                                            >nogginzmart</a
+                                          >
+                                          est. 8/13/2025!</span
+                                        ><br />
+                                        <span
+                                          >cyanobacteria.css by
+                                          <a
+                                            href="https://ribo.zone/free/layouts/"
+                                            >ribo.zone</a
+                                          ></span
+                                        >
+                                        <br>
+                                        <center>
+                                          <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                        </center>
+                                      </footer>
+                                      </div>
+                                      <script src="cecilia.js"></script>
+  </body>
+</html>

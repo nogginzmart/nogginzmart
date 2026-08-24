@@ -1,0 +1,1465 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="nogginzmart - about me">
+    <meta property="og:description" content="learn more about the master mind behind nogginzmart!">
+    <title>about me</title>
+    <link href="/CSS/about.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/about/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+      <center>
+        <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+           Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+        </div>
+      </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+      <center>
+        <div class="tooltip">
+          <a href="https://nogginzmart.neocities.org/about"
+            ><img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/6r1igk.png"
+              />
+          </a>
+          <span class="tooltip-text" style="bottom: 100%;">
+            thanks for coming!<br> learn a little about me!
+          </span>
+        </div>
+      </center>
+        <center>
+        <div class="sitebutton">
+          <input type="text" 
+            style="
+            visibility: hidden;" 
+            value="&lt;a href=&quot;https://nogginzmart.neocities.org/&quot;&gt;&lt;img src=&quot;https://nogginzmart.neocities.org/catbox%20aint%20working/mysitebutton.gif&quot;&gt;&lt;/a&gt;" id="myInput">
+          <img onclick="copyandpaste()" 
+            style="
+            cursor: pointer; 
+            width:176px; 
+            height:62px;" 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/mysitebutton.gif"
+          >
+        </center>
+        <center><p>here's my button!</p></center>
+        <center><p>click to copy & link me back!</p></center>
+        <h1></h1>
+        <h1>
+          things in my bag
+        </h1>
+        <img 
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/PXL_20260419_1822514042.jpg"
+        />
+        <h1></h1>
+        <div style="display: flex; justify-content: center;">
+        <div class="box3">
+          <ul>
+            <li>
+              iPod
+            </li>
+            <li>
+              EOS Chapstick
+            </li>
+            <li>
+              hand sanitizer
+            </li>
+            <li>
+              30 pin to USB charger
+            </li>
+            <li>
+              wallet
+            </li>
+            <li>
+              fidget cube
+            </li>
+          </ul>
+        </div>
+        </div>
+        <h1></h1>
+        <div class="box5">
+          <marquee direction="down" scrollamount="5">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_db564f8ca2415cf5f51abe383233d156_f3d1eff0_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_74150f5474cd0aac6d35b5c00fa94c94_aaa2a5a0_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_64293444f9517763478a14105492d46b_90024be5_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_4faa4f4104fc402c875224786de34be4_c2b28a5d_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_33019c4e74223256a3ca5c3937f8eff7_68f8c47f_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_77ae5da8930a4f7fe8d019f47cbdebc4_24776330_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_a572b846225be85133fa3b4458bf607f_32e95406_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_468968c1610ce20ff07805940ead002f_491eeaa4_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_23ae57675845f570490be97bcc38a8e0_0fafc595_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_163c7c1e79bc065ae1cf6bc935d4709e_0ec228d2_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_8bcee53282e3138cfd102410340877e6_6c0a0752_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_52fc3aeacaf3ec6574b5c1f57a81a75d_618312aa_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_b6c7b1be5031861210d3c24094a360d3_993050b2_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_9244864231546782ca1a2dc23b129fee_5c3d63d2_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_f938db286647d3fc4404282a9b4b75e4_1820eab1_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_9f9ffd5bace83e12a7cd387326191a3d_ff565eeb_640.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_998ff65364466463cea6c4aa61d2e686_90136ac8_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_212e9fb50b2a63dc29d555be8f7a30b0_2a5c3d37_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_b871cb32b9ab6e37171fc0f6ba23e398_91452274_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_9c652711169ba414d0a7748d2bced9e2_1efdd4ca_250.jpg"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_94371249892eeca9db09797e394d4ed4_f36626d1_250.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/leftblinkie1.webp"
+              width="250px;"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/leftblinkie2.gif"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/leftblinkie3.webp"
+              width="250px"
+            />
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/leftblinkie4.webp"
+              width="250px;"
+            />
+          </marquee>
+        </div>
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/favicon_1.webp"
+            width="40px;"
+          />
+          learn about me!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/favicon_1.webp"
+            width="40px;"
+          />
+        </h1>
+        <h2><u>the braindead webmaster behind this site, nogginzmart!</u></h2>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%">
+        <center>
+        <h4>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/favicon_2.webp"
+            width="30px"
+          />
+          <u> hi, my name is Lee & I run nogginzmart!</u>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/favicon_2.webp"
+            width="30px"
+          />
+        </h4>
+        <p>
+          A little about me, I'm a 21-year-old college student who loves
+          to<br> draw, write, & enjoyer of lots of nerdy things!
+        </p>
+
+        <div class="meow"><p>hi</p></div>
+
+        <h4>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/favicon_3.webp"
+            width="30px"
+          />
+          <u>"why did you make nogginzmart?"</u>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/favicon_3.webp"
+            width="30px"
+          />
+        </h4>
+        <p>
+          I have wanted to make a website for a while. I made
+          nogginzmart because I always get discouraged posting my
+          content on social media. Not to mention with all the AI
+          running rampant nowadays, I just find little joy being on
+          social media anymore.
+        </p>
+        <p>
+          I also have a lot of fondness & nostalgia for when I was
+          younger & perusing the internet. I loved being on tumblr, & it
+          still is to an extent the same, & the fun, free nature of it.
+        </p>
+        <p>
+          So I thought of encapsulating my love for the internet,
+          community, all my creative endeavors, & my insane urge to
+          learn new things (CODING IS HARD) to create nogginzmart!
+        </p>
+        </center>
+        <div class="meow"></div>
+        <center>
+          <h4>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/favicon_4.webp"
+              width="40px;"
+            />
+            <u>"what else should we know?"</u>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/favicon_4.webp"
+              width="40px;"
+            />
+          </h4>
+          <p>
+            Oh! Well, as I mentioned before, I am a college student. Not
+            to mention that I have a part time job(s). As a result, I
+            can't be the most chronically online. Though I will do my very
+            best to keep things updated & functioning!
+          </p>
+          <p>
+            I also have no problem with anyone borrowing things from my
+            site! Everything is pretty much up for grabs, MINUS MY OWN
+            ART!! PLEASE!! Though I borrowed a LOT in the process of
+            making my site, so I'd be a hypocrite not to offer what I've
+            made! THIS IS HARD!!
+          </p>
+          <p>
+            If you're THAT interested in me, I have a
+            <a href="https://nogginzmart.neocities.org/blog">blog</a> if
+            you wanna keep up with what I get up to! I will blog about a
+            plethora of things, which you can get an idea from the tags I
+            have included at the top of that site!
+          </p>
+        </center>
+        <div class="meow"></div>
+        <center>
+            <h4>
+                <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/favicon_5.webp"
+                    width="40px;"
+                />
+                <u>well, I'll be seeing you around!</u>
+                <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/favicon_5.webp"
+                    width="40px;"
+                />
+            </h4>
+        </center>
+        <br>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%">
+          <div class="column">
+            <div class="row">
+              <div class="box2">
+                <center>
+                  <h1>
+                    LIKES
+                  </h1>
+                </center>
+                <ul>
+                  <li>
+                    cold weather
+                  </li>
+                  <li>
+                    animals
+                  </li>
+                  <li>
+                    aesthetics
+                  </li>
+                  <li>
+                    dusk & nighttime
+                  </li>
+                  <li>
+                    the internet (when it's not being an ass)
+                  </li>
+                  <li>
+                    school & learning
+                  </li>
+                  <li>
+                    cartoons
+                  </li>
+                  <li>
+                    anime
+                  </li>
+                  <li>
+                    TUMBLR!
+                  </li>
+                  <li>
+                    My iPod!
+                  </li>
+                  <li>
+                    stickers
+                  </li>
+                  <li>
+                    stuffed animals
+                  </li>
+                  <li>
+                    maximalism
+                  </li>
+                  <li>
+                    MY SPACE BEING CLEAN 
+                  </li>
+                  <li>
+                    coffee! (unfortunately my Graves' disease doesn't let me have as much of it anymore)
+                  </li>
+                  <li>
+                    biking (I love my tricycle!)
+                  </li>
+                  <li>
+                    people watching
+                  </li>
+                  <li>
+                    sweets! (I have a KILLER sweet tooth)
+                  </li>
+                  <li>
+                    wax melts, perfumes, air fresheners
+                  </li>
+                </ul>
+              </div>
+              <div class="box2">
+                <h1>
+                  DISLIKES
+                </h1>
+                <ul>
+                  <li>
+                    ignorance
+                  </li>
+                  <li>
+                    hot weather
+                  </li>
+                  <li>
+                    people who don't clean up after themselves
+                  </li>
+                  <li>
+                    beaches (overstimulation central)
+                  </li>
+                  <li>
+                    tight clothing
+                  </li>
+                  <li>
+                    centrists
+                  </li>
+                  <li>
+                    Janurary (just a depressing month)
+                  </li>
+                  <li>
+                    The South (USA)(GET ME THE FUCK OUT OF HERE)
+                  </li>
+                  <li>
+                    negative nancy's
+                  </li>
+                  <li>
+                    cringe culture
+                  </li>
+                  <li>
+                    unwalkwable cities/towns
+                  </li>
+                  <li>
+                    subscription services
+                  </li>
+                  <li>
+                    streaming services in general
+                  </li>
+                  <li>
+                    Geometry (FUUUCK that shit)
+                  </li>
+                  <li>
+                    boring people
+                  </li>
+                  <li>
+                    being lactose intolerant
+                  </li>
+                  <li>
+                    BEING CHRONICALLY ILL
+                  </li>
+                </ul>
+              </div>
+              <div class="box2">
+                <h1>
+                  HOBBIES
+                </h1>
+                <ul>
+                  <li>
+                    drawing
+                  </li>
+                  <li>
+                    writing
+                  </li>
+                  <li>
+                    working on this nightmare of a website
+                  </li>
+                  <li>
+                    crafting/repurposing things
+                  </li>
+                  <li>
+                    reading
+                  </li>
+                  <li>
+                    playing vidya games
+                  </li>
+                  <li>
+                    collecting a variety of things
+                  </li>
+                  <li>
+                    interior design 
+                  </li>
+                  <li>
+                    being evil & gay & stuff
+                  </li>
+                </ul>
+                <h1>
+                  INTERESTS
+                </h1>
+                <ul>
+                  <li>
+                    2000s tech
+                  </li>
+                  <li>
+                    console modding & emulation
+                  </li>
+                  <li>
+                    media analysis/discussions
+                  </li>
+                  <li>
+                    alternative fashion
+                  </li>
+                  <li>
+                    budgeting/financial planning
+                  </li>
+                  <li>
+                    media preservation 
+                  </li>
+                  <li>
+                    physical media
+                  </li>
+                  <li>
+                    FANDOMMM
+                  </li>
+                  <li>
+                    being left TF alone
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%">
+        <br>
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_23e3189d4cdffd02208f35f3a70c5998_a120e21c_250.webp"
+            width="200px"
+          />
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_94be1c9c6d96e83fca0ca9d6666ccd55_d686eb8b_75.webp"
+            width="40px"
+          />
+          favorite things!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_94be1c9c6d96e83fca0ca9d6666ccd55_d686eb8b_75.webp"
+            width="40px"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_23e3189d4cdffd02208f35f3a70c5998_a120e21c_250.webp"
+            width="200px"
+          />
+        </h1>
+        <div class="meow"></div>
+        <center>
+          <h3>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_445424addd86491764ba0da6860ac651_ed2bbebb_540.jpg"
+            width="40%"
+          />  
+          <u>
+            VIDEO GAMES 
+          </u>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_445424addd86491764ba0da6860ac651_ed2bbebb_540.jpg"
+            width="40%"
+          />
+          </h3>
+          <h1></h1>
+        </center>
+        <div class="fav-row">
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/9947b7db432e0376e03935e5e5a7b1f0.jpg"
+            />
+            <span class="tooltip-text"><u>Undertale</u><br>forever my <br>special interest</span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/Screenshot%202026-04-17%20181108.png"
+            />
+            <span class="tooltip-text">
+              <u>Deltarune</u><br>I used to joke I'd graduate college <br>before the game is finished...
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/d5adee58cfa660d4ac466336ab668c02.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Persona 3</u><br>BURN MY DREAAAD!!!
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/b7bd95bc32f89ec66843e7d472fbbfd0.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Stardew Valley</u><br>99+ mods, thousands of hours...<br>oh how I love you
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/earthbound.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Earthbound</u><br>it's just as peak as people say
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/4b20a4d822ef8a5e3d146b01f372fa7a.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Danganronpa</u><br>it's SOOO bad but FUCK<br>am I obsessed
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/735195637d2c737a7180933dcda7696a.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Mario & Luigi RPGs</u><br>Bowser's Inside Story<br>is my favorite!
+            </span>
+          </div>
+        </div>
+        <div class="fav-row">
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/7535f2ff8aa2c8db6821e07732153122.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Psychonauts</u><br>the vibe & aesthetic FUCKS
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/Screenshot%202026-07-06%20101047.png"
+            />
+            <span class="tooltip-text">
+              <u>Papa's Games</u><br>perfect time wasters
+            </span>
+          </div>
+        </div>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%">
+        <div class="meow"></div>
+        <center>
+          <h3>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_445424addd86491764ba0da6860ac651_ed2bbebb_540.jpg"
+            width="42%"
+          />
+          <u>
+            CARTOONS
+          </u>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_445424addd86491764ba0da6860ac651_ed2bbebb_540.jpg"
+            width="42%"
+          />
+          </h3>
+          <h1></h1>
+        </center>
+        <div class="fav-row">
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/9n5IaliOQo.png"
+            />
+            <span class="tooltip-text">
+              <u>Invader Zim</u><br>I own...<br>so many Gir things
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/09be7864051989226c500c2b8fa9e402.jpg"
+            />
+            <span class="tooltip-text">
+              <u>My Life as a Teenage Robot</u><br>I will never stop yearning for<br>more of this show
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/91821c414ab0b2c562d1001cc288210c.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Codename:Kidz Next Door</u><br>hoping for Galactic Kidz Next<br>Door someday 
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/69944829f2600ff7cdb7b94cc02c979b.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Crashbox</u><br>an ABSOLUTE gem
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/3e00470067cd7a41679ecebbc57816b7.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Steven Universe</u><br>despite complicated feelings<br>this shit was the bomb
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/Screenshot%202026-04-18%20135022.png"
+            />
+            <span class="tooltip-text">
+              <u>South Park</u><br>I blame an ex-partner for<br>binging this with me &<br>getting me obsessed
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/spungeboob.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Spongebob<br>Squarepants</u><br>they could never<br> make me hate you
+            </span>
+          </div>
+        </div>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%">
+        <div class="meow"></div>
+        <center>
+          <h3>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_445424addd86491764ba0da6860ac651_ed2bbebb_540.jpg"
+              width="44%"
+            />
+            <u>
+              ANIME
+            </u>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_445424addd86491764ba0da6860ac651_ed2bbebb_540.jpg"
+              width="44%"
+            />
+          </h3>
+          <h1></h1>
+        </center>
+        <div class="fav-row">
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/FMA.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Fullmetal Alchemist</u><br>OG & Brotherhood<br>forever in love
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/utena.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Revolutionary Girl Utena</u><br>yurilicious
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/Screenshot%202026-04-18%20145709.png"
+            />
+            <span class="tooltip-text">
+              <u>Delicious in Dungeon</u><br>been a while since I've loved<br>a modern anime this much
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/souleater.png"
+            />
+            <span class="tooltip-text">
+              <u>Soul Eater</u><br>my first modern anime<br>so many good memories
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/Screenshot%202026-04-18%20151135.png"
+            />
+            <span class="tooltip-text">
+              <u>Jojo's Bizarre Adventure</u><br>it's like crack, I can never<br> get enough
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/Screenshot%202026-04-18%20151438.png"
+            />
+            <span class="tooltip-text">
+              <u>Neon Genesis Evangelion</u><br>get in the fucking robot, Shinji
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/Screenshot%202026-04-18%20202555.png"
+            />
+            <span class="tooltip-text">
+              <u>Scott Pilgrim<br>Takes Off</u><br>ABSOLUTE PEAK!!
+            </span>
+          </div>
+        </div>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%">
+        <div class="meow"></div>
+        <center>
+          <h3>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_445424addd86491764ba0da6860ac651_ed2bbebb_540.jpg"
+              width="43%"
+            />
+            <u>
+            ALBUMS
+            </u>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/tumblr_445424addd86491764ba0da6860ac651_ed2bbebb_540.jpg"
+              width="43%"
+            />
+          </h3>
+          <h1></h1>
+        </center>
+        <div class="fav-row">
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/2e13684336fa1b0fbc8f21747376d987.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Bury Me at<br> Makeout Creek</u><br>Mitski
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/2e4b0dadc1d9f3405d37d2fd4416524d.jpg"
+            />
+            <span class="tooltip-text">
+              <u>The Visitor</u><br>ABBA
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/302e3e176b936fe2296b624d268d243d.jpg"
+            />
+            <span class="tooltip-text">
+              <u>OK Computer</u><br>Radiohead
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/739bd16b18939e053b7ddeea0fdda8aa.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Folie e Deux</u><br>Fall Out Boy
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/a6e5869e0e2c4fa30e2882491b22f9bf.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Masterpiece</u><br>Big Thief
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/7fb022f2aeb4d731ba8f9ead6c9aee1e.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Vices & Virtues</u><br>Panic! at The Disco
+            </span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/e957fa47772d42519f3a14fc11f07665.jpg"
+            />
+            <span class="tooltip-text">
+              <u>Knife Man</u><br>AJJ
+            </span>
+          </div>
+        </div>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%">
+        <br>
+        <br>
+        <marquee direction="left" scrollamount="5">
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_1.webp"
+                width="150px;"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_2.webp"
+                width="150px;"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_3.webp"
+                width="150px;"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_4.webp"
+                width="150px;"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_5.webp"
+                width="150px;"
+            />
+            <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_6.png" 
+                width="150px;" 
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_7.webp"
+                width="150px;"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_8.webp"
+                width="150px;"
+            />
+            <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_9.png" 
+                width="150px;" 
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_10.webp"
+                width="150px;"
+            />
+            <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_11.png" 
+                width="150px;" 
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_12.webp"
+                width="150px;"
+            />
+            <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_13.png" 
+                width="150px;" 
+            />
+            <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_14.png" 
+                width="150px;" 
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_15.webp"
+                width="150px;"
+            />
+            <img 
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_16.webp" 
+                width="150px;" 
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_17.webp"
+                width="150px;"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_18.webp"
+                width="150px;"
+            />
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ws_19.png"
+                width="150px;"
+            />
+        </marquee>
+      </section>
+    </div>
+      <div class="container2">
+        <section class="small">
+           <div class="profile_table">
+              <table id="profile_table">
+                  <tbody>
+                      <tr>
+                        <th>
+                          NAME
+                        </th>
+                        <td>
+                          Lee
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          PRONOUNS
+                        </th>
+                        <td>
+                          they/them
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          BIRTHDAY
+                        </th>
+                        <td>
+                          December 17th
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          AGE
+                        </th>
+                        <td>
+                          21
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          GENDER
+                        </th>
+                        <td>
+                          Nonbinary
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          ORIENTATION
+                        </th>
+                        <td>
+                          Lesbian, Demiromantic/sexual
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          ZODIAC
+                        </th>
+                        <td>
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/HJLIYn4.png" width="130px"
+                          >
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/YlKQFV6.png" width="130px"
+                          >
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/4t6FWCD.png" width="130px"
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          MBTI
+                        </th>
+                        <td>
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/94kffp.png" width="130px"
+                          > 
+                          or 
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/6xb7z7.png" width="130px"
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          FAVORITE SEASON
+                        </th>
+                        <td>
+                          Winter or Fall
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          FAVORITE COLOR
+                        </th>
+                        <td>
+                          desaturated, dark green
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          FAVORITE ANIMAL(S)
+                        </th>
+                        <td>
+                          opossums, raccoons, & dogs
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          FAVORITE HOLIDAY
+                        </th>
+                        <td>
+                          Christmas
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          DEBUFFS
+                        </th>
+                        <td>
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/pbfdq9.png" width="130px"
+                          >
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/vvz97e.png" width="130px"
+                          >
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/mQy2v6v.png" width="130px"
+                          >
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/yg8d05.png" width="130px"
+                          >
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/kno9by.png" width="130px"
+                          >
+                          <img 
+                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/G8AyR6r.png" width="130px"
+                            >
+                        </td>
+                      </tr>
+                  </tbody>
+              </table>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%">
+              <br>
+              <div class="randomfactbox">
+                <p id="randomfact">want to learn stupid, little things about me?<br>click for a random fact!</p>
+              </div>
+              <center>
+                <button type="button" id="gimmerandomfact">click me!</button>
+              </center>
+              <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%">
+              <br>
+              <center>
+                <h2>
+                  <u>
+                    KINS
+                  </u>
+                </h2>
+                <h1></h1>
+                <p>if you were at all curious</p>
+                <h1></h1>
+                <div class="row">
+                  <div class="column">
+                    <div class="tooltip">
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/cd000eb7dfc9938a8a7810b9151cb6ac.jpg"
+                      />
+                      <span class="tooltip-text">
+                        <u>Fairy Odd <br>Parents</u><br>Timmy Turner
+                      </span>
+                    </div>
+                    <div class="tooltip">
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/ae223977a39316d26398064c04114f83.jpg"
+                      />
+                      <span class="tooltip-text">
+                        <u>Steven Universe</u><br>Peridot
+                      </span>
+                    </div>
+                    <div class="tooltip">
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/45d9d070aa20a93d157ee37f6a943049.jpg"
+                      />
+                      <span class="tooltip-text">
+                        <u>Invader Zim</u><br>Dib
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="column">
+                    <div class="tooltip">
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/05cac7845d27dc381936e215e9f4c247.jpg"
+                      />
+                      <span class="tooltip-text">
+                        <u>Sonic</u><br>Tails (Miles) <br>Prower
+                      </span>
+                    </div>
+                    <div class="tooltip">
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/c2af1760bc4dbb17d448ecf3484fe860.jpg"
+                      />
+                      <span class="tooltip-text">
+                        <u>Delicious in Dungeon</u><br>Laios
+                      </span>
+                    </div>
+                    <div class="tooltip">
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/73d179be791af8a59b714be307ed50f4.jpg"
+                      />
+                      <span class="tooltip-text">
+                        <u>Persona 3</u><br>Junpei Iori
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="column">
+                    <div class="tooltip">
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/1f27ba5213c244f16f567adb9e007f88.jpg"
+                      />
+                      <span class="tooltip-text">
+                        <u>Deltarune</u><br>Lancer
+                      </span>
+                    </div>
+                    <div class="tooltip">
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/d89966417ca560b8ed5e99d649c7dad6.jpg"
+                      />
+                      <span class="tooltip-text">
+                        <u>Danganronpa 2</u><br>Gundham Tanaka
+                      </span>
+                    </div>
+                    <div class="tooltip">
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/about/IMG_1004.png"
+                      />
+                      <span class="tooltip-text">
+                        <u>Undertale MV</u><br>Underswap Sans
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <h1></h1>
+              </center>
+              <h1>
+                questions!
+              </h1>
+              <div class="box4">
+                <h5>
+                  "how tall are you?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    5'4'' or 5'5''
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                " Do you think that creativity involves putting your heart and soul into your work? Or is it more like letting your mind flow freely to witness the surprising results of your actions? "
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    Personally, it's a bit of both.<br>a lot of my work is very personal to me & is drawn from my own experiences or of those that are or were dear to me. & whatever comes from my mind is usually scenarios to put the characters in or lore intricacies.
+                  </li>
+                  <li>
+                    so yeah, I think any good work has a mix of both.
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "Are you a good liar?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    I have been told I am not.
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "Do you think that creativity involves putting your heart and soul into your work? Or is it more like letting your mind flow freely to witness the surprising results of your actions?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    Yes & no. I'm well aware that nothing is inherently original. Though I like to think the way in which I convey things & the perspectives I illustrate might bring out a unique experience. 
+                  </li>
+                  <li>
+                    Though I wouldn't be surprised if even that has been seen before. Though in the end I write for me, so whatever anybody gets out of what I make is interesting & valuable nonetheless. 
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "Are you left or right handed?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    I am left handed!
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "What do you do to keep yourself motivated and interested in your work?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    Uh USUALLY not work myself into the grave when it comes to work & school. If I'm unmotivated to do that, I'm typically unmotivated to create. 
+                  </li>
+                  <li>
+                    Otherwise I like watching new shows, movies, videos, & looking at things like Pinterest to get gears turning. Plus looking at different sites on here gives me inspiration & motivation to least work on my page!
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "Do you talk to yourself?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    ...yes 
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "Were you ever discouraged? If so, how did it it affect your creativity?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    I've been discouraged a lot over the years. Most of the time being when I was trying to participate in the rat race that was getting popular on platforms like Tumblr or Instagram.
+                  </li>
+                  <li>
+                    I've come to terms with the fact that, popular or not, that shouldn't effect how I create & I shouldn't compare the success of others to my ability to create. I like my stuff & that's all that matters. 
+                  </li>
+                  <li>
+                    Plus like...creating for the sake of compliments is such a terrible form of motivation? Don't do that--even if fucking normies don't like it, YOU like your work. 
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "What was an embarrassing moment?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    I am a professional embarrassment, so I have a lot of stories.
+                  </li>
+                  <li>
+                    During my 7th grade awards day, It was like halfways through the ceremony. A friend of mine was called & went up to get his award, & I yelled out "NERD!". Now, we ALWAYS called each other nerd, so I never saw anything wrong with it. 
+                  </li>
+                  <li>
+                    I never got in trouble with my teachers or anything, but his AUNT came up to me, got in my face, & was saying all this shit about how horrible I was. My mum & dad almost beat her ass. 
+                  </li>
+                  <li>
+                    I talked to him afterward & he didn't seem that phased by it. Though who knows--it might've. We never talked that much after that year.
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "Do you critique your own work?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    Oh, ABSOLUTELY!
+                  </li>
+                  <li>
+                    I'm a big proponent of constantly improving & learning. Plus I don't want to get a big head & think my stuff is the best in the world. Especially when I'm not liking how a project or piece is going, I go through in my head "what about this is not meshing with me?" 
+                  </li>
+                  <li>
+                    Now this usually isn't a fix overnight deal, but I know what I can work on & study overtime to get better at this shortfall. 
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "Do you smoke or drink?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    No & yes. 
+                  </li>
+                  <li>
+                    I do like the smell of cigarettes, but unless everything goes wrong in life I don't see myself actually starting to smoke. Plus I think vaping is for pussies (don't take that personally).
+                  </li>
+                  <li>
+                    I do drink, though I hate the taste of alcohol. So it's usually like...a fruity little drink. I never drink to get drunk, it's just for a nice little drink. 
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "Has rejection ever affected your creative process?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    Yes? Like other than being an inspiration for things I write about, I have had run ins with people that care/did care about me say shit that made me feel horrible about the things I make & projects I've had. 
+                  </li>
+                  <li>
+                    Though that's seldom happened since High school--mostly since I've decentered the approval of others as motivation to keep creating.
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "If someone handed you a million dollars, what are you going to do with it?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    pay off my college education, get top surgery, build my own PC, & set the rest aside for rent. 
+                  </li>
+                  <li>
+                    would buying a house be nice? yes! but I do not make enough to pay things like utilities once all the cash dries up. No shame in living small!
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "What was the biggest opposing force that you encountered on your creative journey?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    My opposition to feeling uncomfortable or pushing myself to try new things. I put off learning digital art for the longest time because...I already liked how I did traditional, why would I do this??
+                  </li>
+                  <li>
+                    but with what I want to do with my art, learning digital was necessary & inevitable. Plus it's been so much more convenient & easier on my wallet. 
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "What is one thing you absolutely cannot live without?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    airconditioning & central heating. I lived in a dorm that was built in the 60s & it didn't have that & I was MISERABLE. I loved the space I had but FUCK was I hot in the summer & freezing in winter. 
+                  </li>
+                  <li>
+                    I own 2 fans but sometimes it just isn't enough. Plus I like cold weather but since I've gotten my auto immune disorder regulated, for the most part, I'm actually experiencing being cold during the winter. so yeah! I would rather not deal with that again!
+                  </li>
+                </ul>
+                <h1></h1>
+                <h5>
+                  "What do you do to get into your creative zone?"
+                </h5>
+                <h1></h1>
+                <ul>
+                  <li>
+                    Music typically--like something that jives with the vibe I'm going for. I also like looking at different pieces I've made before & getting into the mindset or remind myself the specific way I tell/write this specific story, character, or project. 
+                  </li>
+                  <li>
+                    Also...make sure I don't have any other extenuating responsibilities that I need to get to first before I start creating for, potentially, hours.
+                  </li>
+                </ul>
+                <h1></h1>
+              </div>
+           </div>
+          </section>
+        </div>
+    <script src="/JS/about.js"></script>                                  
+  </body>
+</html>

@@ -1,0 +1,688 @@
+<!doctype html>
+<html>
+  <head>
+    <title>gianna's profile</title>
+    <link href="/CSS/gianna.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="nogginzmart - OC gianna">
+    <meta property="og:description" content="learn more about my OC, gianna!">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/siteicon.webp"
+      type="image/x-icon"
+    />
+    <audio autoplay loop>
+      <audio id="background-music" preload="auto">
+        <!-- The first song will be loaded initially -->
+        <source src="https://nogginzmart.neocities.org/music/gianna_1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </audio>
+    <div class="crt"></div>
+  </head>
+  <body>
+     <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/navpic.jpg" width="100%;" />
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          /> <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_1.webp" /> gianna's page
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_1.webp" /> <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+          learn more about my character, gianna!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h2>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/tumblr_4b0183953048d2c793c4709ff5269e97_b3ab5272_2048.jpg" width="100%;" />
+        </center>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Gianna is one of the side characters in my story
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >"Dedicated to The Kidz I Fought"</a
+          >. Gianna has recently moved from New York to Crested Butte, Colorado with her kids <a href="https://nogginzmart.neocities.org/ollie">Ollie</a>, <a href="https://nogginzmart.neocities.org/victoria">Victoria</a>, & their pets <a href="https://nogginzmart.neocities.org/thor">Thor</a> & Beav. After getting a work opportunity at a hospital in Gunnison, & consulting whether the kids would be up to such a large change, they packed up their bags & headed west! & as the Fall 2008 semester rolls around at the local school, it'll be Ollie & Victoria's first days in a brand new school. Gianna being all the excited for the two of them!
+        </p>
+        
+        <p>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_3.webp"
+            width=40px;
+            height=40px;
+          />
+          Although she's lived in New York for most of her life, she's optimistic & excited for all she can do out here in Colorado. Though she couldn't have felt more lucky to have sold their townhouse & have their house built when they did. It being a lot more cheap than she expected due to the crash. They all definitely got some stares moving into town with their brand new house in the middle of the crisis.
+        </p>
+        
+        <p>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_3.webp"
+            width=40px;
+            height=40px;
+          />
+          She never had many friends back in New York, so starting fresh wasn't too bad. Especially since she had cut her father entirely out of her life. So now it's just her & her kids, & she couldn't he happier. Though she's hopeful about meeting people in this new town. Wanting to get involved in the local farmers' market with her new chicken's eggs & produce she'll grow in her blossoming garden & greenhouse. 
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/tumblr_4b0183953048d2c793c4709ff5269e97_b3ab5272_2048.jpg" width="100%;" />
+        </center>
+        <h2><img src="" /> check out more info below!! <img src="" /></h2>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/tumblr_4b0183953048d2c793c4709ff5269e97_b3ab5272_2048.jpg" width="100%;" />
+        </center>
+
+        <br />
+        <marquee direction="left" scrollamount="5">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/ws_1.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/ws_2.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/ws_3.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/ws_4.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/ws_5.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/ws_6.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/ws_7.png"
+            width="150px;"
+            height="70px;"
+          />
+        </marquee>
+        <span
+          ><marquee direction="left" scrollamount="5">
+            <p>
+              BACKGROUND PLAYLIST ✮⋆˙ Friday I'm in Love - The Cure 
+              ✮⋆˙ Cosmic Love - Florence + The Machine 
+              ✮⋆˙ Our Last Summer - ABBA
+              ✮⋆˙ Will You Still Love Me Tomorrow? - Amy Winehouse
+              ✮⋆˙ Goodbye Yellow Brick Road - Elton John
+            </p>
+          </marquee></span
+        >
+      </section>
+
+      <section class="small">
+        <br>
+        <img src="" width="100%;">
+        <img src="" width="300px;" />
+        <center>
+          <img
+            src=""
+            title=""
+          />
+          <p>
+            Gianna's Spinny is a work in progress!
+          </p>
+        </center>
+        <img src="" width="300px;" />
+        <img src="" width="100%">
+      </section>
+
+      <section class="full">
+        <h2>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_2.webp" width="150px" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_3.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_4.webp" />
+          <u>more information</u>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_4.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_3.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_2.webp" width="150px"/>
+        </h2>
+        <div class="column">
+          <div class="box3" style="overflow-y: scroll">
+            <aside id="leftSidebar" style="margin-right: 0px">
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>basic info</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+              </h2>
+              <ul>
+                <li><u>full name</u> - Gianna Betta Coppola</li>
+                <li>
+                  <u>pronouns</u> -
+                  <img
+                    src="https://i.imgur.com/hHi8SF1.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>gender</u> -
+                  <img
+                    src="https://i.imgur.com/FMoJ9vk.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>sexual orientation</u> -
+                  <img
+                    src="https://i.imgur.com/5iXiC8z.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                  <img
+                    src="https://i.imgur.com/H0t7Ypl.png"
+                    width=100px;
+                    height=20px;
+                  />
+                </li>
+                <li><u>birthplace</u> - Short Hills, New Jersey</li>
+                <li><u>age</u> - 42</li>
+                <li><u>birthday</u> - March 2nd, 1966</li>
+                <li><u>height</u> - 5'1''</li>
+              </ul>
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_5.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>likes</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_5.webp"
+                  width="30px;"
+                  height="30px;"
+                />
+              </h2>
+              <ul>
+                <li>animals</li>
+                <li>nature</li>
+                <li>a nice, cool Fall day</li>
+                <li>tea & coffee</li>
+                <li>game shows</li>
+                <li>spending time with her kids</li>
+                <li>being involved in the community</li>
+                <li>having her well needed alone time</li>
+                <li>giving clothes a second life</li>
+                <li>being crafty</li>
+                <li>when Ollie & Victoria don't fight</li>
+              </ul>
+            </div>
+            </div>
+
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>personality</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                    </h2>
+                    <h2><u>stats</u></h2>
+                    <ul>
+                      <li>
+                        <u>MBTI</u> -
+                        <img
+                          src="https://i.imgur.com/Vs2WmBF.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li>
+                        <u>Zodiac</u> -
+                        <img
+                          src="https://i.imgur.com/pyAp3dI.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/KvyC10q.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/nxnvMxS.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                    </ul>
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>mental/physical</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      /><u>ailments</u>
+                    </h2>
+                    <ul>
+                      <li>
+                        <u>Disabilities</u> - N/A
+                      </li>
+                      <li>
+                        <u>Psychological Disorders</u> -
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li><u>Addictions</u> - N/A</li>
+                    </ul>
+                </div>
+
+                    <div class="column">
+                      <div class="box3" style="overflow-y: scroll">
+                        <aside id="leftSidebar" style="margin-right: 0px">
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>interests</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <h2><u>& hobbies</u></h2>
+                          <ul>
+                            <li>
+                              <u>interests</u> - Gardening, chicken raising, botany, witchcraft, crafting/giving things a second life, public health, fashion
+                            </li>
+                            <li>
+                              <u>hobbies</u> - Gardening, Sewing/mending, Singing, Reading, Cooking/Baking
+                            </li>
+                            <li>
+                              <u>extracurriculars</u> - Beta Club, Book Club
+                            </li>
+                            <li>
+                              <u>favorite artists (music)</u> - The Beatles, Billy Joel, Elton John, 
+                            </li>
+                            <li>
+                              <u>clothing style</u> - Boho, Twee, Artsy, comfortable, layers
+                            </li>
+                          </ul>
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_9.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>education</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_9.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <ul>
+                            <li>
+                              <u>schools</u> - The Pingry School (K-12),
+                              <br />Columbia University (Undergrad & MD)
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+
+                          <div class="column">
+                            <div class="box3" style="overflow-y: scroll">
+                              <aside id="leftSidebar" style="margin-right: 0px">
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>relationships</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Victoria (adoptive daugther)</li>
+                                  <li>Ollie (biological son)</li>
+                                </ul>
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_11.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>dislikes</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/favicon_11.webp"
+                                    width="30px"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>crowded spaces</li>
+                                  <li>medical ignorance & purposeful neglect</li>
+                                  <li>her dad</li>
+                                  <li>Ollie & Victoria fighting</li>
+                                  <li>men (most of the time)</li>
+                                  <li>summer (too...hot)</li>
+                                  <li>cable</li>
+                                  <li>long shifts</li>
+                                  <li>forgetting she ran out of incense</li>
+                                  <li>Thor being a little shit</li>
+                                  <li>getting stuck in her head</li>
+                                </ul>
+                            </div>
+                        </div>
+                        </section>
+
+                                <section class="full">
+                                  <div class="box2" style="overflow-y: scroll">
+                                    <aside
+                                      id="leftSidebar"
+                                      style="margin-right: 0px"
+                                    >
+                                      <h2>
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_5.jpg"
+                                        />
+                                        what are they like?
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_5.jpg"
+                                        />
+                                      </h2>
+
+                                      <ul>
+                                        <li>
+                                          Considering how resourceful she is, you'd think she can from a background where they had to make everything last. Quite the opposite, actually--her father was quite well off & gave Gianna quite a comfortable youth. Putting her though a pretigious education & her physical needs were met, though with the small amount of time she knew her mother she always wanted to be like her. Resourceful, appreciative of the things in her life, & a humble green witch. So even though Gianna went through the motions of being successful in the normal way, she finds for mileage in living life in the way she knew her mother would've wanted her to.
+                                        </li>
+                                        
+                                        <li>
+                                          She initially adopted Victoria because she didn't think she'd ever have children of her own. Plus with her introverted nature she didn't think she'd have much luck finding someone to love, not understanding at that point she had little interest in men. Even though she eventually had Ollie, her adoration of Victoria never changed. Gianna fostering her into a capable young witch, her still trying to find which type of magic to specialize in.
+                                        </li>
+                                        
+                                        <li>
+                                          Although Gunnison is a bit of a commute for work, Gianna thought Crested Butte had the better school--not to mention a more inviting town environment. Ultimately deciding that she'd rather commute if it meant her kids would have an easier time getting adjusted & live living where they are.
+                                        </li>
+                                        
+                                        <li>
+                                          Most of the time she'll have snacks prepared for Ollie & Victoria to have after school. Them having an allotted time in the afternoon to get homework & assignments done. Then they'd sit together at dinner & discuss their days. She looks forward to it everyday, & she hates when she has to miss it because of a medical emergency or a particularly long shift.
+                                        </li>
+                                        
+                                        <li>
+                                          When Erin & Ollie becomes friends, she's flattered that their house becomes the usual hang out spot. Finding Erin reserved but smart & respectful kid. & when Brooke & Willow come along she loves them much the same. Though she definitely has to remind them to lower their voices when they get particularly tilted at Mario Kart Wii
+                                        </li>
+                                        
+                                        <li>
+                                          She hopes she'll get the courage to talk to the other parents in the community more. It would be nice to have some friends for a change. Especially since she finds the parents of Ollie's friends quite kind.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                </section>
+
+                                      <section class="full">
+                                        <h2>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_6.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_67.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_8.webp"
+                                          />
+                                          <u>aesthetic</u>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_8.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_67.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/blinkie_6.webp"
+                                          />
+                                        </h2>
+                                        <marquee
+                                          direction="left"
+                                          scrollamount="5"
+                                        >
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_1.jpg"
+                                            width="220px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_2.jpg"
+                                            width="300px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_3.jpg"
+                                            width="400px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_4.jpg"
+                                            width="350px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_5.jpg"
+                                            width="220px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_6.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_7.jpg"
+                                            width="400px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_8.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_9.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_10.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_11.jpg"
+                                            width="250px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_12.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_13.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/gianna/aesthetic_14.jpg"
+                                            width="220px;"
+                                          />
+                                        </marquee>
+                                        </section>
+                                    </div>
+
+                                      <div style="display: flex; justify-content: center;">
+                                        <footer>
+                                          <span
+                                            ><a
+                                              href="https://nogginzmart.neocities.org/"
+                                              >nogginzmart</a
+                                            >
+                                            est. 8/13/2025!</span
+                                          ><br />
+                                          <span
+                                            >cyanobacteria.css by
+                                            <a
+                                              href="https://ribo.zone/free/layouts/"
+                                              >ribo.zone</a
+                                            ></span
+                                          >
+                                          <br>
+                                          <center>
+                                            <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                          </center>
+                                        </footer>
+                                        </div>
+                                        <script src="/JS/gianna.js"></script>
+                                      </section>
+  </body>
+</html>

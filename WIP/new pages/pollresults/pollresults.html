@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>poll results</title>
+    <link href="/WIP/new pages/pollresults/pollresults.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="https://nogginzmart.neocities.org/catbox%20aint%20working/pollresults/tumblr_d01f7de762091d818fafe0326660fb5f_19828f30_75.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&family=Doto:wght@100..900&family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div id="layout">
+      <div id="header">
+        <div class="sitename">
+          <div class="tooltip">
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+            />
+            <span class="tooltip-text" style="font-size: 20px; top: 105%;">
+                Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to <br>check out!
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div id="main">
+        <div id="left">
+          <div class="box extralinks">
+            <div class="title" style="text-align: center;">a i s l e s</div>
+            <a href="https://nogginzmart.neocities.org/home">homepage</a><br />
+            <a href="https://nogginzmart.neocities.org/about">about</a><br />
+            <a href="https://nogginzmart.neocities.org/blog">blog</a><br />
+            <a href="https://nogginzmart.neocities.org/art">art</a><br />
+            <a href="https://nogginzmart.neocities.org/stories">stories</a><br />
+            <a href="https://nogginzmart.neocities.org/not_found">comics</a><br />
+            <a href="https://nogginzmart.neocities.org/random">random</a><br />
+            <a href="https://nogginzmart.neocities.org/resources">resources</a><br />
+            <a href="https://nogginzmart.neocities.org/community">community</a><br />
+            <a href="https://nogginzmart.neocities.org/site-map">site map</a>
+          </div>
+          <div class="box extralinks">
+            <div class="title" style="text-align: center; font: bold 15px 'earthbound';">s h e l v e s</div>
+            <a href="https://nogginzmart.neocities.org/iPod">ipod life</a><br />
+            <a href="https://nogginzmart.neocities.org/collections">colletions</a><br />
+            <a href="https://nogginzmart.neocities.org/3DS">3ds hb</a><br />
+            <a href="https://nogginzmart.neocities.org/mountaindew">mtn dew</a><br />
+            <a href="">poll results</a><br />
+          </div>
+          <div class="scrollbox" style="height: 300px;">
+            <div class="title" style="text-align: center; font: bold 15px 'earthbound';">h i s t o r y</div>
+          </div>
+        </div>
+
+        <div id="content">
+          <div class="box" id="intro">
+            <div class="title">what is this?</div>
+            <b>Glad you asked!</b><br><br>
+            After getting help from <a href="https://howsoonisnow.org/">howsoonisnow</a>'s guide to help make my new homepage quizzes, I felt inspired by how they have a whole page dedicated to recording the results of their quizzes!<br><br>
+            I figured it might be fun to do! Also to help me stay motivated with changing the quizzes semi often & perhaps making more engaging quizzes! I really love hearing other people's perspectives on things, so even if it's over something more complicated or just simple it's cool how different people can come to a different conclusion or preference based on a singular idea or event!<br><br>
+            At the <b>bottom of the left bar</b> there's a history of older quiz summaries! Click on one of the dates if you wanna see the quiz & what the results were!<br><br>
+            This is by no means scientific--I can barely get over 15 people to answer my quizzes over several months. It's just for fun! Unless you want to go off a sample size of 2 pennies--then by all means consider it gospel.<br><br>
+            Anyways, have fun reading! see you around!
+          </div>
+          <!-- Do not remove the credits if you use this free layout! thank you. -->
+
+          <div class="credits">
+            <b>Layout</b> made by
+            <a href="http://itinerae.blogspot.com" target="_blank">Itinerae.</a>
+          </div>
+          <div class="headup">
+            <a href="#header">
+                heading up?
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/WIP/new pages/pollresults/pollresults.js"></script>
+  </body>
+</html>

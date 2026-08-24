@@ -1,0 +1,660 @@
+<!doctype html>
+<html>
+  <head>
+    <title>thor's profile</title>
+    <link href="/CSS/thor.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/thor">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/not_found">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_1.webp" /> thor's page
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_1.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+          learn more about my character, thor!
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_2.5.webp"
+            class="flip-horizontal"
+            width=30px;
+          />
+            
+        </h2>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Thor is...a cat, in my story
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >. He has been dragged along by his owner,
+          <a href="https://nogginzmart.neocities.org/victoria">Victoria</a> &
+          her family from New York to the quiet, mountain town, Crested Butte,
+          Colorado. He doesn't really care where life takes him, but he would've
+          preferred to not be cooped up in a cage like some beast.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Only Victoria can hear him, & he always has a lot to say.
+          Usually...mean things about others, being a hateful little creature,
+          but he's genuienly curious about the humans around him & why they do
+          what they do. Though after living with Victoria for so long, there
+          isn't much that surprises him anymore.
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+        <h2><img src="" /> check out more info below!! <img src="" /></h2>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <br />
+        <marquee direction="left" scrollamount="5">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/ws_1.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/ws_2.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/ws_3.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/ws_4.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/ws_5.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/ws_6.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/ws_7.jpg"
+            width="150px;"
+            height="70px;"
+          />
+        </marquee>
+        <marquee direction="left" scrollamount="5">
+          <p>
+            BACKGROUND PLAYLIST ✮⋆˙ Misery Fell - Tally Hall ✮⋆˙ Dead Man - Self ✮⋆˙ Great Vacation - Dirt Poor Robins ✮⋆˙
+            Nearest Exit - Hussalonia ✮⋆˙ Bloom - j^p^n ✮⋆˙
+          </p>
+        </marquee>
+      </section>
+
+      <section class="small">
+        <br>
+        <br>
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/spinnyblinkie1.webp"
+          width="100%"
+        />
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/spinnyblinkie2.webp"
+          width="100%"
+        />
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/spinnyblinkie3.webp"
+          width="100%"
+        />
+        <center>
+          <div class="tooltip">
+            <img 
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1157.gif" 
+            />
+            <span class="tooltip-text" style="bottom: 100%">
+              excuse me??<br>begone, intruder!
+            </span>
+          </div>
+        </center>
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/spinnyblinkie4.webp"
+          width="100%"
+        />
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/spinnyblinkie5.webp"
+          width="100%"
+        />
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/spinnyblinkie6.gif"
+          width="100%"
+        />
+      </section>
+
+      <section class="full">
+        <h2>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_moreinfo_1.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_moreinfo_2.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_moreinfo_3.webp" />
+          <u>more information</u>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_moreinfo_3.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_moreinfo_2.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_moreinfo_1.webp" />
+        </h2>
+
+        <div class="column">
+          <div class="box3" style="overflow-y: scroll">
+            <aside id="leftSidebar" style="margin-right: 0px">
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>basic info</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+              </h2>
+              <ul>
+                <li>
+                  <u>species</u> -
+                  <img
+                    src="https://i.imgur.com/r5ZH9ZI.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>pronouns</u> -
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/He_It.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>gender</u> -
+                  <img
+                    src="https://i.imgur.com/SDBUfch.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>sexual orientation</u> -
+                  <img
+                    src="https://i.imgur.com/hh5n4WA.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li><u>birthplace</u> - ???</li>
+
+                <li><u>age</u> - ???</li>
+
+                <li><u>birthday</u> - ???</li>
+
+                <li><u>height</u> - 10"</li>
+              </ul>
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_5.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>likes</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_5.webp"
+                  width="30px;"
+                  height="30px;"
+                />
+              </h2>
+              <ul>
+                <li>being fed/getting treats from Gianna</li>
+                <li>fucking with the chickens</li>
+                <li>listening to drama/gossip</li>
+                <li>quilts, blankets, soft plush pillows</li>
+                <li>getting brushed</li>
+                <li>holidays because he can get more interesting food</li>
+                <li>
+                  finding the perfect spot in the window where he can watch
+                  pathetic humans mull about while also being comfortable in the
+                  sun's comfortable rays
+                </li>
+                <li>terrorizing Ollie</li>
+              </ul>
+            </div>
+            </div>
+
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>personality</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                    </h2>
+                    <h2><u>stats</u></h2>
+
+                    <ul>
+                      <li>
+                        <u>MBTI</u> -
+                        <img
+                          src="https://i.imgur.com/l3R7Ulc.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                    </ul>
+                </div>
+
+                    <div class="column">
+                      <div class="box3" style="overflow-y: scroll">
+                        <aside id="leftSidebar" style="margin-right: 0px">
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_7.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>interests</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_7.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <h2><u>& hobbies</u></h2>
+                          <ul>
+                            <li>
+                              <u>interests</u> - learning more about humans,
+                              human developments/creations
+                            </li>
+
+                            <li>
+                              <u>hobbies</u> - people watching, terrorizing,
+                              being a sassy asshole
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+
+                          <div class="column">
+                            <div class="box3" style="overflow-y: scroll">
+                              <aside id="leftSidebar" style="margin-right: 0px">
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_8.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>relationships</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_8.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Victoria ("owner", lives with her)</li>
+                                  <li>Gianna (feeds him, Victoria's mother)</li>
+                                  <li>
+                                    Ollie (annoying boy, Victoria's brother)
+                                  </li>
+                                  <li>
+                                    Beav (nuisance, protects boy from his
+                                    terrorizing, Ollie's dog)
+                                  </li>
+                                </ul>
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_9.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>dislikes</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/favicon_9.webp"
+                                    width="30px"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Ollie (annoying boy)</li>
+                                  <li>his fur getting wet</li>
+                                  <li>
+                                    being babied/coddled by anyone other than
+                                    Gianna
+                                  </li>
+                                  <li>Beav getting in the way of his plans</li>
+                                  <li>
+                                    getting stepped on (he will try to kill you)
+                                  </li>
+                                  <li>being ignored by Victoria</li>
+                                  <li>...most things, really</li>
+                                  <li>
+                                    Gianna not being the one to feed it
+                                    (Victoria is cursed from cooking & Ollie is
+                                    STUPID ANNOYING BOY!! WHERE IS GIANNA?!!?!?)
+                                  </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </section>
+
+                                <section class="half">
+                                  <div class="column">
+                                    <div
+                                      class="box2"
+                                      style="overflow-y: scroll"
+                                    >
+                                      <aside
+                                        id="leftSidebar"
+                                        style="margin-right: 0px"
+                                      >
+                                        <h2>
+                                          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_WATL.webp" /> what are they like?
+                                          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_WATL.webp" />
+                                        </h2>
+
+                                        <ul>
+                                          <li>
+                                            Thor is a sophisticated little
+                                            creature, but will claw your eyes
+                                            out if you violate his space.
+                                            Especially if you're <a href="https://nogginzmart.neocities.org/ollie">Ollie</a>.
+                                          </li>
+
+                                          <li>
+                                            Victoria loves Thor, & knows he
+                                            tolerates her, but he fosters some
+                                            affection. Though he would never
+                                            admit it.
+                                          </li>
+
+                                          <li>
+                                            He has come to terms that he is,
+                                            indeed, a cat. Although he prefer
+                                            not to be, that's just how things
+                                            go. Least, for as long as they're
+                                            alive, he's comfortable with shelter
+                                            for this portion of his life. For
+                                            however long this life will be.
+                                          </li>
+
+                                          <li>
+                                            He doesn't feel the need to explain
+                                            WHAT he is to Victoria because what
+                                            is there to know? For all they
+                                            should care, he's just a cat
+                                          </li>
+                                        </ul>
+                                    </div>
+                                    </div>
+
+                                        <div class="column">
+                                          <iframe
+                                            width="314"
+                                            height="321"
+                                            scrolling="no"
+                                            src="https://gifypet.neocities.org/pet/pet.html?name=Thor&dob=1755399932&gender=m&element=Fire&pet=https%3A%2F%2Ffiles.catbox.moe%2F7n8nmj.gif&map=https%3A%2F%2Ffiles.catbox.moe%2Fv5s4t3.png&background=https%3A%2F%2Ffiles.catbox.moe%2Fvwfu0f.jpg&tablecolor=black&textcolor=black"
+                                            frameborder="2"
+                                          ></iframe>
+                                        </div>
+                                    </section>
+
+                                          <section class="full">
+                                            <h2>
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_aesthetic_1.webp"
+                                              /><img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_aesthetic_2.webp"
+                                              /><img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_aesthetic_3.webp"
+                                              />
+                                              <u>aesthetic</u>
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_aesthetic_3.webp"
+                                              /><img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_aesthetic_2.webp"
+                                              /><img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/blinkie_aesthetic_1.webp"
+                                              />
+                                            </h2>
+                                            <marquee
+                                              direction="left"
+                                              scrollamount="5"
+                                            >
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_1.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_2.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_3.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_4.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_5.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_6.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_7.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_8.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_9.jpg"
+                                                width="250px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_10.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_11.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_12.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_13.jpg"
+                                                width="200px;"
+                                              />
+                                              <img
+                                                src="https://nogginzmart.neocities.org/catbox%20aint%20working/thor/aesthetic_14.jpg"
+                                                width="200px;"
+                                              />
+                                            </marquee>
+                                          </section>
+                                        </div>
+
+                                        <footer>
+                                          <span
+                                            ><a
+                                              href="https://nogginzmart.neocities.org/"
+                                              >nogginzmart</a
+                                            >
+                                            est. 8/13/2025!</span
+                                          ><br />
+                                          <span
+                                            >cyanobacteria.css by
+                                            <a
+                                              href="https://ribo.zone/free/layouts/"
+                                              >ribo.zone</a
+                                            ></span
+                                          >
+                                          <br>
+                                          <center>
+                                            <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                          </center>
+                                        </footer>
+
+                                        <script src="/JS/thor.js"></script>
+  </body>
+</html>

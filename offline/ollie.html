@@ -1,0 +1,813 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ollie's profile</title>
+    <link href="/CSS/ollie.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/resources">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_nav_pic.jpg"
+          width="100%"
+        />
+        <img src="https://files.catbox.moe/milhpg.webp" width="100%;" />
+        <img 
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_nav_blinkie_2.webp" 
+          width="100%"
+        />
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_nav_blinkie_3.webp"
+          width="100%"
+        />
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/blinkie_1.webp" /> ollie's page
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/blinkie_1.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+          learn more about my character, ollie!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h2>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_9.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Ollie is one of the main characters in my story,
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >. Ollie has just recently moved into Crested Butte, Colorado from New
+          York with his mum, <a href="https://nogginzmart.neocities.org/gianna">
+          Gianna</a>, his older, adopted sister
+          <a href="https://nogginzmart.neocities.org/victoria">Victoria</a>, his
+          dog, Beav, & Victoria's evil calico cat,
+          <a href="https://nogginzmart.neocities.org/thor">Thor</a>. Although
+          he's was initially apprehensive to make such a big change, he takes
+          this change as an opportunity to make new friends & meet all the new
+          people in his new school & town!
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_9.webp"
+            width="40px;"
+            height="40px;"
+          />
+          It's the beginning of the Fall 2008 school year, & Ollie is starting
+          the 7th grade at Crested Butte Community School. He's greeted with
+          lots of curiosity, confused why someone would move all the way to this
+          quiet, mountain town. Ollie being more than thrilled to describe his
+          life back in New York & what it was like to all his new classmates.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_9.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Though he notices another kid in his class who seems to keep to
+          themselves, <a href="https://nogginzmart.neocities.org/erin">Erin</a>.
+          Determined to try & make a good impression to everyone, he approaches
+          them. After getting to know them a little more, & intrigued by their
+          voluntary reclusion, insists to hang around & provide them with some
+          well needed company--much to their dismay.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_9.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Although he gets along with pretty much anybody, he seems to prefer
+          sticking with those who either prefer being on their own or struggle
+          to find their own crowd. So with Erin & eventually
+          <a href="https://nogginzmart.neocities.org/willow">Willow</a> &
+          <a href="https://nogginzmart.neocities.org/brooke">Brooke</a>, he
+          feels like he's found his crowd. Them reminding him of the friends he
+          had back home. Plus it helps his mom approves of them.
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+        <h2><img src="" /> check out more info below!! <img src="" /></h2>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+        <br />
+        <marquee direction="left" scrollamount="5">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ws_1.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ws_2.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/nbma26.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/dv0u5x.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_ws_marquee_fuckyou.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/spzxbc.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_WS_marquee_7.png"
+            width="150px;"
+            height="70px;"
+          />
+        </marquee>
+        <marquee direction="left" scrollamount="5">
+          <p>
+            BACKGROUND PLAYLIST ✮⋆˙ Walking On The Sun - Smash Mouth ✮⋆˙ One
+            Week - Barenaked Ladies ✮⋆˙ Jerk It Out - Caesars ✮⋆˙ On & On -
+            Mustard Plug ✮⋆˙ Can I Kick It? - A Tribe Called Quest ✮⋆˙
+          </p>
+        </marquee>
+      </section>
+
+      <section class="small">
+        <br>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/idp9w4.png" width="100%;" />
+        <center>
+          <div class="tooltip">
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/OLLIE%20SPIN%20THE%20SEQUEL.gif"
+              height="500px;"
+              width="500px;"
+            />
+            <span class="tooltip-text" style="bottom: 100%;">
+              wassup? stay a while!
+            </span>
+          </div>
+        </center>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_WS_side_2.jpg" width="100%;" />
+      </section>
+
+      <section class="full">
+        <h2>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_blinkie_moreinfo_1.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/tumblr_4cf2b7a016173e990ec15e800930c819_714f6521_250.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/blinkie_2.webp" />
+          <u>more information</u>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/blinkie_2.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/tumblr_4cf2b7a016173e990ec15e800930c819_714f6521_250.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_blinkie_moreinfo_1.webp" />
+        </h2>
+
+        <div class="column">
+          <div class="box3" style="overflow-y: scroll">
+            <aside id="leftSidebar" style="margin-right: 0px">
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_2.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>basic info</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_2.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+              </h2>
+              <ul>
+                <li><u>full name</u> - Ollie Xander Coppola</li>
+                <li>
+                  <u>ethnicity & race</u> -
+                  <img
+                    src="https://i.imgur.com/BWs5gMJ.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                  <img
+                    src="https://i.imgur.com/C3gPKb3.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>pronouns</u> -
+                  <img
+                    src="https://i.imgur.com/a24f2Oy.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>gender</u> -
+                  <img
+                    src="https://i.imgur.com/JGB1EvW.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li>
+                  <u>sexual orientation</u> -
+                  <img
+                    src="https://i.imgur.com/mtHAEL4.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+                <li><u>birthplace</u> - Staten Island, New York</li>
+                <li><u>age</u> - 12</li>
+                <li><u>birthday</u> - September 3rd, 1996</li>
+                <li><u>height</u> - 5'1''</li>
+                <li>
+                  <u>other languages</u> -
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/italian.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+              </ul>
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_3.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>likes</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_3.webp"
+                  width="30px;"
+                  height="30px;"
+                />
+              </h2>
+              <ul>
+                <li>animals (especially Beav & his mom's hens!)</li>
+                <li>people</li>
+                <li>SWEETS!! especially sour, fruity candies</li>
+                <li>Fall</li>
+                <li>general mischief</li>
+                <li>school</li>
+                <li>PIZZA</li>
+                <li>coats & hoodies</li>
+                <li>comics & manga</li>
+                <li>giving Victoria a hard time</li>
+                <li>HALLOWEEN</li>
+              </ul>
+            </div>
+            </div>
+
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_favicon_5.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>personality</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_favicon_5.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                    </h2>
+                    <h2><u>stats</u></h2>
+
+                    <ul>
+                      <li>
+                        <u>MBTI</u> -
+                        <img
+                          src="https://i.imgur.com/vQaNIuq.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li>
+                        <u>Zodiac</u> -
+                        <img
+                          src="https://i.imgur.com/Wn6vGC1.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/QYpIXaH.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/tUt6mnx.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                    </ul>
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_4.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>mental/physical</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_4.webp"
+                        width="30px;"
+                        height="30px;"
+                      /><u>ailments</u>
+                    </h2>
+                    <ul>
+                      <li>
+                        <u>Disabilities</u> -
+                        <img
+                          src="https://i.imgur.com/gUe2de3.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li>
+                        <u>Psychological Disorders</u> -
+                        <img
+                          src="https://i.imgur.com/gUe2de3.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                      <li><u>Addictions</u> - N/A</li>
+                    </ul>
+                </div>
+
+                    <div class="column">
+                      <div class="box3" style="overflow-y: scroll">
+                        <aside id="leftSidebar" style="margin-right: 0px">
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_5.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>interests</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_5.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <h2><u>& hobbies</u></h2>
+                          <ul>
+                            <li>
+                              <u>interests</u> - music, cartoons, video games,
+                              people
+                            </li>
+                            <li>
+                              <u>hobbies</u> - skateboarding, hiking, exploring
+                            </li>
+                            <li><u>extracurriculars</u> - concert band</li>
+                            <li>
+                              <u>favorite artists (music)</u> - Reel Big Fish,
+                              Smash Mouth, Fall Out Boy, Blink-182, Cake, Green
+                              Day, System Of A Down, The Smashing Pumpkins,
+                              All-American Rejects, Bowling For Soup, The
+                              Killers, Maroon 5, Red Hot Chili Peppers
+                            </li>
+                            <li>
+                              <u>clothing style</u> - Skater, Comfortable,
+                              Layers, lots of browns, "my mum picked it out &
+                              said I was handsome"
+                            </li>
+                          </ul>
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_6.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>education</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_6.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <ul>
+                            <li>
+                              <u>schools</u> - New Explorations into Science,
+                              Technology, & Math School (New York, New York)
+                              (K-6),<br />
+                              Crested Butte Community School (Crested Butte,
+                              Colorado) (present)
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+
+                          <div class="column">
+                            <div class="box3" style="overflow-y: scroll">
+                              <aside id="leftSidebar" style="margin-right: 0px">
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_7.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>relationships</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_7.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Gianna (mom)</li>
+                                  <li>Victoria (adopted sister)</li>
+                                  <li>Skye (half sibling)</li>
+                                  <li>Erin, Willow, & Brooke (friends)</li>
+                                </ul>
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_8.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>dislikes</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/favicon_8.webp"
+                                    width="30px"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>bullies</li>
+                                  <li>homework</li>
+                                  <li>crowds</li>
+                                  <li>ricotta cheese</li>
+                                  <li>hot weather</li>
+                                  <li>public speaking</li>
+                                  <li>rain</li>
+                                  <li>being bored</li>
+                                  <li>reading/english class</li>
+                                  <li>coffee</li>
+                                  <li>Willow & Erin smoking</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </section>
+
+                                <section class="full">
+                                  <div class="box2" style="overflow-y: scroll">
+                                    <aside
+                                      id="leftSidebar"
+                                      style="margin-right: 0px"
+                                    >
+                                      <h2>
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_blinkie_whataretheylike.webp"
+                                        />
+                                        what are they like?
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_blinkie_whataretheylike.webp"
+                                        />
+                                      </h2>
+
+                                      <ul>
+                                        <li>
+                                          Ollie tries to least be surface level
+                                          friends with everyone!! Even at his
+                                          old, & much larger school--he seemed
+                                          to get along with anyone that crossed
+                                          paths with him. Due to enjoying that
+                                          energy back home, he wants to have a
+                                          similar relationship with his
+                                          classmates at his new school!! Which
+                                          goes over fairly well, especially
+                                          since people are fascinated that he
+                                          came from so far away.
+                                        </li>
+
+                                        <li>
+                                          He is 100% a momma's boy--him not
+                                          being afraid to wear an outfit she
+                                          picked out for him, a scarf she
+                                          knitted, a shirt she made-- helps
+                                          she's pretty observant when it comes
+                                          to things he likes! He also doesn't
+                                          "rebel" much, is his mom has a
+                                          sneaking suspicion he's doing
+                                          something wrong, he usually cracks
+                                          under the pressure & confesses to her.
+                                        </li>
+
+                                        <li>
+                                          His relationship with his older
+                                          sister,
+                                          <a
+                                            href="https://nogginzmart.neocities.org/victoria"
+                                            >Victoria</a
+                                          >, is pretty standards for an older
+                                          sister younger brother dynamtic. They
+                                          routinely terrorize one another & butt
+                                          heads sometimes.
+                                          <a href="https://nogginzmart.neocities.org/gianna">
+                                          Gianna</a> usually shuts it
+                                          all down pretty quick, but she's aware
+                                          there's no entirely stopping it. Ollie
+                                          doesn't dislike Victoria, not at all,
+                                          but finds some of things she does as
+                                          obnoxious or disruptive. Not to
+                                          mention thinks she's full of herself
+                                          sometimes.
+                                        </li>
+
+                                        <li>
+                                          Ollie LOVES his dog, Beav!!!! He's
+                                          usually the one to take her out on
+                                          walks, usually exploring town. Beav
+                                          usually sleeps in his bed at night, &
+                                          if Ollie could take her to school with
+                                          him--he would.
+                                        </li>
+
+                                        <li>
+                                          He struggles being perpetually seen as
+                                          the younger brother friend. Is it his
+                                          maturity? his interets? No one ever
+                                          seems to explain it much other than
+                                          that's just how they see him. He tries
+                                          to get his way out of it, but not to
+                                          much success.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    </section>
+
+                                      <section class="full">
+                                        <h2>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/blinkie_3.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_blinkie_aesthetic_2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_blinkie_aesthetic_3.webp"
+                                          />
+                                          <u>aesthetic</u>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_blinkie_aesthetic_3.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_blinkie_aesthetic_2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/blinkie_3.webp"
+                                          />
+                                        </h2>
+                                        <marquee
+                                          direction="left"
+                                          scrollamount="5"
+                                        >
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_1.jpg"
+                                            width="200px;"
+                                            height="250px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_2.jpg"
+                                            width="200px;"
+                                            height="250px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_3.jpg"
+                                            width="200px;"
+                                            height="250px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_4.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_5.jpg"
+                                            width="200px;"
+                                            height="230px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_6.jpg"
+                                            width="230px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_7.jpg"
+                                            width="220px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_8.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_9.jpg"
+                                            width="200px;"
+                                            height="230px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_10.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_11.jpg"
+                                            width="200px;"
+                                            height="220px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_12.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_13.jpg"
+                                            width="180px;"
+                                            height="230px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/ollie/ollie_aesthetic_14.jpg"
+                                            width="200px;"
+                                            height="200px;"
+                                          />
+                                        </marquee>
+                                    </section>
+                                </div>
+
+                                        <div style="display: flex; justify-content: center;">
+                                        <footer>
+                                          <span
+                                            ><a
+                                              href="https://nogginzmart.neocities.org/"
+                                              >nogginzmart</a
+                                            >
+                                            est. 8/13/2025!</span
+                                          ><br />
+                                          <span
+                                            >cyanobacteria.css by
+                                            <a
+                                              href="https://ribo.zone/free/layouts/"
+                                              >ribo.zone</a
+                                            ></span
+                                          >
+                                          <br>
+                                          <center>
+                                            <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                          </center>
+                                        </footer>
+                                        </div>
+                                        <script src="/JS/ollie.js"></script>
+                            
+  </body>
+</html>

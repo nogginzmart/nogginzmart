@@ -1,0 +1,798 @@
+<!doctype html>
+<html>
+  <head>
+    <title>skye's profile</title>
+    <link href="/CSS/skye.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/not_found">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/not_found">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/navpic.jpg" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/navblinkie_1.webp" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/navblinkie_2.webp" width="100%;" />
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_1.webp" /> skye's page
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_1.webp" />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+          learn more about my character, skye!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h2>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Skye is one of the side characters in my story,
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >. In the cold winter months of October of 2008, Skye starts living
+          with the Coppola's after the insistance of her mother. Skye is the
+          child of <a href="https://nogginzmart.neocities.org/ollie">Ollie</a>'s
+          other parent--making them half-siblings. <a href="https://nogginzmart.neocities.org/gianna">Gianna</a> is more
+          than happy to let Skye stay with them, letting Skye take the former
+          guest room as their own bedroom.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Skye takes to their new school fairly well, joining
+          <a href="https://nogginzmart.neocities.org/victoria">Victoria</a> in
+          her freshman year at Crested Butte Community School. Their gender
+          ambiguity causing them to attract the attention of different ground of
+          their classmates, making Victoria annoyed. Ollie is more than thrilled
+          to have a half sibling--especially a cool & effortlessly nonchalant
+          one like Skye!
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Skye tends to keep themsevles, but isn't afraid to chat it up with
+          their classmates when they initiate conversation. Though they
+          DEFINIETLY brush off any romantic interests from their classmates, but
+          they're definitely flattered they're popular & seen as attractive.
+          They even joined basketball after being told they'd probably be good
+          at it. They find it interesting--& it gives them something to do, so
+          what's there to complain about? Though they were...definitely confused
+          on what team to put them on.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Skye is...different, but still quite friendly. Stands out but blends
+          into the crowd at the same time. Victoria thinks something is up about
+          them, but Gianna says there's nothing for her to worry about. Much to
+          her dismay...Gianna never keeps things under wraps with them.
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+        <h2><img src="" /> check out more info below!! <img src="" /></h2>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg" width="100%;" />
+        </center>
+
+        <br />
+        <marquee direction="left" scrollamount="5">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/ws_1.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/ws_2.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/ws_3.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/ws_4.jpg"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/ws_5.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/ws_6.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/ws_7.png"
+            width="150px;"
+            height="70px;"
+          />
+        </marquee>
+        <marquee direction="left" scrollamount="5">
+          <p>
+            BACKGROUND PLAYLIST ✮⋆˙ Great White Shark - Big Thief ✮⋆˙ Bad Friend
+            - Cheese on Bread ✮⋆˙ Yellow - Coldplay ✮⋆˙ Six Different Ways - The
+            Cure ✮⋆˙ Grace Kelly - MIKA ✮⋆˙
+          </p>
+        </marquee>
+      </section>
+
+      <section class="small">
+        <br>
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/spinnyblinkie1.webp"
+          width="100%"
+        />
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/spinnyblinkie2.webp"
+          width="100%"
+        />
+        <center>
+          <div class="tooltip">
+            <img 
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1158.gif" 
+            />
+            <span class="tooltip-text" style="bottom: 100%">
+              I didn't see you there,<br>it's a pleasure to meet you!
+            </span>
+          </div>
+        </center>
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/spinnyblinkie3.webp"
+          width="100%"
+        />
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/spinnyblinkie4.webp"
+          width="100%"
+        />
+      </section>
+
+      <section class="full">
+        <h2>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_moreinfo_1.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_moreinfo_2.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_moreinfo_3.webp" />
+          <u>more information</u>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_moreinfo_3.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_moreinfo_2.webp"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_moreinfo_1.webp" />
+        </h2>
+
+        <div class="column">
+          <div class="box3" style="overflow-y: scroll">
+            <aside id="leftSidebar" style="margin-right: 0px">
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>basic info</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+              </h2>
+              <ul>
+                <li>
+                  <u>ethnicity & race</u> -
+                  <img
+                    src="https://i.imgur.com/BWs5gMJ.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>pronouns</u> -
+                  <img
+                    src="https://i.imgur.com/F2u3PH0.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>gender</u> -
+                  <img
+                    src="https://i.imgur.com/sh5xjiu.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>sexual orientation</u> -
+                  <img
+                    src="https://i.imgur.com/pZJYyk4.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li><u>birthplace</u> - ???</li>
+
+                <li><u>age</u> - 16</li>
+
+                <li><u>birthday</u> - September 3rd, 1990</li>
+
+                <li><u>height</u> - 6'3''</li>
+              </ul>
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_5.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>likes</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_5.webp"
+                  width="30px;"
+                  height="30px;"
+                />
+              </h2>
+              <ul>
+                <li>people (they're fascinating!)</li>
+                <li>nature</li>
+                <li>philosophy</li>
+                <li>animals</li>
+                <li>FOOD (WHY IS THERE SO MANY DIFFERENT TYPES OF FOOD??)</li>
+                <li>mundane everyday life & monotony</li>
+                <li>trying new things</li>
+                <li>hanging out with/being surrounded by family</li>
+                <li>singing</li>
+                <li>school</li>
+                <li>comfort</li>
+              </ul>
+            </div>
+            </div>
+
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>personality</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                    </h2>
+                    <h2><u>stats</u></h2>
+
+                    <ul>
+                      <li>
+                        <u>MBTI</u> -
+                        <img
+                          src="https://i.imgur.com/GIQnAA5.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+
+                      <li>
+                        <u>Zodiac</u> -
+                        <img
+                          src="https://i.imgur.com/Wn6vGC1.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/KvyC10q.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/JGXHlFX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                    </ul>
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>mental/physical</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      /><u>ailments</u>
+                    </h2>
+                    <ul>
+                      <li><u>Disabilities</u> - N/A</li>
+
+                      <li><u>Psychological Disorders</u> - N/A</li>
+
+                      <li><u>Addictions</u> - N/A</li>
+                    </ul>
+                </div>
+
+                    <div class="column">
+                      <div class="box3" style="overflow-y: scroll">
+                        <aside id="leftSidebar" style="margin-right: 0px">
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_87.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>interests</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_87.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <h2><u>& hobbies</u></h2>
+                          <ul>
+                            <li>
+                              <u>interests</u> - fashion, people, music,
+                              exploring nature & other towns/cities, nature,
+                              philosophy
+                            </li>
+
+                            <li>
+                              <u>hobbies</u> - hanging out with Rae, hiking,
+                              wandering around town & doing whatever really
+                            </li>
+
+                            <li><u>extracurriculars</u> - basketball</li>
+
+                            <li>
+                              <u>favorite artists (music)</u> - The Cure,
+                              Breaking Benjamin, ABBA, Arctic Monkeys, The
+                              Beatles
+                            </li>
+
+                            <li>
+                              <u>clothing style</u> - Whimsigoth, comfortable,
+                              layers
+                            </li>
+                          </ul>
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_910.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>education</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_910.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <ul>
+                            <li>
+                              <u>schools</u> - Crested Butte Community School
+                              (current)
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+
+                          <div class="column">
+                            <div class="box3" style="overflow-y: scroll">
+                              <aside id="leftSidebar" style="margin-right: 0px">
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>relationships</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Ollie (half brother)</li>
+                                </ul>
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_11.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>dislikes</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/favicon_11.webp"
+                                    width="30px"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>nosey people</li>
+                                  <li>waking up early</li>
+                                  <li>stress & conflict</li>
+                                  <li>standardized testing</li>
+                                  <li>feeling stuck</li>
+                                  <li>injustice</li>
+                                  <li>being ordered around</li>
+                                  <li>close-minded people</li>
+                                  <li>obsessive people</li>
+                                  <li>seeing those they love in pain</li>
+                                  <li>loud noises</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </section>
+
+                                <section class="half">
+                                  <div class="box2" style="overflow-y: scroll">
+                                    <aside
+                                      id="leftSidebar"
+                                      style="margin-right: 0px"
+                                    >
+                                      <h2>
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_whataretheylike.webp"
+                                        />
+                                        what are they like?
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_whataretheylike.webp"
+                                        />
+                                      </h2>
+
+                                      <ul>
+                                        <li>
+                                          Skye is very chill & sociable--kind &
+                                          pretty adaptable to anyone! They find
+                                          people fascinating, & even if they
+                                          ultimately don't agree or get along
+                                          with them, they find the interaction
+                                          valuable in some sense. Though this
+                                          attracts a lot of attention their way,
+                                          which isn't the most favorable to
+                                          them. They're flattered people like
+                                          them, but ultimatly likes sticking to
+                                          the background.
+                                        </li>
+                                        <li>
+                                          Skye is a frequent daydreamer, usually
+                                          having to be snapped back to the real
+                                          world when in class or out & about
+                                          wandering. Whatever they're thinking
+                                          about, it captivates their attention.
+                                        </li>
+                                        <li>
+                                          They love having siblings like Ollie &
+                                          Victoria. Loving to hear what they
+                                          have to say about their issues or
+                                          daily hyjinks--big or small.
+                                        </li>
+                                        <li>
+                                          They're more attracted to the mundane
+                                          everyday rather than anything outright
+                                          exciting. Though trying new things
+                                          intrigues them, so it usually works
+                                          out in the end, but if it's crazy for
+                                          no reason...they'll be disgruntled
+                                          about it.
+                                        </li>
+                                        <li>
+                                          Them &
+                                          <a
+                                            href="https://nogginzmart.neocities.org/rae"
+                                            >Rae</a
+                                          >
+                                          are tight, but they don't always agree
+                                          with Rae's more...irresponsible &
+                                          reckless decisions. Especially those
+                                          directed towards Victoria, of which
+                                          the two have a supposed...rivalry, or
+                                          whatever. Strong personalities clash,
+                                          they get that, but it kinda dampens
+                                          what makes Rae fun to be around--along
+                                          with Victoria.
+                                        </li>
+                                        <li>
+                                          Though, besides that, the two usually
+                                          hang out the most. They'll hang out in
+                                          town after class or on the weekends,
+                                          in the parking lot after or before
+                                          class, & usually sit with one another
+                                          at lunch. Skye doesn't usually partake
+                                          in Rae's frequent smoke breaks or
+                                          skipping class, but Rae usually offers
+                                          anyway.
+                                        </li>
+                                        <li>
+                                          Skye &
+                                          <a
+                                            href="https://nogginzmart.neocities.org/iris"
+                                            >Iris</a
+                                          >
+                                          get along, kind to one another & could
+                                          talk for hours of allowed. Though with
+                                          their varying schedules they usually
+                                          don't cross paths. Skye wishes they
+                                          could see her more often.
+                                        </li>
+                                        <li>
+                                          Gianna & them spend a lot of time
+                                          chatting. Although the two aren't
+                                          biologically related, Skye feels like
+                                          Gianna was the other mother they never
+                                          had. Especially with how their own
+                                          mother would describe her, Skye
+                                          couldn't be more thankful to be
+                                          meeting her in the flesh, let alone be
+                                          allowed to live with her.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    </section>
+
+                                      <section class="full">
+                                        <h2>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_aesthetic_1.webp"
+                                            width="180px;"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_aesthetic_2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_aesthetic_3.gif"
+                                            width="180px;"
+                                          />
+                                          <u>aesthetic</u>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_aesthetic_3.gif"
+                                            width="180px;"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_aesthetic_2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/blinkie_aesthetic_1.webp"
+                                            width="180px;"
+                                          />
+                                        </h2>
+                                        <marquee
+                                          direction="left"
+                                          scrollamount="5"
+                                        >
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_1.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_2.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_3.jpg"
+                                            width="230px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_4.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_5.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_6.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_7.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_8.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_9.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_10.jpg"
+                                            width="230px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_11.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_12.jpg"
+                                            width="230px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_13.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/skye/aesthetic_14.jpg"
+                                            width="200px;"
+                                          />
+                                        </marquee>
+                                    </div>
+                                        </section>
+
+                                        <div style="display: flex; justify-content: center;">
+                                        <footer>
+                                          <span
+                                            ><a
+                                              href="https://nogginzmart.neocities.org/"
+                                              >nogginzmart</a
+                                            >
+                                            est. 8/13/2025!</span
+                                          ><br />
+                                          <span
+                                            >cyanobacteria.css by
+                                            <a
+                                              href="https://ribo.zone/free/layouts/"
+                                              >ribo.zone</a
+                                            ></span
+                                          >
+                                          <br>
+                                          <center>
+                                            <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                          </center>
+                                        </footer>
+                                      </div>
+                                        <script src="/JS/skye.js"></script>
+  </body>
+</html>

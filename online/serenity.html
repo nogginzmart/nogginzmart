@@ -1,0 +1,783 @@
+<!doctype html>
+<html>
+  <head>
+    <title>serenity's profile</title>
+    <link href="serenity.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/siteicon.webp"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+     <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <div class="crt"></div>
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/not_found">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/not_found">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Sincerely, Mommy</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Bellevue Once Removed</a
+          >
+          <a href="https://nogginzmart.neocities.org/not_found"
+            >Untitled Story w/ Friend</a
+          >
+          <a href="https://nogginzmart.neocities.org/OC">OCs' Page!</a>
+        </nav>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/navpic.jpg" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/navblinkie.webp" width="100%;" />
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_heading.gif" /> serenity's page
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_heading.gif" />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+        <h2>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+          learn more about my character, serenity!
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_2.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h2>
+
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/77smvx.jpg" width="100%;" />
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Serenity is one of the side characters in my story,
+          <a href="https://nogginzmart.neocities.org/DTTKIF"
+            >Dedicated to The Kidz I Fought</a
+          >! When the Fall 2008 school year begins, nothing much changes for
+          Serenity other than sending her only child,
+          <a href="https://nogginzmart.neocities.org/cecilia">Cecilia</a>, to
+          school. & while she's gone she opens up her cafe-by-day-bar-by-night,
+          the "Morning Fix"! It's her passion & she loves being the start & end
+          to many townsfolks' day.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          She's a mix of beloved & notorious in town depending on who you ask.
+          She's a ray of sunshine, always loving to chat away with someone, new
+          or old. Though get on her bad side or do her wrong & she'll unleash
+          every little or bad thing she's ever heard about you. A force to never
+          be reckoned with, but lovely to have on your side.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Everyone...pretty much knows she's divorced. Her ex-husband, John
+          Robinson, being a local preacher. Though the two couldn't be more
+          different, so it was bound to fall apart. Serenity likes the freedom,
+          & couldn't be happier to finally pursue things she enjoys rather than
+          being stuck as a stay-at-home mom for the rest of her days. Though
+          whenever their paths cross, John makes it quite evident he despises
+          the woman she's become.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_3.webp"
+            width="40px;"
+            height="40px;"
+          />
+          <a href="https://nogginzmart.neocities.org/thomas">Thomas</a> &
+          <a href="https://nogginzmart.neocities.org/veronica">Véronica</a> frequent her establishment, coming there on
+          Saturday's. She loves chatting with them most of the night, them
+          feeling much the same way. Usually lingering even after the bar is
+          closed for the night. Much to the detriment of their sleep schedules.
+        </p>
+
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/77smvx.jpg" width="100%;" />
+        <h2><img src="" /> check out more info below!! <img src="" /></h2>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/77smvx.jpg" width="100%;" />
+
+        <br />
+        <marquee direction="left" scrollamount="5">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/ws_1.webp"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/ws_2.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/ws_3.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/ws_4.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/ws_5.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/ws_6.png"
+            width="150px;"
+            height="70px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/ws_7.png"
+            width="150px;"
+            height="70px;"
+          />
+        </marquee>
+        <marquee direction="left" scrollamount="5">
+          <p>
+            BACKGROUND PLAYLIST ✮⋆˙ I Got My Mind Set On You - George Harrison
+            ✮⋆˙ Since You Been Gone - Rainbow ✮⋆˙ Hole In Your Soul - ABBA ✮⋆˙
+            Material Girl - Madonna ✮⋆˙ 9 to 5 - Dolly Parton
+          </p>
+        </marquee>
+      </section>
+
+      <section class="small">
+        <br />
+        <br />
+        <br />
+        <center><p>Serenity's spinny is a work in progress!</p></center>
+        <br />
+        <center><img src="" /></center>
+      </section>
+
+      <section class="full">
+        <h2>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_moreinfo_1.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_moreinfo_2.jpg"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_moreinfo_3.webp" />
+          <u>more information</u>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_moreinfo_3.webp" /><img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_moreinfo_2.jpg"
+          /><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_moreinfo_1.webp" />
+        </h2>
+
+        <div class="column">
+          <div class="box3" style="overflow-y: scroll">
+            <aside id="leftSidebar" style="margin-right: 0px">
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>basic info</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_4.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+              </h2>
+              <ul>
+                <li>
+                  <u>pronouns</u> -
+                  <img
+                    src="https://i.imgur.com/hHi8SF1.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>gender</u> -
+                  <img
+                    src="https://i.imgur.com/FMoJ9vk.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li>
+                  <u>sexual orientation</u> -
+                  <img
+                    src="https://i.imgur.com/mtHAEL4.png"
+                    width="100px;"
+                    height="20px;"
+                  />
+                </li>
+
+                <li><u>birthplace</u> - Excelsior, Minnesota</li>
+
+                <li><u>age</u> - 40</li>
+
+                <li><u>birthday</u> - December 19th, 1968</li>
+
+                <li><u>height</u> - 5'4''</li>
+
+                <li>
+                  <u>occupation</u> - Bartender, Cook, Barista, Business Owner
+                </li>
+              </ul>
+              <h2>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_5.webp"
+                  height="30px;"
+                  width="30px;"
+                />
+                <u>likes</u>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_5.webp"
+                  width="30px;"
+                  height="30px;"
+                />
+              </h2>
+              <ul>
+                <li>Fall/Summer</li>
+                <li>traveling</li>
+                <li>staying busy</li>
+                <li>shopping</li>
+                <li>being the best looking in the room</li>
+                <li>gossip (but not about her, of course)</li>
+                <li>fashion (esp 60s, 70s, & 80s)</li>
+                <li>causing trouble</li>
+                <li>luxury things</li>
+                <li>holidays (probably her only days off)</li>
+                <li>being free</li>
+              </ul>
+            </div>
+            </div>
+
+              <div class="column">
+                <div class="box3" style="overflow-y: scroll">
+                  <aside id="leftSidebar" style="margin-right: 0px">
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>personality</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_6.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                    </h2>
+                    <h2><u>stats</u></h2>
+
+                    <ul>
+                      <li>
+                        <u>MBTI</u> -
+                        <img
+                          src="https://i.imgur.com/GIQnAA5.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+
+                      <li>
+                        <u>Zodiac</u> -
+                        <img
+                          src="https://i.imgur.com/HJLIYn4.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/eoyJyml.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/NqlNCxa.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+                    </ul>
+                    <h2>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      />
+                      <u>mental/physical</u>
+                      <img
+                        src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_7.webp"
+                        width="30px;"
+                        height="30px;"
+                      /><u>ailments</u>
+                    </h2>
+                    <ul>
+                      <li><u>Disabilities</u> - N/A</li>
+
+                      <li>
+                        <u>Psychological Disorders</u> -
+                        <img
+                          src="https://i.imgur.com/gUe2de3.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/2VtxnMX.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/wLurwzJ.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/OBrKa68.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                        <img
+                          src="https://i.imgur.com/o7CqYdD.png"
+                          width="100px;"
+                          height="20px;"
+                        />
+                      </li>
+
+                      <li><u>Addictions</u> - nicotine</li>
+                    </ul>
+                </div>
+
+                    <div class="column">
+                      <div class="box3" style="overflow-y: scroll">
+                        <aside id="leftSidebar" style="margin-right: 0px">
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>interests</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_8.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <h2><u>& hobbies</u></h2>
+                          <ul>
+                            <li>
+                              <u>interests</u> - music, fashion, pop culture,
+                              cooking/baking, mixology, people, learning
+                            </li>
+
+                            <li>
+                              <u>hobbies</u> - singing/dancing, cooking/baking,
+                              chatting/hanging out/meeting new people, learning,
+                              reading (but only romance & raunchy novels)
+                            </li>
+
+                            <li>
+                              <u>extracurriculars</u> - Beta Club, Cheer,
+                              Student Council, Dance
+                            </li>
+
+                            <li>
+                              <u>favorite artists (music)</u> - ABBA, Journey,
+                              Billy Joel, The Beatles, Blondie, Bon Jovi, Cyndi
+                              Lauper, Elton John, Fleetwood Mac, Simon &
+                              Garfunkel, Van Halen,
+                            </li>
+
+                            <li>
+                              <u>clothing style</u> - HOT (in her words), Boho,
+                              60's/70's/80's adjacent, Boots, dresses,
+                              bellbottom pants, & lots of yellow & blue
+                            </li>
+                          </ul>
+                          <h2>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_9.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                            <u>education</u>
+                            <img
+                              src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_9.webp"
+                              width="30px;"
+                              height="30px;"
+                            />
+                          </h2>
+                          <ul>
+                            <li>
+                              <u>schools</u> - St. John The Baptist Catholic
+                              Montessori School (K-8th)<br />
+                              Minnetonka High School (9th-12th)<br />
+                              University of Denver
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+
+                          <div class="column">
+                            <div class="box3" style="overflow-y: scroll">
+                              <aside id="leftSidebar" style="margin-right: 0px">
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_910.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>relationships</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_910.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>Cecilia (bio daughter)</li>
+                                  <li>John Robinson (ex-husband)</li>
+                                  <li>Véronica, Thomas (friends)</li>
+                                </ul>
+                                <h2>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_10.webp"
+                                    width="30px;"
+                                    height="30px;"
+                                  />
+                                  <u>dislikes</u>
+                                  <img
+                                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/favicon_10.webp"
+                                    width="30px"
+                                    height="30px;"
+                                  />
+                                </h2>
+                                <ul>
+                                  <li>
+                                    men (why do I have to like them, God?)
+                                  </li>
+                                  <li>rushes</li>
+                                  <li>tax season</li>
+                                  <li>winter (so much fucking snow here)</li>
+                                  <li>church</li>
+                                  <li>sleeping</li>
+                                  <li>being alone</li>
+                                  <li>the quiet</li>
+                                  <li>
+                                    living in an apartment on top of her fucking
+                                    business (fuck you John)
+                                  </li>
+                                  <li>feeling inadequate</li>
+                                  <li>all the one-night-stands she's had</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </section>
+
+                                <section class="half">
+                                  <div class="box2" style="overflow-y: scroll">
+                                    <aside
+                                      id="leftSidebar"
+                                      style="margin-right: 0px"
+                                    >
+                                      <h2>
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_whataretheylike.webp"
+                                        />
+                                        what are they like?
+                                        <img
+                                          src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_whataretheylike.webp"
+                                        />
+                                      </h2>
+
+                                      <ul>
+                                        <li>
+                                          She can never make up her mind on what
+                                          the Hell she wants to wear. Usually
+                                          having to spend a good part of the
+                                          night picking out what she wants to
+                                          wear so she won't waste too much time
+                                          in the morning trying to make up her
+                                          mind.
+                                        </li>
+                                        <li>
+                                          Cecilia is usually the one waking her
+                                          up in the morning. She knows her mum
+                                          doesn't sleep very well, so when she
+                                          finally crashes it's going to be hard
+                                          getting her out of it. This is usually
+                                          after all 15 alarms she set went off &
+                                          still didn't wake her up.
+                                        </li>
+                                        <li>
+                                          She struggles with feeling
+                                          helpless--after spending so much time
+                                          not allowed to do much or even pursue
+                                          a career she got a degree for, she
+                                          can't help but feel restless &
+                                          motivated to keep working. Though it's
+                                          much to her detriment & causes her
+                                          great exhaustion. Doesn't help she
+                                          already doesn't sleep well.
+                                        </li>
+                                        <li>
+                                          She LOVES being a mum--especially with
+                                          the best daughter in the world! (in
+                                          her super humble opinion) Although she
+                                          misses the time she was full time mum,
+                                          she likes having the freedom to make
+                                          sure the both of them are taken care
+                                          of & loved. Plus she's...well aware
+                                          her daughter thinks she's an
+                                          overworked scatterbrain.
+                                        </li>
+                                        <li>
+                                          Even during the brutal winter storms
+                                          they get, she tries to stay open as a
+                                          place for people to go & get something
+                                          to eat for those in town that don't
+                                          have the luxury of being out of work.
+                                          Though with the majority of those in
+                                          town being MUCH higher income, it's
+                                          still pretty quiet on those days.
+                                        </li>
+                                        <li>
+                                          She wishes there was more time in the
+                                          world for her to do things. To take
+                                          Cecilia along & travel rather than
+                                          being stuck for months, & potentially,
+                                          years on end in the same town with
+                                          nothing to do for hours out. A part of
+                                          her misses being in the city, but with
+                                          the oppotunities here & the great
+                                          education Cecilia's getting, she can't
+                                          bring herself to move.
+                                        </li>
+                                        <li>
+                                          She is always singing something, she
+                                          is always swaying or dancing to
+                                          something--there's a radio in her head
+                                          & it's on repeat.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    </section>
+
+                                      <section class="full">
+                                        <h2>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_aesthetic_1.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_aesthetic_2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_aesthetic_3.webp"
+                                          />
+                                          <u>aesthetic</u>
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_aesthetic_3.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_aesthetic_2.webp"
+                                          /><img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/blinkie_aesthetic_1.webp"
+                                          />
+                                        </h2>
+                                        <marquee
+                                          direction="left"
+                                          scrollamount="5"
+                                        >
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_1.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_2.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_3.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_4.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_5.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_6.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_7.jpg"
+                                            width="220px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_8.jpg"
+                                            width="260px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_9.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_10.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_11.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_12.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_13.jpg"
+                                            width="200px;"
+                                          />
+                                          <img
+                                            src="https://nogginzmart.neocities.org/catbox%20aint%20working/serenity/aesthetic_14.jpg"
+                                            width="200px;"
+                                          />
+                                        </marquee>
+                                    </section>
+                                </div>
+
+                                      <div style="display: flex; justify-content: center;">
+                                        <footer>
+                                          <span
+                                            ><a
+                                              href="https://nogginzmart.neocities.org/"
+                                              >nogginzmart</a
+                                            >
+                                            est. 8/13/2025!</span
+                                          ><br />
+                                          <span
+                                            >cyanobacteria.css by
+                                            <a
+                                              href="https://ribo.zone/free/layouts/"
+                                              >ribo.zone</a
+                                            ></span
+                                          >
+                                          <br>
+                                              <center>
+                                                <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                              </center>
+                                        </footer>
+                                        </div>
+                                        <script src="serenity.js"></script>
+  </body>
+</html>

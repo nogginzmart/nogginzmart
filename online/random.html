@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>random!</title>
+    <link href="random.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/random/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+     <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="leftcolumn">
+      <div class="about">
+        <img src="" width="100%" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/random/cmm0sk.png" width="100%" />
+        <h1>Random Directory</h1>
+        <center>
+          <p>___________________________________________________</p>
+        </center>
+        <center>
+          <p>check out off-topic sites about random things I like & do!!</p>
+        </center>
+        <nav>
+          <center>
+            <div class="tooltip">
+              <div class="directorybuttons">
+                <a 
+                  href="https://nogginzmart.neocities.org/iPod"
+                >
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/random/ipod_life_.png"
+                  />
+                  <span class="tooltip-text">
+                    check out what it's like & what you'll need to live with/use an iPod in our modern era!
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="tooltip">
+              <div class="directorybuttons">
+                <a 
+                  href="https://nogginzmart.neocities.org/collections"
+                >
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/random/collections.png"
+                  />
+                </a>
+                <span class="tooltip-text">
+                  Like collecting things?<br>see what stuff I like & plan to add/have in my collections!
+                </span>
+              </div>
+            </div>
+            <div class="tooltip">
+              <div class="directorybuttons">
+                <a 
+                  href="https://nogginzmart.neocities.org/3DS"
+                >
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/random/3DS_HB.png"
+                  />
+                </a>
+                <span class="tooltip-text">
+                  wanna learn how I modded my 3DS?<br>click here!
+                </span>
+              </div>
+            </div>
+            <div class="tooltip">
+              <div class="directorybuttons">
+                <a
+                  href="https://nogginzmart.neocities.org/mountaindew"
+                >
+                  <img
+                    src="https://nogginzmart.neocities.org/catbox%20aint%20working/random/mtn_dew.png"
+                  />
+                </a>
+                <span class="tooltip-text">
+                  an ode to my favorite, discontinued Mountain Dew flavor, Spark!
+                </span>
+              </div>
+            </div>
+          </center>
+        </nav>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <center>
+          <p>___________________________________________________</p>
+        </center>
+        <center><p>more sites will be coming soon!!</p></center>
+        <img
+          src="https://nogginzmart.neocities.org/catbox%20aint%20working/random/cmm0sk.png"
+          width="100%"
+          transform="rotate:180deg;"
+        />
+      </div>
+    </div>
+    <script src="random.js"></script>
+  </body>
+</html>

@@ -1,0 +1,609 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="nogginzmart - art gallery">
+    <meta property="og:description" content="check out past & present art pieces from yours truly!">
+    <title>art</title>
+    <link href="art.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+    <div class="container">
+        <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    </div>
+    <div class="leftcolumn">
+      <div class="about">
+        <h2>
+          <b>welcome to the<br />art gallery</b>
+        </h2>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/sideborder.webp" width="100%;" />
+        <center>
+          <p>
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/favicon_1.webp" width="30px;" />
+            thank you for stopping by!
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/favicon_1.webp" width="30px;" />
+          </p>
+        </center>
+        <p>
+          here you can look at my variety of pieces! They're sorted
+          chronologically & in sections that specify the year they were made!
+        </p>
+        <p>
+          click on the thumbnails & it'll blow up to show the whole picture-- a
+          lot closer for you to enjoy the little details! Along with a date &
+          caption!
+        </p>
+        <h2>have fun browsing!</h2>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/sideborder.webp" width="100%;" />
+        <br />
+        <br />
+        <div class="directorybuttons">
+        <center>
+          <a href="https://nogginzmart.neocities.org/home"
+            ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/Website_Home.png" width="150px;"
+          /></a>
+          <a href="https://nogginzmart.neocities.org/about"
+            ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/About.png" width="150px;"
+          /></a>
+          <a href="https://nogginzmart.neocities.org/blog"
+            ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/blog.png" width="150px;"
+          /></a>
+          <a href="https://nogginzmart.neocities.org/stories"
+            ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/stories.png" width="150px;"
+          /></a>
+          <a href="https://nogginzmart.neocities.org/not_found"
+            ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/comics.png" width="150px;"
+          /></a>
+          <a href="https://nogginzmart.neocities.org/random"
+            ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/random.png" width="150px;"
+          /></a>
+          <a href="https://nogginzmart.neocities.org/resources"
+            ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/resources.png" width="150px;"
+          /></a>
+          <a href="https://nogginzmart.neocities.org/community"
+            ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/COMMUNITY.png" width="150px;"
+          /></a>
+          <a href="https://nogginzmart.neocities.org/site-map"
+            ><img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/site_map.png" width="150px;"
+          /></a>
+        </center>
+        </div>
+        <br />
+        <center>
+          <p>
+            <a href="https://nogginzmart.neocities.org/">nogginzmart</a> est.
+            8/13/2025!
+          </p>
+          <p></p>
+        </center>
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <center>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/border2.webp" width="70%;" />
+      </center>
+
+      <h1>
+        <b><u>2026</u></b>
+      </h1>
+      <div class="art">
+        <ul>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1242.gif"
+              alt="August 6th, 2026<br>Cecilia's spinny is finally finished!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1215.png"
+              alt="July 18th, 2026<br>attack of FrammyJammy's OC, Suzu!!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1214.png"
+              alt="July 18th, 2026<br>MASS ATTACK for my good friend & cowriter, stimky_crayy<br>this includes her characters (from left to right) Luther, Elijah, Freyja, Aphaea, Miles, Duncan, Ace, & Callisto!! "
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1193.png"
+              alt="July 14th, 2026<br>JOHNFIGHT ATTACK 7! This is Galaxywolf1079's cat Smokey!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1192.png"
+              alt="July 14th, 2026<br>JOHNFIGHT ATTACK 6! This is druginduceddyke's OC Tori!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1190.png"
+              alt="July 14th, 2026<br>JOHNFIGHT ATTACK 5! This is Iskof's OC Aoi!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1187.png"
+              alt="July 14th, 2026<br>JOHNFIGHT ATTACK 4! This is FernzArtz's OC Luna!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1189.png"
+              alt="July 14th, 2026<br>JOHNFIGHT ATTACK 3! this is Impromptu_magpie's OC Imogen!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1188.png"
+              alt="July 14th, 2026<br>JOHNFIGHT ATTACK 2! this is MaxxyArtBoy's OC Alaira!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1186.png"
+              alt="July 14th, 2026<br>JOHNFIGHT ATTACK 1! this is rileyhighroller's OCs Pink, Orange, & Blue!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1184.png"
+              alt="July 12th, 2026<br>6th revenge for peegirlweezer's OC Alice!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1182.png"
+              alt="July 12th, 2026<br>5th revenge for Azzy_Wazzy's OC Luni!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1180.png"
+              alt="July 7th, 2026<br>4th revenge for an IRL friend CoffeeJellyQuartz's OC Orion!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1172.png"
+              alt="July 5th, 2026<br>3rd revenge of amo_pajamo's oc Mega!Sans!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1170.png"
+              alt="July 5th, 2026<br>second attack of the season of IceKingNumber1Fan's character Lillith!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1166.png"
+              alt="July 3rd, 2026<br>SECOND REVENGE!! this is of Neocities mutual loomingrey's OC Sylvia!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1165.png"
+              alt="July 2nd, 2026<br>FIRST REVENGE!! This is of Renlovesthem's OC Ariadne!"
+            />
+          </li>
+          <li>
+            <img 
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1163.png"
+              alt="July 2nd, 2026<br>FIRST ATTACK OF ARTFIGHT 2026! it's of my mutual, Overshine's, OCs Bea & Ellie!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1158.gif"
+              alt="June 30th, 2026<br>Skye's spinny for their page!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1157.gif"
+              alt="June 28th, 2026<br>Thor's spinny for his page!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1140.png"
+              alt="June 14th, 2026<br>My team card for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1133.png"
+              alt="June 13th, 2026<br>Alice's reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/A3FAFAEB-1CA5-4CFC-AF86-A745BF11A114.png"
+              alt="June 10th, 2026<br>Bryce's reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1107.png"
+              alt="June 9th, 2026<br> Gianna's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1098.png"
+              alt="June 2nd, 2026<br> Iah's reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1093.png"
+              alt="June 1st, 2026<br> Veronica's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1084.png"
+              alt="May 29th, 2026<br> Serenity's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img  
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1073.png"
+              alt="May 26th, 2026<br> Cecilia's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1068.png"
+              alt="May 25th, 2026<br> Skye's new reference for Artfight"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/365A1812-BB64-483A-A5C8-E58A0F59C96A.png"
+              alt="May 24th, 2026<br> Victoria's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1057.png"
+              alt="May 22nd, 2026<br> Rae's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1052.png"
+              alt="May 20th, 2026<br> Iris's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1047.png" 
+              alt="May 16th, 2026<br> Thomas's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1040.png"
+              alt="May 13th, 2026<br> Brooke's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1035.png"
+              alt="May 12th, 2026<br> Ollie's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/E055BA4D-FE49-4226-914E-11AD3951C4B4.png"
+              alt="May 12th, 2026<br> Willow's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_1023.png"
+              alt="May 11th, 2026<br> Erin's new reference for Artfight!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/willow/IMG_1015.gif"
+              alt="May 3rd, 2026<br> Willow long anticipated spinny is finally finished!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_0999.png"
+              alt="April 11th, 2026<br> a drawing of Erin I finally finished--I'm really happy with how it came out!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/doodle1.jpg"
+              alt="March 21st, 2026<br> a doodle I did!! thought they looked cute"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/raepic.png"
+              alt="March 15th, 2026<br> just a monochromatic drawing of Rae I had an itching for"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/brycedrawing.png"
+              alt="March 4th, 2026<br> a drawing inspired by a roleplay I was doing!"
+            />
+          </li>
+        </ul>
+      </div>
+
+      <center>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/border2.webp" width="70%;" />
+      </center>
+      
+      <h1>
+        <b><u> 2025</u></b>
+      </h1>
+      <div class="art">
+        <ul>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/IMG_0960.png"
+              alt="December 4th, 2025.<br> a drawing I made inspired by a roleplay I was doing!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/august.png"
+              alt="November 22nd, 2025.<br> a drawing I made inspired by a roleplay I was doing!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/hera%202.png"
+              alt="November 11th, 2025.<br> a drawing I made inspired by a roleplay I was doing!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/hera.png"
+              alt="November 11th, 2025.<br> a drawing I made inspired by a roleplay I was doing!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/victoria%20spinyy.gif"
+              alt="October 15th, 2025.<br> Victoria's spinny for her specific page!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/rae%20spinny!!!.gif"
+              alt="October 8th, 2025.<br> Rae's spinny for her specific page!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/iris%20spinnyyy.gif"
+              alt="October 5th, 2025.<br> Iris's spinny for her specific page!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/thomas%20spinny.gif"
+              alt="September 29th, 2025.<br> Thomas's spinny for his specific page!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/BROOKE%20SPINNY.gif"
+              alt="September 28th, 2025.<br> Brooke's spinny for her specific page!!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/OLLIE%20SPIN%20THE%20SEQUEL.gif"
+              alt="September 19th, 2025.<br> Ollie's spinny for his specific page!!"
+            />
+          </li>
+          <li>
+            <img
+              class="myImages"
+              id="myImg"
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/ERIN%20SPIIIN.gif"
+              alt="September 11th, 2025.<br> Erin's spinny for their specific page!!"
+            />
+          </li>
+        </ul>
+      </div>
+      <center>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/border2.webp" width="70%;" />
+      </center>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </div>
+    <script src="art.js"></script>
+  </body>
+</html>

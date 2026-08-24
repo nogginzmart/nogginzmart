@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+  <head>
+    <title>iPod Life</title>
+    <link href="/CSS/iPod.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="nogginzmart - iPod">
+    <meta property="og:description" content="FUCK SPOTIFY & APPLE MUSIC! embrace MP3's & learn how I've adapted to & resources I've used for my iPod!">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div class="container">
+      <header>
+        <center>
+          <div class="tooltip">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+          />
+          <span class="tooltip-text" style="font-size: 20px; bottom: 105%;">
+            Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to check out!
+          </span>
+          </div>
+        </center>
+      </header>
+
+      <div class="small">
+        <nav>
+          <div>A I S L E S</div>
+          <a href="https://nogginzmart.neocities.org/home">HOME</a>
+          <a href="https://nogginzmart.neocities.org/about">ABOUT</a>
+          <a href="https://nogginzmart.neocities.org/blog">BLOG</a>
+          <a href="https://nogginzmart.neocities.org/art">ART</a>
+          <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+          <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+          <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+          <a href="https://nogginzmart.neocities.org/not_found">RESOURCES</a>
+          <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+          <a href="https://nogginzmart.neocities.org/not_found">SITE MAP</a>
+        </nav>
+        <!-- optional spot for styled button outside the navigation box -->
+        <nav>
+          <div>S H E L V E S</div>
+          <a href="https://nogginzmart.neocities.org/iPod">IPOD LIFE</a>
+          <a href="https://nogginzmart.neocities.org/collections"
+            >COLLECTIONS</a
+          >
+          <a href="https://nogginzmart.neocities.org/3DS">3DS HOMEBREW</a>
+          <a href="https://nogginzmart.neocities.org/mountaindew">MTN DEW SPARK</a>
+        </nav>
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/navpic_1.jpg" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/navpic_2.jpg" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/navpic_3.jpg" width="100%;" />
+        <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/navpic_4.jpg" width="100%;" />
+      </div>
+
+      <section class="half">
+        <h1>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/blinkie_1.webp" /> iPod Life
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/blinkie_1.webp" />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/favicon_1.webp"
+            width="30px;"
+            height="30px;"
+          />
+        </h1>
+
+        <center>
+          <p>
+            tired of spotify, apple music, or youtube music ruining your joy of
+            listening to music on the go?
+          </p>
+        </center>
+        <center>
+          <p>
+            want a SIGNIFICANTLY cheaper way to listen to music & actually own
+            the music you listen to?
+          </p>
+        </center>
+        <center>
+          <p>
+            well, let me show you how to enter & navigate the life of having an
+            iPod!!
+          </p>
+        </center>
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/f1y9f0.jpg" width="100%;" />
+        </center>
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/favicon_2.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Now, I'm not going to lie & say it isn't a big change. It's definitely
+          something to get used to. A lot of the stuff we use nowadays have the
+          perk of being convenient, & a lot of people didn't grow up without a
+          smartphone. So there's no shame in thinking it's not for you!
+          Remember, it may be more convenient, but you will own the music you
+          listen to, you don't have to pay for it, & you're not dealing with a
+          soulless corporation who funds harmful things & doesn't pay the
+          artists! Plus I also gradually weened away from using Spotify & when I
+          finally cancelled my subscription it felt like cutting the cord!
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/favicon_2.webp"
+            width="40px;"
+            height="40px;"
+          />
+          Furthermore, when I talk about cheaper, in the LONG TERM it is.
+          Especially if you get a refurbished device from the site I bought
+          mine, they're made with new items inside plus lots more storage--so
+          their price reflects that. Not to mention add-ons that you'll need
+          depending on what you're looking for with listening to music on the
+          go. But your wallet will definitely be thanking you in the long run!!
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/f1y9f0.jpg" width="100%" />
+        </center>
+
+        <h1><img src="" /> What Do You Use? <img src="" /></h1>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/favicon_2.webp"
+            width="40px;"
+            height="40px;"
+          />
+          In the right column, you can see a picture of my iPod! Now this isn't
+          just ANY iPod--it's a refurbished model!! Now you don't have to get
+          one like I did--there are listings for different models on Amazon,
+          Ebay--just look for it!! Though I highly recommend it because you can
+          get them with more storage, bluetooth capabilities, & a new battery.
+          Not to mention cool cosmetics, like mine!!
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://eoe.works/collections/apple-ipod-video-5th-5-5-enhanced/products/new-apple-ipod-video-classic-5th-5-5-enhanced-atomic-green-dream-black-atomic-clover-silver"
+              >my iPod!</a
+            >
+            - this is the EXACT listing & seller of the iPod I own!! This is
+            also the site I got my bluetooth adaptor from!!
+          </li>
+
+          <li>
+            <a href="https://spotidownloader.com/en6"
+              >Spotify Music Downloader</a
+            >
+            - one of the sites I use to acquire my music!
+          </li>
+
+          <li>
+            <a href="https://spotdownloader.com/">Spotify Downloader</a> - this
+            site is good for when you have larger playlists & want a swifter way
+            to download them from Spotify!
+          </li>
+
+          <li>
+            <a href="https://ytmp3.cx/mI5b/">Youtube to MP3 Converter</a> - this
+            is helpful because some songs won't download over Spotify Music
+            Downloader, so this is a great second option in case! Not to mention
+            you can download some songs that aren't on Spotify!
+          </li>
+
+          <li>
+            also you'll NEED TO HAVE some form of wired headphones/earbuds,
+            bluetooth adaptor for bluetooth headphones/earbuds, or an aux cord
+            that fit both your headphones & iPod. You CANNOT listen to the music
+            on your iPod without them!
+          </li>
+
+          <li>
+            You will also need an iTunes account! This is where you'll be
+            hosting all your music & where you'll transfer ALL your music to
+            your iPod!! you can also tranfer music from CD's to iTunes & put
+            them on your iPod if you would prefer to do it like that!!
+          </li>
+        </ul>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/f1y9f0.jpg" width="100%" />
+        </center>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/favicon_2.webp"
+            width="40px;"
+            height="40px;"
+          />
+          That's pretty much it for necessary things!! Again, the iPod
+          experience is really customizable & you can choose however you wish to
+          go about it!! Plus you get such euphoria from doing it--I enjoy using
+          my iPod so much & it beats having Spotify sucking money out of my
+          wallet just the give it to dipshits who wanna ruin our world.
+        </p>
+
+        <p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/favicon_2.webp"
+            width="40px;"
+            height="40px;"
+          />
+          now get out there & get yourself an iPod! Plus there's always guides
+          on the internet if you're more curious on learning more about living
+          with an iPod!! Plus I'm always open to discuss how I use it, so if you
+          guys are interested, just let me know!!
+        </p>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/f1y9f0.jpg" width="100%" />
+        </center>
+
+        <br />
+        <marquee direction="left" scrollamount="5">
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_1.png"
+            width="150px;"
+            height="90px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_2.png"
+            width="150px;"
+            height="90px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_3.png"
+            width="150px;"
+            height="90px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_4.webp"
+            width="150px;"
+            height="90px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_5.png"
+            width="150px;"
+            height="90px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_6.png"
+            width="150px;"
+            height="90px;"
+          />
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_7.png"
+            width="150px;"
+            height="90px;"
+          />
+        </marquee>
+      </section>
+
+      <section class="small">
+        <br />
+        <center><h1>my iPod!!</h1></center>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/3da7bq.jpg" width="100%" />
+        </center>
+        <br />
+        <center><h1>other accessories</h1></center>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/5kj9au.jpg" width="100%" />
+        </center>
+        <ul>
+          <li>skullcandy evo crushers</li>
+          <li>
+            <a
+              href="https://eoe.works/collections/bluetooth-transmitters-for-apple-ipod/products/kokkia-bluetooth-5-0-adapter-transmitter-for-3-5mm-auxiliary-headphone-jack"
+              >bluetooth adaptor</a
+            >
+          </li>
+        </ul>
+
+        <center>
+          <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/f1y9f0.jpg" width="100%" />
+        </center>
+        <center>
+          <marquee direction="down" scrollamount="5">
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_8.webp" width="300px;" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_9.webp" width="300px;" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_10.gif" width="300px;" />
+            <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/ws_11.png" width="300px;" />
+          </marquee>
+        </center>
+      </section>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+    <footer>
+      <span
+        ><a href="https://nogginzmart.neocities.org/">nogginzmart</a> est.
+        8/13/2025!</span
+      ><br />
+      <span
+        >cyanobacteria.css by
+        <a href="https://ribo.zone/free/layouts/">ribo.zone</a></span
+      >
+      <br>
+      <center>
+        <a href="https://nogginzmart.neocities.org/">nogginzmart</a> © 2025 by <a href="https://example.com">lee_nogginzmart</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+      </center>
+    </footer>
+    </div>
+    <script src="/JS/iPod.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="nogginzmart - blog">
+    <meta property="og:description" content="peak journalism--keep up with the webmasters weird life">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>nogginzmart's blog</title>
+    <meta name="nogginzmart" content="lee" />
+    <meta
+      name="description"
+      content="hiii, here i talk about...my life, pretty much!"
+    />
+    <!--you can change this to "simplified-style.css" if changing all the individual colors is too overwhelming-->
+    <link href="blog.css" rel="stylesheet" type="text/css" media="all" />
+    <link
+      rel="shortcut icon"
+      href="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/siteicon.webp"
+      type="image/x-icon"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+             <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <!--keep everything inside a container so we can change the layout for mobile easily-->
+    <div id="container">
+      <aside id="sidebar">
+        <!--another container for layout purposes-->
+        <div class="flex">
+          <div id="icon">
+            <!--replace this with the page url so people can refresh the page easily... at least that's what i always click on people's icons to do.-->
+            <a href="https://nogginzmart.neocities.org/blog">
+              <div class="tooltip">
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/uxdqzv.png"
+                  title="welcome to my blog! click on the 'intro' tag for an intro to my blog!"
+                />
+                <span class="tooltip-text" style="bottom: -50%">
+                  welcome to my blog! <br>click on the 'intro' tag<br> for an intro to my blog!
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <section id="profile">
+            <h1>
+              <!--same here, link to your page (if you want)-->
+              <a
+                href="https://nogginzmart.neocities.org/"
+                title="this will send you back to my homepage!"
+                >nogginzmart</a
+              >
+            </h1>
+            <!--the first line of your profile~ describe yourself in one sentence or something-->
+            <p>weird artist who tries to be the jack-of-all-trades</p>
+
+            <div id="bio">
+              <p>NAME: lee</p>
+              <p>PRONOUNS: they/them</p>
+              <p>AGE: 21</p>
+              <p>BIRTHDAY: 12/17</p>
+              <center>
+              <p>
+                <img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/lesbian.webp"
+                  title="lesbian"
+                  style="width: 50px"
+                  height:20px;
+                /><img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/demisexual.webp"
+                  title="demisexual"
+                  style="width: 50px"
+                  height:20px;
+                /><img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/transginger.webp"
+                  title="transgender"
+                  style="width: 50px"
+                  height:20px;
+                /><img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/nonbinary.webp"
+                  title="nonbinary"
+                  style="width: 50px"
+                  height:20px;
+                /><img
+                  src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/autistic.webp"
+                  title="neurodivergent/autistic"
+                  style="width:50px;"
+                  height:20px;
+                />
+              </p>
+              </center>
+              <!--this is set up to link to your homepage-->
+              <p>
+                site:
+                <a href="https://nogginzmart.neocities.org/">nogginzmart</a>
+              </p>
+            </div>
+
+            <!--add as many paragraphs as you want, the sidebar is scrollable!-->
+            <center>
+              <p>wanna head elsewhere?</p>
+              <p>here's some quick links!</p>
+            </center>
+          </section>
+        </div>
+
+        <!--add links to other pages on your site, or other sites you're on!-->
+        <nav>
+          <ul>
+            <li><a href="https://nogginzmart.neocities.org/about">ABOUT</a></li>
+            <li><a href="https://nogginzmart.neocities.org/art">ART</a></li>
+            <li>
+              <a href="https://nogginzmart.neocities.org/stories">STORIES</a>
+            </li>
+            <li>
+              <a href="https://nogginzmart.neocities.org/not_found">COMICS</a>
+            </li>
+            <li>
+              <a href="https://nogginzmart.neocities.org/random">RANDOM</a>
+            </li>
+            <li>
+              <a href="https://nogginzmart.neocities.org/resources"
+                >RESOURCES</a
+              >
+            </li>
+            <li>
+              <a href="https://nogginzmart.neocities.org/community">COMMUNITY</a>
+            </li>
+            <li>
+              <a href="https://nogginzmart.neocities.org/site-map">SITE MAP</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!--i made it so the stamps section here only shows up on desktop-->
+        <section id="stamps" class="center pc-only">
+            <!--swap this with your site button if you have one!-->
+            <div class="tooltip">
+            <div class="sitebutton">
+          <input type="text" 
+            style="
+            visibility: hidden;" 
+            value="&lt;a href=&quot;https://nogginzmart.neocities.org/&quot;&gt;&lt;img src=&quot;https://nogginzmart.neocities.org/catbox%20aint%20working/mysitebutton.gif&quot;&gt;&lt;/a&gt;" id="myInput">
+          <img onclick="copyandpaste()" 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/mysitebutton.gif"
+          >
+          <span class="tooltip-text">
+            click me to copy my code<br>to your clipboard!
+          </span>
+        </div>
+        </div>
+        </section>
+
+        <!--feel free to remove the credit or put it somewhere else, i don't mind!-->
+        <p class="center small-text">
+          site template by <a href="https://nomnomnami.com">NomnomNami</a>
+        </p>
+      </aside>
+
+      <!--now for the POSTS! the "tagged" class makes sure the tag filters do what they're supposed to-->
+      <main class="tagged">
+        <!--first is a deviantart inspired "current status" section where you can list things you're currently up to-->
+        <section id="status" class="pinned">
+          <!--remove the "open" part to have this closed by default-->
+          <details open>
+            <!--i like to include a last updated date for this part-->
+            <summary>status <time>06/28/2026</time></summary>
+            <ul>
+              <!--i don't think this is reeeally how you're supposed to use html lists, but we're just having fun here so it's ok-->
+              <li>what are you doing?</li>
+              <li>
+                Chilling, for the most part. Just going to work, roleplaying, & picking my nose I guess
+              </li>
+
+              <li>what are you listening to?</li>
+              <li>SaltyDKDan & whatever grabs my attention</li>
+
+              <li>playing any video games?</li>
+              <li>
+                Papa's Mocharia & just finished Deltarune chapter 5!
+              </li>
+            </ul>
+          </details>
+        </section>
+
+        <section id="tag-filters" class="pinned">
+          <details open>
+            <summary>tag filters</summary>
+            <!--when you add new tags here, make sure to add them to your css as well so that the filters will work properly. careful not to make any typos...!-->
+            <label><input type="radio" id="all" name="tag" checked />all</label>
+            <label><input type="radio" id="intro" name="tag" />#intro</label>
+            <label
+              ><input type="radio" id="personal" name="tag" />#personal</label
+            >
+            <label><input type="radio" id="art" name="tag" />#art</label>
+            <label><input type="radio" id="vent" name="tag" />#vent</label>
+            <label
+              ><input
+                type="radio"
+                id="trigger-warning"
+                name="tag"
+              />#trigger-warning</label
+            >
+            <label
+              ><input type="radio" id="projects" name="tag" />#projects</label
+            >
+            <label><input type="radio" id="work" name="tag" />#work</label>
+            <label><input type="radio" id="school" name="tag" />#school</label>
+            <label><input type="radio" id="fandom" name="tag" />#fandom</label>
+            <label
+              ><input
+                type="radio"
+                id="video-games"
+                name="tag"
+              />#video-games</label
+            >
+            <label><input type="radio" id="music" name="tag" />#music</label>
+            <label
+              ><input
+                type="radio"
+                id="site-updates"
+                name="tag"
+              />#site-updates</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="cool-sites"
+                name="tag"
+              />#cool-sites</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="latest-post"
+                name="tag"
+              />#latest-post</label
+            >
+            <label
+              ><input type="radio" id="political" name="tag" />#political</label
+            >
+          </details>
+        </section>
+
+        <!--BEGIN POSTING!!!!!!!!-->
+
+        <!--each post should use the "article" element. set its class to "post", and add any tags that you use with spaces separating them. this is how it knows which posts to filter when you click the buttons above!-->
+
+        <article class="post video-games fandom latest-post">
+          <div class="post-header">
+            @lee-nogginzmart <time>06/28/2026, 5:12 pm</time>
+          </div>
+          <h2>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/tumblr_158308de62edd52a7f1e983e8d990428_0f42560d_100.webp"
+              width="30px"
+            />
+            HELLO BLOG!!
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/tumblr_158308de62edd52a7f1e983e8d990428_0f42560d_100.webp"
+              width="30px"
+            />
+          </h2>
+          <p>
+            I hope everyone's been well & having a good Pride month!! I haven't really done much other than work & prepare for Artfight, to be honest. Summer depression is REAL & is my seasonal depression (fucking hate the heat). 
+          </p>
+          <p>
+            Some of you know, but...I dunno why you're here if you don't know, but DELTARUNE CHAPTER 5 CAME OUT!! It's CRAZY ALONE that we got another chapter so soon, but it's hard to follow up how incredible chapters 3 & 4 were. So going in I tried to have as little expectations as possible as to not get disappointed or judge the chapter unfairly. I wanted to talk about how I felt about it! & as of writing this (drafting June 25th, 2026) I have finished the chapter!
+          </p>
+          <p>
+            I do want to preface what I did prior to chapter 5 coming out. So, when chapters 3 & 4 came out, it had been so long since I played chapter 1 & 2 that I did those playthroughs on a different Steam account (I didn't have my own yet). So, as a result, after I did an initial playthrough of 3 & 4 I went through & played the entire game thus far (secrets & all) so I would have a 100% MAIN ROUTE playthrough.
+          </p>
+          <p>
+            That was...NOT easy. I would NEVER say I am a pro gamer--I am actually quite terrible at video games. I guess that's why I gravitate TOWARD RPG's because they're more story based & more strategic rather than...dealing with my subpar motor capabilities, reaction time, & most importantly...patience.
+          </p>
+          <p>
+            Because I am aware some people are waiting till the entire game comes out. Which...dude, you're never going to get to play it; you're going to be in the grave before then /j, people who can't afford to buy the Steam release & haven't played the most latest chapters, & those who are just behind the ball & haven't gotten around to playing yet. Which is totally cool! Don't let people make you feel bad for that! I wish everyone that wanted to could play this game in its entirety!
+          </p>
+          <p>
+            SO I will be spoilering off my review, thoughts, & theory sections of this post. Those who don't give a fuck about Deltarune...read anyway or just scroll past, it's all good. Otherwise, I hope you guys catching up will eventually feel ready to read this & enjoy what I got to say! I've been playing & waiting since day 1 with Deltarune, so I definitely feel a lot towards this game & especially this chapter!
+          </p>
+          <p>
+            So, 
+              <b>
+                <u>
+                  <i>
+                    SPOILERS for Deltarune THUS FAR!!! Proceed with caution!!
+                  </i>
+                </u>
+              </b>
+          </p>
+          <p>
+            Anyway, lets get started!!
+            <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+            />
+          </p>
+          <h3>
+            <u>
+              GOING IN : INITIAL THOUGHTS
+            </u>
+          </h3>
+          <details closed="readmore">
+            <summary>read more</summary>
+            <p>
+              I was grateful I caught up with my 100% playthrough so I didn't have to do any homework before going in. I didn't mind doing the twice over last year, & when 2 came out I replayed 1, but since I'm...stupid & not good a vidya gems I'm SUPER happy I don't have to do the fucking chapter 3 secret boss again. That took me WEEKS. 
+            </p>
+            <p>
+              I honestly didn't think I was going to be able to do just one playthrough perfectly. I had save slot 1 saved permanently reaaally early in the chapter in case I needed to go again to 100% everything. As far as I am aware NOW, I don't think I'll need to do that. Which is awesome!
+            </p>
+            <p>
+              I also played it with my little brother on call. Last year he watched me play chapters 3 & 4 in my room, but since I live on my own & have work we just ended up doing that! We also like to voice act the entire thing to make it more engaging, so that was fun!! Thankfully my job is dead enough I bulldozed through chapter 5 with him pretty easily.
+            </p>
+            <p>
+              Now, chapter 5 had really big boots to fill. 3 & 4 were an incredible package to get together & they were both so strong in their character dynamics, lore drops, & not to mention general game mechanics & environments. 3 was super cool in the rating system from Tenna's games & the alone gaming sessions between those games to get the shadow mantle for the secret boss. It was a perfect dissonance of jovial fun which is typical of Toby but also the unnerving underbelly of what might be going down that we still aren't aware of. 
+            </p>
+            <p>
+              4 especially followed up with more of that moody atmosphere & was more beautiful than silly--the music was breathtaking & the angst with the roaring knight was incredibly gripping. Not to mention that final boss fight!! DUDE?? & THE SHIT AT NOELLE'S HOUSE??? YURI & FUCKING DESS STUFF??? It just felt perfect--& I think I knew then it was going to be hard to follow up such a great middle.
+            </p>
+            <p>
+              & with the ending of chapter 4 really making me anxious of what was going to happen next, I think everyone was rattling around with what was going to happen at the festival. Was Asriel going to show up? Is this when shit hits the fan & the whole town just explodes? Will Friend inside me REALLY happen?!??!!? All we could do is think & wait!!
+            </p>
+            <p>
+              So, it's finally here, & I played it! I'm surprised I did it in 2 days, especially since now I'm employed & last summer it took me weeks to do it all & I was...very much not employed. I guess I was just that excited to see what all was going to go down! I can't say I'm disappointed, but I definitely have thoughts! 
+            </p>
+          </details>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+            />
+          <h3>
+            <u>
+              CHAPTER 5 REVIEW
+            </u>
+          </h3>
+          <details closed="readmore">
+            <summary>read more</summary>
+            <p>
+              I just want to preface, I LOVED this chapter. I don't hate or dislike any of the chapters. All of them are fun & gripping in their own way, including this one! So don't misconstrue what I have to say thinking I was dissatisfied or didn't think Toby & his team did an amazing job. 
+            </p>
+            <p>
+              Though I feel like I would've been more happy with 5 if it was a package deal like 3 & 4. Obviously the chapters aren't meant to be something to experience independent from everything else, hence them being chapters of a whole, but this chapter especially, I felt, needed something with it to feel more satisfying.
+            </p>
+            <p>
+              I do believe MOST of the chapter felt like the experience I wanted. The beginning was strong, the festival was ADORABLE (YURI YURI YURI) & all the character interactions were lovely! I don't even think the flowers were underbaked. Yeah, there are a lot of them & a lot of characters to characterize, but I feel like the mechanic where you can hang out with them in the cafe is a great way to supplement what they can't get to during the main game without compromising the flow of the story. Though I personally wouldn't have minded waiting a little while longer to get 5 & 6 as a package deal. Since, on the main route, 5 ends so abruptly & at such a tense moment that when it was over I was like..."shit, that's it?"
+            </p>
+            <p>
+              Which I mean...if that was the point, then they did a good job! I just...I dunno, I think I'm just spoiled but I've waited longer for chapters, I wouldn't have minded! 
+            </p>
+            <p>
+              But about the chapter itself, KRIS WHY ARE YOU G R E E N?? /j but in all seriousness though...it's pretty evident that Kris can't LIVE without the soul but to see them be out long enough to start going pale? rotting? I dunno but I was like oooh shit.
+            </p>
+            <p>
+              Plus when you interact with the blood stain it's like 'I should probably clean this up at some point' or something along those lines & I'm like YEAH DUDE. But it really shows how kinda...absent Toriel can be? I know she's probably going through a lot right now as well, but how do you just miss a pretty...obvious splat of red on the carpet? That or the bed & cart cover it up that well.
+            </p>
+            <p>
+              Bro...but the festival was so cute. Plus I loved how we visited castle town at the beginning of the chapter. I loved the trash gang fight (although it took me a couple times, I was super rusty since it was my first fight) & WHY THE FUCK IS THE FREEDOM MOTIF IN THE THEME HELLO???
+            </p>
+            <p>
+              I also loved how everyone was excited for Susie & wanted to help her feel ready for her date with Noelle. Like GIRL YES YOU DESERVE LOVE!!
+            </p>
+            <p>
+              UGH! SUSELLE MY BELOVED!! No shade to people that ship anything else (highkey would be down for Susie x Kris x Noelle) but YES YES YES YES I was trying so hard not to squeal at work I was just so happy. EVERYTHING WAS SO CUUUUUTE!! THEY'RE SO HOPELESS!! I've seen people say Toby is just three lesbians in a trenchcoat because...why is this so perfect?
+            </p>
+            <p>
+              I was so sad when it had to end. Also Toby if Rudy is dead I will be at your house easy to kick you in the nards because NO THIS GAME IS LITERALLY A HORROR MOVIE FOR NOELLE QUIT MAKING HER SUFFERRRR
+            </p>
+            <p>
+              Also not Susie making me think for a second she was catching onto Kris being a little shit & actually being the reason these fountains are getting created. Toby messing with me all the damn time.
+            </p>
+            <p>
+              To talk about the dark world, I really liked it!! I enjoyed how it played on chapter one's aesthetic but later on it became more unique with its own vibe & aesthetic! Definitely played on nostalgia being a big factor in a world surrounding Asgore. I really liked the 2D sidescroller game mechanic! Now...was some of the platforming for the pink coins ABSOLUTELY INSANITY INDUCING??? ...yes, but I eventually did it but fuck...I wanted to snap my computer so many times.
+            </p>
+            <p>
+              I really hope Hopschef is in my castle town next chapter because I loved him so much you have no idea. Also I did the fucking time trial for his sourdough thinking I was going to get a pink coin from it? How TF am I supposed to complete it in 8 seconds? Hello??? Anyway my brother & I were like wtf man & just ditched it to find the rest of the coins.
+            </p>
+            <p>
+              Also kudos to all the people being on their game with walkthroughs & directions for everything. I don't think I would've found all the pink coins without help. Some of them were in the most asinine places & routes. Some I guessed were probably to get more pink coins but eh. I found the 10 for the secret boss key pretty easily, but for the rest to get the gear? UUUUGGGGHHHHH (fuck you flower puzzle in the top of the castle I hope you fall into a ditch)
+            </p>
+            <p>
+              Post mortem, I think seeing some of Toby's commentary about the chapter & what it was going to mean helped me appreciate & understand it better. This chapter really is the last fun adventure before shit gets real, & I think after 4 I get why he did that. Three was super fun, yes, but 4 really was a change in tone & to just keep getting darker I think wouldn't be entirely Toby. Doesn't change how I feel about the timing of chapters & 5 on itself but I can see his intentions behind it.
+            </p>
+            <p>
+              Also with all the fan interpretations of what they thought 5 was going to be like, I kinda wonder if Toby & his team went out of their way to subvert expectations. I can't be too certain of that because I'm sure they do a lot of preplanning & premeditation which could predate a whole lot of speculation, but I definitely didn't expect the more East Asian influence & aesthetic. Not to mention FLOWERY & that fucking piece of shit (#hatingflowerybecauseralseidoes) but I wouldn't be lying if I said I would've preferred a lot of these fan interpretations over the one we got. I think that's just me & what I like aesthetically & what would've fit for the narrative & characters. THERE IS NOTHING WRONG WITH EAST ASIAN INFLUENCE & AESTHETICS, DON'T GET ME WRONG! I just...I dunno, it feels odd for a chapter surrounding Asgore & his shop. That's just me, though.
+            </p>
+            <p>
+              Bro...but some of these portraits & gags in this chapter are PRICELESS. Like Ralsei is FUCKING PISSED in this chapter! What piss in their Cheerios??? I loved it personally, & I can kinda see why Ralsei was so standoffish. Flowery is quite literally all Ralsei can't really be or feels like they can't be (or least that's the interpretation I got). & how Flowery's flagrant disregard for the rules of the world peev Ralsei off to no end. I thought that was really cool, especially following 4 when we also got some pretty good Ralsei growth & characterization. I think this is a natural stream of events when it comes to them & their exploration of self & their feelings independent of Susie, Kris, & their job.
+            </p>
+            <p>
+              Dude, the other flowers too were really fun! I believe my favorites would have to be Yellow, Blue, & Green. Green is just so...mood. Just happy to be there & came in clutch so many times oml thank you. Yellow & Blue are also just PRECIOUS!! THIS CHAPTER IS SO FUCKING GAY, GUYS!! DURING PRIDE MONTH, TOO??? UGH! I loved Blue's dialogue & personality so much, his "flowery" (heh) dialogue was so appropriate & I had lots of fun voice acting for them. Yellow also...bless their heart, scared the fucking shit out of Susie & Ralsei LMAO! They're just sweethearts, & I loved every second we got with them. Plus the more "oh shit" you feel as Blue investigates what happened to Yellow & how easily misconstrued it can all be. I thought that was HILARIOUS.
+            </p>
+            <p>
+              Not to say I didn't like the other Flowers! I do think Orange was very one note, I don't think they really knew what to do with them. I also loved Seth but I feel like they needed a little more to stand out. I struggled to come up with a voice for them & kept changing it throughout the playthrough. I kept trying to do an Alphys thing but I just wasn't vibing with it. Their plights are very interesting, though, & I enjoyed all of their motivations on why they're doing what they're doing. Aqua is just so much fun, is a silly goose--no notes. & Flowery himself is the scum of the Earth. I'm joshing but I feel like with SO many characters trying to share screentime, we didn't get a lot of chances to really bond with Flowery like other chapters main antagonists.
+            </p>
+            <p>
+              I really do get why they were fighting so hard & why they cared for Asgore so deeply. All of them. It also really hurt me how Asgore really was just using them to get to his initial goal when all they wanted to do was repay him the love he had given them all these years with prolonging their lives. Not to mention their plights to LIVE LIVES & fulfill dreams they've had. Though if only they had to bodies to do & engage in such things, which they try to do in the dark world.
+            </p>
+            <p>
+              I thought that was really interesting, & it really hurt we had to say goodbye to them. I would've loved to see them interacting in Castle Town with the other residents. Not to mention Flowery continuing to ragebait the fuck out of Ralsei. Like...the others it could possibly happen, but now...I think Flowey doesn't really have a chance of doing that (even with Susie's effort at the end of the chapter).
+            </p>
+            <p>
+              I also raised an eyebrow when Flowery was explaining his plight & how...literally we're doing the same thing but for Castle Town. Why do we get to exist & have a community while they can't? They're bad because we're not involved in doing it? I don't know why I hadn't thought about it before hand, but yeah. I get there shouldn't be a LOT of dark worlds BECAUSE of the prophecy, but at the end of the day Castle Town probably won't be allowed to exist forever. Which I think will be something we might have to grapple with at the end of the game. Or not. Toby & his team are always full of surprises.
+            </p>
+            <p>
+              Now I wanna talk about the secret boss. Initially I was like OH...OKAY?? but after reading stuff on Toby's intentions with the chapter, as I mentioned before, ....yeah I get it. That battle was fun! It wasn't AGGRESSIVELY hard & honestly I wouldn't be against doing it again if I ever wanted to play the game all over again. Mechanically it was super interesting with the purple soul & the dating sim homages. I fucking HATED THE BOMBS!! I KEPT DYING TO THAT!! IT PISSED ME OFFFFF but otherwise the battle was pretty easy to memorize the patterns of & master!
+            </p>
+            <p>
+              Mew Mew was adorable & a pleasant surprise to see her come back. BRO & the music was so silly & fun, too. My brother & I were like "HATSUNE MIKU!?!", it was glorious.
+            </p>
+            <p>
+              Also, if you were curious about my secret boss ratings based on difficulty, from easiest to hardest, I'd say Spamton Neo, Mew Mew, Gerson, Jevil, Then the Roaring Knight.
+            </p>
+            <p>
+              To give some context...I wouldn't mind fighting Jevil again because I love him & his theme. but the ROARING KNIGHT??? I DREAD the thought of replaying this game & having to redo that fight. It's so FUCKING HARD. I HATED IT. It was cool but I HATED ITTTTTT!! If I wasn't such a stubborn bastard I probably would've given up at some point. I had to take so many breaks because it was pissing me off so royally.
+            </p>
+            <p>
+              Back to the topic at hand, though, I did have to go back & get the egg after seeing if there was one in this chapter (again, thank you guidemakers). I feel like it was appropriate to have it like that, especially as the last one. With a chapter that has nostalgia so integral, having it pretty similar to chapter one's felt apt. I also liked how haunting it was to receive the egg. I really do wonder what the eggs will do. I don't remember any theories on the top of my head so I guess that'll be homework for me.
+            </p>
+            <p>
+              Finally, the final boss wasn't too bad. I especially sucked at it because I am not good at the bullet Hell & I am quite the worst at dodging shit, so it took me a couple of times. I don't...know...if I got to it before the patch to make it easier? I believe I did after the patch? Either way, I think it's funny how people are like 'hehe finished it before the patch dweebs'. Don't have to tell me twice that I'm bad at the game.
+            </p>
+            <p>
+              Also...fuck, now Asgore's been taken too by the Roaring Knight. I know people are pretty removed from Undyne. Like yeah she had a pretty prominent role in the town but Asgore's absence directly effects us & our family. I'm curious how that coupled with Rudy...dying? getting sicker? ??? will effect the upcoming chapters.
+            </p>
+            <p>
+              I was also pretty bummed that we didn't get to see Noelle again after the dark world. I get it was night time & tensions were high, especially on Susie's part but...I dunno. I really wanted to see more of her. Now, is that probably because Kris just said Noelle had to leave rather than, you know, her DAD FUCKING PASSING THE FUCK OUT....YES...BUT Kris pisses me off (as much as I love them) & I can't be too surprised.
+            </p>
+            <p>
+              So we walk Susie home & it's no surprise that Susie lives full time in the Dark World. From what's implied, if I could go to a place where people genuinely loved me & my parents wouldn't come searching...I would. I really empathize with that. Plus seeing the montage of her getting things ready for Noelle because she believe including her could help them fix this situation I thought was precious. Though I'm scared after Rudy's accident how Noelle will be. Whether doing something like that would do more harm than good. Who knows, especially since after all that happened in 5 I think Noelle is inclined to trust Susie & confide in her. But I guess we'll have to see.
+            </p>
+            <p>
+              Now, to talk about Snowgrave. I refuse to do my own playthrough of it. It's pretty obvious that the actions are due to our influence &, for whatever Kris wants to happen in the main route, it's DEFINITELY not what you're doing/supposed to do in Snowgrave. Now this doesn't make me better than anyone else, obviously but...fuck man, I can't do that shit.
+            </p>
+            <p>
+              Snowgrave in this chapter is incredibly short, which I thought was super cool. & for people not understanding why Noelle would do to this. Dawg. be so for real. We have been psychologically TORTURING THIS GIRL in 2 & 4 & you just think "maaan this is Chara's fault". DAWG. ANYWAY. It was super haunting. I actually drew a picture the day I watched someone play through it. I don't know if I'll post it? I don't want to spoil anyone so I might not. But like...dude. I really wonder if they died, went to another realm, if Dess did the same thing--& so on, there are so many questions I have.
+            </p>
+            <p>
+              I believe that's pretty much it? All & all a great chapter & I'm so glad we got back to back releases! I'm so anxious yet excited for the future & next year (supposedly) couldn't come sooner enough!
+            </p>
+          </details>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+            />
+            <h3>
+              <u>
+                THOUGHTS & THEORIES
+              </u>
+            </h3>
+          <details closed="readmore">
+            <summary>read more</summary>
+            <p>
+              I've heard & seen a couple things. I've seen people say the picture Susie draws for Sans is the one that's in his drawer in the shed behind their house in Undertale. & It's not something you can skip, you HAVE to do it for BOTH routes, which I thought was interesting. I wouldn't be surprised if that was the case. Though as a hardcore Undertale fan I would I be a little disappointed...yes? Let me explain--I LOVE Undertale. I love all the fan theories & shit. I think it's more a 'awe, it's not that?' rather than BOO THIS IS A BAD IDEA. It would honestly be pretty neat to see where Undertale officially fits in the world or universe of Deltarune. 
+            </p>
+            <p>
+              I watched Saltydkdan play chapter 5 thus far (as of June 27th, 2026) & he brought up (I don't remember if he said this was his own theory or from someone else) that Undertale COULD BE a game Asriel was working on, on his computer. More of a little personal project where he put in people he knew IRL in the game & Undertale is a Dark World. Him bringing up the 10th anniversary stream for Undertale & how a little Noelle was in the game when why would a younger Noelle be in there when Noelle is obviously older? But he said it could be an older project since it's on the computer back at the house & how he put in people IRL but in the way he knew/remembered them. & as an older sibling myself, I honestly would put the younger version of my siblings in stuff. That's just how I see them, they're permanently those stinky little kids in my mind. I just thought that was a cool way to see it, & I wouldn't be too surprised if that was the case.
+            </p>
+            <p>
+              I also wonder if we'll see Asriel next chapter? With Asgore going missing it feels like that would be something that would happen. I know Toriel said at the beginning of 5 how she thought it might be fun to go early to pick him up & surprise him at his dorm (a personal nightmare as a college student myself) but it might this next one, it might be the one after the next...we might NEVER see Asriel because Toby likes pissing me off personally! /j
+            </p>
+            <p>
+              Also I don't know WHO I watched say this but they saw the code for the shelter in 5 & said "ISN'T THAT WHEN FRISK FELL INTO THE UNDERGROUND?!?!" Now, that would be FUCKING SICK. But. I want to remind everyone that we only got the year that Frisk fell into the underground. Futhermore, it's not even the correct year! Now, is this code a date? Yes, but I haven't seen anybody theorize what the significance is & why that, of all codes, would be one for the shelter? It's fascinating, & I'm so curious what people will rattle around as we wait.
+            </p>
+            <p>
+              I also hope this next chapter we learn more about Dess. Does everyone say this? Yes, but I don't give a fuck. Originality isn't real. I NEED TO KNOW WHAT HAPPENED TO HER!!! Especially with what happens in this chapter in Snowgrave, we HAVE TO LEARN SOMETHING! I'M GOING GODDAMN CRAZY!!
+            </p>
+            <p>
+              Plus with the route you have to take in 3 to get the shadow mantle, I thought it was curious how it's supposed to mirror the trajectory of the Snowgrave route. I really think that Noelle might die as a result of them going in the lake since she's technically "used up" along with the ice key. Which I would HATE to be the case but...I mean, if it wasn't then what was the point of it?
+            </p>
+            <p>
+              I just want Ralsei, Susie, & Noelle to be happy, man. Kris deserves what karma they get for all this shit. Like I get they're probably doing all this to get Dess back, but that shouldn't come at the expense of people that care about you. Though I'm sure they'd be like I'd have to care about them at all to care (because teenagers will be teenagers) but I hope that makes sense.
+            </p>
+          </details>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+            />
+          <p>
+            Anyway, that's pretty much it!!
+          </p>
+          <p>
+            If you guys wanna let me know YOUR thoughts on Deltarune so far...um...email me? send me mail through carrier pigeon? I jest, but since I don't want anyone to get spoiled email is probably the best right now. Or Discord if we're mutuals on Discord! My email is <u>nogginzmart@protonmail.com</u>! Send me as much or as little as you want, I really don't mind! Or just say I smell. then I'll have something to giggle at.
+          </p>
+          <p>
+            Also I apologize if my way of review & analysis is...rough, this was more of a stream of consciousness rather than anything super critical or formal. I just wanted to get my thoughts out there & for you guys to maybe give me your thoughts, too! Deltarune is really near & dear to my heart, so I'd love to hear what you guys that feel the same have to say, too! 
+          </p>
+          <p>
+            Anyway, July is coming up & I may be preoccupied with Artfight. I'll definitely try to post what I draw for the event (if the creator allows it) on here so you guys can see what I get up to! Otherwise, if you're interested & have an account on there, my Artfight user is <a href="https://artfight.net/~nogginzmart">https://artfight.net/~nogginzmart</a> .
+          </p>
+          <p>
+            I have my hitlist set up so I hope to get to most of them this year!! I'm really excited to see what others cook up for me as well! I've made a lot of friends being a menace in the Discord & joined the infamous Johns so maybe some of my fellow Johns will send me art! But that's not the goal of it, it's to give people silly art & improve your skills! Branch out of your comfort zone! & Honestly that's what I love most about it, it's making people happy.
+          </p>
+          <p>
+            Well, that's all I really have to say!! You guys have a great rest of your day & I'll catch you on the flipside! 
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/tumblr_19c8ce6c66c3f97b9705b9a4842fed8a_b0253cdf_250.webp"
+              width="30px"
+            />
+          </p>
+          <section class="tags">
+            <a href="video-games">#video-games</a>
+            <a href="fandom">#fandom</a>
+            <a href="latest-post">#latest-post</a>
+          </section>
+        </article>
+
+        <article class="post personal political vent">
+          <div class="post-header">
+            @lee-nogginzmart <time>06/01/2026, 9:11am </time>
+          </div>
+          <h2>
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/tumblr_e3c2586e60b7b943b1a8a0cc76d3c2e8_95bcff8c_75.webp"
+              width="30px"
+            />
+            Happy Pride Month, Everyone! 
+            <img
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/tumblr_e3c2586e60b7b943b1a8a0cc76d3c2e8_95bcff8c_75.webp"
+              width="30px"
+            />
+          </h2>
+          <p>
+            June has come back around again & I wanted to wish everyone a lovely & safe pride month! I don't know what percent of you are queer but let's be honest it HAS to be more than half. I mean...come on...you come to MY page LMAO. 
+          </p>
+          <p>
+            I hope, wherever you all are, that you're able to celebrate in your own ways. Even if it's just like me & you sit at home & feel good about being gay & trans for a change. That you have friends & family/found family around you that love, care about you, & feel safe around. I know, as someone who's in the Southern United States & has been here my entire life thus far, it feels like things have backpedaled & tensions are high when it comes to being who we are & how we exist. 
+          </p>
+          <p>
+            & Not just for queer people, trans people are experiencing a constant onslaught of ridicule & lesgislation thrown our way. Not to mention the rise in hate crimes & insecurity when it comes to how us just...being ourselves will impact things such as housing, employment, & potential assistance. 
+          </p>
+          <p>
+            Now isn't the time for infighting. Now isn't the time to be pointing fingers at one another when the problem is outside the house. Everyone experiences being queer & trans in their own, beautiful ways. The beauty of it all is that these boundaries are arbitrary. I know it might feel cathartic to have someone to rant about, to not personally agree with how someone expresses themselves, but at the end of the day...what does this ranting get you? Does this change how the world looks? Does this bring you & other queer/trans people remotely closer? 
+          </p>
+          <p>
+            Humans are...notoriously opinionated, I get it, but I just want to remind you all that...who gives a fuck? Like seriously--you're criticizing people who you'll probably NEVER meet in person. Let alone if you see them in person, don't you think they're not already experiencing hate from people who already DON'T like queer/trans people? 
+          </p>
+          <p>  
+            This is not to disregard intersectionality, though. For example, I benefit from being white, Cis, White gay men benefit from being cis & white, bisexual women benefit from their proximity to men & "straight-passing" relationships, & so on & so forth. Yes, those are very important to understand, acknowledge, & people should want to learn more on how their position in the world impacts others & the societal advantages they get from how they're perceived. 
+          </p>
+          <p>
+            Though education shouldn't come at the expense of alienating your community. From pushing others away from what community they have. Because at the end of the day, they fucking HAAAATE us right now. It seems like everyday I see SOMETHING SOMEWHERE about restrictions & legislation. Especially as someone who likes being politically aware, I can't lie & say I haven't felt utterly hopeless. 
+          </p>
+          <p>
+            I can't say my experience right now is universal, because some people feel connected in their communities & have people to turn to in a moment of need. I've always struggled with starting & maintaining friendships in real life. Social settings...stress me out. I always feel like I'm an alien in a room full of people who KNOW I'm an alien. That I'll watch & listen to people talk but never understand how to do it myself. & people I've tried to be friends with either fizzle out or they weren't who I thought they were. It's exhausting, upsetting, & has made all of this even more isolating. 
+          </p>
+          <p>
+            I'm sure some of you can relate to family...not being the best or the most supportive. I have a sister who cares, but otherwise the rest of them are willfully ignorant & part of the problem. I get so angry every time I think about their reactions to things, how they treat me, & how complicit they are in aspects that are making my life more unbearable. & when there's few other people you have to turn to in a moment or crisis or...none at all, it feels like everything is against you. 
+          </p>
+          <p>
+            Just know that you AREN'T alone. That you're not the only one angry, frustrated, hopeless, & so on & so forth right now. 
+          </p>
+          <p>
+            They want us to be scared & try to blend in. Us being scared is how they get what they want. Assimilation & the eradication of these identities entirely. Now is the time, more than ever, to be soooo fucking annoying. To support your local communities, to keep peers safe when tensions arise, & advocate that we aren't going anywhere. 
+          </p>
+          <p>
+            & I want to say thank you to everyone I've met on here & what internet friends I have. I would rather DIE than actually talk about stuff plaguing my mind, but you all have made things less unbearable & gives me hope there are people out there who care & are just as silly as I am. I have things to look forward to, people I like hearing from, & I've felt a lot less alone. & I hope I bring some light into your lives & make things a whole lot less shitty, too. 
+          </p>
+          <p>
+            Now I'm going to look at my code & call it homophobic when it doesn't do what it's supposed to.
+          </p>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+          />
+          <p>
+            On a lighter note, how did you guys find out you were gay/trans? 
+          </p>
+          <p>
+            I came out as gay at 10--I was in love with my best friend (we compared ourselves to Undyne & Alphys from Undertale because we were silly) & it's funny thinking back on it. Especially since we never...officially broke up (Crow if you're out there where's the child support /j /j). Though I remember being even younger & I was like '...it would be SOOO crazy if they liked me. like...super crazy', but then stopping the train of thought because girls (at the time girl) can't be together nawww. 
+          </p>
+          <p>
+            Plus I got called a lesbian on the bus after staring at a girl for too long in 4th grade. Ironic. 
+          </p>
+          <p>
+            I can't remembered what spurred me to realize I was trans? That period in my life is...incredibly fuzzy, unfortunately. Though I was a trans man at first then went to nonbinary, I believe, by the end of middle school. & That's around the time I went fully as Lee & have been ever since. 
+          </p>
+          <p>
+            I will say I have jumped around sexuality labels--I was Bi, then Bi Ace, then Pan, & now Lesbian & Demiromantic/sexual. It took a whiiiile for me to stop trying to say I liked men. I do not. At all. Compulsory heterosexuality is real, guys LOL. 
+          </p>
+          <p>
+            I used to joke that I have a pretty linear journey when it came to who I was. By the time I was in highschool I...pretty much was who I am now. Could it be the autism? Could it be I had nothing else better to do than work on myself? Who knows--but it's fun seeing people going through their own journeys &...totally not being jealous of the cool names people come up with. I joke "List of names I could've called myself instead of Lee". I love my name, don't get me wrong, but people out whimsy me & I can't help but feel competitive LMAO! 
+          </p>
+          <p>
+            Well, that's pretty much all I had to say!! I'll be doing a lot of work for preparing for Artfight in July &...working, really (bitch needs money). I'll definitely be around & working on little things here & there. Hopefully I'll actually get to working on spinnys this month...or not! We'll see!!
+          </p>
+          <p>
+            Happy Pride, guys, & I'll catch you on the flipside! <img src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/tumblr_f9482d0b71426e7dbcfb02f74f2d9204_f7c742bb_75.webp" width="30px;">
+          </p>
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="vent">#vent</a>
+            <a href="politcial">#political</a>
+          </section>
+        </article>
+        <article class="post personal site-updates school work">
+          <div class="post-header">
+            @lee-nogginzmart <time>05/07/2026, 1:42pm</time>
+          </div>
+          <h2>
+            <img 
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/tumblr_ec1d8ae17a0a242ff35b06781f9c58ac_dc2c9bb3_250.webp"
+              width="30px" 
+            />
+              HOWDY THERE!
+            <img 
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/tumblr_ec1d8ae17a0a242ff35b06781f9c58ac_dc2c9bb3_250.webp" 
+              width="30px" 
+            />
+          </h2>
+          <p>
+            <i>
+              church bells ring dramatically
+            </i><br>
+            THE SEMESTER!! IS!! OVERRRR!!! I AM FREE FROM MY SUFFERING!!<br>
+            (for a couple of months but we're not going to talk about that)
+          </p>
+          <p>
+            It's kinda crazy to think about how over the span of this school year, this website has grown & changed so much. Especially since I started it a week or so before I left to move into my apartment & start the Fall semester.
+          </p>
+          <p>
+            I just wanna say how grateful I am for all the people I've met & the help I've gotten to make this site so much better & interesting (not to mention less of an eyesore). For a little while I felt lonely out here & really thought about whether this was something worth the constant frustration & maintenance. Though time & time again I was reminded why I love learning & continuing to improve. 
+          </p>
+          <p>
+            I'm kinda a chronic...project abandoner. I get bored, frustrated, or discouraged & go off to do something else. I've always done that. But this isn't like social media & I don't have the insatiable need to see that people are seeing what I make & I can just...put it out there. Because I like it & I put effort into it. Like my own...fridge on the internet & I put up things sometimes. 
+          </p>
+          <p>
+            & school year hasn't been the easiest. I failed macroeconomics during the Fall & I failed Accounting 2 in the spring. I've been so frustrated by it all & even though it's something I want to do, doing this has really helped me in not feeling like...an absolute failure. Not to mention personal shit & having to tough through it. I couldn't be more thankful to have this website & have put the effort to make it awesome & cool & evil & gay LOL you get the point. 
+          </p>
+          <p>
+            Now I may have one more final to get done today, I can brush the dirt off my hands & say I've made it through another school year without throwing myself off a parking garage. Which I would say is an accomplishment! Despite the most <b>INCOMPETENT PROFESSORS OH MY FUCKING GOURRRRDD UUUGGGHHDSKALSDFJA</b>
+          </p>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+          />
+          <p>
+            "But Lee, now that the school year is over, what are you planning to do in the meantime?"
+            <br>
+            I'm so glad you...probably didn't ask that question, but I'd be more than eager to answer!
+          </p>
+          <p>
+            I will still be working because I'm #employed. I do have some days & weekends throughout the summer I plan to take off work for doctor's appointments & trips but otherwise I'll consistently be working throughout the summer. 
+          </p>
+          <p>
+            Now with nothing really...going on during the summer at work I'll probably be doing a lot of working on the site & maybe adding things I didn't have time to during the semester! Most of which being art. I've been working on remaking Willow's spinny & I believe it's done but I just have to upload it. Plus I've got profile pics for the last 2 characters I plan adding to the DTTKIF section on the OC page!
+          </p>
+          <p>
+            I will ALSO be preparing my Artfight profile for Artfight in July!! I've already done some housekeeping & working on the new connections feature (I posted a little message about it on the activity feed for the...5 of you that liked it LMAO)! 
+          </p>
+          <p>
+            When it gets closer to the season I'll probably put something on my homepage linking to my Artfight for those interested! I also have my site linked on my Artfight page, too! (though obviously specified for 18+ users) 
+          </p>
+          <p>
+            I am pretty excited for this season! this'll be my second season joining & I hope I get to make more friends & get to do a lot more engagement! I kinda died out halfway through July last season because I was doing like...several defenses & attacks a day (you know, like a mad man & what you're NOT supposed to do). Sooo I'm going to try to be better at pacing myself!
+          </p>
+          <p>
+            sooo for those that are starting early in preparing, feel free to go check out my profile & keep an eye on it as we get closer to Artfight season!
+          </p>
+          <p>
+            <a href="https://artfight.net/~nogginzmart">
+              MY ARTFIGHT PROFILE!
+            </a>
+          </p>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+          />
+          <p>
+            Speaking more about the website & it's more recent changes, do you guys like them? I thought after redoing my About Me page, I really liked the most engaging cosmetic aspects I played with on that page! Sooo the rest of the website had to be infected with it, obviously! 
+          </p>
+          <p>
+            I just recently added those features to my Random directory--taking it so the buttons pop out & look cool! Plus I'm sure you guys might've not seem...half the title functions I put on different pictures on my pages, so I think the tooltip stuff really helps in conveying my thoughts rather than the tiny title function that can be missed pretty easily.
+          </p>
+          <p>
+            Also I'm SO glad I changed the To Do list. I was kinda neglecting it because of how it looked before because the goals were really broad. Though now they're specific & shit I...really need to get done LMAO! I also like showing off what I've already done & people can look at that! Idk I just think it's cool!
+          </p>
+          <p>
+            Also...I don't plan on removing Chattable? I'm aware of the kinda odd state it's in right now but it still functions. It's just the best option out there where I don't have to pay for it & it's INCREDIBLY customizable. Plus I like supporting such a cool, independent project! & don't be afraid to use it yourselves! I love hearing anything, even the most stupid & silly responses! There are plenty of emojis, too, so go wild!
+          </p>
+          <p>
+            As of today I made it so the backgrounds on most pages don't scroll with you. They just stay put. Which...I wish I did a whole lot earlier buuuut oops! I guess I can't be awesome & cool ALL the time!
+          </p>
+          <p>
+            My brain is starting to flatline, so I think that's all I'll share for now. Either not enough caffeine or I'm just that tiredddd
+          </p>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+          />
+          <p>
+            well, here's to a great summer & hopefully the next time I make a blog post won't be a month from now! but until then! See you guys around!
+             <img 
+              src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/tumblr_66508f5138ebb93cac22292aa04c96b6_4fab963a_250.webp"
+              width="30px"
+          />
+          </p>
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="school">#school</a>
+            <a href="work">#work</a>
+          </section>
+        </article>
+        <article class="post personal site-updates school work">
+          <div class="post-header">
+            @lee-nogginzmart <time>04/07/2026, 6:30pm</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/n2crc9.webp" width="30px" /> HELLO OUT THEEERE!! 
+            <img src="https://files.catbox.moe/n2crc9.webp" width="30px" />
+          </h2>
+          <p>
+            I LIIIIIIIVE!! (barely)
+          </p>
+          <p>
+            I didn't even realize the last blog post I had was <i>fucking February</i>. Though it's apparent that hasn't been the last time I've interacted with you all. I've been doing a lot of revamping & we've had a couple more pages added since then!!
+          </p>
+          <p>
+            I also changed the To Do list to be a little more...accurate? like you can see more specific things I'm wanting to do & currently trying to get done. Also I KNOW A LOT OF THE WORK I DO IT ON MY HOMEPAGE!! I'M SORRY! I mean it's like...the face of my page. You'd want it to look nice, wouldn't you??? Plus I'm really happy with how it looks right now. Perfectly maximalist lol
+          </p>
+          <p>
+            As of right now I'm working on getting the autoplaying music OUT OF HERE & putting audio players on every page. I personally never minded the autoplaying but I understand why others would erm...find it annoying lol. Sooo that's why I'm working on it! 
+          </p>
+          <p>
+            also, as I'm writing this, I'm thinking of revamping my about me page as well. Mostly because I want it to reflect me rather than being an extension of the homepage. I just feel like it could look a lot better. Plus, other than the homepage, it's one of the oldest pages on my site. So I think it deserves a revamp after all this time honing thy skills!
+          </p>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+          />
+          <p>
+            Also, I've been having lots of fun meeting other webmasters! (hello guys from the Web Weavers Discord) They've really been a big help in providing resources, advice, & also just being a fun group of guys that love their quirky little websites!! It's been a while since I've had so much fun, especially with others. So I couldn't be more grateful to have been asked to join by Ghostk.id. Not to mention just finding people out in the Neocities wild & adding them to my site button collection on my homepage! Everyone I've met thus far have been so nice!
+          </p>
+          <p>
+            I'm also looking forward to Art Fight this year!! I need to figure out where I want to link my profile on there, but I've adjusted my profile & thinking of what I'm wanting to do with my references. I need to update some things & also see how many more OC's I can add before the season starts. but this is MY summer!! We're getting shit DONE!!
+          </p>
+          <p>
+            Also I've made profile pics for the rest of the OC's for my main story. It's just a matter of making their pages. Not to mention catching up on spinnys. Though that's DEFINITELY going to be a chore. So I don't see myself pumping them out like hotcakes once I get some free time. Especially since I'll still be working. 
+          </p>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+          />
+          <p>
+            As for my super exciting everyday life as of late, <i>please free me from the prison that is university</i>. I AM EXHAUSTED!!! I HAVE WANTED NOTHING MORE THAN TO SIT IN MY APARTMENT & ROT AWAY!!! It's not like I'm not...HAPPY to be in university BUT...it's been a ROUGH semester, to put it simply. Now to be fair I have been not the most dedicated when it comes to studying, but I am the WORST studier. If I can think I can get away with it, I will try (this always comes back to bite me in the end). Sooo I'm kinda holding on by the skin of my teeth! I meet with my advisor Thursday so I can discuss what classes I'll be taking next semester, & I have to schedule an exam that I have to take before I proceed in my major, but FUUUUUUCK IT'S THE LAST THING I WANT TO THINK ABOUT THIS VERY SECOND!!! 
+          </p>
+          <p>
+            Anyway yes I do need a break! & I appreciate you all being here with me through these TRYING times! Because there is nothing I want more than to walk straight into the ocean! 
+          </p>
+          <p>
+            Get a degree but at what cost
+          </p>
+          <img 
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+          />
+          <p>
+            Also I have absolutely no clue if I mentioned it but I've been working at a new job for about a month or 2! & because of my rapidly dwindling free time I finally dropped my dorm job! We're moving up in the world, guys!! No longer will I just be making 10 dollars an hour! now! it's! 13! (I'll take the wins where I can get it LMAO)
+          </p>
+          <p>
+            Plus I can work there over the summer CONSISTENTLY compared to the dorm job. Rather than the "you know whenever we need you BITCH I NEED MONEY" like! you know! my dorm job! Plus bitch has to pay rent SOOOO
+          </p>
+          <img
+            src="https://nogginzmart.neocities.org/catbox%20aint%20working/2y3hk7.jpg"
+            width="100%"
+          />
+          <p>
+            ANYWAY that's pretty much it!! keep me in your thoughts as I suffer through these last few weeks of pain. I'm looking forward to getting. shit. DONE!! TILL NEXT TIME GAMERS!!! 
+            <img 
+              src="https://files.catbox.moe/8wuvob.webp"
+              width="30px"
+            />
+          </p>
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="school">#school</a>
+            <a href="work">#work</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates school work">
+          <div class="post-header">
+            @lee-nogginzmart <time>02/06/2026, 6:04pm</time>
+          </div>
+          <h2>
+            <img src="" width="30px;" /> hey, it's been a while!
+            <img src="" width="30px;" />
+          </h2>
+
+          <p>
+            I am alive! I promise! I've just been busy & haven't had much to
+            talk about!
+          </p>
+
+          <p>
+            Considering I...try to remain anonymous on here, some stuff that
+            happens in my everyday life I try to keep to myself. Not that you
+            guys would probably find it interesting, anyways.
+          </p>
+
+          <p>
+            if you've been keeping a close eye on the change log, I've been
+            doing things here & there! I hope you guys like the CRT filter, I
+            think it looks rad as hell! If you have a site of your own, I have
+            the guide I used on my resources page, which is accessible through
+            the homepage directory OR the site map!!
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            Also the spring semester at my university has started, so I've been
+            a busy bee--with work & assignments (fuck my chungus life). It's
+            been pretty smooth sailing as of right now. That winter storm SUCKED
+            so we were out for an entire week & I couldn't make to several
+            shifts from both my jobs. I'm trying to make up for it now but
+            dla;sdjvkdjnaknv it was SUCH bullshit.
+          </p>
+
+          <p>
+            ALSO MY CAR'S BATTERY FUCKING DIED YESTERDAY!! I was ready to head
+            to class & went to start up my car & it freaked the fuck out. what
+            sucks is that my car is a hybrid, so it NEEDS that battery to be
+            working. Thankfully my dad was going to be in the area so he came by
+            the help. He even bought the new battery for me because I'm broke af
+            right now.
+          </p>
+
+          <p>
+            Though crisis was averted, she seems to be working just fine now. My
+            dad said the worst part about having a hybrid is that batteries will
+            die in the winter since it's super fucking cold or out of the blue
+            because fuck you I guess. so I've been trying to keep a close eye on
+            the new battery & hopefully there'll be no more issues with my car
+            in the near future (knock on wood)
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            Again, I'm not going to make any promises on new sites coming up
+            anytime soon. With school & my persistent art block, I haven't had
+            much time nor motivation to make more OC pages or update any assets.
+            Though I hope the little things I've been adding to spice up the
+            experience on here has made up for it!
+          </p>
+
+          <p>
+            also, PLEASE check out the cool sites at the bottom on my homepage!!
+            some of them are sites of people I've met online & talked to &
+            they're really sweet people! They need more fans other than me so
+            please if you get bored here why don't you go check them out!
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            well, that's pretty much it for now!! see you guys around!
+            <img src="" width="30px;" />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="school">#school</a>
+            <a href="work">#work</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates video-games">
+          <div class="post-header">
+            @lee-nogginzmart <time>01/07/2026, 12:21am</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/pj9h2i.webp" width="30px;" />
+            happy new year!!!
+            <img src="https://files.catbox.moe/pj9h2i.webp" width="30px;" />
+          </h2>
+
+          <p>
+            I hope you guys had a great holiday season!! I'm definitely getting
+            the holiday blues--I hate how brief it feels, especially with how
+            busy it has been. Well, nonetheless I had an amazing Christmas & New
+            Years, & I hope you guys did too!
+          </p>
+
+          <p>
+            If you guys have been lingering around, I have updated different
+            things after the holidays & New Years! The update log has everything
+            that's essentially been done, but the calendar is updated for
+            January, there's a new cool video I wanted to share with you guys on
+            the homepage TV, & the collections site has been updated after
+            getting some items I wanted for my collection for Christmas!
+          </p>
+
+          <p>
+            I've done one bust drawing for another OC--but that's the extent of
+            my drawing as of right now, honestly. I go through seasons of
+            wanting to do it, whether I have the time to do it or not. Is that
+            good for my longterm artistic growth? noooo but artblock is
+            literally the death of me I have to pace myself LMAO
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            OH! I also made a new page for my experience with 3DS Homebrew!! you
+            can find it through the random tab on the Aisles directory, or you
+            can find it at the site map!! I like how it came out! I used Google
+            drawings to splice together the background for the page! I was
+            struggling figuring out which I liked best, so I ended up going with
+            a collage look!
+          </p>
+
+          <p>
+            It's not that dense with content, more just stuff I used, apps I
+            like & use, & links to download themes I made (& use) for a modded
+            3DS/2DS. I just thought it would be cool to make since I am
+            passionate about it & feel like giving people good resources to
+            breathe life into their consoles helps!
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>Well, that pretty much all I had to talk about!!</p>
+
+          <p>
+            I don't want to say I have anything specific planned? Some stuff
+            just comes to me in the moment, plus as I'm still in my art rut I
+            don't see more OC sites coming up soon. Though I will definitely let
+            you guys know when that happens!
+          </p>
+
+          <p>
+            thank you guys for sticking around for this ,almost, half a year of
+            this site being up! This had been a fun experience & I look forward
+            to what 2026 will bring!! HOPEFULLY it's a lot better than 2025. See
+            you guys around!!
+          </p>
+
+          <p>
+            Also, I am aware Chattable if down--I've checked & it seems to be
+            all across the board. I'll let you guys know when it's back up &
+            running! you might already notice if it's up because it's on the
+            homepage, but I'll keep an eye on everything! if you wanna comment,
+            please feel free to do it on the website follow & info page!! you
+            can just use the link to follow button on the homepage to head
+            straight there!
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="video-games">#video-games</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates work school video-games">
+          <div class="post-header">
+            @lee-nogginzmart <time>12/12/2025, 9:46am</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/tv4ip2.webp" width="30px;" /> hey
+            there!!
+            <img src="https://files.catbox.moe/tv4ip2.webp" width="30px;" />
+          </h2>
+
+          <p>
+            It's been a while!! since I've last mentioned something--a few
+            things have changed!!
+          </p>
+
+          <p>
+            First of all, I hope you guys like the additions to the home page!!
+            I thought the calendar was cute & the video player was a cool way
+            for me to share cool videos I find!!
+          </p>
+
+          <p>
+            Furthermore, I GOT A 3DS & MODDED IT!! Not to mention a better
+            bluetooth adaptor for my iPod--so those were updates on my
+            collections page!! (which you guys should totally check out if you
+            haven't). They were...not cheap, but I'm very happy to have them!
+            Not to mention modding my 3DS wasn't as bad as I thought it was
+            going to be!
+          </p>
+
+          <p>
+            Since I've gotten it modded I've played the 3DS remake of Mario &
+            Luigi Superstar Saga!! Now I've played the original on an emulator
+            on my laptop & I own the original GBA cartridge. Now I'm playing
+            Mario & Luigi Partners in Crime--which I've never played before!!
+            I've heard it isn't...as liked as Superstar Saga & Bowser's Inside
+            Story--though I've been enjoying it so far!! It's been a bit of a
+            learning curve because the addition of the babies adds a different
+            dynamic--but it hasn't made it unenjoyable!
+          </p>
+
+          <p>
+            But I'm pretty early on in the game--who knows if anything will
+            change. But other games I got through emulation are Mario Party
+            Advance for GBA (heard it was good, watched a video on it!), Rhythm
+            Heaven on DS, Earthbound for SNES, Mother 3 english fan translation
+            for GBA, obviously Mario & Luigi Partners in Time for DS, Pokemon
+            Rangers for DS, New Super Mario Bros on DS, & I believe that's it? I
+            also plan to play games I already have the cartridge of like Mario
+            64 DS--which I'm excited to play utilizing the joystick instead of
+            the D-pad
+          </p>
+
+          <p>
+            Aaaalso! Classes are over for the Fall semester!! I am S O happy.
+            It's been such a busy semester & I need a reprieve. Least my spring
+            semester seems to be an easier time--Plus I'll have a lot more free
+            time (which I orchestrated on purpose, I desperately missed having
+            some time to BREATHE
+          </p>
+
+          <p>
+            Though I will be working over the break! Well...for as many hours as
+            they give me (which isn't a lot...which is so BALLS) so I mostly
+            plan to just chill at the apartment, play some vidya gems, & work on
+            the site!! Plus I might catch up on watching stuff! It's been a
+            while since I've watched a show or anything like that. I usually
+            don't have the time to just sit & enjoy a show. Maybe watch
+            movies--we'll see where the month takes me!!
+          </p>
+
+          <p>
+            Alright, I'm tired & work is overstimulating me. I'll see you guys
+            around, & here's to a happy holiday!
+            <img src="https://files.catbox.moe/h3hpwq.webp" width="30px;" />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="work">#work</a>
+            <a href="school">#school</a>
+            <a href="video-games">#video-games</a>
+          </section>
+        </article>
+
+        <article class="post personal">
+          <div class="post-header">
+            @lee-nogginzmart <time>11/29/2025, 1:50pm</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/ah71o4.webp" width="30px;" />
+            Happy Thanksgiving, everyone!!
+            <img src="https://files.catbox.moe/ah71o4.webp" width="30px;" />
+          </h2>
+
+          <p>
+            I hope you all, that celerate, are having a lovely holiday!! That
+            you're all fat & sassy with whatever food you partook in this
+            holiday!!
+          </p>
+
+          <p>
+            Now, although I am a Christmas lover & prefer the holiday over
+            everything, I do enjoy Thanksgiving. It holds me off till Christmas,
+            if I'm being honest. Satiates me so I don't start celebrating in
+            July or something LMAO so this time of the year is my absolute
+            favorite
+          </p>
+
+          <p>
+            we had Thanksgiving on the actual day, but it was just immediate
+            family. My older sister was only going to be able to stay for the
+            day of so we went ahead & had some stuff then. Though today,
+            Saturday, we had my mom's parents come over for a more extended
+            Thanksgiving. Whiiich is what we're doing today!!
+          </p>
+
+          <p>
+            Just had some awesome food--deviled eggs, sweet potato casserole, we
+            fried our turkey with some cajun seasoning & butter, & so much more
+            yummy goodness. My sister & I are definitely going to be bringing a
+            lot of leftovers home to the apartment.
+          </p>
+
+          <p>
+            I'm kinda glad it's been a pretty chill holiday! means I'll feel a
+            little better giving the last push toward the end of the semester.
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            I got paid early! I believe because of Black Friday & stuff, which
+            was sooo nice!! I got a bunch of stuff--not really related to the
+            holidays but I needed some things. THINGS SUCH AS!!
+          </p>
+
+          <ul>
+            <li>
+              compression knee braces (thanks chronic illness & making my knees
+              hate me)
+            </li>
+            <li>
+              more redbull (I'll be running out halfway through the month so I
+              went ahead & got more)
+            </li>
+            <li>
+              airpod case (I got some from the lost & found from work, they've
+              been in there for like 2 semesters, okay? they're free for grabs)
+            </li>
+          </ul>
+
+          <p>
+            NOT TO MENTION!! I got a case for the 3DS XL, USB-C to Micro SD card
+            reader for my computer, & the said micro SD card!! Plus the magical
+            3DS XL!! I'll let you guys know when I get it & put all the stuff on
+            it!! Since the break is coming up, I thought it would give me
+            something cool to do & document!!
+          </p>
+
+          <p>
+            Plus I never got to own my own DS--& after having the DS Lite
+            &...being too scared to mod it, I figured modding a more
+            comfortable, stronger console would be a better idea!!
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            well, that's pretty much it!! as you've seen I've been adding &
+            adjusting little things. Just keep an eye on the change log on the
+            home page for any new updates!!
+          </p>
+
+          <p>
+            I hope anyone traveling for the holidays have a safe trip back home
+            or to your current residence! Also that your leftovers be good & it
+            holds off the Christmas demon stewing inside, waiting for it to
+            finally be free.
+          </p>
+
+          <p>
+            Till next time, guys!!
+            <img src="https://files.catbox.moe/0xgv2p.webp" width="30px;" />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates school">
+          <div class="post-header">
+            @lee-nogginzmart <time>11/23/2025, 7:11am</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/n8orsa.webp" width="30px;" />
+            hello there!!
+            <img src="https://files.catbox.moe/n8orsa.webp" width="30px;" />
+          </h2>
+
+          <p>
+            it's been a bit!! (about 10 days lmao dang) I can assure you not
+            much has happened, hence why I didn't see much of a point to make a
+            post. unless you wanted to hear about JUST me bitching about college
+            (not interested? I don't blame you LMAO)
+          </p>
+
+          <p>
+            well, I added a couple of things since last time!! but now you don't
+            have to just get notifications of updates from here, but from my
+            fancy!! new!! change log!! on the home page!! mostly so if people
+            want to see how active I am they can see it easier than just going
+            to my profile to check the last I've updated. just a little
+            addition, & as a result I moved things around a bit
+          </p>
+
+          <p>
+            also!! I found a way to get chattable working!! I just had to go on
+            a different browser EWWWW. though I'm glad I got it working, I'm
+            really happy with it!! Also I have a little mood tracker!! Thought
+            it would be cute & fun!! Thooough it doesn't help I've been a little
+            down & exhausted lately because of school. though I hope with the
+            break we can turn this ship around!!
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>updates done!! lets get to what I'm doing with my life!</p>
+
+          <p>
+            as I have made...pretty apparent, the Fall semester is wrapping up
+            very soon. I only have 1 official final, the other being optional (&
+            you got me fucked up if I'm taking THAT) Though it's on...the last
+            day of finals, so other than last exams on the last day of classes,
+            I'm pretty smooth sailing through finals.
+          </p>
+
+          <p>
+            I guess my reason for bitching is because I DON'T WANT TO BE
+            HEREEEE!! Going to classes is draining, looking at people is
+            draining, & couple that with work? I'm ready to throw in the towel
+            LMAO!! It's been such a busy semester, I think I've earned this
+            exhaustion. Though with this upcoming week being only really 2 days
+            of class sessions & work, I think I'll be okay to tough out finals.
+          </p>
+
+          <p>
+            Furthermore, artblock is still in full swing (yaaay kill me) so...I
+            haven't felt like working on any assets for OC sites. Now I've
+            started on future site layouts for them, but other than
+            that...they're pretty rudimentary or blank without all the assets &
+            stuff.
+          </p>
+
+          <p>
+            I highly doubt I'll get around to drawing over this Thanksgiving
+            break, so don't be coming for me LMAO. Also, I'm excited for free
+            food, man. Plus I get to see my puppyyyy!! I miss her so much, her
+            name is Nala!! She's such a cutie patootie--she's going to be so
+            excited when I get there.
+          </p>
+
+          <p>
+            I hope you guys don't mind the little updates or adjustments!!
+            They're really all I have motivation for & I'm trying to not burn
+            myself out on working on the website. I love this project & I'm
+            excited with all I can get up to on here!!
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            anyway, I've gotta get going!! thank you guys for sticking around &
+            checking out what all I do! I really appreciate it!! till then!
+            <img src="https://files.catbox.moe/6me0qj.webp" width="30px;" />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="school">#school</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="latest-post">#latest-post</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates school">
+          <div class="post-header">
+            @lee-nogginzmart <time>11/10/2025, 4:40pm</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/6vox66.webp" width="30px;" />
+            little update!!
+            <img src="https://files.catbox.moe/6vox66.webp" width="30px;" />
+          </h2>
+
+          <p>
+            nothing remarkable has really happened other than me just wanting to
+            blog!!
+          </p>
+
+          <p>
+            um...so I don't know if any one else has experiences this cold
+            front, if you're in the United States, but it's FREEZING (literally)
+            out there today! I put on three layers & wore a mask over my face to
+            keep my face warm. Not complaining, though! I quite enjoy the cold
+            weather!! I probably should've worn leggings under my pants,
+            though--they have holes in them & my thighs went numb after being
+            outside for a while.
+          </p>
+
+          <p>
+            It's supposed to be a tad warmer tomorrow but still cold cold. By
+            Wednesday it's supposed to get back to how it was (lows in the high
+            40's-low to mid 50s & high to mid 60s or low 70s for the high)--it
+            also started SNOWING!! Well--it was just flurries, but it's
+            definitely odd for early November!! Makes me excited for December to
+            get here.
+          </p>
+
+          <p>
+            also, if you guys haven't noticed, I put a change log on the home
+            page!! I see them on a lot of other pages so I figured it would be a
+            good idea! Plus I applied to join another webring that is for those
+            who regularly update their sites!! So I thought it would be good to
+            have something more blatant that shows what I've added or done to
+            the site. Plus I sometimes do really small things or adjustments,
+            though not big enough to warrant an entire blog post. Sooo there you
+            guys go!
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            on a more personal note, I just had to take another accounting exam
+            today. UGH. I got 20 points of extra credit, so I hope it does a lot
+            of heavy lifting in bringing up my grade, but FUCK that was an
+            experience in torture.
+          </p>
+
+          <p>
+            & might I add--we had an exam like a week ago, so we didn't get much
+            time to go over the stuff the exam was over. To be fair, it was only
+            2 chapters the exam covered, but I didn't feel comfortable enough
+            with the subject matter (I'm not going to bother you guys with
+            accounting jargin) to feel confident about how I was going to do on
+            this exam
+          </p>
+
+          <p>
+            NOW TO BE FAIR!! I didn't think I'd do good on the last exam I took
+            in there, in which I made a 90 something, though I highly doubt I'll
+            have the same luck this time around. I just hope I did good enough
+            on it so I don't have to take the final exam (which is optional if
+            you want to raise your grade in the class)
+          </p>
+
+          <p>
+            Speaking of school, I got to register for my classes for next
+            semester today. I'm pretty optimistic about my classes! I'll only
+            have 12 credit hours (which is the minimum to be full time at my
+            university). Which I think I'll need after how crazy this semester
+            has been. It looks likes I'll have 2 online classes & two in person.
+            Though it looks like I'll have 1 class per day on campus, which is
+            super sweet!!
+          </p>
+
+          <p>
+            Gives me more time to work! & with the...kinda sad results I got on
+            the FAFSA (thanks administration), I'll need to start saving to make
+            next fall semester easier on the wallet. Though I got a scholarship
+            back after getting my grades back up, so that's a little more at my
+            disposal.
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            well, that's pretty much it! I don't have anything planned right
+            now, honestly? If you haven't read the last blog post, I'm entering
+            the final stretch of the semester & haven't had much inspiration to
+            do much. Not to mention ART BLOCK keeping me from working on art
+            assets for the OC's (KILL ME)
+          </p>
+
+          <p>
+            but I've been trying to tweak things here & there & browse around
+            for new webrings!! Plus I might start on working on OC site
+            templates & have their sprites pending but boo who knows
+          </p>
+
+          <p>
+            well, see you guys around!! keep an eye out for new updates & stuff!
+            <img src="https://files.catbox.moe/gvn0xf.webp" width="30px;" />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="school">#school</a>
+            <a href="site-updates">#site-updates</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates fandom school">
+          <div class="post-header">
+            @lee-nogginzmart <time>11/8/2025, 2:53pm</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/44yklc.webp" width="30px;" /> yo
+            yo yo!
+            <img src="https://files.catbox.moe/44yklc.webp" width="30px;" />
+          </h2>
+
+          <p>
+            Nothing!! has really happened!! Sorry, I've been tired & busy! With
+            the semester wrapping up end of this month & finals being early
+            December, I've been running around all over the place. So I haven't
+            had much inspiration to do art or work on OC pages. Though I DID add
+            more sites to the homepage for you guys to check out! Not to mention
+            little changes here & there on the site!
+          </p>
+
+          <p>of which were</p>
+          <ul>
+            <li>
+              when you hover over some images, you get a little box that has
+              text in it! I thought it was fun & helpful for different things!
+              For example, if you hover over my little thumbnail to the left on
+              this page, you get that little caption!! they're sprinkled all
+              over the place!
+            </li>
+            <li>
+              added a new song to the song of the day. I was struggling with one
+              but the song I put has really been hitting lately!! I don't
+              usually keep up with modern music but I heard it on Tiktok & WOW
+              it was SOOO good!!
+            </li>
+            <li>
+              the biggest things I did was cosmetic changes to the front page &
+              about me page!! mostly because the front page has always bothered
+              me a bit? plus it's the oldest, & I've learned a lot since first
+              making it (lord is the formatting a mess don't get me started on
+              that). Though I hope you guys like it & find it more pleasing &
+              readable!!
+            </li>
+          </ul>
+
+          <p>
+            I can't promise I will pick up once the semester ends? I'd like to
+            enjoy actually taking a break, but I'll definitely be checking here
+            often & posting silly little blog posts like this!! Especially with
+            the holidays coming up, I'm so excited!!
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            ANOTHER TOPIC! So I watched what is so, so far, for Fiona & Cake
+            season 2 & I LOVE ITTT!! I loved season 1 so when they said they
+            were making season 2 I was quite excited to see what they'd do with
+            it!!
+          </p>
+
+          <p>
+            I wasn't the most die hard Adventure Time fan when it was airing? 1)
+            I couldn't watch it without doing it in secret, my parents didn't
+            like us watching it. They thought it was stupid. 2) I enjoyed it but
+            I always had other shows I preferred watching more? I don't know how
+            to describe it. But I remember when the Fiona & Cake episodes aired
+            & I ADOOOORED them!!! (though I think that's how it was for a lot of
+            people) So I'm pretty hyped they actually made a spin off of it,
+            even if it's not EXACTLY those old episodes.
+          </p>
+
+          <p>
+            I won't discuss it yet because I know there's a lot of people that
+            haven't been able to see it! I got impatient &...uh...watched it
+            TOTALLY legally!! Violating the law is wrong! soooo I might discuss
+            it once it's a couple weeks removed from the end of it. So take that
+            as a sign to GO WATCH IT IT'S SO GOOD!!
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            Also I'm SUPER on track to get a New 3DS XL to mod it!! I don't know
+            if I'll get it the next time I'm paid? I have a rough budget made
+            for the end of this month & I don't know how much of my credit card
+            I'll have to pay off by the end of the month. That's a big contender
+            whether or not I'll buy it. Though I'm DEFINITELY getting a micro SD
+            card & SD Card adaptor for my computer. Though, whatever happens, I
+            plan to get it at the end of December when I get that paycheck!
+          </p>
+
+          <p>
+            Also I'm pretty sure I said New 2DS XL before? I was watching videos
+            & reading some Reddit threads about 3DS modding & I kept seeing New
+            3DS XL was better CPU wise, plus has less issues with modding
+            compared to the 2DS. Feel free to let me know otherwise if you've
+            done it yourself! Though right now I'm trusting those that have done
+            it on the internet.
+          </p>
+
+          <p>
+            That's super exciting! Plus I def plan on getting a better bluetooth
+            adaptor for my iPod! It'll be directly from the website I initially
+            got my iPod from, so I have faith it'll be responsive & good! My
+            current one gets the job done, but getting my headphones connected
+            it kind of a pain & sometimes I've given up because it was taking
+            too long. Which...the point of it is to make things easier. So a
+            revamp is in order.
+          </p>
+
+          <p>
+            ALSO I have airpod pros now? Okay, so there's a lost & found at one
+            of my jobs, & I've been there since my freshman year (if I didn't
+            change my major several times, I'd be a junior right now) & these
+            airpods have been in there SINCE THEN. They had both pods in them,
+            so I didn't see much point in letting them rot in there!! There were
+            actually 2 sets in there that have been stewing in there for a
+            LOOOONG time! I dunno how much I'll use them, but I'm using them
+            right now because wearing my headphones after a while hurts my baby
+            ears LOL
+          </p>
+
+          <center>
+            <img src="https://files.catbox.moe/2y3hk7.jpg" width="100%;" />
+          </center>
+
+          <p>
+            well, that's pretty much it for now! I'll see you guys around!! Wish
+            me luck on this end of the semester!
+            <img src="https://files.catbox.moe/40rsd2.gif" width="30px;" />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="school">#school</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="fandom">#fandom</a>
+          </section>
+        </article>
+
+        <article class="post personal school site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>11/2/2025, 6:50pm</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/f7wspi.webp" width="30px;" />
+            happy late halloween!!
+            <img src="https://files.catbox.moe/f7wspi.webp" width="30px;" />
+          </h2>
+
+          <p>
+            hey sorry LMAO I spent Halloween kinda chilling. It's been a busy
+            time of year with school & what not.
+          </p>
+
+          <p>
+            but if you haven't seen already--I have a new section on the main
+            directory!! the
+            <a href="https://nogginzmart.neocities.org/random">random</a>
+            section!! it's basically a place where I can put sites that don't
+            necessarily go with the main stuff on my page but I want to feature!
+            these are more personal interests & background projects that aren't
+            art, scripting/coding, or writing related. I've started off with 2
+            pages! Mostly cause these came to mind first.
+          </p>
+
+          <p>
+            these sites are (if you're too lazy to go to the random page)
+            <a href="https://nogginzmart.neocities.org/iPod">iPod Life</a> &
+            <a href="https://nogginzmart.neocities.org/collections"
+              >collections</a
+            >! iPod life if pretty self explanatory--though it's a guide to
+            owning an iPod in the year of our lord 2025! Plus stuff that I used
+            & where I got my accessories & the titular iPod. Then collections
+            is...pretty self explanatory as well!! It's about stuff I have in my
+            personal collections & what I want to collect in the future!!
+          </p>
+
+          <p>
+            I find them pretty cool! I know they're not for everyone so I don't
+            expect them to be anybodies favorite but I feel similar crowds that
+            are into that stuff come on here or make sites on here. Plus I'd
+            like to see & hear what you guys do & collect!! I sent the iPod site
+            to a discord I'm in at my university & they thought it was so cool!
+            like they found it helpful & those that has one too gave tips, which
+            I thought was so cool!! like that's what I want from doing this
+            stuff!!
+          </p>
+
+          <p>
+            also guess who got PAAAAID?!? I get paid monthly so I'm SOOO happy
+            after having...only...6 dollars in my bank account (okay I forgot I
+            had a credit card payment scheduled & bought stuff then ended up
+            having...6 dollars LMAO). Also I bought a new binder!! It's not here
+            yet, but I've been using GC2B binders since like...before COVID.
+            Though they've definitely gone down in quality over the years. The
+            straps are too thin & with my chest size I get too much stress on my
+            neck & shoulders.
+          </p>
+
+          <p>
+            sooo the people in the discord I'm in at my university recommended
+            spectrum outfitters & their binders!! So I got one! I liked how wide
+            the straps are so I'm hoping it'll be a lot better! I'm going to
+            keep my current/old binder as a back up in case but I'm glad to
+            finally be getting a new one!
+          </p>
+
+          <p>
+            okay I'm tired (it's 7 pm as I'm finishing this I know but grandpa
+            needs to sleep & has to wake up for classes & work tomorrow) so I'm
+            going to wrap this up
+          </p>
+
+          <p>
+            here's to a good November, & I'll see you guys around!!
+            <img src="https://files.catbox.moe/2q7x0m.webp" width="30px;" />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="school">#school</a>
+            <a href="site-updates">#site-updates</a>
+          </section>
+        </article>
+
+        <article class="post personal school">
+          <div class="post-header">
+            @lee-nogginzmart <time>10/24/2025, 7:19pm</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/8r81ne.webp" width="30px;" />
+            wassup?!
+            <img src="https://files.catbox.moe/8r81ne.webp" width="30px;" />
+          </h2>
+
+          <p>
+            there's nothing really new, but I wanted to blog since another week
+            has ended for me!
+          </p>
+
+          <p>
+            I'm working on the resources page!! I wrote down on the notepad app
+            on my computer different stuff I've used to make my website! Not to
+            mention some tips & tricks I used while creating it as well. You can
+            never have enough tips & tricks!!
+          </p>
+
+          <p>
+            OC pages are still on hold! I don't know if I'll continue working on
+            them once the Resources page is eventually finished? I'm still not
+            feeling up to drawing much. Thus us the way the school grind gets to
+            me! I'm surprised I was this motivated to draw for this long--I
+            usually have pretty long droughts during the semester, so honestly
+            this is probably the most I've drawn whilst class is in session!
+          </p>
+
+          <p>
+            Though I can only outrun art block for so long, unfortunately. It
+            usually hits me with nothing I make coming out right. & with me
+            trying to fix Willow's spinny & refining her PFP--I've really been
+            like 'you know what? fuck it I'm taking a break'. Which honestly, I
+            need right now. Not that school has been killing me, but it takes a
+            lot out of you, you know? Plus I'm trying to stay on top of things
+            with having 2 jobs & personal responsibilities & all...
+          </p>
+
+          <p>
+            but I had a pretty good Friday, all things considered! I worked this
+            morning, it was really cold outside (a good thing) so I was in my
+            element! I then had an appointment & my advisor saved me a pumpkin
+            from an event I couldn't make it to because of work!! so this
+            afternoon I stopped by Walmart on my way home, bought some acryllic
+            paints & brushes, & painted my pumpkin!! (carving is a sensory no no
+            for me)
+          </p>
+
+          <p>
+            <img
+              src="https://files.catbox.moe/tubbja.jpg"
+              title="BLEHHH"
+              width="300px;"
+            />
+          </p>
+
+          <p>
+            PUMPKIIIN!! Aren't they handsome??? I'm so proud with out they came
+            out!! I'm not an original person, & these tiktoks with pumpkins like
+            this have been driving me crazy--they're just so silly!! So I had to
+            do it.
+          </p>
+
+          <p>
+            there's another campus event next Thursday where they have a BUUUNCH
+            of pumpkins & let you paint them!! Although I have an exam & work--I
+            plan to eat then run to get a pumpkin, & then to work! I think
+            they'd understand if I was a little late to participate in an event
+            (my job is literally where they make & run these events) so then my
+            pumpkin will have a smaller friend!!
+          </p>
+
+          <p>
+            Well, I gotta get back to working on that resources page!! I'll see
+            you guys around!!
+            <img src="https://files.catbox.moe/pxeghb.webp" width="30px;" />
+          </p>
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="school">#school</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates work school">
+          <div class="post-header">
+            @lee-nogginzmart <time>10/20/2025, 3:49pm</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/kdej39.webp" width="30px;" />
+            hello there!! I've got some things to say!
+            <img src="https://files.catbox.moe/kdej39.webp" width="30px;" />
+          </h2>
+
+          <p>
+            <b
+              ><a href="https://nogginzmart.neocities.org/thor">Thor's</a> page
+              is up, & I've redone the art gallery!!</b
+            >
+          </p>
+
+          <p>
+            I also added & redid some stuff on & to the home page & about page!!
+          </p>
+
+          <p>
+            Whyyyy did I change the gallery site? well, because the original
+            was, in bluntest terms, ugly as Hell. I hope you guys think it's a
+            lot nicer! PLUS you can get a closer, clear look at my pieces!! I
+            find that VERY exciting, especially since that's supposed to be
+            like...one of the biggest draws to my site is my art--you know?
+          </p>
+
+          <p>
+            Also, if you haven't seen already, I've joined a webring!! I have
+            another application pending, but I'm a part of the Sapphic
+            webring!!! I want to get more involved in the Neocities community,
+            so what's the best way to do that than with joining some webrings??
+            I also put in an application for the Neo Creatives one, but I'm
+            waiting for a word back.
+          </p>
+
+          <p>
+            I also added two more questions & answers to the little questionaire
+            section I have on my about me page. Figured I should disclose
+            specifically what games & anime's I enjoy.
+          </p>
+
+          <p>
+            Also about Thor's page, I was struck with a bit of art block &
+            burnout so I'm putting it off so I don't make it worse, but it's
+            pretty much complete besides for that!! Because of the art block
+            thing, I might be putting working on OC sites on hold? It shouldn't
+            be for forever, but I'd rather slow down a bit rather than keep
+            going, get disinterested in it, & stop for MUCH longer
+          </p>
+
+          <p>
+            On a more personal note, I finally got my progress report grades
+            in!! my fucking Macroeconomics teacher waited till the last minute
+            to submit them (ironically my least favorite class). I have A's in
+            ALL my classes...but that one. I have a D+ in there. I need a C to
+            make candidacy to progress in my major next year. It's so
+            ANNOYING!!!
+          </p>
+
+          <p>
+            I'm hoping I can squeeze by, but don't have high hopes for my exams
+            in that class. My professor is just horrible!! Worse comes to worst
+            I'll just have to retake it next semester & finish my Gen Ed's.
+            Either way, I GOT MY SCHOLARSHIP BACK BITCHES!! I JUST HAD TO GET
+            DOCUMENTATION I WAS DEPRESSED & CHRONICALLY ILL!!
+          </p>
+
+          <p>
+            & aaaall that money will be going to my rent
+            <img src="https://files.catbox.moe/iuorue.webp" width="30px;" />
+            thus the pain of being an adult. Least I won't have to lose so much
+            of my paycheck in the future! Well, for like...3 months. Which is
+            still a pretty sweet deal!!
+          </p>
+
+          <p>
+            also, I get paid next week!! which is SUPER exciting!! It's not like
+            I'm broke right now, but it gives me a little rush of dopamine--you
+            know?
+          </p>
+
+          <p>
+            Also I'm working on the comic page!! It's reaaally rough right now,
+            & there's honestly no point linking it if there's...nothing to
+            really look at, so I'm keeping it functioning in the background for
+            right now! Though I might make a landing page at some point because
+            I plan for most of my stories to be comics, anyway.
+          </p>
+
+          <p>
+            well, that's pretty much it for now!! see you guys around!!
+            <img src="https://files.catbox.moe/uugqg1.webp" width="30px;" />
+          </p>
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="work">#work</a>
+            <a href="school">#school</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>10/15/2025, 2:49pm</time>
+          </div>
+          <h2>
+            <img src="https://files.catbox.moe/zy8k2k.webp" width="30px;" />
+            hey, it's been a bit!!
+            <img src="https://files.catbox.moe/zy8k2k.webp" width="30px;" />
+          </h2>
+
+          <p>
+            sorry for the drought, I just haven't had much motivation, nor need,
+            to write!! Though I've gotten a bunch of things done, so I figured
+            I'd catch you guys up to speed!!
+          </p>
+
+          <p>
+            I literally JUST finished my oc
+            <a href="https://nogginzmart.neocities.org/victoria">Victoria's</a>
+            page, & I finished another oc's,
+            <a href="https://nogginzmart.neocities.org/rae">Rae's</a> a little
+            while back!! So please, go check them out!!
+          </p>
+
+          <p>
+            Also, if you haven't seen the message I put on the activity page, I
+            FORMALLY APOLOGIZE TO PEOPLE WHO ACTUALLY USE THE LIGHT MODE VERSION
+            ON THEIR COMPUTER!! I didn't realize it was sooo fucked up. I'm
+            actually presenting my website tonight for a club thing so I was
+            checking if you could see the site on school computers. LOW & BEHOLD
+            MOST of my sites were not looking right!!
+          </p>
+
+          <p>
+            I know I'm pretty much talking to the void, but it makes me wish
+            someone let me know sooner, I feel so bad!! I wonder how many people
+            I detered with the sites not looking right. Oh well, least I know
+            what I'm doing now!!
+          </p>
+
+          <p>
+            We just got off of Fall break here at my university!! It
+            was...Monday & Tuesday, so I considered it more as an extended
+            weekend. It was nice, nonetheless!! I got caught up on chores &
+            slept a whole bunch. I've been thoroughly exhausted, so I
+            desperately needed it. So we're pretty much back to the grind till
+            Thanksgiving break--which is the 26th of November & we'll resume
+            classes that following Monday. Though finals & the last of classes
+            aren't that far behind--the 2nd of December being the end of the
+            semester.
+          </p>
+
+          <p>
+            It's so weird that the Fall semester will be over soon! Hell, I
+            already picked out what I'm getting my brother for Christmas! (we do
+            secret santa since we don't have a bunch of money individually) I'm
+            planning on getting him plushies of Cain & Kinger from The Amazing
+            Digital Circus! I know I'll be going over the budget we agreed on
+            for Secret Santa, but I don't care. I want whoever I get to have a
+            special Christmas! (it's my favorite holiday, afterall!)
+          </p>
+
+          <p>
+            I know I know, "let Halloween pass before you gush about
+            Christmas!", I'm sorry! Time is just moving so fast! Plus I'm not
+            planning to do anything for Halloween. I have class & I didn't have
+            the chance to buy a new costume, money has been tight with having
+            some new responsibilities. Hence the early shopping for Christmas
+            lol
+          </p>
+
+          <p>
+            Well, I know I've been working on just OC pages, but that'll
+            probably be the way things go for a while (also that's most of my
+            reason for making this site is showing off the stories & characters
+            I'm working on & developing) &...if you aren't aware... I have QUITE
+            A FEW OC's. especially for my main story right now. Though I've been
+            having a lot of fun making them, & I hope you like them!!
+          </p>
+
+          <p>
+            Well, that's pretty much it for now! I have to get back to school
+            work & working on this site!!
+          </p>
+
+          <p>
+            see you guys around!!
+            <img src="https://files.catbox.moe/ep7vun.webp" width="30px;" />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="site-updates">#site-updates</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>10/2/2025, 2:50pm</time>
+          </div>
+
+          <h2>
+            <img src="https://files.catbox.moe/n2crc9.webp" width="30px;" />
+            hello hello!!
+            <img src="https://files.catbox.moe/n2crc9.webp" width="30px;" />
+          </h2>
+
+          <p>
+            I'm not AS exhausted this go around, but I'm still pretty pooped
+            LMAO
+          </p>
+
+          <p>
+            I just wanted to let you guys know, if you haven't seen
+            already--that another OC page is done!! for my character
+            <a href="https://nogginzmart.neocities.org/thomas">Thomas!</a>
+          </p>
+
+          <p>
+            I also added a new section to the OC pages!! it's a text box with
+            more information about the character!! they're lengthy but they're
+            supposed to be there if anyone wants to comb through it all. You
+            basically get the gist from the 4 scroll boxes above!! I just
+            thought they would be a cool inclusion for those interested in
+            learning more!!
+          </p>
+
+          <p>but that's pretty much it for the site updates!!</p>
+
+          <p>
+            on a more personal note, I finally got paid! but, since I am an
+            adult with adult responsibilities--my paycheck didn't last very
+            long. Well, it's not ENTIRELY gone but MOST of it is. Which makes me
+            so bummed!! Ugh--it can't be helped, because I need to, you
+            know...eat & have somewhere to sleep LMAO but it's just soooo lame!!
+          </p>
+
+          <p>
+            I did want to get myself something extra though!! I went to the mall
+            yesterday after class & hit Bath & Body Works for some perfume!! I
+            wanted more "Vampire's Blood" because the last time I went I only
+            got a small bottle to try it out. So now I have a big bottle of it!
+          </p>
+
+          <p>
+            I ALSO was on a mission for something fall scented!! I DESPERATELY
+            need to smell like a fall breeze, & the workers were really nice
+            pointing me in the right direction!! I got this perfume called
+            Champagne Apple & honey & it's INCREDIBLE!! I'm hoping it'll summon
+            Fall weather to finally hit where I'm at UGH. I'M TIRED OF THIS
+            HEAAAAT
+          </p>
+
+          <p>
+            well, that's pretty much it for now!! I'll see you guys around!!
+            <img src="https://files.catbox.moe/m0ofuc.webp" width="30px;" />
+          </p>
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="site-updates">#site-updates</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates work school">
+          <div class="post-header">
+            @lee-nogginzmart <time>9/29/2025, 3:12pm</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/forex6.webp"
+              width="30px;"
+              height="30px;"
+            />
+            hrrrngngnmfvaklnv
+            <img
+              src="https://files.catbox.moe/forex6.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>
+            it's Monday, & I wanna go back home & curl up in my bed. this is
+            such BULLSHIIIIIT
+            <img
+              src="https://files.catbox.moe/sf0u5j.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <p>
+            anyway, even though I'm exhausted--I have been INCREDIBLY
+            productive!!
+          </p>
+
+          <p>
+            <b
+              >Willow's site is entirely done, Brooke's site is up & finished, &
+              the site map is done & up to date!!</b
+            >
+          </p>
+
+          <p>
+            yes yes hold your applause. Willow's spinny was such a fucking pain
+            because I think I redid it like 3 times. Brooke's came out
+            BEAUTIFULLY, which was a relief, but it pissed me off after Willow's
+            LMAO
+          </p>
+
+          <p>
+            also, if you've seen the site map--you might be wondering "this is
+            pretty basic". IT'S SUPPOSED TO BE, I PROMISE! It's to provide ease
+            of traversal across the different spots on the site. If you guys
+            have any suggestions to make it any easier, just let me know! I made
+            sure to hover my mouse over each of the links to see if they'd be
+            big enough. Spacing was super important lol
+          </p>
+
+          <p>
+            I'm working on the next oc site!! I started on assets yesterday
+            afternoon. His page is going to be interesting, because he's an old
+            man compared to the teen characters LMAO! I love him a lot so I hope
+            you guys enjoy the site as much as I am!
+          </p>
+
+          <p>
+            ALSO!! I found a basic java script thing so I can have background
+            playlists on the oc sites!! (I also have it on the D.T.T.K.I.F site)
+            I just thought having one song playing over & over would get old.
+            Plus with music being an important thing when it comes to my
+            inspiration, I thought it would just be appropriate!! They're not
+            super long--like 5 songs long. Though I'm super happy I figured it
+            out & there's more music playing on the sites!!
+          </p>
+
+          <p>
+            also I'm SUUUPER excited to get paid tomorrow!! my paycheck is
+            pending, & I have only 3 dollars in my bank account right now
+            (YIKES!!) makes me wish I worked over the summer but I also wouldn't
+            have gotten so bored that I make this website!
+          </p>
+
+          <p>
+            well, that's pretty much it for now!! keep on the look out for all
+            the new things!!
+          </p>
+
+          <p>
+            see you guys around!!
+            <img
+              src="https://files.catbox.moe/m81123.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="work">#work</a>
+            <a href="school">#school</a>
+          </section>
+        </article>
+
+        <article class="post personal site-updates work school">
+          <div class="post-header">
+            @lee-nogginzmart <time>9/22/2025, 1:53pm</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/1lciod.webp"
+              width="30px;"
+              height="30px;"
+            />
+            I'm baaack!
+            <img
+              src="https://files.catbox.moe/1lciod.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>
+            it's been a little bit!! sorry, it's not that I haven't been working
+            on anything, I just haven't had much to update about!!
+            Well--personally wise. I just felt like it was pretty unnecessary to
+            just put a one line blog entry of 'hey this thing is done'.
+          </p>
+
+          <p>
+            Well, Ollie's page is done & accessible through the OC page!! You'll
+            be able to see his handsome thumbnail right beside Erin's!
+          </p>
+
+          <p>
+            Willow, who's thumbnail is already up but there's no link behind her
+            page, is almost done!! I just have to do her little spin gif for the
+            side of her page. Otherwise, cosmetically & code wise it is done!! I
+            plan on starting on the last the chaotic 4, Brooke's, page when I
+            get out of my last class for today (which I'm in right now lol).
+          </p>
+
+          <p>
+            If you didn't notice, I have added a "site map" option to the main
+            Aisles directory. Though it has not been made yet, so don't go
+            clicking on it. I checked everywhere to make sure it didn't change
+            too much to the page flow. Though do let me know if it did do a
+            fucky wucky LOL.
+          </p>
+
+          <p>
+            On a more personal note, things have been okay. I've been on the
+            grind--it's surprising to say September is almost over!!
+          </p>
+
+          <p>
+            OH!! I WAS LOOKING THROUGH MY ENTRIES & FORGOT TO MENTION--I CAN
+            ACCESS NEOCITIES AT MY APARTMENT NOW!!!
+            <img
+              src="https://files.catbox.moe/pe4fh3.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <p>
+            so expect faster progression on things!! I might get to the site map
+            AFTER I finish Brooke's page. Though that's a big might. I'll see
+            how motivated I am.
+          </p>
+
+          <p>
+            On a less fun note--my fucking bedroom WINDOW was LEAKING during the
+            storm we had last night!!! They said they patched it up today while
+            I was at school. So I'm HOPING I don't go back to a soaked bedroom
+            (I would literally start sobbing). The apartments I live at said
+            they're doing property wide inspections to check the integridy of
+            everything. I know the issue I had was...pretty bad, so I wonder if
+            it was a wider issue than me. We had other issues, but that was the
+            only one I really cared about.
+          </p>
+
+          <p>
+            I'm just ready for the month to end--I'm working with only 19
+            dollars in my bank account & I only get paid monthly. It SUUUUPER
+            sucks!! Doesn't help most of my paycheck it going to rent,
+            groceries, & paying off my credit card (had to put groceries on
+            there since I didn't have enough). Though I plan to go to the mall
+            once I do get paid--I want to get some perfumes!! I NEED TO SMELL
+            LIKE A FALL CANDLE!!! Plus I wanna get more of this other perfume I
+            have--It's called Vampire's Blood!! It's from Bath & Body Works--if
+            you're not aware (I've heard it's pretty popular)
+          </p>
+
+          <p>
+            alright alright--that's enough yapping. Please go check out the new
+            stuff & stick around for more updates!! Class is about to start, &
+            we're prepping for our first exam on Wednesday--UGH!! wish me luck!!
+          </p>
+
+          <p>
+            alright, catch you guys later!!
+            <img
+              src="https://files.catbox.moe/17b9oq.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="work">#work</a>
+            <a href="school">#school</a>
+          </section>
+        </article>
+
+        <article class="post vent personal">
+          <div class="post-header">
+            @lee-nogginzmart <time>9/15/2025, 11:51am</time>
+          </div>
+
+          <h2>
+            hey guys
+            <img
+              src="https://files.catbox.moe/fs0qqn.webp"
+              height="30px;"
+              width="30px;"
+            />
+          </h2>
+
+          <p>
+            sorry for kinda the low energy post, but my childhood dog, Lady,
+            passed away.
+          </p>
+
+          <p>
+            she was such a good girl, & she lived a long 14 years with us. We
+            had a hunch this year would be our last with her, & I'm glad I got
+            to spend my summer taking care of her & spending all the time I
+            could with her. I gave her lots of love before I left for school, I
+            just wish I got to see her one last time. Or have been there in her
+            final moments.
+          </p>
+
+          <p>
+            we have a younger dog, Nala, who's 2 (I believe?) & when we got her
+            she brought so much life back into Lady. Lady only tolerated Nala,
+            but the way the two played was adorable & we have countless memories
+            of the two just annoying the snot out of one another.
+          </p>
+
+          <p>
+            I'm just glad she's not hurting or uncomfortable anymore. Near the
+            end her hips were bothering her, experiencing skin issues, & had a
+            chronic ear infection in her left ear. We did our best to make her
+            comfortable--bathing her often, getting her a comfy bed, & flushing
+            her ears. Plus her pancreas decided to stop working years ago, so we
+            had to change her food & give her these enzymes to make sure she was
+            absorbing her food
+          </p>
+
+          <p>
+            though I have so many good, funny memories of her. & I couldn't have
+            asked for a better dog. Oh how we terrorized her when we were
+            younger. We'd put her in the laundry hamper, & she'd look so
+            confused as we pushed the hamper around with her in it, like a car.
+            When we'd put her on the trampoline we had & she would look like she
+            was petrified. How she'd care for the baby bunnies in our yard &
+            chase the birds away from running behind a bush we had in our
+            yard--watching them all fly away.
+          </p>
+
+          <p>
+            I plan to get a tattoo at some point as a memoriam for her & other
+            pets I may have in my life. Though she is my first loss, & I don't
+            think it'll ever get easier. My folks & I shared a bunch of pictures
+            & videos of her in our family group chat--which made me smile &
+            laugh.
+          </p>
+
+          <p>
+            <img
+              src="https://files.catbox.moe/i7rtob.jpg"
+              width="200px;"
+              height="220px;"
+            />
+          </p>
+
+          <p>
+            here's a picture of her! I don't remember when it was taken, but I'm
+            pretty sure it was a year or so ago. she was such a pretty girl!!
+          </p>
+
+          <p>
+            hold your pets tighter today for me, they may only be there for a
+            fraction of your life--you're there for the entirety of their's.
+          </p>
+
+          <p>
+            thank you guys for listening, & I'll see you guys another time
+            <img
+              src="https://files.catbox.moe/wqp9eg.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <a href="vent">#vent</a>
+            <a href="personal">#personal</a>
+            <a href="latest-post">#latest-post</a>
+          </section>
+        </article>
+
+        <article class="post vent political personal school work site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>9/15/2025, 6:45pm</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/63j79q.webp"
+              width="30px;"
+              height="30px;"
+            />
+            hey guys!!
+            <img
+              src="https://files.catbox.moe/63j79q.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>
+            now bear with me, this is going to be a long one. it won't be
+            ENTIRELY bad, but I'll let you guys know when I start on the more
+            realistic/personal stuff!!
+          </p>
+
+          <p>
+            to start, SITE UPDATES!! there isn't much, but Erin's page is very
+            close to being done!! It's pretty presentable now, & I'm pretty sure
+            accessible through the OC's page, but I plan to add a few more
+            things! It's funny how much I enjoy making OC profiles, but the
+            moment I try to figure out what I want to put on them I draw a
+            blank! I suppose that's how it goes!
+          </p>
+
+          <p>
+            I believe I will be updating a lot slower for now, if that isn't
+            evident at this point. I'm just incredibly busy & when I get free
+            time I'm usually catching up on household duties & homework. Other
+            than that I might be sleeping LMAO. Though this doesn't mean I'm
+            going on a hiatus! if that were the case, I'd put a blog post up to
+            keep you guys up to date (or as much as I can)!
+          </p>
+
+          <center>
+            <h2>
+              <img
+                src="https://files.catbox.moe/qapmsy.webp"
+                height="30px;"
+                width="30px;"
+              />
+              HALT!
+              <img
+                src="https://files.catbox.moe/qapmsy.webp"
+                height="30px;"
+                width="30px;"
+              />
+            </h2>
+          </center>
+          <center>
+            <p>
+              beyond this point I will be talking about current events (in the
+              U.S), & personal stuff. if you are not interested, just proceed &
+              do your thing! there's no shame in that. So, if this is it, I'll
+              see you guys dipping out some other time!!
+            </p>
+          </center>
+
+          <details class="readmore">
+            <summary>read more</summary>
+
+            <p>
+              hello! okay, before I continue, I just want anyone who cares to
+              know that if you EMPATHIZE/SYMPATHIZE/WHATEVER with C.K (if you
+              know you know) & believe, to an extent, they didn't deserve what
+              they got--GET. OFF. MY. PAGE. point. blank. period.
+            </p>
+
+            <p>
+              I do not support gun violence in any way, but if you have any idea
+              of the things they endorsed--why does it only matter when it
+              happens to him & not everyone else?
+            </p>
+
+            <p>
+              Furthermore, on a more personal note, I have been extremely
+              paranoid being on campus/doing things on campus because of these
+              events. My school has outright endorsed vigil's for this prick &
+              has silenced those in power that have spoken out against this
+              man's cruel activties. Not to mention preestablished campus
+              organizations that align with his beliefs being more insufferable
+              than usual.
+            </p>
+
+            <p>
+              I dunno if I'd describe myself as agoraphobic, though I definitely
+              worry most people are out to get me, in some way. it's very
+              irrational, but it keeps me from taking part in social activities
+              or going out. Sooo current events have exasperating these issues.
+              Though I'm trying to remain optimistic, or enjoying what little
+              joys I have everyday.
+            </p>
+
+            <p>
+              Like I got to take a picture with a cute puppy today!! they were
+              very sweet, a dalmation! I wish I could remember their name, but
+              they were so excitable & gentle. makes me wish I had my puppies
+              back at home with me.
+            </p>
+
+            <p>
+              Just, to whoever is listening who's also queer, disabled, mentally
+              ill--or specifically targeted right now with the rise of
+              conservatism. Know that you're not alone, & we're all fighting the
+              same fight. Go out there, exist, have fun--the world may be hard
+              right now but you're still in it, & you have time to make things
+              change for the better--even if it's just a little. Not to mention
+              enjoying the little things in life while things are rough. Keep
+              those you love close, you never know what they could be going
+              through right now
+            </p>
+          </details>
+
+          <p>
+            alright, well that's all for now!! I'll see you guys around!! much
+            love!!
+            <img
+              src="https://files.catbox.moe/tumzh6.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="school">#school</a>
+            <a href="work">#work</a>
+            <a href="vent">#vent</a>
+            <a href="site-updates">#site-updates</a>
+            <a href="political">#political</a>
+          </section>
+        </article>
+
+        <article class="post site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>9/8/2025, 1:02pm</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/s0n0fn.webp"
+              width="30px;"
+              height="30px;"
+            />
+            HELLOOOO!!!
+            <img
+              src="https://files.catbox.moe/s0n0fn.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>
+            the OCs' & "Dedicated To The Kidz I Fought" page are officially up!!
+            much excitement!!
+            <img
+              src="https://files.catbox.moe/eh6vd7.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <p>
+            Furthermore, I have two pfps up on the oc page for my characters
+            Erin & Ollie!! I plan to get them them first when it comes to their
+            pages.
+          </p>
+
+          <p>
+            I do want to make a site map--just because some sections of the site
+            are reachable in certain sites. Just to make it easier for anyone
+            that don't know where specifically to go! (I suppose I'll need to
+            put that in the To Do list)
+          </p>
+
+          <p>
+            Unfortunately with my apartment wifi blocking neocities, I can't get
+            to things as fast as I wish I could. So I usually end up having to
+            update things while I'm at work or in class (without compromising my
+            education). Which is frustrating, but I believe I'm managing it good
+            enough so far!! Especially since my jobs are not very demanding.
+          </p>
+
+          <p>
+            Though if I keep up at this rate, I believe by the end of this
+            semester I will have most of the sites functioning & pretty
+            traversable!! I'm very proud with how much I've done so far,
+            especially with juggling school, work, & personal antics.
+          </p>
+
+          <p>
+            Though I do believe the comics site will be one of the last things I
+            get to. Mostly because there is no on-going comics right now, & I'd
+            rather get to other aspects of the site where I will be more likely
+            to update. This is not to say comics won't be happening, obviously
+            not, but they're not a priority for a long while. I don't even know
+            how I'm going to format the site for it when I eventually get to it.
+            Guess that's just part of the process!
+          </p>
+
+          <p>
+            Anyways, I need to get back to class!! I'm writing this in
+            statistics. I suuuure love frequency tables LMAO
+          </p>
+
+          <p>
+            till next time, keep an eye out for updates!!
+            <img
+              src="https://files.catbox.moe/386h5l.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <a href="site-updates">#site-updates</a>
+          </section>
+        </article>
+
+        <article class="post site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>9/5/2025, 8:46am</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/nhm394.webp"
+              width="30px;"
+              height="30px;"
+            />
+            stuff is happening!!
+            <img
+              src="https://files.catbox.moe/nhm394.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>
+            if you haven't seen already, the stories page is up!
+            <img
+              src="https://files.catbox.moe/sq7blz.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <p>
+            although, other than the main Aisles directory, the shelves
+            directory only has dead links right now. Though I do plan to start
+            on at least 1 story page & start thinking of how I'm going to format
+            the OC's page!!
+          </p>
+
+          <p>
+            I've already been gathering assets, but there's a lot of other stuff
+            that goes into it. Like what exactly I'm going to be putting ON the
+            OC pages & what not. All that fun jazz
+          </p>
+
+          <p>
+            ALSO!! Some sites that previous didn't have music, do! I'll
+            definitely have to remember all of them for when I get around to
+            doing the resources page! That's definitely going to be a looooong
+            one.
+          </p>
+
+          <p>
+            I dunno how much more I'll get to this weekend, but keep an eye out!
+            I've got some homework to do & assignments due at the beginning of
+            next week so let's hope I actually get to do more work on the
+            sites!!
+          </p>
+
+          <p>
+            Well, that's pretty much it! see you guys around!!
+            <img
+              src="https://files.catbox.moe/tumzh6.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+          <section class="tags">
+            <a href="site-updates">#site-updates</a>
+            <a href="latest-post">#latest-post</a>
+          </section>
+        </article>
+
+        <article class="post personal school site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>9/3/2025, 12:31pm</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/6jr7k3.webp"
+              width="30px;"
+              height="30px;"
+            />
+            GUESS WHO'S BACK!
+            <img
+              src="https://files.catbox.moe/6jr7k3.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>
+            well it's not like I've been gone forever lol but I thought that
+            would be funny
+          </p>
+
+          <p>
+            if you haven't already checked, I put some art up on the art gallery
+            & the art main site!! It's a little old picture but I've been
+            wanting to display it! the other sections on the gallery page, other
+            than home, shouldn't have anything to look at yet. I just don't want
+            to break anything fundamental to the site trying to take them off.
+            that template has already been fucky wucky with me.
+          </p>
+
+          <p>
+            while I'm writing this I'm waiting for my statistics class to start.
+            scarfed down my lunch because I only have 40 minutes between leaving
+            work & going to my first class. Well--I only have one other after
+            this, but still!
+          </p>
+
+          <p>
+            I've been gathering assets for the future OC profile pages!! mostly
+            background & stuff from Pinterest, but I'm excited & brainstorming
+            what exactly I'm going to put on there & how I'm going to format it!
+          </p>
+
+          <p>
+            I've been looking around at other sites to get inspiration on how
+            I'm going to format them! I've seen some SUPER cool stuff!! People
+            are so creative!! I wish I was technical enough to do super neat
+            stuff like that! maybe someday if I do this long enough!
+          </p>
+
+          <p>
+            well, class is starting! I have to take these notes! (I would do it
+            by hand but my carpal tunnel is fucking me UP!! SO!! MANY!!
+            NOTES!!!!)
+          </p>
+
+          <p>
+            see you guys some other time!!
+            <img
+              src="https://files.catbox.moe/63ai2p.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <a href="#personal">#personal</a>
+            <a href="school">#school</a>
+            <a href="site-updates">#site-updates</a>
+          </section>
+        </article>
+
+        <article class="post personal school work site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>8/31/2025, 9:46am</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/gsqwoe.gif"
+              width="30px;"
+              height="30px;"
+            />
+            hello again!!
+            <img
+              src="https://files.catbox.moe/gsqwoe.gif"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>
+            it's been a little while!! not much has changed, really, I've just
+            been so busy! I'm so tiredddd
+            <img
+              src="https://files.catbox.moe/s4hmmb.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <p>
+            but BIG NEWS!! I GOT THE TAG SYSTEM TO WOOOORK!!! YAAAAY
+            <img
+              src="https://files.catbox.moe/sq7blz.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <p>
+            now...was it a matter of not reading all the notes the original
+            creator if the template put on the HTML & CSS file? ...yeeeees BUT.
+            I never said I was the smartest person! LMAO!!
+          </p>
+
+          <p>
+            I was tempted initially to contact the creator but they seemed like
+            a busy person. Now I'm glad I didn't!! It was a note in the damn
+            file! Well, least that's a good demonstration of the intelligence of
+            the person making these sites (me...)
+          </p>
+
+          <p>
+            but everything has been good!! I've just been so busy with school &
+            work! Plus I've been looking around to see what the best format it
+            would be for my stories & oc pages. I haven't seen templates
+            dedicated ENTIRELY for oc logging so I think I'm just going to have
+            to get created with a template I've already used OR a new one.
+          </p>
+
+          <p>
+            furthermore, the art gallery site is in a rough state because...I've
+            been too busy to draw. NOW I am gradually working on one & I have
+            another I finished before school started. Though I need to crop it &
+            make a thumbnail for it. It's far too long for it to be seem
+            properly in the art gallery sight.
+          </p>
+
+          <p>
+            I might have my room properly decorated by next weekend! My sister
+            is bringing back more 3M poster strips from home so hopefully I'll
+            have enough to finish covering these walls!! I'll edit them to take
+            out anything personal but it shouldn't be much that it makes the
+            pictures uncomprehensible.
+          </p>
+
+          <p>
+            I wish the end of September could get here faster. I am going into
+            September with only 60 something dollars in my account & I dunno
+            what I'm going to do!! thankfully my car does great on gas mileage &
+            my mom has been helpful making sure I stay fed, but it's still
+            frustrating. I hate being broke, & I try to avoid it as much as
+            possible!
+          </p>
+
+          <p>
+            I guess the broke college student stereotype was going to catch up
+            with me eventually...
+          </p>
+
+          <p>
+            ALSO my fucking apartment blocked neocities on their firewall, I
+            believe, & I CAN ONLY ACCESS IT AT SCHOOL!! WHICH IS SUCH BALLS!!
+            they won't stop my coding POWERRR!!
+          </p>
+
+          <p>
+            Well, that's pretty much it for now! thanks for sticking around &
+            look forward to all the stuff that may come in the future!!
+          </p>
+
+          <p>
+            I'll see you around!
+            <img
+              src="https://files.catbox.moe/38rs4f.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <a href="#personal">#personal</a>
+            <a href="school">#school</a>
+            <a href="work">#work</a>
+            <a href="site-updates">#site-updates</a>
+          </section>
+        </article>
+
+        <article class="post personal work school">
+          <div class="post-header">
+            @lee-nogginzmart <time>8/26/2025, 4:37pm</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/jesb5m.webp"
+              width="30px;"
+              height="30px;"
+            />
+            hey, it's been a bit!
+            <img
+              src="https://files.catbox.moe/jesb5m.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>
+            hrrng...what day is it?
+            <img
+              src="https://files.catbox.moe/mwv5sn.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <p>
+            if it isn't apparent, or this is the first blog post you're seeing,
+            the fall semester had started at my university & I am EXHAUSTED &
+            WORKING. ALL. THE. TIME!!
+          </p>
+
+          <p>
+            Not that I mind school or making money (I've been VERY lucky in my
+            easy desk jobs), but by the time I get home at the end of the day I
+            don't feel like doing anything but getting my pajamas, eating
+            dinner, then curling up in bed!!
+          </p>
+
+          <p>
+            though I do still get time to do schoolwork at work, so don't think
+            I'm neglecting my studies! Though to be fair classes have JUST
+            started.
+          </p>
+
+          <p>
+            I'll have to share pictures of my apartment room soon, because I'm
+            really liking how I've decorated it thus far! Though I'm going to
+            have to get more poster 3m strips because I ran out! My sister, who
+            I'm rooming with, is going home this weekend & my mum is giving her
+            some more to take back with her.
+          </p>
+
+          <p>
+            I think you all would get a kick out of this, but on the first day
+            of classes--I got mixed up on where I was working at the beginning
+            of the day. I had a shift from 10 am to noon, which I thought was at
+            the dorms. APPARENTLY NOT! so I had to bike QUICK over to our
+            student union (which was too terribly far) & head to the 3rd floor.
+            Though when I got in there the start on my first day, I didn't have
+            my paperwork filled out! I thought that, because I've been working
+            on campus for...almost three years, I wouldn't have to do any
+            paperwork!
+          </p>
+
+          <p>
+            I was veeery wrong. So, thankfully, they gave me a ride across
+            campus to human resources. All for them to keep me there for 5
+            minutes, check some things, & then give me a note on the back of an
+            old business card saying I can work. I got a ride back but I ended
+            up working 30 minutes later than I should've.
+          </p>
+
+          <p>
+            My coworkers were, thankfully, very nice & understanding, but lord I
+            felt so stupid! Not to mention frazzled
+          </p>
+
+          <p>
+            Otherwise, I got to my classes on time! I got a little lost in the
+            business building because apparently classes & professor offices are
+            on different sides of the building (I was in the offices one). Then
+            I had to get a good route on my bike back to the parking lot I
+            parked in, but I forgot my extender to my bike lock!! THEN I forgot
+            my WD-40 so my bike wouldn't squeak obnoxiously loud!
+          </p>
+
+          <p>
+            Well, that's why I was more prepared entering my second day.
+            ...though I totally forgot my Ipad charger
+            <img
+              src="https://files.catbox.moe/e4875d.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <p>
+            well, we can't win them all!! I'll just have to be more prepared
+            when I have to work a loooong shift like this!
+          </p>
+
+          <p>
+            oh yeah, while I'm writing this I'm at work. I only 2 hours left in
+            my 5 hour & a half shift. It's been pretty chill!! my coworker even
+            gave me some school shirts for me to have!! (yay, more comfy pajama
+            shirts!!)
+          </p>
+
+          <p>
+            Okay this post is getting a little long & I don't want to keep you
+            guys here longer than I have to. Wouldn't want to keep you guys from
+            exploring!
+          </p>
+
+          <p>
+            well, till next time! thanks for dropping by!
+            <img
+              src="https://files.catbox.moe/jdmzjx.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="work">#work</a>
+            <a href="school">#school</a>
+          </section>
+        </article>
+
+        <article class="post personal work school site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>8/23/2025, 7:20pm</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/24qdwq.webp"
+              width="30px;"
+              height="30px;"
+            />
+            another day, another entry!
+            <img
+              src="https://files.catbox.moe/24qdwq.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>
+            hello again! I can definitely say today was a lot less
+            overwhelmingly busy.
+          </p>
+
+          <p>
+            Work was longer, yeah, but it wasn't as busy where I couldn't work
+            on anything. If you haven't checked already, the art page is up! The
+            Art gallery portion is a little rusty? Only really in the cosmetics
+            & the fact there isn't art up there yet. though they're a-okay to
+            least look at!
+          </p>
+
+          <p>
+            Tomorrow I only work 2 hours, so I might get some more work
+            done--but I do need to prepare for classes starting on Monday! I
+            have laundry to do, a shower to take, & I HAVE to do something about
+            my clothes still being in garbage bags LMAO
+          </p>
+
+          <p>
+            Sooo there may be no activity on Monday, depending on how work looks
+            like! I work a shift in the morning at the dorms then in the
+            afternoon for my federal work study job! Not to mention classes from
+            12 till 3 (which isn't too bad!). Helps my jobs are in pretty close
+            distance & the dorm I work at is right beside the building I have
+            all my classes in!
+          </p>
+
+          <p>
+            I dunno, I'm a little upset about it because it'll give me less of a
+            reason to explore campus, but least I can get my biking in heading
+            to the parking lot & to campus!
+          </p>
+
+          <p>
+            But I did some more decorating! I would've done more if I hadn't run
+            out of poster 3m strips! Least my room is now more colorful! After I
+            finished that I caved & took a 3 hour nap--I was exhausted! I
+            haven't really relaxed since moving in so I suppose I needed it! I'm
+            also glad I got some ibuprofen from my recent grocery order because
+            LORD were my feet killing me! My hands are still somewhat swollen
+            from moving in!
+          </p>
+
+          <p>
+            I'm just ready to get the ball back rolling again! I really enjoy
+            college life & having that structure going to class, work, & getting
+            to sleep at a reasonable hour! Makes me feel productive, even if I
+            don't do much in a day!
+          </p>
+
+          <p>
+            Well, I'm going to try & sort through my clothes before I go to bed
+            for the night. I have to wake up early again tomorrow to open the
+            dorm desk!
+          </p>
+
+          <p>
+            I'll catch you guys on the flip side!
+            <img
+              src="https://files.catbox.moe/jzal3j.webp"
+              width:30px;
+              height:30px;
+            />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="work">#work</a>
+            <a href="school">#school</a>
+            <a href="site-updates">#site-updates</a>
+          </section>
+        </article>
+
+        <article class="post personal work school">
+          <div class="post-header">
+            @lee-nogginzmart <time>8/22/2025, 12:40pm</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/7fk1pn.webp"
+              width="30px;"
+              height="30px;"
+            />
+            hey! update!!
+            <img
+              src="https://files.catbox.moe/7fk1pn.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>yeaaah don't be surprised there was nothing for yesterday--</p>
+
+          <p>
+            we got moved in! yay! Though now the unpacking begins & that's a
+            boooo. I've got some stuff unpacked, but all my clothes are still in
+            totes & bags, & I've only really set up my desk yesterday. Other
+            than that everything is pretty much still packed away. The apartment
+            is really nice, I'm very happy with us picking this place! The only
+            real issue we had was connecting to the wifi, because how they wrote
+            it on the paper was not accurate.
+          </p>
+
+          <p>
+            I'm at work right now--it's been & GOING to be busy for a while
+            since the freshman are checking into the dorm (I work at the front
+            desk & assist them in the process). Then I work all through the
+            weekend & Monday. Though then Tuesday, Wednesday, & Thursday I work
+            at my other job. I gotta make the money!! Though once the semester
+            officially starts up everything should start to slow & I can work on
+            the site (if I don't have assignments taking priority).
+          </p>
+
+          <p>
+            Though it helps this website will basically be my "social media"
+            rather than some scam of a platform, app, or website. Like I have
+            tumblr but only to scroll & look at stuff rather than post. Just
+            feels like a waste of time.
+          </p>
+
+          <p>
+            I miiiight get to some work tonight but I won't make any promises.
+            If I do update anything, it'll probably be small. I have to get as
+            much organizing, decorating, & unpacking done as possible before the
+            semester starts.
+          </p>
+
+          <p>
+            well, that's pretty much it for now, I'll be seeing you around!
+            <img
+              src="https://files.catbox.moe/eh6vd7.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <a href="personal">#personal</a>
+            <a href="work">#work</a>
+            <a href="school">#school</a>
+          </section>
+        </article>
+
+        <article class="post personal projects site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>8/19/2025, 6:52pm</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/c8gzdj.webp"
+              width="30px;"
+              height
+              30px;
+            />
+            hello again!
+            <img
+              src="https://files.catbox.moe/c8gzdj.webp"
+              width="30px;"
+              height
+              30px;
+            />
+          </h2>
+
+          <p>I've definitely been a busy bee! for better or for worse.</p>
+
+          <p>
+            not only have I been working on the site, I found this nice template
+            for the art page! (I had to start over because I broke it somehow
+            lol but least I know what I'm doing) I've been getting as much
+            packing done as possible for when I move into my apartment on
+            Thursday!
+          </p>
+
+          <p>
+            I also cleaned out my car--I have FAR too much to do tomorrow to
+            have more things to worry about! Plus the day before I washed my car
+            (only for it to get dirty again--I hate being parked under trees!!)
+          </p>
+
+          <p>
+            Though tomorrow I don't think I'll be able to update the site much
+            or make another blog post. We're getting the cars packed tomorrow
+            since our move in time is early Thursday morning. I have to wake up
+            early tomorrow to bring last minute items downstairs, but I also
+            have some appointments, too! I have an oil change at 2:30 pm & then
+            I have to drive a little whiles away for my hair cut appointment at
+            4!!
+          </p>
+
+          <p>
+            I desperately need a hair cut but I'm totally going to exhausted by
+            the end of yesterday. Better go to bed early just to make sure I
+            don't enter Thursday in a grumpy mood.
+          </p>
+
+          <p>
+            I don't think I'll be able to do much updates on Thursday, either.
+            We should get done by midafternoon but I might spend most of that
+            unpacking & getting my room a semblance of normal. Plus I have to
+            work Friday morning so it'll be vital I get sorta organized LOL.
+          </p>
+
+          <p>
+            It's a busy time, but I think I'll be okay! Though have me in your
+            hearts--it's still going to be A LOT of work.
+          </p>
+
+          <p>
+            I'll be seeing you around!!
+            <img
+              src="https://files.catbox.moe/kfj2b1.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <!--the tag section is optional, and you should put each tag inside of an <a> or <span> element! (that way they get styled correctly...)-->
+            <a href="#personal">#personal</a>
+            <a href="#projects">#projects</a>
+            <a href="#site-updates">#site-updates</a>
+            <!--using an id you made a tag for above will make it scroll up to the tag filter section so people can filter posts that way!-->
+          </section>
+        </article>
+
+        <article class="post personal projects site-updates">
+          <div class="post-header">
+            @lee-nogginzmart <time>8/18/2025, 10:34am</time>
+          </div>
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/7npzv2.webp"
+              width="30px;"
+              height="30px;"
+            />
+            hey, it's another day!
+            <img
+              src="https://files.catbox.moe/7npzv2.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>hello again! it's yet another day of site updates!</p>
+
+          <p>
+            last night I finished up on the homepage, so it should all be cool
+            beans! If you haven't checked it out, I have a chatbox set up! I'd
+            love to hear from you!
+          </p>
+
+          <p>
+            furthermore, I started on my about me page! it's still in progress
+            as I'm writing this, but it's coming along nicely!
+          </p>
+
+          <p>
+            also, I'm sure you've noticed, we have custom cursors!! I haven't
+            figured out how to customize the pointer cursor but I'll get to that
+            some other day! I also got background audio to work!! so on the
+            homepage I have just supermarket ambiance while on here I have a
+            song playing! I really like it & feel it really encapsulates me so I
+            put it on here!
+          </p>
+
+          <p>
+            plus, if you haven't checked it ou, I have updated the 'song of the
+            day' once again!! it's a really good one!
+          </p>
+
+          <p>
+            but on a more personal note, I move into my apartment Thursday! So
+            there won't be much work happening on here that day. I've been
+            packing & I plan on finishing up on that today. (minus personal
+            stuff like my meds, computer, & everyday uses) then I need to wash
+            my car. they're a little dirty LOL. I don't want to be pulling up to
+            my apartment in a dirty car!
+          </p>
+
+          <p>
+            The fall semester starts up next Monday, which is exciting! I'm
+            ready to get back on a routine again. I don't function well when I'm
+            aimless. My executive dysfunction & depression tend to flare up. I'm
+            pretty sure I'll be able to update the site just fine! My jobs tend
+            to allow lots of free time since they're just desk jobs. Though
+            won't be as fast as it is now.
+          </p>
+
+          <p>
+            Well, I gotta get my day moving. Wouldn't want to waste waking up
+            this early!
+          </p>
+
+          <p>
+            I'll be seeing you around!
+            <img
+              src="https://files.catbox.moe/hrqo6f.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <!--the tag section is optional, and you should put each tag inside of an <a> or <span> element! (that way they get styled correctly...)-->
+            <a href="#personal">#personal</a>
+            <a href="#projects">#projects</a>
+            <a href="#site-updates">#site-updates</a>
+            <!--using an id you made a tag for above will make it scroll up to the tag filter section so people can filter posts that way!-->
+          </section>
+        </article>
+
+        <article class="post intro">
+          <!--you can put your name at the top here, using a fake social media handle or just typing it normally. up to you!-->
+          <div class="post-header">
+            @lee-nogginzmart <time>8/17/2025, 2:09pm</time>
+          </div>
+          <!--remember to change the timestamp... i always forget to lol....-->
+
+          <h2>
+            <img
+              src="https://files.catbox.moe/x4d83x.webp"
+              width="30px;"
+              height="30px;"
+            />
+            Welcome!
+            <img
+              src="https://files.catbox.moe/x4d83x.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h2>
+
+          <p>
+            hey! thanks for stopping by my blog! while I'm writing this, the
+            state of it is pretty rough (most of the cosmetic stuff is not
+            done), but I'm otherwise really happy with how it's turning out!
+          </p>
+
+          <p>
+            this is a link to the template I am using!
+            <a href="https://nomnomnami.com/templates/#blog" target="_blank"
+              >template!</a
+            >
+            it's really nice & pretty easy to get customized & set up!
+          </p>
+
+          <p>
+            <b
+              >THOUGH FOR THE LOVE OF GOD!! CHANGE!! THE!! NAME!! OF THE!!
+              INDEX!!</b
+            >
+            I OVERWROTE my code for my homepage & set me back HOURS of progress.
+            so please...do yourself a favor & don't go through the heartache I
+            went through.
+          </p>
+
+          <p>
+            what to expect on this blog is a plethora of things! if you haven't
+            already looked at the tags, here's what to expect!
+          </p>
+
+          <h3>
+            <img
+              src="https://files.catbox.moe/17b9oq.webp"
+              width="30px;"
+              height="30px;"
+            />
+            POTENTIAL BLOG MATERIAL!
+            <img
+              src="https://files.catbox.moe/17b9oq.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </h3>
+          <ul>
+            <li>fandom stuff</li>
+            <ul>
+              <li>check my about me if you're curious about what I'm into</li>
+            </ul>
+            <li>hobbies</li>
+            <ul>
+              <li>
+                pretty apparent, but stuff like art, working on this website,
+                music, & other stuff!
+              </li>
+            </ul>
+            <li>art galore!</li>
+            <li>not to mention cool,fellow neocities sites!</li>
+          </ul>
+
+          <p>
+            so look forward to all the cool stuff! not to mention learning more
+            about thy webmaster, me!
+          </p>
+
+          <p>
+            so, I hope to seeing you around!
+            <img
+              src="https://files.catbox.moe/yrfo0r.webp"
+              width="30px;"
+              height="30px;"
+            />
+          </p>
+
+          <section class="tags">
+            <!--the tag section is optional, and you should put each tag inside of an <a> or <span> element! (that way they get styled correctly...)-->
+            <a href="#intro">#introduction</a>
+            <!--using an id you made a tag for above will make it scroll up to the tag filter section so people can filter posts that way!-->
+          </section>
+        </article>
+
+        <!--this button brings you back to the top of the page, like it says-->
+        <section id="page-nav">
+          <p class="center">
+            <a href="#"
+              ><img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/favicon_1.webp"
+                width="30px;"
+                height="30px;" />
+              back to top
+              <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/blog/favicon_1.webp"
+                width="30px;"
+                height="30px;"
+            /></a>
+          </p>
+        </section>
+      </main>
+
+      <footer></footer>
+    </div>
+    <script src="blog.js"></script>
+  </body>
+</html>
