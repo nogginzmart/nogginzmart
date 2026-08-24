@@ -1,0 +1,29 @@
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+body {
+	padding: 10px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+	color: var(--text);
+	
+	background-color: #94a48b;
+}
+
+ style
+a {
+  color: #4d604a;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2e352d;
+  background-color: transparent;
+  text-decoration: underline;
+}

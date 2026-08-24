@@ -1,0 +1,792 @@
+/* these are the site colors, replace them with anything you want!
+ * this version is highly customizable... use simple-style.css for quicker editing if you don't care too much about the specifics!*/
+:root {
+  --site-bg: url("https://nogginzmart.neocities.org/catbox%20aint%20working/blog/background.jpg");
+  /*or like this for just a solid color:*/
+  /*--site-bg: #FFE1C6; */
+
+  --post-bg: #292b27;
+  --post-text: #d9e0d2;
+  --post-header-text: #cddacd;
+  --border-color: #41473d;
+  --border-shadow: #bfcbb8;
+  --sidebar-text: #7c837c;
+  --sidebar-bg: #222421;
+  --sidebar-button-bg: #b4c3b4;
+  --sidebar-button-bg-hover: #a3b3a0;
+  --sidebar-button-text: #4e223d;
+  --sidebar-button-text-hover: #6d796a;
+  --sidebar-border-color: #bbc9b7;
+
+  /*this is for the collapsible sections at the top (status and tag filters)*/
+  --pinned-text: #1a1c19;
+  --pinned-bg: #aab3a5;
+  /*tag filter button colors*/
+  --button-bg: #343931;
+  --button-bg-hover: #5c6457;
+  --button-bg-selected: #212821;
+  --button-text: #9aa493;
+  --button-border-color: #e3eedb;
+
+  /*these next two colors are for when you highlight text on the page*/
+  --selected-bg: #dde8c7;
+  --selected-text: #8a927a;
+}
+
+/*the fonts used for this template are available here: 
+ * https://fonts.google.com/specimen/Atkinson+Hyperlegible
+ * https://fonts.google.com/specimen/Nunito
+ * 
+ * if you don't include these files in a "fonts" folder on your website, your browser will try to substitute the next closest thing...
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background: var(--selected-bg);
+  color: var(--selected-text);
+}
+* {
+  box-sizing: border-box;
+  /*custom scrollbar colors~ i think it only works on some browsers tho...*/
+  scrollbar-color: var(--post-header-text) var(--post-bg);
+  scrollbar-width: thin;
+}
+
+body {
+  /*change the main font here*/
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  background: var(--site-bg);
+  color: var(--post-text);
+  line-height: 1.6em;
+  /*if you use a bg image, this will keep it from scrolling*/
+  background-attachment: fixed;
+}
+
+/*use a special font for certain headings/buttons*/
+h1,
+nav,
+.pinned summary {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: bold;
+}
+/*use a pointer for the fake buttons*/
+details > summary,
+#tag-filters label {
+  cursor: pointer;
+}
+
+/*quick addon styles you can use in combination with anything*/
+.center {
+  text-align: center;
+}
+.small-text {
+  font-size: smaller;
+}
+.no-border {
+  border: none;
+  padding: 0;
+}
+
+/*some parts of the layout can be hidden/shown depending on if you're on desktop or mobile*/
+.mobile-only {
+  display: none;
+}
+.pc-only {
+  display: block;
+}
+
+/*this class makes stuff wrap around, very handy*/
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+/*this container will center the page contents better for larger screen sizes*/
+#container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+main {
+  /*here is the post width*/
+  width: 800px;
+  /*this part means it ignores all other elements when figuring out where to sit on the page*/
+  position: absolute;
+  /*because of that, we gotta tell it how much room to leave for the sidebar*/
+  margin-left: 380px;
+}
+
+#sidebar {
+  background: var(--sidebar-bg);
+  margin-left: 0px;
+  padding: 2em 1em;
+  /*we left 300px of room for the sidebar, but we want the width to be less than that since there should be some spacing between*/
+  width: 350px;
+
+  /*i put dashed borders on each side, but you can change it to a different type or remove them*/
+  border-inline: 2px dashed var(--sidebar-border-color);
+  /*outlines go outside of the borders, so it makes it look like stitching on the edges. cute!*/
+  outline: 4px solid var(--sidebar-bg);
+
+  /*the sidebar doesn't scroll with the rest of the page*/
+  position: fixed;
+  /*this stacks it on top of everything else*/
+  z-index: 99;
+  /*make sure it takes up the whole screen vertically*/
+  height: 100%;
+  /*and add a scrollbar if someone's window is too short to see all the content*/
+  overflow-y: auto;
+}
+
+#sidebar h1 {
+  margin-block: 0.5em;
+}
+/*link text in the sidebar should be the same color*/
+#sidebar a {
+  color: var(--sidebar-text);
+}
+/*font size for your name in the sidebar*/
+#sidebar h1 a {
+  font-size: 1.2em;
+}
+/*no underline for your name, or hovered links in sidebar*/
+#sidebar h1 a,
+#sidebar a:hover {
+  text-decoration: none;
+}
+
+/*center the icon in the sidebar*/
+#icon {
+  margin: auto;
+}
+#icon img {
+  padding-top: 15px;
+  /*this makes it a circle, lower the number for a rounded square*/
+  border-radius: 50%;
+  max-width: 200px;
+}
+/*these styles are for when your icon image is being used as a link, it just makes it react on mouseover*/
+#icon a img {
+  outline: 2px solid var(--sidebar-bg);
+  /*adds animation to the outline*/
+  transition: 0.2s;
+}
+#icon a img:hover {
+  outline: 2px solid var(--sidebar-text);
+  outline-offset: 4px;
+}
+
+/*profile text doesnt need as much spacing as the posts do*/
+#profile p {
+  margin-block: 0.3em;
+  line-height: 1.5em;
+}
+/*styling the simple bio block*/
+#bio {
+  border-block: 2px dashed var(--sidebar-border-color);
+  padding-block: 0.5em;
+  margin-block: 1em;
+  font-size: small;
+}
+
+/*for the rounded link buttons!*/
+#sidebar nav ul {
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-evenly;
+}
+#sidebar nav li a {
+  /*set a width so they're the same size*/
+  min-width: 120px;
+  display: inline-block;
+  background: var(--sidebar-button-bg);
+  color: rgb(80, 91, 80);
+  font-weight: bold;
+  border-radius: 1rem;
+  outline: 2px solid #fff0;
+  transition: 0.2s;
+  text-decoration: none;
+}
+#sidebar nav li a:visited {
+  color: var(--sidebar-text);
+}
+#sidebar nav li a:hover {
+  background: var(--sidebar-button-bg-hover);
+  color: var(--sidebar-button-text-hover);
+  outline: 2px solid var(--sidebar-text);
+  outline-offset: 3px;
+}
+/*and add some spacing around them too*/
+#sidebar nav {
+  margin-block: 1.5em;
+}
+
+/*for the collapsible sections at the top (status and tag filters)*/
+.pinned {
+  background: var(--pinned-bg);
+  font-size: smaller;
+  padding: 0.5em;
+  border-radius: 1em;
+  margin: 1em 0;
+  border: 2px solid var(--border-color);
+  outline: 2px solid var(--post-bg);
+  box-shadow: 2px 2px 6px var(--border-shadow);
+}
+/*the heading for those blocks*/
+.pinned summary {
+  padding-top: 15px;
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: 2px dashed var(--border-color);
+  margin: 0.5em;
+}
+/*since the summary uses the special font, switch back to the other one for the timestamp*/
+.pinned time {
+  color: black; 
+  font-family: "Pixelify Sans", sans-serif;
+  float: right;
+  font-weight: normal;
+  font-size: small;
+}
+
+/*the list with the alternating colors! (cute!!!)*/
+#status ul {
+  background: var(--post-bg);
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+#status li {
+  list-style-type: none;
+  padding: 0.2em;
+}
+/*list title, ie "reading:"*/
+#status li:nth-child(odd) {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: var(--post-header-text);
+}
+/*list answer, ie "books about magic"*/
+#status li:nth-child(even) {
+  background: var(--pinned-bg);
+  color: var(--pinned-text);
+  border-radius: 0.3em;
+  padding-inline: 0.8em;
+}
+/*make links the same as in posts*/
+#status li a {
+  color: var(--pinned-text);
+}
+#status li a:hover {
+  text-decoration: none;
+}
+
+/*finally the post styles!!!*/
+.post {
+  background: var(--post-bg);
+  color: var(--post-text);
+  border-radius: 1rem;
+  padding: 0 0.8rem 0.2rem 0.8rem;
+  margin-bottom: 1em;
+  box-shadow: 2px 2px 6px var(--border-shadow);
+  min-width: 100%;
+}
+/*make sure images stay within the post*/
+.post img {
+  max-width: 100%;
+}
+/*add some space from the post header if you have an image first*/
+.post div + img {
+  margin-top: 1em;
+}
+
+/*the top of the post where you put your username*/
+.post-header {
+  color: var(--post-header-text);
+  font-weight: bold;
+  padding: 0.5rem 0;
+  border-bottom: 2px dashed var(--border-color);
+}
+/*and the post's timestamp*/
+.post time {
+  float: right;
+  font-weight: normal;
+  font-size: smaller;
+  margin: 0.2em;
+}
+/*link styling*/
+.post a {
+  color: var(--post-text);
+}
+.post a:hover {
+  text-decoration: none;
+}
+
+/*this is for lists*/
+.post li {
+  /*you can change the normal dot to anything you want :)*/
+  /*list-style-type: "♥";*/
+  /*i used stars to match the bg image!*/
+  list-style-image: url("https://files.catbox.moe/ci3xsv.webp");
+}
+
+/*"read more" button for long posts*/
+.readmore {
+  margin-bottom: 1em;
+}
+.readmore summary {
+  font-weight: bold;
+  color: var(--post-header-text);
+  /*this gets rid of the arrow*/
+  list-style-type: none;
+}
+/*hide the "read more" button after it's clicked (delete this line to keep it there)*/
+.readmore[open] > summary {
+  display: none;
+}
+/*optional border to denote a border was there before*/
+.readmore[open] {
+  border-top: 2px dashed var(--button-bg);
+  padding-top: 1em;
+}
+
+.tags {
+  border-top: 2px dashed var(--border-color);
+  padding: 0.4em 0;
+}
+.tags a {
+  color: var(--post-text);
+}
+.tags span {
+  color: var(--post-header-text);
+}
+.tags a,
+.tags span {
+  font-size: small;
+  padding: 0.2em 0.5em;
+  border-radius: 1em;
+  text-decoration: none;
+}
+.tags a:hover {
+  background: var(--button-bg);
+  text-decoration: underline;
+}
+
+/*css for hiding posts*/
+.tagged:has(input:checked) article {
+  display: none;
+}
+
+/*add new tags to filter here!
+ * follow the class naming conventions (no spaces, don't start it with a number)
+ * remember on the actual page you can write the tag however you want!*/
+.tagged:has(#all:checked) article,
+.tagged:has(#intro:checked) article[class~="intro"],
+.tagged:has(#personal:checked) article[class~="personal"],
+.tagged:has(#secret:checked) article[class~="secret"],
+.tagged:has(#art:checked) article[class~="art"],
+.tagged:has(#vent:checked) article[class~="vent"],
+.tagged:has(#trigger-warning:checked) article[class~="trigger-warning"],
+.tagged:has(#projects:checked) article[class~="projects"],
+.tagged:has(#work:checked) article[class~="work"],
+.tagged:has(#school:checked) article[class~="school"],
+.tagged:has(#fandom:checked) article[class~="fandom"],
+.tagged:has(#video-games:checked) article[class~="video-games"],
+.tagged:has(#music:checked) article[class~="music"],
+.tagged:has(#site-updates:checked) article[class~="site-updates"],
+.tagged:has(#cool-sites:checked) article[class~="cool-sites"],
+.tagged:has(#latest-post:checked) article[class~="latest-post"],
+.tagged:has(#political:checked) article[class~="political"] {
+  display: inline-block;
+}
+
+/*tag filter button styles (there's a lot)*/
+#tag-filters label {
+  background: var(--button-bg);
+  border: 1px solid var(--button-border-color);
+  border-radius: 0.5em;
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-block: 0.3em;
+  padding: 0 0.8em 0 0.1em;
+}
+/*hovering filter buttons (normal)*/
+#tag-filters label:hover {
+  background: var(--button-bg-hover);
+  text-decoration: underline;
+}
+/*selected filters*/
+#tag-filters label:has(input:checked) {
+  background: var(--button-bg-selected);
+  color: var(--button-text);
+  text-decoration: underline;
+  font-weight: bold;
+}
+/*hovering selected filters*/
+#tag-filters label:has(input:checked):hover {
+  background: var(--button-bg-hover);
+  text-decoration: none;
+}
+/*hide the radio button for tags*/
+#tag-filters input {
+  appearance: none;
+}
+
+/*for the "back to top" link at the bottom of the page*/
+#page-nav a {
+  color: var(--sidebar-text);
+}
+#page-nav a:hover {
+  text-decoration: none;
+}
+
+footer {
+  color: var(--sidebar-text);
+  background: var(--sidebar-bg);
+  /*in the html the footer is at the very end, but when looking at the site you see it at the bottom of the sidebar!*/
+  z-index: 100;
+  position: fixed;
+  /*make it the same length/positioning as the sidebar*/
+  margin-left: 22px;
+  width: 236px;
+  bottom: 4px;
+  font-size: small;
+  /*semitransparent so you can see any content that goes under it*/
+  opacity: 60%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .mobile-only {
+    display: block;
+  }
+  .pc-only {
+    display: none;
+  }
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  /*turning the specially positioned elements back to normal*/
+  #sidebar,
+  main {
+    position: static;
+    height: auto;
+    flex: 100%;
+    max-width: none;
+  }
+  #sidebar {
+    border-inline: none;
+    margin-left: 0;
+    padding: 1em;
+    padding-bottom: 0;
+  }
+  #icon {
+    /*shrink the icon a bit to prioritize text on mobile*/
+    max-width: 40%;
+    /*and add some spacing since they're side-by-side now*/
+    margin-right: 0.5em;
+  }
+  /*don't let the icon get too big haha*/
+  #icon img {
+    max-width: 100%;
+  }
+
+  #sidebar nav {
+    margin-block: 0.5em;
+  }
+
+  main {
+    left: 0;
+    margin-inline: 1em;
+  }
+  /*this makes the profile text take up more screen-space than the icon image*/
+  #profile {
+    flex: 2;
+  }
+  #profile p {
+    margin-block: 0;
+    margin-left: 10px;
+  }
+  /*remove borders from the short bio section*/
+  #bio {
+    border: none;
+    padding-block: 0;
+  }
+  /*and put the footer at the bottom of the page instead of the sidebar!*/
+  footer {
+    position: static;
+    text-align: center;
+    background: none;
+    margin: 0;
+    width: 100%;
+    opacity: 100%;
+  }
+}
+
+.crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  z-index: 2;
+  background-size:
+    100% 2px,
+    3px 100%;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.10626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.10626;
+  }
+  30% {
+    opacity: 0.18128;
+  }
+  35% {
+    opacity: 0.23604;
+  }
+}
+
+.crt::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+#musicplayer {
+  z-index: 100;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: bold;
+  height: 40px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  margin-bottom: 20px;
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    #808471 0%,
+    #c3caa5 45%,
+    #374532 47%,
+    #45543d 60%,
+    #6c715b 100%
+  );
+  border: ridge 2px #5d8247; /* border around player */
+  outline: solid 2px black;
+  box-shadow:
+    inset 10px 0px 6px -10px #586650,
+    inset -13px 0px 6px -10px #4b5b42,
+    inset 0px 10px 6px -10px #ffffff,
+    inset 0px -13px 6px -10px #2a3227;
+}
+
+.songtitle {
+  display: block;
+  padding: 2px; /* padding around song title */
+  font-family: "Pixelify Sans", sans-serif;
+  margin-top: 4px;
+  margin-right: 5px;
+  font-size: 15px;
+  color: black;
+  letter-spacing: 1px;
+
+  background: white; /* background of song title */
+  border: gray inset 1px;
+  border-radius: 6px;
+  box-shadow:
+    inset 13px 0px 6px -10px rgb(66 66 66 / 20%),
+    inset -13px 0px 6px -10px rgb(66 66 66 / 56%),
+    inset 0px 13px 6px -10px #ffffff,
+    inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+}
+
+.controls {
+  font-size: 12px; /* size of controls */
+  text-align: center;
+  width: 100px;
+  height: 20px;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)
+    drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black);
+}
+
+.controls td {
+  padding-top: 5px; /* padding around controls */
+}
+
+.seeking {
+  width: 75%;
+  background: transparent; /* background color of seeking bar */
+  display: flex;
+  justify-content: space-evenly;
+  padding: 7px; /* padding around seeking bar */
+}
+
+.current-time {
+  padding-right: 5px;
+  margin-right: 3px;
+  color: black;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)
+    drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black);
+}
+
+.total-duration {
+  padding-left: 5px;
+  color: black;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)
+    drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black);
+}
+.ctrlimg {
+  height: 20px;
+  width: 20px;
+}
+.ctrlimg:hover {
+  cursor: pointer;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px; /* thickness of seeking track */
+  cursor: help;
+  border-radius: 6px;
+  background: black; /* color of seeking track */
+  border: 1px white solid;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 30px; /* height of seeking square */
+  width: 20px; /* width of seeking square */
+  background-image: url("https://file.garden/Zztv0a9yEhr5pmEq/tumblr_40786d3985453eb5412348aad980ac51_3a9a1088_1280%20(1).gif"); /* image of  seeking square */
+  background-size: 25px;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+input[type="range"].volume_slider::-webkit-slider-runnable-track {
+  background: white; /* color of volume seeking track */
+  filter: drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black); /* outline of volume seeking track */
+}
+
+input[type="range"].volume_slider::-webkit-slider-thumb {
+  background-image: url(https://file.garden/Zztv0a9yEhr5pmEq/798d7d72_original.png); /* image of volume seeking square */
+  background-size: 20px;
+  height: 20px; /* height of volume seeking square */
+  width: 20px;
+  margin-top: -8px;
+}
+
+.slider_container {
+  width: 15%; /* width of volume seeker */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sitebutton img {
+  width: 176px;
+  height: 62px;
+  cursor: pointer;
+  transition: transform 250ms;
+}
+
+.sitebutton img:hover {
+  transform: scale(1.2);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 100%; /* above the image */
+  left: 50%;
+  z-index: 50;
+  font-size: 20px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}

@@ -1,0 +1,445 @@
+:root {
+  --text: #0f2128;
+  --border: #00a6ff;
+  --accent: white;
+  --bg: #7ec5df;
+  --gradientBottom: #beeeff;
+  --gradientTop: #f2fbfe;
+  a:link {
+    color: #00bbff;
+  }
+}
+header {
+  background: url("https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/header.jpg");
+}
+/* end dark mode styling */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 10px;
+  font-family: "Pixelify Sans", sans-serif;
+  color: var(--text);
+
+  /* page background pattern */
+  background-image: url("https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/background.jpg");
+  background-attachment: fixed; 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 5vw auto 12px auto;
+  border: 6px ridge var(--border);
+  outline: 3px solid var(--gradientTop);
+  outline-offset: 4px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  gap: 5px;
+
+  /* container background pattern */
+  background-color: #edeeef;
+}
+
+/* these control the column widths */
+.small {
+  flex: 1 1 10%;
+}
+.large {
+  flex: 1 1 82%;
+}
+.full {
+  flex: 1 1 100%;
+}
+.half {
+  flex: 1 1 49%;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 170px; /* change banner height here*/
+  border: 2px ridge var(--border);
+  border-radius: 5px;
+  position: relative;
+}
+nav {
+  border: 2px ridge var(--border);
+  border-radius: 5px;
+  padding: 5px;
+  background: linear-gradient(var(--gradientTop), var(--gradientBottom));
+}
+nav div {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 5px 5px 10px 5px;
+}
+nav a {
+  display: block;
+  margin: 5px;
+  background: linear-gradient(to right, var(--bg), var(--gradientBottom));
+  border-radius: 5px;
+  padding: 2px 7px;
+  text-decoration: none;
+}
+nav a:link,
+nav a:visited {
+  color: var(--text);
+}
+nav a:hover,
+nav a:focus {
+  background: linear-gradient(
+    to right,
+    var(--bg),
+    var(--gradientBottom),
+    var(--gradientTop)
+  );
+}
+
+/* optional button styling like in the preview */
+div.small > img {
+  display: block;
+  margin: 5px auto;
+  border: 2px ridge var(--border);
+  border-radius: 5px;
+}
+
+section {
+  border: 2px ridge var(--border);
+  border-radius: 5px;
+  background: linear-gradient(var(--gradientTop), var(--gradientBottom));
+  padding: 5px;
+  list-style-image: url("https://nogginzmart.neocities.org/catbox%20aint%20working/iPod/listimage.webp");
+}
+
+footer {
+  color: black;
+  text-align: center;
+  margin-bottom: 5vw;
+  font-size: 0.8rem;
+  border-radius: 8px; 
+  padding: 10px; 
+  background-color: #ffffff;
+}
+footer a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 5px;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+  text-align: center;
+  border-bottom: 2px ridge var(--border);
+  padding-bottom: 5px;
+}
+h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  text-align: center;
+}
+h3 {
+  font-size: 1.1rem;
+}
+h4 {
+  font-size: 1rem;
+  color: var(--accent);
+  padding-left: 12px;
+}
+
+/* prevents overflow on smaller screens */
+img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+
+a:hover,
+a:focus {
+  font-style: italic;
+}
+a:visited {
+  color: var(--accent);
+}
+.box2 {
+  background-color: #000000;
+  border: 3px solid #00a6ff;
+  padding: 10px;
+  width: 100%;
+  height: 300px;
+  float: none;
+}
+
+.box3 {
+  background-color: #000000;
+  border: 1px solid #00a6ff;
+  padding: 10px;
+  width: 272px;
+  height: 320px;
+  float: left;
+}
+
+.crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  z-index: 2;
+  background-size:
+    100% 2px,
+    3px 100%;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.10626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.10626;
+  }
+  30% {
+    opacity: 0.18128;
+  }
+  35% {
+    opacity: 0.23604;
+  }
+}
+
+.crt::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+#musicplayer {
+  z-index: 10;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: bold;
+  height: 40px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  margin-bottom: 20px;
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    #a1ebfa 0%,
+    #f0f5ff 45%,
+    #75afe9 47%,
+    #7dbbfa 60%,
+    #8fe4f7 100%
+  );
+  border: ridge 2px #94c6f8; /* border around player */
+  outline: solid 2px black;
+  box-shadow:
+    inset 10px 0px 6px -10px #73b6f8,
+    inset -13px 0px 6px -10px #80bcf8,
+    inset 0px 13px 6px -10px #ffffff,
+    inset 0px -13px 6px -10px #3885d2;
+}
+
+.songtitle {
+  display: block;
+  padding: 2px; /* padding around song title */
+  font-family: "Pixelify Sans", sans-serif;
+  margin-top: 4px;
+  margin-right: 5px;
+  font-size: 15px;
+  color: black;
+  letter-spacing: 1px;
+
+  background: white; /* background of song title */
+  border: gray inset 1px;
+  border-radius: 6px;
+  box-shadow:
+    inset 13px 0px 6px -10px rgb(66 66 66 / 20%),
+    inset -13px 0px 6px -10px rgb(66 66 66 / 56%),
+    inset 0px 13px 6px -10px #ffffff,
+    inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+}
+
+.controls {
+  font-size: 12px; /* size of controls */
+  text-align: center;
+  width: 100px;
+  height: 20px;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)
+    drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black);
+}
+
+.controls td {
+  padding-top: 5px; /* padding around controls */
+}
+
+.seeking {
+  width: 75%;
+  background: transparent; /* background color of seeking bar */
+  display: flex;
+  justify-content: space-evenly;
+  padding: 7px; /* padding around seeking bar */
+}
+
+.current-time {
+  padding-right: 5px;
+  margin-right: 3px;
+  color: black;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)
+    drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black);
+}
+
+.total-duration {
+  padding-left: 5px;
+  color: black;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)
+    drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black);
+}
+.ctrlimg {
+  height: 20px;
+  width: 20px;
+}
+.ctrlimg:hover {
+  cursor: pointer;
+}
+
+input[type="range"] {
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px; /* thickness of seeking track */
+  cursor: help;
+  border-radius: 6px;
+  background: black; /* color of seeking track */
+  border: 1px white solid;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 30px; /* height of seeking square */
+  width: 20px; /* width of seeking square */
+  background-image: url("https://file.garden/Zztv0a9yEhr5pmEq/tumblr_40786d3985453eb5412348aad980ac51_3a9a1088_1280%20(1).gif"); /* image of  seeking square */
+  background-size: 25px;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+input[type="range"].volume_slider::-webkit-slider-runnable-track {
+  background: white; /* color of volume seeking track */
+  filter: drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black)
+    drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black)
+    drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black)
+    drop-shadow(0.5px 0.5px 0 black); /* outline of volume seeking track */
+}
+
+input[type="range"].volume_slider::-webkit-slider-thumb {
+  background-image: url(https://file.garden/Zztv0a9yEhr5pmEq/798d7d72_original.png); /* image of volume seeking square */
+  background-size: 20px;
+  height: 20px; /* height of volume seeking square */
+  width: 20px;
+  margin-top: -8px;
+}
+
+.slider_container {
+  width: 15%; /* width of volume seeker */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header img:hover {
+  transform: scale(1.2);
+}
+
+header img {
+  transition: transform 250ms;
+  width: 800px;
+  height: 160px;
+  padding-left: 80px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 125%; /* above the image */
+  left: 50%;
+  z-index: 50;
+  font-size: 15px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
