@@ -123,6 +123,7 @@ footer {
   font-size: 0.8rem;
   border-radius: 8px;
   padding: 10px;
+  width: 500px;
   background-color: #602e06;
 }
 footer a {

@@ -380,6 +380,7 @@ you want something different! */
   width: 350px;
   height: 500px;
   float: right;
+  font-size: 0.8rem;
 }
 .box2 {
   background-color: #3b3533;
@@ -388,6 +389,7 @@ you want something different! */
   width: 350px;
   height: 500px;
   float: left;
+  font-size: 0.8rem;
 }
 
 .box3 {
