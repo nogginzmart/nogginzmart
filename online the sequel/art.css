@@ -64,9 +64,9 @@ li:last-child {
 
 body {
   background-image:
-    url("https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/background1.gif"),
-    url("https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/background2.gif"),
-    url("https://nogginzmart.neocities.org/catbox%20aint%20working/artgallery/background3.gif");
+    url("https://nogginzmart.neocities.org/catbox%20aint%20working/art/background1.gif"),
+    url("https://nogginzmart.neocities.org/catbox%20aint%20working/art/background2.gif"),
+    url("https://nogginzmart.neocities.org/catbox%20aint%20working/art/background3.gif");
   background-position: top, bottom;
   background-size: auto, auto;
   background-repeat: repeat-x, repeat-x, repeat;
