@@ -11,7 +11,7 @@
   }
 }
 header {
-  background: url("https://nogginzmart.neocities.org/catbox%20aint%20working/about/c327b6b07591432d6eaf92bcd9965c6a.jpg");
+  background: url("https://nogginzmart.neocities.org/catbox%20aint%20working/about/header.png");
 }
 /* end light mode styling */
 
@@ -29,7 +29,7 @@ header {
     }
   }
   header {
-    background: url("https://nogginzmart.neocities.org/catbox%20aint%20working/about/c327b6b07591432d6eaf92bcd9965c6a.jpg");
+    background: url("https://nogginzmart.neocities.org/catbox%20aint%20working/about/header.png");
   }
 }
 /* end dark mode styling */
