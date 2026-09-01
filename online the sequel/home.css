@@ -835,9 +835,9 @@ progress::-moz-progress-bar {
 }
 
 .month {
-  background: #742705;
-  border-bottom: 3px solid #3e210f;
-  border-top: 3px solid #3e210f;
+  background: #2b2929;
+  border-bottom: 3px solid #000000;
+  border-top: 3px solid #000000;
   font-size: 35px;
   padding: 2px;
   text-align: center;
