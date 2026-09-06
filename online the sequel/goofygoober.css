@@ -170,6 +170,7 @@ footer {
   width: 550px; /* Set your desired fixed or percentage width */
   margin: 0 auto;
   border-radius: 25px;
+  padding: 5px; 
 }
 
 ol {
