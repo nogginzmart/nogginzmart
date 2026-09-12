@@ -180,8 +180,8 @@ window.addEventListener("load", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
   // === CONFIGURATION ===
-  const FORM_ID = "1FAIpQLSebET4RAzbH9Axr92kpowuKERceX0fzLKvHWjSWBkxmP7YWFQ"; // Google Form ID (from the form's URL)
-  const SHEET_ID = "10zVyOMv0FE_F_99VgSHonsiHN_3xv0giq0-p280-XC4"; // Google Sheet ID (linked to form responses)
+  const FORM_ID = "1FAIpQLSdym6uwmcl7oX_WmcuBLrdeFdsPxrkld-eEkJ5WiTgCnu0KAA"; // Google Form ID (from the form's URL)
+  const SHEET_ID = "1SvmMrIqo6FuNZfizoHLJ-hotdbKR7ibVH_TMEN_mm9Q"; // Google Sheet ID (linked to form responses)
   const STORAGE_KEY = `pollVoted_${FORM_ID}`; // LocalStorage key to track if this browser already voted
 
   // === DOM ELEMENTS ===
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // === ENABLE VOTING WHEN USER SELECTS AN OPTION ===
-  form.querySelectorAll("input[name='entry.761438196']").forEach((radio) => {
+  form.querySelectorAll("input[name='entry.1755876556']").forEach((radio) => {
     radio.addEventListener("change", () => {
       // Enable "Other" text input only if "Other" is selected
       // if (otherRadio.checked) {
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Require a selected option
     const selected = form.querySelector(
-      "input[name='entry.761438196']:checked",
+      "input[name='entry.1755876556']:checked",
     );
     if (!selected) {
       alert("Please select an answer.");
@@ -271,16 +271,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Map full Google Form answers to short labels
     const optionLabels = {
-      "Piracy Scary": "Piracy Scary",
-      Convenience: "Convenience",
-      "Can't afford MP3 Player, iPod, etc":
-        "Can't afford MP3 Player, iPod, etc",
-      "Haven't explored other options": "Haven't explored other options",
-      "What's wrong with those platforms?":
-        "What's wrong with those platforms?",
-      "Other (answer in chatbox!)": "Other (answer in chatbox!)",
-      "I have left these platforms for a better, ethical option! (share in chatbox!)":
-        "I have left these platforms for a better, ethical option! (share in chatbox!)",
+      "dead/abandoned sites": "dead/abandoned sites",
+      "little to no attention/interaction": "little to no attention/interaction",
+      "unreadable/cluttered sites":
+        "unreadable/cluttered sites",
+      "the upkeep/constant grind": "the upkeep/constant grind",
+      "sites not properly content warned, etc. ":
+        "sites not properly content warned, etc. ",
+      "Other (besides the obvious like AI, spammers, bots, etc)(answer in chatbox)": 
+      "Other (besides the obvious like AI, spammers, bots, etc)(answer in chatbox)",
     };
 
     // Initialize counts to 0 for all options
