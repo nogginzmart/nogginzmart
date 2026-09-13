@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>poll results</title>
+    <link href="/online the sequel/pollresults.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="https://nogginzmart.neocities.org/catbox%20aint%20working/pollresults/tumblr_d01f7de762091d818fafe0326660fb5f_19828f30_75.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&family=Doto:wght@100..900&family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <div class="crt"></div>
+  </head>
+  <body>
+    <div id="musicplayer">
+      <table class="controls">
+        <tr>
+          <td>
+            <div class="prev-track" onclick="prevTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/back.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/play.png"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="next-track" onclick="nextTrack()">
+              <img
+                class="ctrlimg"
+                src="https://file.garden/Zztv0a9yEhr5pmEq/next.png"
+              />
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <marquee scrollamount="8" class="songtitle"></marquee>
+      </div>
+      <div class="seeking">
+        <div class="current-time">00:00</div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration">0:00</div>
+          </div>
+        <audio id="music" src=""></audio>
+      </div>
+    <div id="layout">
+      <div id="header">
+        <div class="sitename">
+          <div class="tooltip">
+            <img
+                src="https://nogginzmart.neocities.org/catbox%20aint%20working/websitebanner.gif"
+            />
+            <span class="tooltip-text" style="font-size: 20px; top: 105%;">
+                Nogginzmart! <br>The best place to...not buy anything, really, <br>but we sure have fun & there's lots of stuff to <br>check out!
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div id="main">
+        <div id="left">
+          <div class="box extralinks">
+            <div class="title" style="text-align: center;">a i s l e s</div>
+            <a href="https://nogginzmart.neocities.org/home">homepage</a><br />
+            <a href="https://nogginzmart.neocities.org/about">about</a><br />
+            <a href="https://nogginzmart.neocities.org/blog">blog</a><br />
+            <a href="https://nogginzmart.neocities.org/art">art</a><br />
+            <a href="https://nogginzmart.neocities.org/stories">stories</a><br />
+            <a href="https://nogginzmart.neocities.org/not_found">comics</a><br />
+            <a href="https://nogginzmart.neocities.org/random">random</a><br />
+            <a href="https://nogginzmart.neocities.org/resources">resources</a><br />
+            <a href="https://nogginzmart.neocities.org/community">community</a><br />
+            <a href="https://nogginzmart.neocities.org/site-map">site map</a>
+          </div>
+          <div class="box extralinks">
+            <div class="title" style="text-align: center; font: bold 15px 'earthbound';">s h e l v e s</div>
+            <a href="https://nogginzmart.neocities.org/iPod">ipod life</a><br />
+            <a href="https://nogginzmart.neocities.org/collections">colletions</a><br />
+            <a href="https://nogginzmart.neocities.org/3DS">3ds hb</a><br />
+            <a href="https://nogginzmart.neocities.org/mountaindew">mtn dew</a><br />
+            <a href="https://nogginzmart.neocities.org/pollresults">poll results</a><br />
+          </div>
+          <div class="scrollbox" style="height: 300px; text-align: center; font-size: 16px;">
+            <div class="title" style="text-align: center; font: bold 15px 'earthbound';">h i s t o r y</div>
+            <a href="#1">7/12/26 - 9/12/26</a>
+
+          </div>
+        </div>
+
+        <div id="content">
+          <div class="box" id="intro">
+            <div class="title">what is this?</div>
+            <b>Glad you asked!</b><br><br>
+            After getting help from <a href="https://howsoonisnow.org/">howsoonisnow</a>'s guide to help make my new homepage quizzes, 
+            I felt inspired by how they have a whole page dedicated to recording the results of their quizzes!<br><br>
+            I figured it might be fun to do! Also to help me stay motivated with changing the quizzes semi often & perhaps making more engaging 
+            quizzes! I really love hearing other people's perspectives on things, so even if it's over something more complicated or just simple it's 
+            cool how different people can come to a different conclusion or preference based on a singular idea or event!<br><br>
+            At the <b>bottom of the left bar</b> there's a history of older quiz summaries! Click on one of the dates if you wanna see the quiz & what the 
+            results were!<br><br>
+            This is by no means scientific--I can barely get over 15 people to answer my quizzes over several months. It's just for fun! Unless you want to 
+            go off a sample size of 2 pennies--then by all means consider it gospel.<br><br>
+            Anyways, have fun reading! see you around!
+          </div>
+
+          <div class="scrollbox" id="1">
+            <div class="title">
+              What is keeping you from leaving Spotify/Apple Music/Youtube Music?<br>
+              <div class="subtitle">7/12/26 - 9/12/26</div>
+            </div>
+            <p>
+              <b>
+                why this for a poll?
+              </b>
+            </p>
+            <p>
+              Okay, so, I'm sure most of you had at least seen my iPod page on here (if not, check the sitemap OR look to your left,literally the link 
+              is there) & I genuienly wanted to see WHY people haven't moved away from such platforms!
+            </p>
+            <p>
+              Not in a way to like shame others or tell them "erm I'm better than you"--absolutely not. Everyone is in different circumstances & 
+              something that may seem easy to me could be a lot more tasking for others. Not to mention any barriers of entry, such as paying for an MP3 
+              player etc etc.
+            </p>
+            <p>
+              & I am going to say I am pleasantly surprised with how many responses I got! Thank you all that answered! I really appreciate it & you make 
+              it possible for me to compile the results like this!
+            </p>
+            <p>
+              Now, lets get to this poll's results!
+            </p>
+            <b>RESULTS</b><br><br>
+            <img src="https://file.garden/anM3NRKssQGmKFsm/pollresults/poll_results_1.png" style="border-radius: 10px;"><br><br>
+            <b>Total Participants</b> - 17<br>
+            <b>Breakdown</b> -
+            <ul>
+              <li>
+                <u>Piracy Scary</u> - 2 Votes (11.8%)
+              </li>
+              <li>
+                <u>Convenience</u> - 9 Votes (52.9%)
+              </li>
+              <li>
+                <u>Can't afford MP3 Player/iPod/etc</u> - 0 Votes (0%)
+              </li>
+              <li>
+                <u>Haven't explored other options</u> - 1 Vote (5.9%)
+              </li>
+              <li>
+                <u>What's wrong with those platforms?</u> - 0 Votes (0%)
+              </li>
+              <li>
+                <u>Other (answer in chatbox!)</u> - 2 Votes (11.8%)
+              </li>
+              <li>
+                <u>I have left these platforms for a better, ethical option! (share in chatbox!)</u> - 3 Votes (17.6%)
+              </li>
+            </ul>
+            <p>
+              Unfortunately those that said Other or that they've left these platforms already never mentioned where they went or what they meant by other, so 
+              whatever they meant or what they're using now I/we don't know. (Frammy if you're reading this I sort of remember yours but the chatbox deleted it for
+              some reason so I don't have it ToT my apologies)
+            </p>
+            <p>
+              Also I'm very happy that no one said they don't know what makes these platforms bad, so there's acknowledgement there that these platforms aren't the 
+              most ethical--but it's that they're convenient! Which I totally get!
+            </p>
+            <p>
+              Which brings me to Convenience being the biggest category. I'm not surprised, but I'm glad people were honest about it! I used Spotify since I was in 
+              8th grade (~2018) so I get it when it's hard to find or stick with an alternative!
+            </p>
+            <p>
+              Plus, I'm just gonna brush past it since it's the minority of votes--I'm sorry to break it to you but EVERYONE & I mean PRETTY MUCH EVERYONE pirates 
+              nowadays.
+            </p>
+            <p>
+              It's not really a taboo, like I remember when I was a senior in highschool (2022-2023) kids were told to stop using "free movie" sites 
+              on their Chromebooks. Not because it was piracy, no, but because it was distracting them from schoolwork. UNLESS YOU MAKE YOURSELF INCREDIBLY KNOWN. 
+              NO ONE WILL FIND OUT. Or it's something egregious or you're distributing stuff, which gives you a higher chance of receiving repercussions.
+            </p>
+            <p>
+              Plus if you're that spooked, Proton has a free VPN you can use. Turn it on when you want to download your music/shows/etc. I promise the pigs aren't
+              just waiting for you to download a car to come & break down your door. I think they're too busy being useless
+            </p>
+            <p>
+              & I get it, I know music feels a little more intimate because you know who's singing it/writing it/making it/etc. ,but I want you to hear me when 
+              I say this
+            </p>
+            <p>
+              <b><u>1. are they a big artist?</u></b><br>
+              if yes, I can assure you, they can still live without more money. Celebrity culture is toxic, bad ,& although I believe people should be compensated
+              for the art they make, I do believe there's no reason why a musician should be a multimillionare. Plus you do not know these people/person/etc. For
+              all you know in a year or so they could be clubbing seals for fun. Do not put your heart & soul into a creator--no one is infallable.
+            </p>
+            <p>
+              <b><u>2. are they a smaller/indie artist?</u></b><br>
+              If yes, there are ways you can support them without listening to their stuff on platforms which have BEEN PROVEN to give them little to NOTHING
+              based on your listening (literal pennies).
+            </p>
+            <p>
+              BUY CDS, VINYLS, FUCKING CASETTES--EVEN IF YOU DON'T HAVE ANYTHING YOU CAN LISTEN TO THEM ON! Fuck--even shirts, hats, stickers, butt plugs!
+              Then you'd be supporting them in a more 
+              SUBSTANTIAL way without giving money & time to some company who 99% of the time will hardly give anything to your favorite, little artist.
+            </p>
+            <p>
+              & this isn't to be mean--I know people have souls, unlike myself! I think it's very virtuous to want to support your favorite little artist! 
+              Just know you'd be better off putting your money in better avenues to support them & encourage them to make more stuff. Plus I already gave
+              my rant about celebrities--that ALSO goes for the small fries as well.
+            </p>
+            <p>
+              <b>NOW.</b> Why am I getting on this soap box?
+            </p>
+            <p>
+              I don't know if you'd believe this, but music means a lot to me. A WHOLE lot. So believe me when I say I have tried to listen to music I like in
+              SO many different ways over the years. Even pressing a bad MP3 player up against a TV speaker to record Cannibal by Ke$ha so I can listen to it 
+              on the go.
+            </p>
+            <p>
+              I have also PAID for these platforms to have no ADS, have spent countless hours listening to music on them, & so on & so forth.
+            </p>
+            <p>
+              but I believe my money, & your money & TIME is better spent ELSEWHERE.
+            </p>
+            <p>
+              Especially now with people being more & more into diling back on technology & going into things like physical media, I think it's a great time to
+              FIND these alternatives & do research to do it in an affordable way.
+            </p>
+            <p>
+              For example, my older sister recently asked me to send her a link to the iPod I bought! Which I think is awesome for her to be interested, but
+              I decided against that & went to find her a more afforable & accessible MP3 option.
+            </p>
+            <p>
+              <b>"But Lee, don't YOU have an iPod you use regularly?"</b>
+            </p>
+            <p>
+              YES! But I think I can acknowledge that it was NOT a cheap investment. When I got mine is was about ~$175 (USD), looking on Elite Obsolete Electronics
+              (the site I got my iPod), to get a model SIMILAR to the one I have is around or ABOVE $250 (USD). THAT'S INSANE!
+            </p>
+            <p>
+              Not to mention if you don't like wired headphones & want Bluetooth. Either you go find someone who has put a Bluetooth adapter in the iPod 
+              (which will cost extra because that's a custom mod) OR, you do what I did, & buy an expensive adapter that WORKS, yeah, but was ALSO over $100.
+            </p>
+            <p>
+              SO. Why do I still stand by it? Because I would've been putting THAT MUCH MONEY into a Spotify Premium subscription over time rather than these 1 time purchases!
+            </p>
+            <p>
+              <b>I hate math, but let me give you an example.</b>
+            </p>
+            <p>
+              I cancelled my premium subscription around 2024. I was paying monthly, so for an individual account, at that time, that's <b>$10.99/month (USD)</b>. 
+              That, however, is for a normal user! I was a student, so for cheaper I got the student plan, 
+              but I will include both for relation! The student plan cost was <b>$5.99/month (USD)</b> at that time.
+            </p>
+            <p>
+              for a <u>year on the normal individual, monthly plan</u>, that comes out to <b>$131.88 (USD)</b>, <b>NOT</b> including potential taxes
+            </p>
+            <p>
+              for a <u>year on the student monthly plan</u>, that comes out to <b>$71.88 (USD)</b>.
+            </p>
+            <p>
+              I'm estimating because I do not recall the EXACT price, but for <u>both my bluetooth adaptor & iPod</u>, it would've been around <b>$294 (USD)</b>.
+            </p>
+            <p>
+              <b>294</b> divided by <b>5.99</b> is around <b>49.08</b>. Rounding that to the whole number & dividing 49 by 12, that would be <u>AROUND 4 years of Spotify Premium</u>. <b>NOT</b> including
+              potential hiking of prices & unavailability of certain types of subscriptions.
+            </p>
+            <p>
+              If I do this for the STANDARD monthly plan, take <b>297</b>, divide by <b>10.99</b>, & it comes out to <b>27.02</b>. Rounding to the whole number & dividing that by 12 you get <u>2 & 1/4
+              of a year on the standard monthly plan</u>. Also not including changes, etc.
+            </p>
+            <p>
+              I know this is specifically for Spotify, but that's the only one I've had experience with, but this can go for any subscription based model against a 
+              1-time-purchase.
+            </p>
+            <p>
+              In a world & economy(ies) that have become increasingly more volitile, I think rather than blowing what could be considered chump change one moment 
+              but gradually build over time to HUNDREDS, THOUSANDS of dollars--I think you're better off doing the one time purchase for CONTINUED enjoyment
+              & convenience.
+            </p>
+            <p>
+              Because they have manufactured convenience that WE THINK is convenient IN THE MOMENT. It prays on the shortening attention spans & lack of future
+              sight & entices you to pay. I am taking classes about business & shit--I think you all are smart enough to understand that most of this stuff 
+              is predatory to an extent.
+            </p>
+            <p>
+              WHICH IS WHY I want to try & shorten the journey for you all by PROVIDING resources to get started on your journey to ditch these platforms!
+            </p>
+            <p><b>MP3 Players</b></p>
+            <p>
+              If you are dead set on getting an iPod, by all means get one. I highly recommend <a href="https://eoe.works/">Elite Obsolete Electronics</a> because they refurbish their models 
+              & also provide supplementary parts & materials if you want to tinker with your iPod! 
+            </p>
+            <p>
+              Not that platforms like Ebay or any other second hand outlet is bad, but the hardware could have aged overtime & the batteries could be poor, dying screens,
+              & so on could be happening to the device. Not to mention price hiking as this has become more & more popular of an investment. So if you're interested in more
+              cheapter alternatives, don't fear! I've got you!
+            </p>
+            <p>
+              <a href="https://www.amazon.com/Bluetooth-Portable-Supports-Playlist-Audiobook/dp/B0GVHG78XT/ref=sr_1_4?dib=eyJ2IjoiMSJ9.194dATKK2B8OMweswaBXbfs8Ie3TNhivbMp0X6V1JWf4aD6DT5ouDumK4c2R8NkAVaabxbr-C1IJta66gVTZpiR5tt80pDYJvYq_NzatCoCauIyXA_yUqoC9YOxU_WOHFCbv7Eugcyeo8nQR3PEqXs7Wz6dMV5UFuAFWXo8h8ULbFJdoYjgxTSh7i46QIorNnZZOmN5URkqoqxqLZZPdElbb5-gzaBVNFGN8m_7zk_k._lLnbvFH1cLzp7uz-JfS7vzx3oD3M2znE6Jg9Pn5kR8&dib_tag=se&keywords=mp3%2Bplayer&qid=1789327432&sr=8-4&th=1">Innioasis</a>
+              is a great iPod alternative that gives the same vibe while being significantly cheaper! This is the model I recommended to my older sister! 
+              It has a USB-C charging port & bluetooth compatibility! & for reference, my iPod has 80 GB os storage. On Amazon specificially, you can get a 128 GB 
+              model for just over 80 bucks. That's a steal compared to the 170+ I paid!
+            </p>
+            <p>
+              If you collect CD's, there's no shortage of CD player's out there! It's almost pretty inexpensive to buy blanks & burn your own CD's! I think the most 
+              you'd be paying for is a driver, but the burner I have saved is about ~$20 (USD), so I'd say that's pretty affordable!
+            </p>
+            <p>
+              <b>Acquiring Music</b>
+            </p>
+            <p>
+              Now on my iPod page I have some sites that I use already linked, but I'll go ahead & put them here for convenience!
+            </p>
+            <p>
+              <a href="https://spotidownloader.com/en19">Spotify Downloader</a><br>
+              all you gotta do is copy the link of the song on Spotify & put it in here! Sometimes doesn't work, so be sure to have alternatives to rip such as
+            </p>
+            <p>
+              <a href="https://convertytmp3.org/">YTMP3</a><br>
+              pretty similar to Spotify Downloader, just copy the link of the video as if sharing it & punch it in here! You can also transport them into MP4's
+              if you so wish! 
+            </p>
+            <p>
+              There are lots of other sites out there, but these are the ones I specifically use! Again, I highly encourage you do your own searching!
+              You never know when you find something better that meets your specific needs!
+            </p>
+            <p>
+              <b>So What Now?<br>Final Remarks</b>
+            </p>
+            <p>
+              First of all, if you read through all of this, thank you so much!
+            </p>
+            <p>
+              It's not the most organized research effort nor response, but I do feel passionately about these things & I hope you least come away from this 
+              with a little more knowledge! Or a reason to throw rocks at my window.
+            </p>
+            <p>
+              These platforms, companies, & so on are always trying to get you spend your money somehow. Whether it be manufacturing convenience, producing false 
+              scarcity, & so on--& they prey on the fact that...financial literacy really isn't taught anymore. Which I feel is deliberate.
+            </p>
+            <p>
+              Either way we're going to have to spend money. WHERE we put it, though, is important, & whether or not we even spend it in the ways they want in the
+              first place. 
+            </p>
+            <p>
+              I could make an argument about ANY subscription service, but there's no reason as to why you're paying to have the privilege of not hearing fucking ADS. 
+              Or being able to pick WHATEVER song you wanna listen to. Why get used to a model you don't even have to put up with? Though they prey on the fact it's...
+              probably not the easiest to do or straightforward! 
+            </p>
+            <p>
+              Though there are guides out there, I promise--& I'm sure if you asked people how they do their thing--fuck, ask ME how I do my thing & you never know 
+              if they'll share the magic! I'm tired of the constant bombardment of Ads, the push to make you spend money that sometimes people don't even HAVE, & it just
+              really sours experiences that are supposed to be enjoyable, relaxing, or entertaining. 
+            </p>
+            <p>
+              They get you through the convenience, the laziness, the lack of drive, lack of resources, & so on--don't let them make you think you can't ENJOY your listening
+              & watching experiences! Get those CDs, get that MP3 player, & FUUUUUCK these platforms! 
+            </p>
+            <p>
+              <b>Be smart & savvy, friends!<br>
+              Thank you for reading & participating!</b>
+            </p>
+            <p>
+              <b>till next time!</b> ദ്ദി(｡•̀ ,<)~✩‧₊ 
+            </p>
+          </div>
+          <!-- Do not remove the credits if you use this free layout! thank you. -->
+
+          <div class="credits">
+            <b>Layout</b> made by
+            <a href="http://itinerae.blogspot.com" target="_blank">Itinerae.</a>
+          </div>
+          <div class="headup">
+            <a href="#header">
+                heading up?
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/online the sequel/pollresults.js"></script>
+  </body>
+</html>
