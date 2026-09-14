@@ -171,7 +171,6 @@ footer {
   border-style: solid;
   border-radius: 6px;
   width: 500px;
-  
 }
 footer a {
   text-decoration: none;
@@ -877,13 +876,32 @@ progress::-moz-progress-bar {
 }
 
 #statuscafe {
-    padding: .5em;
-    background-color: #2b2724;
-    border: 1px solid rgb(0, 0, 0);
+  padding: 0.5em;
+  background-color: #2b2724;
+  border: 1px solid rgb(0, 0, 0);
 }
 #statuscafe-username {
-    margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 #statuscafe-content {
-    margin: 0 1em 0.5em 1em;
+  margin: 0 1em 0.5em 1em;
+}
+
+#nixring {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding-left: 15%;
+  font-size: 1.5rem;
+}
+
+#nixring a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+#nixring img {
+  height: 50px;
 }
