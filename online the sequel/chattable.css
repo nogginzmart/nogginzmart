@@ -293,6 +293,6 @@ blockquote {
 
 script {
     chattable.initialize {
-        stylesheet: "/path/to/your/chattable.css"
+        stylesheet: "https://nogginzmart.neocities.org/chattable.css"
     };
   }
