@@ -2,8 +2,8 @@
 
 	<channel>
 		<title>nogginzmart's RSS</title>
-		<link>https://nogginzmart.neocities.org/</link>
-		<atom:link href="https://nogginzmart.neocities.org/rss.xml" rel="self" type="application/rss+xml" />
+		<link>https://nogginzmart.discount/</link>
+		<atom:link href="https://nogginzmart.discount/rss.xml" rel="self" type="application/rss+xml" />
 		<description>
 		  Stay up to date with nogginzmart!
 		</description>
