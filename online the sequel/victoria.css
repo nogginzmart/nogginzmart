@@ -21,6 +21,7 @@ body {
   padding: 10px;
   font-family: "Pixelify Sans", sans-serif;
   color: var(--text);
+  font-size: 0.9rem;
 
   /* page background pattern */
   background-image: url("https://nogginzmart.neocities.org/catbox%20aint%20working/victoria/background.jpg");
@@ -149,7 +150,7 @@ h1 {
   padding-bottom: 5px;
 }
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: normal;
   text-align: center;
 }
