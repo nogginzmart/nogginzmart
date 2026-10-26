@@ -876,6 +876,7 @@ progress::-moz-progress-bar {
 }
 
 #statuscafe {
+  font-size: 0.8rem;
   padding: 0.5em;
   background-color: #2b2724;
   border: 1px solid rgb(0, 0, 0);
