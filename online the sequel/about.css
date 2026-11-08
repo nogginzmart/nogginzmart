@@ -1,3 +1,9 @@
+
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("https://nogginzmart.discount/catbox%20aint%20working/Pixelify_Sans/static/PixelifySans-Regular.ttf");
+}
+
 /* start light mode styling */
 :root {
   --text: white;
@@ -369,8 +375,12 @@ a:visited {
 .box5 {
   background-color: transparent;
   padding: 10px;
-  width: 250px;
+  width: 100%;
   height: 915px;
+}
+
+.box5 img{
+  width: 100%;
 }
 
 .box4 {

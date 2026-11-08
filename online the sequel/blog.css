@@ -1,3 +1,10 @@
+
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("https://nogginzmart.discount/catbox%20aint%20working/Pixelify_Sans/static/PixelifySans-Regular.ttf");
+}
+
+
 /* these are the site colors, replace them with anything you want!
  * this version is highly customizable... use simple-style.css for quicker editing if you don't care too much about the specifics!*/
 :root {

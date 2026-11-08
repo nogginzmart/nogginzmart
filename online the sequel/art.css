@@ -3,7 +3,13 @@
 }
 
 @font-face {
-  font-family: "Pixelify Sans", sans-serif;
+  font-family:"Press Start 2P";
+  src: url("https://nogginzmart.discount/catbox%20aint%20working/art/Press_Start_2P/PressStart2P-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("https://nogginzmart.discount/catbox%20aint%20working/Pixelify_Sans/static/PixelifySans-Regular.ttf");
 }
 
 /* header font */

@@ -1,5 +1,10 @@
 
-		:root {
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("https://nogginzmart.discount/catbox%20aint%20working/Pixelify_Sans/static/PixelifySans-Regular.ttf");
+}
+
+    :root {
 			--text: white;
 			--border: #5E5649;
 			--accent: white;
