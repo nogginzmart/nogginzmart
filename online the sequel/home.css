@@ -501,7 +501,7 @@ body {
   }
 }
 #musicplayer {
-  z-index: 10;
+  z-index: 99999;
   font-family: "Pixelify Sans", sans-serif;
   font-weight: bold;
   height: 40px;
@@ -911,4 +911,124 @@ progress::-moz-progress-bar {
 
 #nixring img {
   height: 50px;
+}
+
+.snow {
+  animation: snowfall var(--duration) var(--delay) linear infinite;
+}
+
+.snow:nth-child(1) {
+  --opacity: 0.6064;
+  --start-x: 56.5936vw;
+  --end-x: 57.29195vw;
+  --mid-x: 57.9903vw;
+  --mid-y: 34.585%;
+  --scale: 0.1606;
+  --duration: 22s;
+  --delay: -16s;
+}
+
+.snow:nth-child(2) {
+  --opacity: 0.0623;
+  --start-x: 38.6106vw;
+  --end-x: 37.81405vw;
+  --mid-x: 37.0175vw;
+  --mid-y: 70.443%;
+  --scale: 0.3982;
+  --duration: 17s;
+  --delay: -21s;
+}
+
+.snow:nth-child(3) {
+  --opacity: 0.7242;
+  --start-x: 18.1453vw;
+  --end-x: 20.1307vw;
+  --mid-x: 22.1161vw;
+  --mid-y: 71.78%;
+  --scale: 0.9984;
+  --duration: 10s;
+  --delay: -24s;
+}
+
+@keyframes snowfall {
+  0% {
+    opacity: var(--opacity);
+    transform: translate(var(--start-x), -10px) scale(var(--scale));
+  }
+
+  50% {
+    transform: translate(var(--mid-x), var(--mid-y)) scale(var(--scale));
+  }
+
+  100% {
+    transform: translate(var(--end-x), 100vh) scale(var(--scale));
+  }
+}
+.snow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+/* ==========================
+   DREAMY WINTER SNOW EFFECT
+   ========================== */
+
+#snow-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Individual snowflakes */
+
+.snow {
+  position: absolute;
+  top: -20px;
+  left: var(--x);
+  color: #fff;
+  opacity: var(--opacity);
+  font-size: var(--size);
+  line-height: 1;
+  user-select: none;
+  will-change: transform;
+
+  animation: snowfall var(--duration) var(--delay) linear infinite;
+}
+
+/* Falling and drifting */
+
+@keyframes snowfall {
+  0% {
+    transform: translate3d(0, -10px, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate3d(calc(var(--drift) * 0.4), 25vh, 0) rotate(90deg);
+  }
+
+  50% {
+    transform: translate3d(var(--drift), 50vh, 0) rotate(180deg);
+  }
+
+  75% {
+    transform: translate3d(calc(var(--drift) * 0.5), 75vh, 0) rotate(270deg);
+  }
+
+  100% {
+    transform: translate3d(0, 105vh, 0) rotate(360deg);
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  #snow-container {
+    display: none;
+  }
 }

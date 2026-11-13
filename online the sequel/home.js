@@ -22,8 +22,8 @@ let curr_track = document.getElementById("music");
 // CATBOX.MOE IS RECOMMENDED FOR UPLOADING MP3 FILES
 let track_list = [
   {
-    name: "store ambiance",
-    path: "https://files.catbox.moe/g1hdup.mp3",
+    name: "holiday store ambiance",
+    path: "https://nogginzmart.discount/music/christmashomepagetrack.ogg",
   },
 ];
 //
@@ -443,3 +443,4 @@ function calendar()
         document.write('</tbody></table>');
         return true;
 }
+

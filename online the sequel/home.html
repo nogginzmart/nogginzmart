@@ -104,7 +104,7 @@
         <div class="tooltip" style="display: flex; justify-content: center;">
           <a href="https://nogginzmart.neocities.org/about"
             ><img
-              src="https://nogginzmart.discount/catbox%20aint%20working/homepage/Qp.png"
+              src="https://nogginzmart.discount/catbox%20aint%20working/homepage/Christmas_me_1_.png"
           /></a>
           <span class="tooltip-text" style="bottom: 100%">
             huh? oh, hi. <br>wanna learn about me?
@@ -1631,6 +1631,15 @@
                               />
                             </h2>
                             <ul>
+                              <li><u>11/12/2026</u> -</li>
+                              <ul>
+                                <li>
+                                  CHRISTMAS THEME IS HERE BABY RAAAGH (I'm impatient)
+                                </li>
+                                <li>
+                                  adding my stash of site buttons to the homepage!
+                                </li>
+                              </ul>
                               <li><u>11/08/2026</u> -</li>
                               <ul>
                                 <li>
@@ -3887,6 +3896,48 @@
                                 />
                               </a>
                             </div>
+                            <div class="column">
+                              <a
+                                href="https://stray.land/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.discount/catbox%20aint%20working/site%20buttons/straylandbutton.gif"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://winggdingg.neocities.org/"
+                                target="_blank"
+                              > 
+                                <img
+                                  src="https://nogginzmart.discount/catbox%20aint%20working/site%20buttons/winggdingg-button.png"
+                                />
+                              </a>
+                            </div>
+                            <div class="column">
+                              <a
+                                href="https://lunari.anbimichi.moe/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.discount/catbox%20aint%20working/site%20buttons/AnbiMichi-button.gif"
+                                />
+                              </a>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="column">
+                              <a
+                                href="https://dogrise.net/"
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://nogginzmart.discount/catbox%20aint%20working/site%20buttons/dogrise.gif"
+                                />
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3925,6 +3976,49 @@
             </div>
         </div>
     </div>
+     <div id="snow-container" aria-hidden="true"></div>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+  const snowContainer = document.getElementById("snow-container");
+
+  const snowflakeCount = 65;
+
+  const snowSymbols = [
+    "✧",
+    "·",
+    "•"
+  ];
+
+  for (let i = 0; i < snowflakeCount; i++) {
+    const snowflake = document.createElement("span");
+
+    snowflake.classList.add("snow");
+
+    // Random snowflake symbol
+    snowflake.textContent =
+      snowSymbols[Math.floor(Math.random() * snowSymbols.length)];
+
+    // Random appearance
+    const size = Math.random() * 12 + 4;
+    const opacity = Math.random() * 0.65 + 0.2;
+
+    // Random movement
+    const x = Math.random() * 100;
+    const drift = (Math.random() - 0.5) * 100;
+
+    // Random animation speed
+    const duration = Math.random() * 15 + 10;
+    const delay = Math.random() * -25;
+
+    snowflake.style.setProperty("--size", `${size}px`);
+    snowflake.style.setProperty("--opacity", opacity);
+    snowflake.style.setProperty("--x", `${x}vw`);
+    snowflake.style.setProperty("--drift", `${drift}px`);
+    snowflake.style.setProperty("--duration", `${duration}s`);
+    snowflake.style.setProperty("--delay", `${delay}s`);
+
+    snowContainer.appendChild(snowflake);
+  }
+});</script>
     <script src="home.js"></script>
   </body>
 </html>

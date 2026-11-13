@@ -11,13 +11,19 @@
       content="A 2000's inspired one-stop-shop for OC art, comics, stories, & other silly gay autistic things the webmaster is into these days."
     />
     <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="shortcut icon"
       href="https://nogginzmart.neocities.org/catbox%20aint%20working/landing/siteicon.webp"
       type="image/x-icon"
     />
     <audio autoplay loop>
-      <source src="https://nogginzmart.neocities.org/music/Choose%20a%20File.ogg" type="audio/mpeg" />
+      <source src="https://nogginzmart.discount/music/Earthbound%20Winters%20Theme.ogg" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   </head>
@@ -142,5 +148,48 @@
         </center>
       </section>
     </div>
+     <div id="snow-container" aria-hidden="true"></div>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+  const snowContainer = document.getElementById("snow-container");
+
+  const snowflakeCount = 65;
+
+  const snowSymbols = [
+    "✧",
+    "·",
+    "•"
+  ];
+
+  for (let i = 0; i < snowflakeCount; i++) {
+    const snowflake = document.createElement("span");
+
+    snowflake.classList.add("snow");
+
+    // Random snowflake symbol
+    snowflake.textContent =
+      snowSymbols[Math.floor(Math.random() * snowSymbols.length)];
+
+    // Random appearance
+    const size = Math.random() * 12 + 4;
+    const opacity = Math.random() * 0.65 + 0.2;
+
+    // Random movement
+    const x = Math.random() * 100;
+    const drift = (Math.random() - 0.5) * 100;
+
+    // Random animation speed
+    const duration = Math.random() * 15 + 10;
+    const delay = Math.random() * -25;
+
+    snowflake.style.setProperty("--size", `${size}px`);
+    snowflake.style.setProperty("--opacity", opacity);
+    snowflake.style.setProperty("--x", `${x}vw`);
+    snowflake.style.setProperty("--drift", `${drift}px`);
+    snowflake.style.setProperty("--duration", `${duration}s`);
+    snowflake.style.setProperty("--delay", `${delay}s`);
+
+    snowContainer.appendChild(snowflake);
+  }
+});</script>
   </body>
 </html>
