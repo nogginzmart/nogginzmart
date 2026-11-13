@@ -22,10 +22,26 @@
       href="https://nogginzmart.neocities.org/catbox%20aint%20working/landing/siteicon.webp"
       type="image/x-icon"
     />
-    <audio autoplay loop>
-      <source src="https://nogginzmart.discount/music/Earthbound%20Winters%20Theme.ogg" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
+   <audio id="bgmusic" autoplay loop>
+    <source
+      src="https://nogginzmart.discount/music/Earthbound%20Winters%20Theme.ogg"
+      type="audio/ogg"
+    />
+   </audio>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("bgmusic");
+
+  music.volume = 0.4;
+
+  music.play().catch(() => {
+    document.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+  });
+});
+</script>
   </head>
 
   <body>
