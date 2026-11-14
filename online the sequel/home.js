@@ -180,8 +180,8 @@ window.addEventListener("load", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
   // === CONFIGURATION ===
-  const FORM_ID = "1FAIpQLSdym6uwmcl7oX_WmcuBLrdeFdsPxrkld-eEkJ5WiTgCnu0KAA"; // Google Form ID (from the form's URL)
-  const SHEET_ID = "1SvmMrIqo6FuNZfizoHLJ-hotdbKR7ibVH_TMEN_mm9Q"; // Google Sheet ID (linked to form responses)
+  const FORM_ID = "1FAIpQLSeVHowJWleIh9_AYfl02DIs4Zt9Etsb4ZkAg5WP5Gko_A5i-Q"; // Google Form ID (from the form's URL)
+  const SHEET_ID = "1FsjsUMPRzvW--YmmOjv9qWAHhiyPOp8a_jpaeD-m2I0"; // Google Sheet ID (linked to form responses)
   const STORAGE_KEY = `pollVoted_${FORM_ID}`; // LocalStorage key to track if this browser already voted
 
   // === DOM ELEMENTS ===
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // === ENABLE VOTING WHEN USER SELECTS AN OPTION ===
-  form.querySelectorAll("input[name='entry.1755876556']").forEach((radio) => {
+  form.querySelectorAll("input[name='entry.558839944']").forEach((radio) => {
     radio.addEventListener("change", () => {
       // Enable "Other" text input only if "Other" is selected
       // if (otherRadio.checked) {
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Require a selected option
     const selected = form.querySelector(
-      "input[name='entry.1755876556']:checked",
+      "input[name='entry.558839944']:checked",
     );
     if (!selected) {
       alert("Please select an answer.");
@@ -271,15 +271,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Map full Google Form answers to short labels
     const optionLabels = {
-      "dead/abandoned sites": "dead/abandoned sites",
-      "little to no attention/interaction": "little to no attention/interaction",
-      "unreadable/cluttered sites":
-        "unreadable/cluttered sites",
-      "the upkeep/constant grind": "the upkeep/constant grind",
-      "sites not properly content warned, etc. ":
-        "sites not properly content warned, etc. ",
-      "Other (besides the obvious like AI, spammers, bots, etc)(answer in chatbox)": 
-      "Other (besides the obvious like AI, spammers, bots, etc)(answer in chatbox)",
+      "Good Ole Walking": "Good Ole Walking",
+      "Biking/Scooter (electric ones count!)": "Biking/Scooter (electric ones count!)",
+      "Roller-Skating/Blading":
+        "Roller-Skating/Blading",
+      "Skateboarding": "Skateboarding",
+      "Train/Bus/Public Transit":
+        "Train/Bus/Public Transit",
+      "Cars (BOOO BOOO TOMATO)": 
+      "Cars (BOOO BOOO TOMATO)",
     };
 
     // Initialize counts to 0 for all options

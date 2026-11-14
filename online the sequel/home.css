@@ -746,6 +746,9 @@ header img {
   border: 3px solid #000000;
   padding: 20px;
   width: 335px;
+  height: 435px;
+  overflow-x: hidden;
+  overflow-y: scroll;
   position: relative;
 }
 
@@ -762,6 +765,9 @@ header img {
 #results {
   display: none;
   width: 335px;
+  height: 435px;
+  overflow-x: hidden;
+  overflow-y: scroll;
   border: 3px solid #000000;
 }
 
