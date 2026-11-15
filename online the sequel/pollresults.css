@@ -473,7 +473,7 @@ input[type="range"].volume_slider::-webkit-slider-thumb {
   border-radius: 6px;
   margin-bottom: 8px;
   width: 200px;
- position: fixed;
+  position: fixed;
   bottom: 0;
   right: 0;
   font: bold 20px "earthbound";
@@ -482,5 +482,5 @@ input[type="range"].volume_slider::-webkit-slider-thumb {
 }
 
 li {
-  list-style-image: url('https://file.garden/anM3NRKssQGmKFsm/pollresults/listimage.webp')
+  list-style-image: url("https://file.garden/anM3NRKssQGmKFsm/pollresults/listimage.webp");
 }
